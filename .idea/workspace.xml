@@ -2,21 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b7531e58-9230-4eee-94e9-5bd5f20cc339" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/public/panel/css/select2/select2-bootstrap.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/panel/css/select2/select2.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/panel/js/app.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/panel/js/components-select2.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/panel/js/select2.full.min.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Panel/ExamController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Panel/ExamController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Panel/TagController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Panel/TagController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/panel/exam/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/panel/exam/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/panel/exam/exam-selectors.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/panel/exam/exam-selectors.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Department.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Department.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Panel/DepartmentController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Panel/DepartmentController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Panel/FacultyController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Panel/FacultyController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Panel/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Panel/HomeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/site/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/site/HomeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/panel/department/all.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/panel/department/all.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/panel/faculty/all.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/panel/faculty/all.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/panel/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/panel/home.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/panel/layouts/css.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/panel/layouts/css.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/panel/layouts/js.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/panel/layouts/js.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/panel/tag/all.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/panel/tag/all.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/panel.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/panel.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -208,47 +202,61 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="panel.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/routes/panel.php">
+      <file leaf-file-name="FacultyController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Panel/FacultyController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="43" selection-start-line="7" selection-start-column="43" selection-end-line="7" selection-end-column="43" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="create.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/panel/material/create.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="332">
-              <caret line="75" selection-start-line="75" selection-end-line="76" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="home.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/panel/home.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" column="68" selection-start-line="14" selection-start-column="68" selection-end-line="14" selection-end-column="68" />
+            <state relative-caret-position="292">
+              <caret line="73" column="7" lean-forward="true" selection-start-line="73" selection-start-column="7" selection-end-line="74" selection-end-column="45" />
+              <folding>
+                <element signature="e#46#74#0#PHP" expanded="true" />
+                <element signature="n#style#0;n#button#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#i#0;n#button#0;n#div#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="all.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/panel/tag/all.blade.php">
+        <entry file="file://$PROJECT_DIR$/resources/views/panel/faculty/all.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="226" selection-start-line="226" selection-end-line="226" />
+            <state relative-caret-position="408">
+              <caret line="138" column="20" selection-start-line="138" selection-start-column="20" selection-end-line="138" selection-end-column="61" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="exam-selectors.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/panel/exam/exam-selectors.blade.php">
+      <file leaf-file-name="all.blade.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/resources/views/panel/department/all.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="93" column="86" selection-start-line="93" selection-start-column="86" selection-end-line="93" selection-end-column="86" />
+            <state relative-caret-position="425">
+              <caret line="133" column="65" selection-start-line="133" selection-start-column="65" selection-end-line="133" selection-end-column="65" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Department.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Department.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="340">
+              <caret line="22" column="57" selection-start-line="22" selection-start-column="57" selection-end-line="22" selection-end-column="57" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DepartmentController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Panel/DepartmentController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="595">
+              <caret line="76" column="45" selection-start-line="76" selection-start-column="45" selection-end-line="76" selection-end-column="45" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Faculty.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Faculty.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="25" selection-start-line="25" selection-end-line="28" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -264,11 +272,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>delete</find>
-      <find>myModalLabel</find>
-      <find>Edit</find>
-      <find>Exam-selectors.js</find>
-      <find>sweetalert2</find>
       <find>chan</find>
       <find>getFullNamearray</find>
       <find>main</find>
@@ -287,13 +290,18 @@
       <find>get_fac_data_table</find>
       <find>get_faculty_data</find>
       <find>panel.tag.all.data</find>
-      <find>&lt;select class</find>
+      <find />
       <find>create</find>
       <find>getExamData</find>
-      <find>Recent Activities</find>
+      <find />
       <find>panel_css</find>
       <find>panel_js</find>
       <find>@push('panel_js')</find>
+      <find>HomeController</find>
+      <find>dashboard</find>
+      <find>fa</find>
+      <find>faculty</find>
+      <find>user</find>
     </findStrings>
     <replaceStrings>
       <replace>panel.</replace>
@@ -323,18 +331,12 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/resources/views/panel/units/semester/all.blade.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/units/ClassesController.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/units/ExamController.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/units/MaterialController.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/units/SemesterController.php" />
         <option value="$PROJECT_DIR$/routes/units.php" />
         <option value="$PROJECT_DIR$/resources/lang/en/auth.php" />
         <option value="$PROJECT_DIR$/resources/lang/en/validation.php" />
         <option value="$PROJECT_DIR$/resources/lang/ar/auth.php" />
         <option value="$PROJECT_DIR$/resources/lang/en/pagination.php" />
         <option value="$PROJECT_DIR$/resources/lang/en/passwords.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/Panel/FacultyController.php" />
         <option value="$PROJECT_DIR$/app/Exam.php" />
         <option value="$PROJECT_DIR$/app/visitors.php" />
         <option value="$PROJECT_DIR$/resources/views/panel/exam/main.blade.php" />
@@ -352,16 +354,13 @@
         <option value="$PROJECT_DIR$/resources/views/public/Index.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/panel/public/Index.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/panel/public/all.blade.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/site/HomeController.php" />
         <option value="$PROJECT_DIR$/database/migrations/2019_05_19_181758_create_tag__exams_table.php" />
         <option value="$PROJECT_DIR$/database/migrations/2018_09_08_004925_create_teacher__materials_table.php" />
         <option value="$PROJECT_DIR$/resources/views/panel/layouts/side-panel.blade.php" />
         <option value="$PROJECT_DIR$/database/migrations/2019_05_19_181205_create_tags_table.php" />
-        <option value="$PROJECT_DIR$/resources/views/panel/faculty/all.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Requests/CreateTag.php" />
         <option value="$PROJECT_DIR$/app/Tag.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Panel/TagController.php" />
-        <option value="$PROJECT_DIR$/resources/views/panel/home.blade.php" />
         <option value="$PROJECT_DIR$/routes/panel.php" />
         <option value="$PROJECT_DIR$/resources/views/panel/tag/all.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Panel/ExamController.php" />
@@ -374,6 +373,15 @@
         <option value="$PROJECT_DIR$/resources/views/panel/layouts/css.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/panel/layouts/js.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/panel/exam/create.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/site/HomeController.php" />
+        <option value="$PROJECT_DIR$/resources/views/panel/home.blade.php" />
+        <option value="$PROJECT_DIR$/app/visitor.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Panel/HomeController.php" />
+        <option value="$PROJECT_DIR$/app/Department.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Panel/FacultyController.php" />
+        <option value="$PROJECT_DIR$/resources/views/panel/faculty/all.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Panel/DepartmentController.php" />
+        <option value="$PROJECT_DIR$/resources/views/panel/department/all.blade.php" />
       </list>
     </option>
   </component>
@@ -482,7 +490,7 @@
       <path value="$PROJECT_DIR$/vendor/phpunit/phpunit-mock-objects" />
     </include_path>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="674" />
@@ -505,25 +513,28 @@
             <path>
               <item name="unitcp" type="b2602c69:ProjectViewProjectNode" />
               <item name="unitcp" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="unitcp" type="b2602c69:ProjectViewProjectNode" />
               <item name="unitcp" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Http" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="unitcp" type="b2602c69:ProjectViewProjectNode" />
               <item name="unitcp" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Http" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Controllers" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="panel" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="unitcp" type="b2602c69:ProjectViewProjectNode" />
               <item name="unitcp" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="routes" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="panel" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="department" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
           </expand>
           <select />
@@ -537,18 +548,18 @@
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\laragon\www\unitcp\resources\views\stuff" />
-      <recent name="C:\laragon\www\iporh\resources\views\panel" />
-      <recent name="C:\laragon\www\iporh\resources\views\panel\layouts" />
-      <recent name="C:\laragon\www\iporh\routes" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\laragon\www\unitcp\resources\views\public" />
       <recent name="C:\laragon\www\unitcp\public\public\styles\bootstrap\js" />
       <recent name="C:\laragon\www\unitcp\public\public\styles\bootstrap\css" />
       <recent name="C:\laragon\www\iporh\resources\views\panel" />
       <recent name="C:\laragon\www\iporh\app\Http\Controllers\Panel" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\laragon\www\unitcp\resources\views\stuff" />
+      <recent name="C:\laragon\www\iporh\resources\views\panel" />
+      <recent name="C:\laragon\www\iporh\resources\views\panel\layouts" />
+      <recent name="C:\laragon\www\iporh\routes" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -681,12 +692,12 @@
       <workItem from="1558181813168" duration="864000" />
       <workItem from="1558183187808" duration="5622000" />
       <workItem from="1558288882208" duration="8681000" />
-      <workItem from="1558352688892" duration="9322000" />
+      <workItem from="1558352688892" duration="12781000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="477709000" />
+    <option name="totallyTimeSpent" value="481168000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -765,46 +776,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/.env">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="18" lean-forward="true" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/panel/exam/main.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="867">
-          <caret line="52" column="75" selection-start-line="52" selection-start-column="75" selection-end-line="52" selection-end-column="75" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/public/layouts/app.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2176">
-          <caret line="128" column="9" selection-start-line="128" selection-start-column="9" selection-end-line="128" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/panel/semester/create.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-697" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/home.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" selection-start-line="15" selection-end-line="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/panel/faculty/create.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" selection-start-line="3" selection-end-line="13" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Logic/FileRepository.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1071">
@@ -847,13 +818,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="60" column="46" selection-start-line="60" selection-start-column="46" selection-end-line="60" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/site/HomeController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="57" selection-start-line="57" selection-start-column="2" selection-end-line="57" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -916,39 +880,11 @@
         <state relative-caret-position="-119" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/panel/layouts/side-panel.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="161" column="47" selection-start-line="161" selection-start-column="47" selection-end-line="161" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/database/migrations/2019_05_19_181205_create_tags_table.php" />
     <entry file="file://$PROJECT_DIR$/app/Semester.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="5" selection-start-line="5" selection-end-line="5" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/panel/department/all.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="21" column="27" selection-start-line="21" selection-start-column="27" selection-end-line="21" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/panel/faculty/all.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="178">
-          <caret line="48" column="62" selection-start-line="48" selection-start-column="55" selection-end-line="48" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Panel/FacultyController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="178">
-          <caret line="50" selection-start-line="50" selection-end-line="54" selection-end-column="5" />
         </state>
       </provider>
     </entry>
@@ -1056,13 +992,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/panel/material/create.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="332">
-          <caret line="75" selection-start-line="75" selection-end-line="76" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/HomeController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
@@ -1070,17 +999,108 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/panel/home.blade.php">
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/site/HomeController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="68" selection-start-line="14" selection-start-column="68" selection-end-line="14" selection-end-column="68" />
+        <state relative-caret-position="204">
+          <caret line="18" column="1" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
+          <folding>
+            <element signature="e#45#73#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/routes/panel.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="43" selection-start-line="7" selection-start-column="43" selection-end-line="7" selection-end-column="43" />
+        <state relative-caret-position="194">
+          <caret line="21" column="37" selection-start-line="21" selection-start-column="37" selection-end-line="21" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/panel/material/create.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="77">
+          <caret line="60" column="140" selection-start-line="60" selection-start-column="140" selection-end-line="60" selection-end-column="140" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/panel/layouts/side-panel.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="177">
+          <caret line="63" column="48" selection-start-line="63" selection-start-column="44" selection-end-line="63" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/User.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/visitor.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="2" lean-forward="true" selection-start-line="8" selection-start-column="2" selection-end-line="8" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/panel/home.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="607">
+          <caret line="78" column="114" selection-start-line="78" selection-start-column="114" selection-end-line="78" selection-end-column="114" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Panel/HomeController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="40" selection-start-line="20" selection-start-column="40" selection-end-line="20" selection-end-column="40" />
+          <folding>
+            <element signature="e#46#74#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Faculty.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="25" selection-start-line="25" selection-end-line="28" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Department.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="22" column="57" selection-start-line="22" selection-start-column="57" selection-end-line="22" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Panel/FacultyController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="292">
+          <caret line="73" column="7" lean-forward="true" selection-start-line="73" selection-start-column="7" selection-end-line="74" selection-end-column="45" />
+          <folding>
+            <element signature="e#46#74#0#PHP" expanded="true" />
+            <element signature="n#style#0;n#button#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#i#0;n#button#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Panel/DepartmentController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="595">
+          <caret line="76" column="45" selection-start-line="76" selection-start-column="45" selection-end-line="76" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/panel/faculty/all.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="138" column="20" selection-start-line="138" selection-start-column="20" selection-end-line="138" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/panel/department/all.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="133" column="65" selection-start-line="133" selection-start-column="65" selection-end-line="133" selection-end-column="65" />
         </state>
       </provider>
     </entry>

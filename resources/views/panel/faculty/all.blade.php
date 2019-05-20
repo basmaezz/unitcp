@@ -35,6 +35,7 @@
                             <th class="text-center" width="20%">الاسم باللغة الإنجليزية</th>
                             <th class="text-center" width="10%">الفاعليه</th>
                             <th class="text-center" width="20%">تاريخ الإضافة</th>
+                            <th class="text-center" width="20%">عدد الأمتحانات</th>
                             <th class="text-center" width="20%"></th>
                         </tr>
                         </thead>
@@ -135,6 +136,7 @@
                     {data: 'name_en', name: 'name_en'},
                     {data: 'active', name: 'active'},
                     {data: 'created_at', name: 'created_at'},
+                    {data: 'exam_count', name: 'exam_count'},
                     {data: 'action', name: 'action'}
                 ],
                 dom: 'Bfrtip',

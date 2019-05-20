@@ -12,8 +12,8 @@
                         <div class="row">
                             <div class="col-md-6 text-white">
                                 <p>عدد الكليات </p>
-                                <h2 class="font-weight-bold">$15,859</h2>
-                                <a href="#">View Statement</a> </div>
+                                <h2 class="font-weight-bold">{{$faculty}}</h2>
+                                <a href="{{route('panel.faculty.all')}}">View Statement</a> </div>
                             <div class="col-md-6 m-t-2 text-right"> <span id="spa-bar"></span> </div>
                         </div>
                     </div>
@@ -25,8 +25,8 @@
                         <div class="row">
                             <div class="col-md-6 text-white">
                                 <p>عدد المستخدمين </p>
-                                <h2 class="font-weight-bold">$8,859</h2>
-                                <a href="#">View Statement</a> </div>
+                                <h2 class="font-weight-bold">{{$user}}</h2>
+                                <a href="{{route('panel.users.all')}}">View Statement</a> </div>
                             <div class="col-md-6 m-t-2 text-right"> <span id="spa-line"></span> </div>
                         </div>
                     </div>
@@ -38,8 +38,8 @@
                         <div class="row">
                             <div class="col-md-6 text-white">
                                 <p>عدد الامتحانات المرفوعه</p>
-                                <h2 class="font-weight-bold">$85,085</h2>
-                                <a href="#">View Statement</a> </div>
+                                <h2 class="font-weight-bold">{{$exam}}</h2>
+                                <a href="{{route('panel.exam.all')}}">View Statement</a> </div>
                             <div class="col-md-6 m-t-2 text-right"> <span id="spa-pie"></span> </div>
                         </div>
                     </div>
@@ -52,7 +52,7 @@
             <div class="col-lg-8">
                 <div class="info-box">
                     <div class="col-12">
-                        <h5>Revenue Statistics</h5>
+                        <h5></h5>
                         <div class="row m-t-2 m-b-2">
                             <div class="col-md-6">
                                 <h1 class="font-weight-500">$23,743</h1>
@@ -75,8 +75,8 @@
                 <div class="card m-b-3">
                     <div class="card-body">
                         <div class="m-b-3 font-weight-bold">
-                            <h5>New Clients
-                                <button type="button" class="btn btn-sm btn-rounded btn-info pull-left">250</button>
+                            <h5>عدد الزائرين
+                                <button type="button" class="btn btn-sm btn-rounded btn-info pull-left">{{$visitor}}</button>
                             </h5>
                         </div>
                         <div class="m-b-2 f-25">09.5% <i class="ti-bar-chart pull-right f-30"></i> </div>

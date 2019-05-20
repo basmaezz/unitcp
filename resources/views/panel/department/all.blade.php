@@ -27,6 +27,7 @@ r@php
                             <th width="15%">الاسم En </th>
                             <th width="15%">الكليه</th>
                             <th width="15%">تاريخ الإضافة</th>
+                            <th width="15%">عدد الامتحانات</th>
                             <th width="25%">#</th>
 
                         </tr>
@@ -130,6 +131,7 @@ r@php
                         {data: 'name_en', name: 'name_en'},
                         {data: 'faculty_id', name: 'faculty_id'},
                         {data: 'created_at', name: 'created_at'},
+                        {data: 'exam_count', name: 'exam_count'},
                         {data: 'action', name: 'action'}
                     ],
                     dom: 'Bfrtip',

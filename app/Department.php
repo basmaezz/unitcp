@@ -17,4 +17,9 @@ use SoftDeletes;
     {
         return $this->belongsTo(Faculty::class, 'faculty_id', 'id');
     }
+
+    public function exams()
+    {
+        return $this->hasMany(Exam::class, 'department_id', 'id');
+    }
 }

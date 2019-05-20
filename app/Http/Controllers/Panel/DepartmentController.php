@@ -56,7 +56,8 @@ class DepartmentController extends Controller
 
     public function get_department_data_table(department $items)
     {
-        $items = $items ->orderBy('id', 'ASC')->get();
+        $items = $items ->orderBy('id', 'ASC')->with('exams')->get();
+//        dd($items);
 
         try {
             return DataTables::of($items)->editColumn('id', function ($item) {
@@ -71,6 +72,9 @@ class DepartmentController extends Controller
                 }
             })->editColumn('created_at', function ($item) {
                 return get_date_from_timestamp($item->created_at);
+
+            })->editColumn('exam_count', function ($item) {
+                return $item->exams->count();
 
             })->addColumn('action', function ($item) {
                 return '<div class="row">

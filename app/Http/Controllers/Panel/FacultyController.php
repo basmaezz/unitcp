@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 use App\faculty;
 use Yajra\DataTables\DataTables;
 use App\Http\Requests\CreateFaculty;
+use App\Exam;
 
 class FacultyController extends Controller
 {
@@ -56,7 +57,8 @@ class FacultyController extends Controller
 
     public function get_fac_data_table(faculty $items)
     {
-        $items = $items->get();
+        $items = $items->with('exams')->get();
+//        dd($items);
 
 
         try {
@@ -68,6 +70,9 @@ class FacultyController extends Controller
 
             })->editColumn('created_at', function ($item) {
                 return get_date_from_timestamp($item->created_at);
+
+            })->editColumn('exam_count', function ($item) {
+                return $item->exams->count();
 
             })->addColumn('action', function ($item) {
                 return '<div class="row">
