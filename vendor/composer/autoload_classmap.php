@@ -67,6 +67,8 @@ return array(
     'App\\Providers\\RouteServiceProvider' => $baseDir . '/app/Providers/RouteServiceProvider.php',
     'App\\Role' => $baseDir . '/app/Role.php',
     'App\\Semester' => $baseDir . '/app/Semester.php',
+    'App\\Tag' => $baseDir . '/app/Tag.php',
+    'App\\Tag_Exam' => $baseDir . '/app/Tag_Exam.php',
     'App\\Teacher_Material' => $baseDir . '/app/Teacher_Material.php',
     'App\\User' => $baseDir . '/app/User.php',
     'App\\Year' => $baseDir . '/app/Year.php',

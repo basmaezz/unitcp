@@ -85,6 +85,8 @@ Route::middleware(['authpermission','checkactive'])->group(function() {
             Route::put('/{material}', ['as' => 'panel.material.edit', 'uses' => 'MaterialController@update']);
         });
     });
+
+
 //*******************Exams*****************
     Route::prefix('/file')->group(function () {
         Route::post('/upload', ['as' => 'panel.file.upload', 'uses' => 'FileController@uploadFile']);
@@ -119,6 +121,23 @@ Route::middleware(['authpermission','checkactive'])->group(function() {
         Route::get('all', ['as' => 'panel.log.all', 'uses' => 'LogController@index']);
         Route::get('all/data', ['as' => 'panel.log.all.data', 'uses' => 'LogController@get_log_data_table']);
 
+    });
+
+
+
+    Route::prefix('tag')->group(function () {
+        Route::get('/all', ['as' => 'panel.tag.all', 'uses' => 'TagController@index']);
+        Route::get('/all/data', ['as' => 'panel.tag.all.data', 'uses' => 'TagController@get_tag_data_table']);
+        Route::get('/data/{id}', ['as' => 'panel.tag.item', 'uses' => 'TagController@get_tag_data']);
+        Route::prefix('/create')->group(function () {
+            Route::get('/', ['as' => 'panel.tag.create', 'uses' => 'TagController@create']);
+
+        });
+        Route::delete('/delete/{id}', ['as' => 'panel.tag.delete', 'uses' => 'TagController@delete']);
+        Route::prefix('/edit')->group(function () {
+            Route::get('/{tag}', ['as' => 'panel.tag.edit', 'uses' => 'TagController@edit']);
+            Route::POST('/{tag}', ['as' => 'panel.tag.edit', 'uses' => 'TagController@update']);
+        });
     });
 
 });
