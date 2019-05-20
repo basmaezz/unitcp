@@ -43,7 +43,7 @@ class TagController extends Controller
     {
         $tag = Tag::updateOrCreate(['id' => $id], $request->all());
 
-        return (isset($tag)) ? $this->response_api(true, 'تم تعديل بيانات الفصل الدراسى بنجاح') : $this->response_api(false, 'حدث خطأ غير متوقع');
+        return (isset($tag)) ? $this->response_api(true, 'تم تعديل بيانات التاج بنجاح') : $this->response_api(false, 'حدث خطأ غير متوقع');
     }
 
 

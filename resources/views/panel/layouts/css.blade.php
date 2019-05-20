@@ -6,5 +6,8 @@
 {!! HTML::style('/panel/css/themify-icons/themify-icons.css') !!}
 {!! HTML::style('/panel/css/simple-lineicon/simple-line-icons.css') !!}
 {!! HTML::style('/panel/css/skins/_all-skins.min.css') !!}
+
+{{--{!! HTML::style('/panel/css/select2/select2.min.css') !!}--}}
+{{--{!! HTML::style('/panel/css/select2/select2-bootstrap.min.css') !!}--}}
 @stack('panel_css')
 

@@ -19,3 +19,6 @@
 {!! HTML::script('/panel/js/fac-selectors.js') !!}
 {!! HTML::script('/panel/js/exam-selectors.js') !!}
 {!! HTML::script('/panel/js/material-selectors.js') !!}
+{{--{!! HTML::script('/panel/js/select2.full.min.js') !!}--}}
+{{--{!! HTML::script('/panel/js/app.min.js') !!}--}}
+{{--{!! HTML::script('/panel/js/components-select2.min.js') !!}--}}

@@ -11,7 +11,7 @@
                     <div class="card-body">
                         <div class="row">
                             <div class="col-md-6 text-white">
-                                <p>Total Balance</p>
+                                <p>عدد الكليات </p>
                                 <h2 class="font-weight-bold">$15,859</h2>
                                 <a href="#">View Statement</a> </div>
                             <div class="col-md-6 m-t-2 text-right"> <span id="spa-bar"></span> </div>
@@ -24,7 +24,7 @@
                     <div class="card-body">
                         <div class="row">
                             <div class="col-md-6 text-white">
-                                <p>Online Revenue</p>
+                                <p>عدد المستخدمين </p>
                                 <h2 class="font-weight-bold">$8,859</h2>
                                 <a href="#">View Statement</a> </div>
                             <div class="col-md-6 m-t-2 text-right"> <span id="spa-line"></span> </div>
@@ -37,7 +37,7 @@
                     <div class="card-body">
                         <div class="row">
                             <div class="col-md-6 text-white">
-                                <p>Total Profit</p>
+                                <p>عدد الامتحانات المرفوعه</p>
                                 <h2 class="font-weight-bold">$85,085</h2>
                                 <a href="#">View Statement</a> </div>
                             <div class="col-md-6 m-t-2 text-right"> <span id="spa-pie"></span> </div>
@@ -138,70 +138,70 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-7">
-                <div class="card">
-                    <div class="card-body">
-                        <h5>Recent Chats <span class="pull-left f-13"><a href="#">View All</a></span></h5>
-                        <div class="box-body">
-                            <!-- Conversations are loaded here -->
-                            <div class="direct-chat-messages" style="height:377px;">
-                                <div class="direct-chat-msg">
-                                    <div class="direct-chat-info clearfix"> <span class="direct-chat-name pull-left">Alexander Pierceeeeeeeeeee</span> <span class="direct-chat-timestamp pull-right">23 Jan 2:00 pm</span> </div>
-                                    <img class="direct-chat-img" src="/panel/img/img2.jpg" alt="user image">
-                                    <div class="direct-chat-text"> A small river named Duden flows by their place and supplies it with the necessary. </div>
-                                </div>
-                                <div class="direct-chat-msg right">
-                                    <div class="direct-chat-info clearfix"> <span class="direct-chat-name pull-right">Sarah Bullock</span> <span class="direct-chat-timestamp pull-left">23 Jan 2:05 pm</span> </div>
-                                    <img class="direct-chat-img" src="/panel/img/img3.jpg" alt="user image">
-                                    <!-- /.direct-chat-img -->
-                                    <div class="direct-chat-text"> You better believe it! </div>
-                                </div>
-                                <div class="direct-chat-msg">
-                                    <div class="direct-chat-info clearfix"> <span class="direct-chat-name pull-left">Alexander Pierce</span> <span class="direct-chat-timestamp pull-right">23 Jan 5:37 pm</span> </div>
-                                    <img class="direct-chat-img" src="/panel/img/img4.jpg" alt="user image">
-                                    <div class="direct-chat-text"> A small river named Duden flows by their place and supplies it with the necessary. </div>
-                                </div>
-                                <div class="direct-chat-msg right">
-                                    <div class="direct-chat-info clearfix"> <span class="direct-chat-name pull-right">Sarah Bullock</span> <span class="direct-chat-timestamp pull-left">23 Jan 6:10 pm</span> </div>
-                                    <img class="direct-chat-img" src="/panel/img/img5.jpg" alt="user image">
-                                    <div class="direct-chat-text"> I would love to. </div>
-                                </div>
-                                <div class="direct-chat-msg">
-                                    <div class="direct-chat-info clearfix"> <span class="direct-chat-name pull-left">Alexander Pierce</span> <span class="direct-chat-timestamp pull-right">23 Jan 2:00 pm</span> </div>
-                                    <img class="direct-chat-img" src="/panel/img/img6.jpg" alt="user image">
-                                    <div class="direct-chat-text"> A small river named Duden flows by their place and supplies it with the necessary. </div>
-                                </div>
-                                <div class="direct-chat-msg right">
-                                    <div class="direct-chat-info clearfix"> <span class="direct-chat-name pull-right">Sarah Bullock</span> <span class="direct-chat-timestamp pull-left">23 Jan 2:05 pm</span> </div>
-                                    <img class="direct-chat-img" src="/panel/img/img3.jpg" alt="user image">
-                                    <!-- /.direct-chat-img -->
-                                    <div class="direct-chat-text"> You better believe it! </div>
-                                </div>
-                                <div class="direct-chat-msg">
-                                    <div class="direct-chat-info clearfix"> <span class="direct-chat-name pull-left">Alexander Pierce</span> <span class="direct-chat-timestamp pull-right">23 Jan 2:00 pm</span> </div>
-                                    <img class="direct-chat-img" src="/panel/img/img6.jpg" alt="user image">
-                                    <div class="direct-chat-text"> A small river named Duden flows by their place and supplies it with the necessary. </div>
-                                </div>
-                                <div class="direct-chat-msg right">
-                                    <div class="direct-chat-info clearfix"> <span class="direct-chat-name pull-right">Sarah Bullock</span> <span class="direct-chat-timestamp pull-left">23 Jan 2:05 pm</span> </div>
-                                    <img class="direct-chat-img" src="/panel/img/img3.jpg" alt="user image">
-                                    <!-- /.direct-chat-img -->
-                                    <div class="direct-chat-text"> You better believe it! </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="box-footer">
-                            <form action="#" method="post">
-                                <div class="input-group">
-                                    <input name="message" placeholder="Type Message ..." class="form-control" type="text">
-                                    <span class="input-group-btn">
-                    <button type="button" class="btn btn-warning btn-flat">Send</button>
-                    </span> </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            {{--<div class="col-lg-7">--}}
+                {{--<div class="card">--}}
+                    {{--<div class="card-body">--}}
+                        {{--<h5>Recent Chats <span class="pull-left f-13"><a href="#">View All</a></span></h5>--}}
+                        {{--<div class="box-body">--}}
+                            {{--<!-- Conversations are loaded here -->--}}
+                            {{--<div class="direct-chat-messages" style="height:377px;">--}}
+                                {{--<div class="direct-chat-msg">--}}
+                                    {{--<div class="direct-chat-info clearfix"> <span class="direct-chat-name pull-left">Alexander Pierceeeeeeeeeee</span> <span class="direct-chat-timestamp pull-right">23 Jan 2:00 pm</span> </div>--}}
+                                    {{--<img class="direct-chat-img" src="/panel/img/img2.jpg" alt="user image">--}}
+                                    {{--<div class="direct-chat-text"> A small river named Duden flows by their place and supplies it with the necessary. </div>--}}
+                                {{--</div>--}}
+                                {{--<div class="direct-chat-msg right">--}}
+                                    {{--<div class="direct-chat-info clearfix"> <span class="direct-chat-name pull-right">Sarah Bullock</span> <span class="direct-chat-timestamp pull-left">23 Jan 2:05 pm</span> </div>--}}
+                                    {{--<img class="direct-chat-img" src="/panel/img/img3.jpg" alt="user image">--}}
+                                    {{--<!-- /.direct-chat-img -->--}}
+                                    {{--<div class="direct-chat-text"> You better believe it! </div>--}}
+                                {{--</div>--}}
+                                {{--<div class="direct-chat-msg">--}}
+                                    {{--<div class="direct-chat-info clearfix"> <span class="direct-chat-name pull-left">Alexander Pierce</span> <span class="direct-chat-timestamp pull-right">23 Jan 5:37 pm</span> </div>--}}
+                                    {{--<img class="direct-chat-img" src="/panel/img/img4.jpg" alt="user image">--}}
+                                    {{--<div class="direct-chat-text"> A small river named Duden flows by their place and supplies it with the necessary. </div>--}}
+                                {{--</div>--}}
+                                {{--<div class="direct-chat-msg right">--}}
+                                    {{--<div class="direct-chat-info clearfix"> <span class="direct-chat-name pull-right">Sarah Bullock</span> <span class="direct-chat-timestamp pull-left">23 Jan 6:10 pm</span> </div>--}}
+                                    {{--<img class="direct-chat-img" src="/panel/img/img5.jpg" alt="user image">--}}
+                                    {{--<div class="direct-chat-text"> I would love to. </div>--}}
+                                {{--</div>--}}
+                                {{--<div class="direct-chat-msg">--}}
+                                    {{--<div class="direct-chat-info clearfix"> <span class="direct-chat-name pull-left">Alexander Pierce</span> <span class="direct-chat-timestamp pull-right">23 Jan 2:00 pm</span> </div>--}}
+                                    {{--<img class="direct-chat-img" src="/panel/img/img6.jpg" alt="user image">--}}
+                                    {{--<div class="direct-chat-text"> A small river named Duden flows by their place and supplies it with the necessary. </div>--}}
+                                {{--</div>--}}
+                                {{--<div class="direct-chat-msg right">--}}
+                                    {{--<div class="direct-chat-info clearfix"> <span class="direct-chat-name pull-right">Sarah Bullock</span> <span class="direct-chat-timestamp pull-left">23 Jan 2:05 pm</span> </div>--}}
+                                    {{--<img class="direct-chat-img" src="/panel/img/img3.jpg" alt="user image">--}}
+                                    {{--<!-- /.direct-chat-img -->--}}
+                                    {{--<div class="direct-chat-text"> You better believe it! </div>--}}
+                                {{--</div>--}}
+                                {{--<div class="direct-chat-msg">--}}
+                                    {{--<div class="direct-chat-info clearfix"> <span class="direct-chat-name pull-left">Alexander Pierce</span> <span class="direct-chat-timestamp pull-right">23 Jan 2:00 pm</span> </div>--}}
+                                    {{--<img class="direct-chat-img" src="/panel/img/img6.jpg" alt="user image">--}}
+                                    {{--<div class="direct-chat-text"> A small river named Duden flows by their place and supplies it with the necessary. </div>--}}
+                                {{--</div>--}}
+                                {{--<div class="direct-chat-msg right">--}}
+                                    {{--<div class="direct-chat-info clearfix"> <span class="direct-chat-name pull-right">Sarah Bullock</span> <span class="direct-chat-timestamp pull-left">23 Jan 2:05 pm</span> </div>--}}
+                                    {{--<img class="direct-chat-img" src="/panel/img/img3.jpg" alt="user image">--}}
+                                    {{--<!-- /.direct-chat-img -->--}}
+                                    {{--<div class="direct-chat-text"> You better believe it! </div>--}}
+                                {{--</div>--}}
+                            {{--</div>--}}
+                        {{--</div>--}}
+                        {{--<div class="box-footer">--}}
+                            {{--<form action="#" method="post">--}}
+                                {{--<div class="input-group">--}}
+                                    {{--<input name="message" placeholder="Type Message ..." class="form-control" type="text">--}}
+                                    {{--<span class="input-group-btn">--}}
+                    {{--<button type="button" class="btn btn-warning btn-flat">Send</button>--}}
+                    {{--</span> </div>--}}
+                            {{--</form>--}}
+                        {{--</div>--}}
+                    {{--</div>--}}
+                {{--</div>--}}
+            {{--</div>--}}
         </div>
         <!-- /.row -->
     </div>

@@ -130,7 +130,9 @@ Route::middleware(['authpermission','checkactive'])->group(function() {
         Route::get('/all/data', ['as' => 'panel.tag.all.data', 'uses' => 'TagController@get_tag_data_table']);
         Route::get('/data/{id}', ['as' => 'panel.tag.item', 'uses' => 'TagController@get_tag_data']);
         Route::prefix('/create')->group(function () {
+
             Route::get('/', ['as' => 'panel.tag.create', 'uses' => 'TagController@create']);
+            Route::POST('/', ['as' => 'panel.tag.create', 'uses' => 'TagController@store']);
 
         });
         Route::delete('/delete/{id}', ['as' => 'panel.tag.delete', 'uses' => 'TagController@delete']);
@@ -140,4 +142,8 @@ Route::middleware(['authpermission','checkactive'])->group(function() {
         });
     });
 
+
+
 });
+
+

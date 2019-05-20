@@ -20,6 +20,7 @@ use Response;
 use App\Department;
 use App\Semester;
 use App\visitor;
+use App\Tag;
 
 
 class ExamController extends Controller
@@ -146,9 +147,10 @@ class ExamController extends Controller
         $classes = DB::table("classes")->where("faculty_id", $id)->get();
         $materials = DB::table("materials")->where("faculty_id", $id)->get();
         $semesters = DB::table("semesters")->where("faculty_id", $id)->get();
+        $tags = Tag::all();
         $year = Year::all();
 
-        $data = ["classes" => $classes, "department" => $department, "materials" => $materials, "semesters" => $semesters,"year"=>$year ];
+        $data = ["classes" => $classes, "department" => $department, "materials" => $materials, "semesters" => $semesters,"year"=>$year,"tag"=>$tags ];
 
         $view = view('panel.exam.exam-selectors', $data)->render();
 

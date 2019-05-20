@@ -10,6 +10,8 @@
         <link href="http://hayageek.github.io/jQuery-Upload-File/4.0.11/uploadfile.css" rel="stylesheet">
         {!! HTML::style('panel/css/jasny-bootstrap.min.css') !!}
         {!! HTML::style('panel/plugins/summernote/summernote-bs4.css') !!}
+        {!! HTML::style('/panel/css/select2/select2.min.css') !!}
+        {!! HTML::style('/panel/css/select2/select2-bootstrap.min.css') !!}
     @endpush
 
     <div class="content">
@@ -40,6 +42,10 @@
                             @include('panel.exam.exam-selectors')
                         </div>
 
+
+
+
+
                         <fieldset class="form-group">
                             <label>كلمات البحث</label>
                             <textarea class="form-control " rows="4" type="text" name="key_search_ar" placeholder="الرجاء إدخال كلمات البحث" ></textarea>
@@ -49,6 +55,10 @@
                             <label>كلمات البحث باللغه الانجليزيه</label>
                             <textarea class="form-control " rows="4" type="text" name="key_search_en" placeholder="الرجاء إدخال كلمات البحث باللغه الانجليزيه" ></textarea>
                         </fieldset>
+
+
+
+
 
                         @if(\App\config::where('name', 'upload')->first()->config == 'on')
                         <input type="hidden" id="exam_file_name" name="fexam">
@@ -86,6 +96,9 @@
         {!! HTML::script('panel/plugins/summernote/summernote-bs4.js') !!}
         {!! HTML::script('/panel/js/post.js') !!}
         {!! HTML::script(asset('/js/app.js')) !!}
+        {!! HTML::script(asset('/panel/js/select2.full.min.js')) !!}
+        {!! HTML::script(asset('/panel/js/app.min.js')) !!}
+        {!! HTML::script(asset('/panel/js/components-select2.min.js')) !!}
 
         <script src="http://hayageek.github.io/jQuery-Upload-File/4.0.11/jquery.uploadfile.min.js"></script>
         <script>
