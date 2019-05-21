@@ -2,19 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b7531e58-9230-4eee-94e9-5bd5f20cc339" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/storage/app/public/faculty/exams/8/556/1/1/1/1/test-2000-2001.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/storage/app/public/faculty/exams/8/556/1/1/6/1/cfgcfh-2000-2001.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/storage/app/public/faculty/exams/8/557/1/1/1/1/test-2000-2001.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/storage/app/public/faculty/exams/8/567/1/1/1/1/test-2000-2001.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/storage/app/public/faculty/exams/8/568/1/1/1/1/test-2000-2001.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/storage/app/public/faculty/exams/8/572/1/1/1/1/test-2000-2001.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/storage/app/public/faculty/exams/8/573/1/1/1/2/test-2002-2003.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Exam.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Exam.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Panel/ExamController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Panel/ExamController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Tag_Exam.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Tag_Exam.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_05_19_181205_create_tags_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_05_19_181205_create_tags_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/panel/exam/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/panel/exam/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/panel/exam/exam-selectors.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/panel/exam/exam-selectors.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/site/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/site/HomeController.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -206,14 +196,44 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ExamController.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ExamController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Panel/ExamController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="148" lean-forward="true" selection-start-line="148" selection-end-line="148" />
+            <state relative-caret-position="357">
+              <caret line="147" lean-forward="true" selection-start-line="147" selection-end-line="147" />
               <folding>
                 <element signature="e#46#59#0#PHP" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="HomeController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/site/HomeController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="47" lean-forward="true" selection-start-line="47" selection-end-line="71" selection-end-column="5" />
+              <folding>
+                <element signature="e#45#73#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Exam.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/Exam.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="330">
+              <caret line="100" column="16" lean-forward="true" selection-start-line="100" selection-start-column="16" selection-end-line="100" selection-end-column="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Tag.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Tag.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="7" column="9" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -247,7 +267,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>getFullNamearray</find>
       <find>main</find>
       <find>storage</find>
       <find>storage/faculty</find>
@@ -277,6 +296,7 @@
       <find>faculty</find>
       <find>user</find>
       <find>firstOrCreate</find>
+      <find>tag</find>
     </findStrings>
     <replaceStrings>
       <replace>panel.</replace>
@@ -311,7 +331,6 @@
         <option value="$PROJECT_DIR$/resources/lang/ar/auth.php" />
         <option value="$PROJECT_DIR$/resources/lang/en/pagination.php" />
         <option value="$PROJECT_DIR$/resources/lang/en/passwords.php" />
-        <option value="$PROJECT_DIR$/app/Exam.php" />
         <option value="$PROJECT_DIR$/app/visitors.php" />
         <option value="$PROJECT_DIR$/resources/views/panel/exam/main.blade.php" />
         <option value="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" />
@@ -343,7 +362,6 @@
         <option value="$PROJECT_DIR$/public/panel/js/components-select2.min.js" />
         <option value="$PROJECT_DIR$/resources/views/panel/layouts/css.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/panel/layouts/js.blade.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/site/HomeController.php" />
         <option value="$PROJECT_DIR$/resources/views/panel/home.blade.php" />
         <option value="$PROJECT_DIR$/app/visitor.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Panel/HomeController.php" />
@@ -357,6 +375,8 @@
         <option value="$PROJECT_DIR$/database/migrations/2019_05_19_181205_create_tags_table.php" />
         <option value="$PROJECT_DIR$/app/Tag_Exam.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Panel/ExamController.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/site/HomeController.php" />
+        <option value="$PROJECT_DIR$/app/Exam.php" />
       </list>
     </option>
   </component>
@@ -647,12 +667,12 @@
       <workItem from="1558183187808" duration="5622000" />
       <workItem from="1558288882208" duration="8681000" />
       <workItem from="1558352688892" duration="13469000" />
-      <workItem from="1558436385381" duration="9294000" />
+      <workItem from="1558436385381" duration="9949000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="491150000" />
+    <option name="totallyTimeSpent" value="491805000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -783,13 +803,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Exam.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1023">
-          <caret line="103" selection-start-line="103" selection-end-line="103" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/panel/classes/all.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="43">
@@ -837,7 +850,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Requests/CreateTag.php" />
     <entry file="file://$PROJECT_DIR$/database/migrations/2019_05_19_181758_create_tag_exams_table.php" />
-    <entry file="file://$PROJECT_DIR$/app/Tag.php" />
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Panel/TagController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
@@ -912,13 +924,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="12" column="7" lean-forward="true" selection-start-line="12" selection-start-column="7" selection-end-line="12" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/site/HomeController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="18" column="1" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
         </state>
       </provider>
     </entry>
@@ -1060,11 +1065,35 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Panel/ExamController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="148" lean-forward="true" selection-start-line="148" selection-end-line="148" />
+        <state relative-caret-position="357">
+          <caret line="147" lean-forward="true" selection-start-line="147" selection-end-line="147" />
           <folding>
             <element signature="e#46#59#0#PHP" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/site/HomeController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="47" lean-forward="true" selection-start-line="47" selection-end-line="71" selection-end-column="5" />
+          <folding>
+            <element signature="e#45#73#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Tag.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="9" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Exam.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="100" column="16" lean-forward="true" selection-start-line="100" selection-start-column="16" selection-end-line="100" selection-end-column="16" />
         </state>
       </provider>
     </entry>

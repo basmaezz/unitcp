@@ -103,4 +103,8 @@ class Exam extends Model
         }
 
     }
+
+    public function tags(){
+        return $this->hasMany(Tag::class,'tag_exams');
+    }
 }

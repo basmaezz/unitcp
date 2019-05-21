@@ -57,7 +57,11 @@ class HomeController extends Controller
         $items= Exam::where('file', 'like', '%' . $txtsearch . '%')
             ->orwhere('key_search_ar', 'like', '%' . $txtsearch . '%')
             ->orwhere('key_search_en', 'like', '%' . $txtsearch. '%')->get();
-//dd($items);
+
+        $examTags= Exam::whereHas('tags',function($query) use ($txtsearch){
+            return $query->where('name_ar',$txtsearch);
+        });
+
         if($items){
             return view('panel.public.all')->with(['item'=>$items]);
         }

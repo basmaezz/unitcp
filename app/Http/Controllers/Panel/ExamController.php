@@ -146,9 +146,6 @@ class ExamController extends Controller
 
         }
 
-
-
-
 //        $exam = Exam::create($request->all());
         return (isset($exam)) ? $this->response_api(true, 'تم الأضافة بنجاح') : $this->response_api(false, 'حدث خطأ غير متوقع');
     }
