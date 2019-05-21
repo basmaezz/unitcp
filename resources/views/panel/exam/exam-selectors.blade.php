@@ -87,25 +87,3 @@
      {{--</div>--}}
 {{--</fieldset>--}}
 
-<fieldset class="form-group">
-    <label class="col-md-3 control-label"> اختر التاج</label>
-    <div class="col-md-9">
-        <div class="input-group select2-bootstrap-append">
-            <select id="multi-append" class="form-control select2" multiple name="tags[]">
-                <option></option>
-
-                @if(isset($tag) && $tag->count() > 0)
-                    @foreach($tag as $item)
-                        <option value="{{$item->id}}" >{{get_text_locale($item,'name_ar')}}</option>
-                    @endforeach
-                @endif
-
-            </select>
-            <span class="input-group-btn">
-               <button class="btn btn-default" type="button" data-select2-open="multi-append">
-               <span class="glyphicon glyphicon-search"></span>
-                </button>
-             </span>
-        </div>
-    </div>
-</fieldset>

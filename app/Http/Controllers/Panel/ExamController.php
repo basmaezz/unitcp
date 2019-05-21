@@ -21,6 +21,7 @@ use App\Department;
 use App\Semester;
 use App\visitor;
 use App\Tag;
+use App\Tag_Exam;
 
 
 class ExamController extends Controller
@@ -49,7 +50,8 @@ class ExamController extends Controller
 
     public function create()
     {
-        return view('panel.exam.create');
+        $tags = Tag::all();
+        return view('panel.exam.create')->with(["tag"=>$tags]);
     }
 
 
@@ -129,6 +131,24 @@ class ExamController extends Controller
         $exam->save();
 
 
+
+
+        $tags=$request->input('tags');
+
+        foreach($tags as $tag){
+            $tag= Tag::firstOrCreate([
+                'name_ar' =>$tag]);
+                //here code of povit table
+            $tag_exam= new Tag_Exam;
+            $tag_exam->exam_id=$exam->id;
+            $tag_exam->tag_id=$tag->id;
+            $tag_exam->save();
+
+        }
+
+
+
+
 //        $exam = Exam::create($request->all());
         return (isset($exam)) ? $this->response_api(true, 'تم الأضافة بنجاح') : $this->response_api(false, 'حدث خطأ غير متوقع');
     }
@@ -147,10 +167,10 @@ class ExamController extends Controller
         $classes = DB::table("classes")->where("faculty_id", $id)->get();
         $materials = DB::table("materials")->where("faculty_id", $id)->get();
         $semesters = DB::table("semesters")->where("faculty_id", $id)->get();
-        $tags = Tag::all();
+
         $year = Year::all();
 
-        $data = ["classes" => $classes, "department" => $department, "materials" => $materials, "semesters" => $semesters,"year"=>$year,"tag"=>$tags ];
+        $data = ["classes" => $classes, "department" => $department, "materials" => $materials, "semesters" => $semesters,"year"=>$year ];
 
         $view = view('panel.exam.exam-selectors', $data)->render();
 

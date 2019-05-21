@@ -37,11 +37,29 @@
                             </select>
                         </fieldset>
 
-
                         <div id="selectors_div">
                             @include('panel.exam.exam-selectors')
                         </div>
 
+                        <fieldset class="form-group">
+                            <label>اسم التاج </label>
+
+                                <div class="input-group select2-bootstrap-append">
+                                    <select id="multi-append" data-tags="true" class="form-control select2" multiple name="tags[]">
+
+                                        <option>إختر التاج</option>
+
+                                        @if(isset($tag) && $tag->count() > 0)
+                                            @foreach($tag as $item)
+                                                <option value="{{$item->id}}" >{{get_text_locale($item,'name_ar')}}</option>
+                                            @endforeach
+                                        @endif
+
+                                    </select>
+
+                                </div>
+
+                        </fieldset>
 
 
 
