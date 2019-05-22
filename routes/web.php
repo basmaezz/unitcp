@@ -12,6 +12,7 @@ Route::post('/search','site\HomeController@searchexam')->name('searchexam');
 
 Route::get('tests','site\HomeController@test');
 Route::get('getdata/{id}','site\HomeController@getData');
+Route::get('download/{id}','site\HomeController@download');//
 
 //Route::get('/home', 'HomeController@index')->name('home');
 

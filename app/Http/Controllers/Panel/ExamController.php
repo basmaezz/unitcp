@@ -130,10 +130,8 @@ class ExamController extends Controller
 
         $exam->save();
 
-
-
-
         $tags=$request->input('tags');
+
 
         foreach($tags as $tag){
             $tag= Tag::firstOrCreate([
@@ -194,7 +192,9 @@ class ExamController extends Controller
                 })
                 ->addColumn('action', function ($item) {
                     return '<div class="row">
-                      <a  title="download" style="margin-right: 10px"  href="'.url("storage/faculty/exams/".$item->files($item->file)).'" class="btn btn-sm btn-primary edit" > <i style="margin-left: 3px" class="fa fa-check-square-o"></i> تحميل</a>
+                      <a  title="download" style="margin-right: 10px"  href="'.asset("storage/faculty/exams/".$item->faculty_id ."/".$item->department_id."/".
+                            $item->class_id ."/".$item->semester_id ."/".$item->material_id ."/".$item->year_id ."/".
+                            $item->files($item->file)).'" class="btn btn-sm btn-primary edit" > <i style="margin-left: 3px" class="fa fa-check-square-o"></i> تحميل</a>
                       <a  title="Edit" style="margin-right: 10px"  href="' . route('panel.exam.edit', ['id' => $item->id]) . '"  class="btn btn-sm btn-primary edit" > <i style="margin-left: 3px" class="fa fa-check-square-o"></i> تعديل</a>
                       <a  data-toggle="reject" title="Delete" style="margin-right: 10px;background-color: #FA2A00;color:white"  data-url="' . admin_url('exam/delete/' . $item->id) . '"   class="btn btn-sm btn-danger delete">  <i style="margin-left:3px" class="fa  fa-trash-o"></i> حذف </a>
                     </div>';

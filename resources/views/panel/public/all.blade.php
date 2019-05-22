@@ -72,6 +72,16 @@
                                          data-layout="button_count">
                                     </div>
 
+                                    <div class="fb-like"
+                                         data-href="{{ url('storage/faculty/exams/'.$exam->files($exam->file)) }}"
+                                         data-layout="button_count">
+                                    </div>
+
+
+
+
+
+
                                 </td>
 
                             </tr>

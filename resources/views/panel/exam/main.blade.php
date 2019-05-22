@@ -28,7 +28,8 @@
 
                     </div><br>
                     <div class="col-md-3">
-                        <a title="Download" href="{{ url('storage/faculty/exams/'.$last->files($last->file)) }}" target="_blank" style="margin-right: 9px;
+                        <a title="Download" href="{{ url('storage/faculty/exams/'.$last->faculty_id ."/".$last->department_id."/".
+                            $last->class_id ."/".$last->semester_id ."/".$last->material_id ."/".$last->year_id ."/".$last->files($last->file)) }}" target="_blank" style="margin-right: 9px;
     height: 42px; margin-bottom: 6px; " data-id="{{ $last->id }}"  class="btn btn-primary download" > تحميل </a>
 
                     </div>
@@ -73,7 +74,8 @@
 
                                 </div><br>
                                 <div class="col-md-3">
-                                    <a title="Download" href="{{ url('storage/faculty/exams/'.$last->files($last->file)) }}" target="_blank" style="margin-right: 9px;
+                                    <a title="Download" href="{{ url('storage/faculty/exams/'.$last->faculty_id ."/".$last->department_id."/".
+                            $last->class_id ."/".$last->semester_id ."/".$last->material_id ."/".$last->year_id ."/".$last->files($last->file)) }}" target="_blank" style="margin-right: 9px;
     height: 42px; margin-bottom: 6px; " data-id="{{ $last->id }}"  class="btn btn-primary download" > تحميل </a>
 
                                 </div>

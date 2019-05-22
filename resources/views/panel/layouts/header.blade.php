@@ -105,8 +105,15 @@
                         <li role="separator" class="divider"></li>
                         <li><a href="#"> إعدادات الحساب <i class="icon-gears drop-icon-item"></i> </a></li>
                         <li role="separator" class="divider"></li>
-                        <li><a href="#"> تسجيل الخروج <i class="fa fa-power-off drop-icon-item"></i> </a></li>
-                    </ul>
+                        <li>
+                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                            {{ @csrf_field() }}
+
+                            </form>
+                        </li>
+
+                        {{--<li><a href="#"> تسجيل الخروج <i class="fa fa-power-off drop-icon-item"></i> </a></li>--}}
+                    </ul>y
                 </li>
                 <!-- Control Sidebar Toggle Button -->
                 <li> <a href="#" data-toggle="control-sidebar"><i class="fa fa-gear animated "></i></a> </li>
