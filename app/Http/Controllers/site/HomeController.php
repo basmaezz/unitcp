@@ -55,14 +55,14 @@ class HomeController extends Controller
         $txtsearch=$request->txtsearch;
 
         $items= Exam::where('file', 'like', '%' . $txtsearch . '%')
-            ->orwhere('key_search_ar', 'like', '%' . $txtsearch . '%')
-            ->orwhere('key_search_en', 'like', '%' . $txtsearch. '%')->get();
+            ->orWhere('key_search_ar', 'like', '%' . $txtsearch . '%')
+            ->orWhere('key_search_en', 'like', '%' . $txtsearch. '%')
+            ->orWhereHas('tags',function($query) use ($txtsearch){
+                $query->where('name_en', 'like', '%' . $txtsearch. '%')
+                    ->orWhere('name_ar', 'like', '%' . $txtsearch. '%');
+            })->get();
 
-        $examTags= Exam::whereHas('tags',function($query) use ($txtsearch){
-            return $query->where('name_ar',$txtsearch);
-        });
-
-        if($items){
+        if(!empty($items)){
             return view('panel.public.all')->with(['item'=>$items]);
         }
         else{

@@ -113,7 +113,7 @@
                         </li>
 
                         {{--<li><a href="#"> تسجيل الخروج <i class="fa fa-power-off drop-icon-item"></i> </a></li>--}}
-                    </ul>y
+                    </ul>
                 </li>
                 <!-- Control Sidebar Toggle Button -->
                 <li> <a href="#" data-toggle="control-sidebar"><i class="fa fa-gear animated "></i></a> </li>

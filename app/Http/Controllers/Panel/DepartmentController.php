@@ -8,6 +8,8 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\CreateDepartment;
 use Yajra\DataTables\DataTables;
+use App\traits\collections;
+
 
 class DepartmentController extends Controller
 {
@@ -27,6 +29,9 @@ class DepartmentController extends Controller
     {
         $data= $request->except('_token');
         $department = Department::create($data);
+        $status = $department ? true : false;
+        collections::log(auth()->user()->id , 'Exam', 'تم اصافه قسم جديد', $department, $status);
+
         return (isset($department)) ? $this->response_api(true, 'تم إضافة قسم بنجاح') : $this->response_api(false, 'حدث خطأ غير متوقع');
     }
 
@@ -41,6 +46,8 @@ class DepartmentController extends Controller
     public function update($id, CreateDepartment $request)
     {
         $department = Department::updateOrCreate(['id' => $id], $request->all());
+        $status = $department ? true : false;
+        collections::log(auth()->user()->id , 'Exam', 'تم تعديل بيانات القسم', $department, $status);
 
         return (isset($department)) ? $this->response_api(true, 'تم تعديل بيانات القسم بنجاح') : $this->response_api(false, 'حدث خطأ غير متوقع');
     }

@@ -9,6 +9,7 @@ use App\Faculty;
 use App\User;
 use App\Exam;
 use App\visitor;
+use App\Log;
 
 class HomeController extends Controller
 {
@@ -19,8 +20,10 @@ class HomeController extends Controller
         $user= User ::all()->count();
         $exam=Exam::all()->count();
         $visitor=visitor::all()->count();
+        $logs= Log::orderBy('id', 'desc')->take(5)->get();
 
-        return view('panel.home',compact('faculty','user','exam','visitor'));
+
+        return view('panel.home',compact('faculty','user','exam','visitor','logs'));
     }
 
 

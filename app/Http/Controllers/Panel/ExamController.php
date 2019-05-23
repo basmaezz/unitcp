@@ -22,6 +22,7 @@ use App\Semester;
 use App\visitor;
 use App\Tag;
 use App\Tag_Exam;
+use App\traits\collections;
 
 
 class ExamController extends Controller
@@ -145,6 +146,8 @@ class ExamController extends Controller
         }
 
 //        $exam = Exam::create($request->all());
+        $status = $exam ? true : false;
+        collections::log(auth()->user()->id , 'Exam', 'تم اضافه امتحان  جديد', $exam, $status);
         return (isset($exam)) ? $this->response_api(true, 'تم الأضافة بنجاح') : $this->response_api(false, 'حدث خطأ غير متوقع');
     }
 

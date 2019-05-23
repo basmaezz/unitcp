@@ -1,8 +1,6 @@
 @extends('panel.layouts.index')
 @section('main')
-    @push('panel_css')
 
-    @endpush
 
     <div class="content">
         <div class="row">
@@ -37,7 +35,7 @@
                     <div class="card-body">
                         <div class="row">
                             <div class="col-md-6 text-white">
-                                <p>عدد الامتحانات المرفوعه</p>
+                                <p>عدد الامتحانات </p>
                                 <h2 class="font-weight-bold">{{$exam}}</h2>
                                 <a href="{{route('panel.exam.all')}}">View Statement</a> </div>
                             <div class="col-md-6 m-t-2 text-right"> <span id="spa-pie"></span> </div>
@@ -49,28 +47,28 @@
         <!-- /.row -->
 
         <div class="row">
-            <div class="col-lg-8">
-                <div class="info-box">
-                    <div class="col-12">
-                        <h5></h5>
-                        <div class="row m-t-2 m-b-2">
-                            <div class="col-md-6">
-                                <h1 class="font-weight-500">$23,743</h1>
-                                <p>Total Revenue</p>
-                            </div>
-                            <div class="col-md-3">
-                                <h6 class="text-blue font-weight-bold">Organic Traffic</h6>
-                                <p class="f-13">+ 40% this month</p>
-                            </div>
-                            <div class="col-md-3">
-                                <h6 class="text-green font-weight-bold">Page Views</h6>
-                                <p class="f-13">+ 25% this month</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div id="earning"></div>
-                </div>
-            </div>
+            {{--<div class="col-lg-8">--}}
+                {{--<div class="info-box">--}}
+                    {{--<div class="col-12">--}}
+                        {{--<h5></h5>--}}
+                        {{--<div class="row m-t-2 m-b-2">--}}
+                            {{--<div class="col-md-6">--}}
+                                {{--<h1 class="font-weight-500">$23,743</h1>--}}
+                                {{--<p>Total Revenue</p>--}}
+                            {{--</div>--}}
+                            {{--<div class="col-md-3">--}}
+                                {{--<h6 class="text-blue font-weight-bold">Organic Traffic</h6>--}}
+                                {{--<p class="f-13">+ 40% this month</p>--}}
+                            {{--</div>--}}
+                            {{--<div class="col-md-3">--}}
+                                {{--<h6 class="text-green font-weight-bold">Page Views</h6>--}}
+                                {{--<p class="f-13">+ 25% this month</p>--}}
+                            {{--</div>--}}
+                        {{--</div>--}}
+                    {{--</div>--}}
+                    {{--<div id="earning"></div>--}}
+                {{--</div>--}}
+            {{--</div>--}}
             <div class="col-lg-4">
                 <div class="card m-b-3">
                     <div class="card-body">
@@ -80,7 +78,7 @@
                             </h5>
                         </div>
                         <div class="m-b-2 f-25">09.5% <i class="ti-bar-chart pull-right f-30"></i> </div>
-                        <div><i class="f-20 ti-upload text-aqua"></i> 35% Increase in 30 Days</div>
+                        {{--<div><i class="f-20 ti-upload text-aqua"></i> 35% Increase in 30 Days</div>--}}
                     </div>
                 </div>
                 {{--<div class="card bg-info m-b-3">--}}
@@ -108,33 +106,23 @@
             <div class="col-lg-5 m-b-3">
                 <div class="card">
                     <div class="card-body">
-                        <h5>Recent Activities <span class="pull-left f-13"><a href="#">View All</a></span></h5>
-                        <div class="message-widget"> <a href="#">
-                                <div class="user-img pull-left"> <img src="/panel/img/img1.jpg" class="img-circle img-responsive" alt="User Image"> <span class="profile-status online pull-right"></span> </div>
+                        <h5>اخر الأنشطه <span class="pull-left f-13"><a href="{{route('panel.log.all')}}">View All</a></span></h5>
+                        <div class="message-widget">
+                            @foreach($logs as $key => $logs)
+                            <a href="#">
+
+                                <div class="user-img pull-left">
+                                    <img src="/panel/img/img1.jpg" class="img-circle img-responsive" alt="User Image">
+                                </div>
+
                                 <div class="mail-contnet">
-                                    <h5>Florence Douglas</h5>
-                                    <span class="mail-desc">Lorem Ipsum is simply dummy text of the printing and type setting industry. Lorem Ipsum has been.</span> <span class="time">9:30 AM</span> </div>
-                            </a> <a href="#">
-                                <div class="user-img pull-left"> <img src="/panel/img/img3.jpg" class="img-circle img-responsive" alt="User Image"> <span class="profile-status invisable pull-right"></span> </div>
-                                <div class="mail-contnet">
-                                    <h5>Florence Douglas</h5>
-                                    <span class="mail-desc">Lorem Ipsum is simply dummy text of the printing and type setting industry. Lorem Ipsum has been.</span> <span class="time">10:30 AM</span> </div>
-                            </a> <a href="#">
-                                <div class="user-img pull-left"> <img src="/panel/img/img4.jpg" class="img-circle img-responsive" alt="User Image"> <span class="profile-status offline pull-right"></span> </div>
-                                <div class="mail-contnet">
-                                    <h5>Florence Douglas</h5>
-                                    <span class="mail-desc">Lorem Ipsum is simply dummy text of the printing and type setting industry. Lorem Ipsum has been.</span> <span class="time">12:30 AM</span> </div>
-                            </a> <a href="#">
-                                <div class="user-img pull-left"> <img src="/panel/img/img3.jpg" class="img-circle img-responsive" alt="User Image"> <span class="profile-status invisable pull-right"></span> </div>
-                                <div class="mail-contnet">
-                                    <h5>Florence Douglas</h5>
-                                    <span class="mail-desc">Lorem Ipsum is simply dummy text of the printing and type setting industry. Lorem Ipsum has been.</span> <span class="time">10:30 AM</span> </div>
-                            </a> <a href="#">
-                                <div class="user-img pull-left"> <img src="/panel/img/img1.jpg" class="img-circle img-responsive" alt="User Image"> <span class="profile-status online pull-right"></span> </div>
-                                <div class="mail-contnet">
-                                    <h5>Florence Douglas</h5>
-                                    <span class="mail-desc">Lorem Ipsum is simply dummy text of the printing and type setting industry. Lorem Ipsum has been.</span> <span class="time">9:30 AM</span> </div>
-                            </a></div>
+                                    <h5 style="font-weight: bold;">{{$logs->who_users->name}}</h5>
+                                    <span class="mail-desc" style="color: #0E7AC4;">{{$logs->what}}</span>
+                                    <span class="time">{{$logs->created_at}} AM</span>
+                                </div>
+                            </a>
+                                @endforeach
+                        </div>
                     </div>
                 </div>
             </div>

@@ -105,6 +105,7 @@ class Exam extends Model
     }
 
     public function tags(){
-        return $this->hasMany(Tag::class,'tag_exams');
+        return $this->belongsToMany(Tag::class,'tag_exams','exam_id','tag_id');
     }
+
 }

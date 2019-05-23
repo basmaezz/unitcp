@@ -65,7 +65,7 @@
                                 <th scope="row">{{ $key +1 }}</th>
                                 <td>{{ getFullNamearray($exam->faculty_id, $exam->class_id, $exam->material_id, $exam->semester_id, $exam->year_id) }}</td>
                                 <td>
-                                    <a title="Download" href="{{ url('storage/faculty/exams/'.$exam->files($exam->file)) }}" target="_blank" style="margin-right: 10px" data-id="{{ $exam->id }}"  class="btn btn-primary download" > تحميل </a>
+                                    <a title="Download" href="{{ url('storage/faculty/exams/'.$exam->faculty_id."/".$exam->department_id."/".$exam->class_id."/".$exam->semester_id."/".$exam->year_id."/".$exam->files($exam->file)) }}" target="_blank" style="margin-right: 10px" data-id="{{ $exam->id }}"  class="btn btn-primary download" > تحميل </a>
 
                                     <div class="fb-share-button"
                                          data-href="{{ url('storage/faculty/exams/'.$exam->files($exam->file)) }}"

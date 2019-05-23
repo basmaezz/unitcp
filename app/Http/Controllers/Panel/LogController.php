@@ -24,7 +24,7 @@ class LogController extends Controller
     public function get_log_data_table(log $items)
     {
         $logs= Log::get();
-        dd($logs);
+//        dd($logs);
 
         try {
             return DataTables::of($items)->editColumn('id', function ($item) {

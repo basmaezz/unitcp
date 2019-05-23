@@ -33,6 +33,8 @@ class ClassesController extends Controller
     public function update($id, CreateClasses $request)
     {
         $classes = classes::updateOrCreate(['id' => $id], $request->all());
+        $status = $classes ? true : false;
+        collections::log(auth()->user()->id , 'Classes', 'تم تعديل بيانات فرقه دراسيه ', $classes, $status);
 
         return (isset($classes)) ? $this->response_api(true, 'تمت عمليه التعديل بنجاح') : $this->response_api(false, 'حدث خطأ غير متوقع');
     }
@@ -42,7 +44,7 @@ class ClassesController extends Controller
         $data= $request->except('_token');
         $classes = Classes::create($data);
         $status = $classes ? true : false;
-        collections::log(auth()->user()->id , 'Classes', 'تم اضافه فصل دراسى جديد', $classes, $status);
+        collections::log(auth()->user()->id , 'Classes', 'تم اضافه فرقه دراسيه جديده', $classes, $status);
 
         return (isset($classes)) ? $this->response_api(true, 'تمت عمليه الاضافه  بنجاح') : $this->response_api(false, 'حدث خطأ غير متوقع');
     }
@@ -50,6 +52,8 @@ class ClassesController extends Controller
     public function delete($id)
     {
         $item = classes::find($id);
+        $status = $item ? true : false;
+        collections::log(auth()->user()->id , 'Classes', 'تم حذف بيانات فرقه دراسيه ', $item, $status);
         return (isset($item) && $item->delete()) ? $this->response_api(true, 'تمت عملية الحذف بنجاح') : $this->response_api(false, 'حدث خطأ غير متوقع');
     }
 

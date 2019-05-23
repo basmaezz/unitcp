@@ -9,6 +9,9 @@ use App\Faculty;
 use App\Semester;
 use Yajra\DataTables\DataTables;
 use App\Http\Requests\CreateSemester;
+use App\traits\collections;
+
+
 
 class SemesterController extends Controller
 {
@@ -26,6 +29,8 @@ class SemesterController extends Controller
     {
 
         $semester = Semester::create($request->all());
+        $status = $semester ? true : false;
+        collections::log(auth()->user()->id , 'Exam', 'تم اصافه فصل دراسى جديد', $semester, $status);
 
         return (isset($semester)) ? $this->response_api(true, 'تم إضافة فصل دراسى جديد بنجاح') : $this->response_api(false, 'حدث خطأ غير متوقع');
     }
@@ -42,6 +47,9 @@ class SemesterController extends Controller
     public function update($id, CreateSemester $request)
     {
         $semester = Semester::updateOrCreate(['id' => $id], $request->all());
+        $status = $semester ? true : false;
+        collections::log(auth()->user()->id , 'Exam', 'تم تعديل بيانات الفصل الدراسى', $semester, $status);
+
 
         return (isset($semester)) ? $this->response_api(true, 'تم تعديل بيانات الفصل الدراسى بنجاح') : $this->response_api(false, 'حدث خطأ غير متوقع');
     }

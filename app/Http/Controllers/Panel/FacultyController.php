@@ -8,6 +8,8 @@ use App\faculty;
 use Yajra\DataTables\DataTables;
 use App\Http\Requests\CreateFaculty;
 use App\Exam;
+use App\traits\collections;
+
 
 class FacultyController extends Controller
 {
@@ -25,6 +27,9 @@ class FacultyController extends Controller
 
         $faculty = Faculty::create($request->all());
 
+        $status = $faculty ? true : false;
+        collections::log(auth()->user()->id , 'Faculty', 'تم إضافة كليه جديده', $faculty, $status);
+
         return (isset($faculty)) ? $this->response_api(true, 'تم إضافة كليه بنجاح') : $this->response_api(false, 'حدث خطأ غير متوقع');
     }
 
@@ -38,6 +43,8 @@ class FacultyController extends Controller
     public function update($id, CreateFaculty $request)
     {
         $faculty = Faculty::updateOrCreate(['id' => $id], $request->all());
+        $status = $faculty ? true : false;
+        collections::log(auth()->user()->id , 'Faculty', 'تم تعديل بيانات الكليه', $faculty, $status);
 
         return (isset($faculty)) ? $this->response_api(true, 'تم تعديل بيانات الكليه بنجاح') : $this->response_api(false, 'حدث خطأ غير متوقع');
     }

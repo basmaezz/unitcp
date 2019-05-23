@@ -151,17 +151,17 @@
                 </ul>
             </li>
 
-            <li class="treeview {{is_element_active('/service/i')}}">
-                <a href="#">
-                    <i class="ti-bar-chart-alt"></i>
-                    <span>التاجات</span>
-                    <span class="pull-right-container"> <i class="fa fa-angle-left pull-right"></i> </span>
-                </a>
-                <ul class="treeview-menu">
-                    <li class="{{is_active('tag/main')}}"><a href=" {{route('panel.tag.create')}}"><i class="fa fa-angle-left"></i> اضافه جديد </a></li>
-                    <li class="{{is_active('tag/main')}}"><a href="{{route('panel.tag.all')}} "><i class="fa fa-angle-left"></i> عرض الكل </a></li>
-                </ul>
-            </li>
+            {{--<li class="treeview {{is_element_active('/service/i')}}">--}}
+                {{--<a href="#">--}}
+                    {{--<i class="ti-bar-chart-alt"></i>--}}
+                    {{--<span>التاجات</span>--}}
+                    {{--<span class="pull-right-container"> <i class="fa fa-angle-left pull-right"></i> </span>--}}
+                {{--</a>--}}
+                {{--<ul class="treeview-menu">--}}
+                    {{--<li class="{{is_active('tag/main')}}"><a href=" {{route('panel.tag.create')}}"><i class="fa fa-angle-left"></i> اضافه جديد </a></li>--}}
+                    {{--<li class="{{is_active('tag/main')}}"><a href="{{route('panel.tag.all')}} "><i class="fa fa-angle-left"></i> عرض الكل </a></li>--}}
+                {{--</ul>--}}
+            {{--</li>--}}
 
             <li class="treeview {{is_element_active('/service/i')}}">
                 <a href="#">
