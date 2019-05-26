@@ -35,6 +35,7 @@ class UserController extends Controller
         $request->faculty_id ? $user->permission = 2 : $user->permission = 1;
         $user->save();
 //        $user = User::create($request->all());
+//        return view('panel.users.all');
 
         return (isset($user)) ? $this->response_api(true, 'تم إضافة مسخدم جديد بنجاح') : $this->response_api(false, 'حدث خطأ غير متوقع');
     }
