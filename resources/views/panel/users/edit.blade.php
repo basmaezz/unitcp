@@ -19,6 +19,40 @@
                 {{--<input type="hidden" id="photo" name="image" value="{{$post->image}}">--}}
                 <div class="card">
                     <div class="card-body">
+
+                        <div class="col-md-12">
+                            <div class="form-group mt-20 mb-20">
+                                <label><strong>نوع المسستخدم </strong></label> <br>
+                                <label class="radio-inline">
+                                    <input type="radio"  value="0" name="user" id="radio-admin">
+                                    مدير نظام
+                                </label>
+                                <label class="radio-inline">
+                                    <input type="radio" value="1" name="user" id="radio-user">
+                                    مستخدم وحده فرعيه
+                                </label>
+                            </div>
+                        </div>
+
+
+                        @php
+                            $items = get_fac_data();
+                        @endphp
+
+                        <fieldset class="form-group  hidden" id="sub-admin" >
+                            <label>اسم الكليه </label>
+                            <select class="form-control "  name="faculty_id" data-placeholder="إختيار الكليه" required>
+                                <option disabled selected hidden>إختيار الكليه</option>
+                                @if(isset($items) && $items->count() > 0)
+                                    @foreach($items as $item)
+
+                                        <option value="{{$item->id}}" >{{get_text_locale($item,'name_ar')}}</option>
+                                    @endforeach
+                                @endif
+                            </select>
+                        </fieldset>
+
+
                         <fieldset class="form-group">
                             <label>الأسم</label>
                             <input class="form-control"  type="text" name="name" placeholder="الرجاء إدخال الأسم"  value="{{$user->name}}" required>
@@ -39,6 +73,16 @@
                             <input class="form-control"  type="password" name="password" placeholder="الرجاء إدخال كله المرور"  value="" required>
                         </fieldset>
 
+                        <p style="color: #0d6aad;">اعاده تعيين كلمه المرور!</p>
+
+                        {{--<fieldset class="form-group">--}}
+                            {{--<label class="btn btn-outline-primary" id="chang-pw" > اعاده تعيين كلمه المرور</label>--}}
+                        {{--</fieldset>--}}
+
+                        <fieldset class="form-group hidden" id="chg-pw">
+                            <label>كلمه المرور الجديده</label>
+                            <input class="form-control"  type="password" name="password" placeholder="الرجاء إدخال كله المرور"  value="" required>
+                        </fieldset>
 
 
                         <fieldset class="form-group">
@@ -50,6 +94,11 @@
                                 <option value="{{$user->active}}"  {{is_selected($user->active,$user->active==0) }} }} >موقوف</option>
 
                             </select>
+                        </fieldset>
+
+                        <fieldset class="form-group">
+                            <label>الصوره الشخصيه</label>
+                            <input class="form-control"  type="file" name="img">
                         </fieldset>
 
 
@@ -82,6 +131,30 @@
         {!! HTML::script('panel/js/jasny.js') !!}
         {!! HTML::script('panel/plugins/summernote/summernote-bs4.js') !!}
         {!! HTML::script('/panel/js/post.js') !!}
+
+
+        <script>
+            $(document).ready(function() {
+
+                $('#radio-user').change(function() {
+                    $('#sub-admin').removeClass('hidden');
+                });
+                $('#radio-admin').change(function() {
+                    $('#sub-admin').addClass('hidden');
+                });
+
+
+
+            });
+
+        </script>
+        <script>
+            $(document).ready(function(){
+                $("p").click(function(){
+                    $('#chg-pw').removeClass('hidden');
+                });
+            });
+        </script>
 
     @endpush
 @stop

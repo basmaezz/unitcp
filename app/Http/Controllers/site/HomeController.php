@@ -63,7 +63,7 @@ class HomeController extends Controller
                     ->orWhere('name_ar', 'like', '%' . $txtsearch. '%');
             })->get();
 
-        dd($items);
+//        dd($items);
         if(!empty($items)){
             return view('panel.public.all')->with(['item'=>$items]);
         }

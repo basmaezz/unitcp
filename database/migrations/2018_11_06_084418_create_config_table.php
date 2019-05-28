@@ -17,6 +17,7 @@ class CreateConfigTable extends Migration
             $table->increments('id');
             $table->string('name')->unique();
             $table->text('action');
+            $table->text('image');
             $table->softDeletes();
             $table->timestamps();
         });

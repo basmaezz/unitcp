@@ -77,7 +77,9 @@
                                 <button type="button" class="btn btn-sm btn-rounded btn-info pull-left">{{$visitor}}</button>
                             </h5>
                         </div>
-                        <div class="m-b-2 f-25">09.5% <i class="ti-bar-chart pull-right f-30"></i> </div>
+
+
+                        {{--<div class="m-b-2 f-25">09.5% <i class="ti-bar-chart pull-right f-30"></i> </div>--}}
                         {{--<div><i class="f-20 ti-upload text-aqua"></i> 35% Increase in 30 Days</div>--}}
                     </div>
                 </div>
@@ -112,7 +114,7 @@
                             <a href="#">
 
                                 <div class="user-img pull-left">
-                                    <img src="/panel/img/img1.jpg" class="img-circle img-responsive" alt="User Image">
+                                    <img src="{{url('uploads/users/profiles/'.$logs->who_users->img)}}" class="img-circle img-responsive" alt="User Image">
                                 </div>
 
                                 <div class="mail-contnet">

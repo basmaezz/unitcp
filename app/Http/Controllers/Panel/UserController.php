@@ -31,11 +31,18 @@ class UserController extends Controller
         $user->username=$request->username;
         $user->email=$request->email;
         $user->password = bcrypt($request->password);
+
+        $imgprofile = $request->file('img');
+        $img_size = $imgprofile->getClientSize();
+        $extension = $imgprofile->getClientOriginalExtension();
+
+        $originalName = str_replace('.' . $extension, '', $imgprofile->getClientOriginalName());
+        $imgprofile->move(public_path('uploads/users/profiles/'),$originalName. '.'.$extension);
+
+        $user->img= $originalName . '.' . $extension;
         $user->active=$request->active;
         $request->faculty_id ? $user->permission = 2 : $user->permission = 1;
         $user->save();
-//        $user = User::create($request->all());
-//        return view('panel.users.all');
 
         return (isset($user)) ? $this->response_api(true, 'تم إضافة مسخدم جديد بنجاح') : $this->response_api(false, 'حدث خطأ غير متوقع');
     }
@@ -56,6 +63,16 @@ class UserController extends Controller
         $user->email=$request->email;
         $user->password = bcrypt($request->password);
         $user->active=$request->active;
+        $imgprofile = $request->file('img');
+        $img_size = $imgprofile->getClientSize();
+        $extension = $imgprofile->getClientOriginalExtension();
+
+        $originalName = str_replace('.' . $extension, '', $imgprofile->getClientOriginalName());
+        $imgprofile->move(public_path('uploads/users/profiles/'),$originalName. '.'.$extension);
+
+        $user->img= $originalName . '.' . $extension;
+        $user->active=$request->active;
+        $request->faculty_id ? $user->permission = 2 : $user->permission = 1;
         $user->save();
 
         return (isset($user)) ? $this->response_api(true, 'تم التعديل بنجاح') : $this->response_api(false, 'حدث خطأ غير متوقع');
@@ -77,9 +94,12 @@ class UserController extends Controller
             return DataTables::of($items)->editColumn('id', function ($item) {
                 return $item->id;
             })->editColumn('active', function ($item) {
-                return ($item->active == 1) ? 'مفعل' : 'غير مفعل';//Done what it the problem?
+                return '<div class="row"> test</div>';
 
-            })->editColumn('faculty_id', function ($item) {
+//                return ($item->active == 1) ? 'مفعل' : 'غير مفعل';//Done what it the problem?
+
+            })->
+            editColumn('faculty_id', function ($item) {
                 if(!empty($item->faculty))
                 {
                     return ($item['faculty']->name_ar);
@@ -92,6 +112,8 @@ class UserController extends Controller
             })->addColumn('action', function ($item) {
                 return '<div class="row">
                       <a  title="Edit" style="margin-right: 10px"  href="' .route('panel.users.edit', ['id' => $item->id]) . '"  class="btn btn-sm btn-primary edit" > <i style="margin-left: 3px" class="fa fa-check-square-o"></i> تعديل</a>
+                       <a  data-toggle="reject" title="Delete" style="margin-right: 10px;background-color: #FA2A00;color:white"  data-url="' . admin_url('user/delete/' . $item->id) . '"   class="btn btn-sm btn-danger delete">  <i style="margin-left:3px" class="fa  fa-trash-o"></i> حذف </a>
+
                     </div>';
             })->rawColumns([ 'action'])->make(true);
         } catch (\Exception $e) {

@@ -11,4 +11,5 @@ class Log extends Model
         return $this->belongsTo('App\User', 'who', 'id');
     }
 
+
 }

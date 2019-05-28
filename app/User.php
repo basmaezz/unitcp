@@ -10,6 +10,8 @@ use Zizaco\Entrust\Traits\EntrustUserTrait;
 
 class User extends Authenticatable
 {
+    use \HighIdeas\UsersOnline\Traits\UsersOnlineTrait;
+
     use Notifiable;
     use EntrustUserTrait { restore as private restoreA; }
     use SoftDeletes { restore as private restoreB; }

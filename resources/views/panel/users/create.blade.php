@@ -12,7 +12,7 @@
     @endpush
 
     <div class="content">
-        {!! Form::open(['id'=>'form','method'=>'POST','url'=>route('panel.users.create'),'to'=>route('panel.users.all')]) !!}
+        {!! Form::open(['id'=>'form','method'=>'POST','url'=>route('panel.users.create'),'to'=>route('panel.users.all'),'enctype'=>('multipart/form-data')]) !!}
         <div class="row">
             <div class="col-md-8">
                 {{--<input type="hidden" id="photo" name="image" value="{{$post->image}}">--}}
@@ -83,6 +83,11 @@
                                 <option value="1" name="active">فعال</option>
                                 <option value="0" name="active">موقوف</option>
                             </select>
+                        </fieldset>
+
+                        <fieldset class="form-group">
+                            <label>الصوره الشخصيه</label>
+                            <input class="form-control"  type="file" name="img">
                         </fieldset>
 
 

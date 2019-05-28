@@ -9,7 +9,7 @@
         <!-- mini logo for sidebar mini 50x50 pixels -->
         <span class="logo-mini"><img src="/panel/img/logo-small.png" alt=""></span>
         <!-- logo for regular state and mobile devices -->
-        <span class="logo-lg"><img src="/panel/img/logo.png" alt=""></span> </a>
+        <span class="logo-lg"><img src="/panel/img/logoo.png" alt=""></span> </a>
     {{--/*********Meta Tag For Upload */--}}
        <meta name="csrf-token" content="{{ csrf_token() }}">
     <!-- Header Navbar -->
@@ -95,10 +95,13 @@
                     </ul>
                 </li>
                 <!-- User Account  -->
-                <li class="dropdown user user-menu p-ph-res"> <a href="#" class="dropdown-toggle" data-toggle="dropdown"> <img src="/panel/img/img1.jpg" class="user-image" alt="User Image"> <span class="hidden-xs">{{$admin->name}}</span> </a>
+                <li class="dropdown user user-menu p-ph-res"> <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+
+                        <img src="{{url('uploads/users/profiles/'.$admin->img)}}" class="user-image" alt="User Image">
+                        <span class="hidden-xs">{{$admin->name}}</span> </a>
                     <ul class="dropdown-menu">
                         <li class="user-header">
-                            <div class="pull-left user-img"><img src="/panel/img/img1.jpg" class="img-responsive img-circle" alt="User"></div>
+                            <div class="pull-left user-img"><img src="" class="img-responsive img-circle" alt="User"></div>
                             <p class="text-left"> {{$admin->name}} <small> {{ $admin->email }}</small> </p>
                         </li>
                         <li><a href="#">الملف الشخصي <i class="icon-profile-male drop-icon-item"></i>  </a></li>

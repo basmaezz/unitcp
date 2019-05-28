@@ -28,9 +28,9 @@
                             <label>ايقاف التحميل</label> <br><br>
                             <div class="radio" name="upload">
                                 <label>
-                                    <input type="radio" name="upload" value="off"
+                                    <input type="radio" name="upload" value="off" id="upload-off"
                                            {{ \App\Config::where('name', 'upload')->first()->config == 'off' ? "checked" : ""}}> ايقاف
-                                        <input type="radio" name="upload" value="on"
+                                        <input type="radio" name="upload" value="on" id="upload-on"
                                        {{ \App\Config::where('name', 'upload')->first()->config == 'on' ? "checked" : ""}}> تشغيل
 
 
@@ -38,6 +38,11 @@
                                 </label>
                             </div>
 
+                        </fieldset>
+
+                        <fieldset class="form-group hidden" id="img-off">
+                            <label>اختر صوره </label>
+                            <input class="form-control"  type="file" name="img-off">
                         </fieldset>
 
 
@@ -71,38 +76,45 @@
         {!! HTML::script('panel/plugins/summernote/summernote-bs4.js') !!}
         {!! HTML::script('/panel/js/post.js') !!}
 
-<script>
+{{--<script>--}}
 
 
-    $(document).ready(function() {
+    {{--$(document).ready(function() {--}}
 
-        $('select[name="upload"]').on('change', function(){
+        {{--$('select[name="upload"]').on('change', function(){--}}
 
+                {{--$.ajax({--}}
+                    {{--url: '/admin/exam/create/getExamData/',--}}
+                    {{--type:"GET",--}}
+                    {{--dataType:"json",--}}
+                    {{--success:function(response) {--}}
+                        {{--if(response.status)--}}
+                        {{--{--}}
+                            {{--// alert('ok');--}}
+                            {{--$('#selectors_div').html(response.item);--}}
+                        {{--}--}}
+                    {{--},--}}
 
-                $.ajax({
-                    url: '/admin/exam/create/getExamData/',
-                    type:"GET",
-                    dataType:"json",
-                    success:function(response) {
-                        if(response.status)
-                        {
-                            // alert('ok');
-                            $('#selectors_div').html(response.item);
-                        }
-                    },
+                {{--});--}}
 
+        {{--});--}}
+    {{--});--}}
+
+{{--</script>--}}
+
+        <script>
+            $(document).ready(function() {
+
+                $('#upload-off').change(function() {
+                    $('#img-off').removeClass('hidden');
+                });
+                $('#upload-on').change(function() {
+                    $('#img-off').addClass('hidden');
                 });
 
+            });
 
-        });
+        </script>
 
-
-
-    });
-
-
-
-
-</script>
     @endpush
 @stop

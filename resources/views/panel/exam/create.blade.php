@@ -13,6 +13,16 @@
         {!! HTML::style('/panel/css/select2/select2.min.css') !!}
         {!! HTML::style('/panel/css/select2/select2-bootstrap.min.css') !!}
     @endpush
+    @if(\App\config::where('name', 'upload')->first()->config == 'off')
+    <div class="content">
+       <div class="container">
+           <div class="row">
+               <img src="{{url('settings/under-upgrade.jpg')}}" style="float: right; padding-right: -10px;">
+           </div>
+
+       </div>
+    </div>
+    @else
 
     <div class="content">
         {!! Form::open(['id'=>'form','method'=>'POST','url'=>route('panel.exam.create'),'to'=>route('panel.exam.main')]) !!}
@@ -105,6 +115,7 @@
         {!! Form::close() !!}
 
     </div>
+    @endif
 
 
     @push('panel_js')
