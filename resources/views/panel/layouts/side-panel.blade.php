@@ -10,7 +10,7 @@
             <div class="info">
                 <p>{{$admin->username}}</p>
                 <a href="#"><i class="fa fa-envelope"></i></a>
-                <a href="#"><i class="fa fa-gear"></i></a>
+                <a href="{{route('panel.users.profile',auth()->id())}}"><i class="fa fa-gear"></i></a>
                 {{--<a href=""><i class="fa fa-power-off"></i></a>--}}
 
                 <div class="btn-group">

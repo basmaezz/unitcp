@@ -14,6 +14,9 @@ Route::middleware(['authpermission','checkactive'])->group(function() {
         });
         Route::get('status/{id}', ['as' => 'panel.users.status', 'uses' => 'UserController@status']);
         Route::delete('/delete/{id}', ['as' => 'panel.users.delete', 'uses' => 'UserController@delete']);
+        Route::get('/{profile}', ['as' => 'panel.users.profile', 'uses' => 'UserController@profile']);
+        Route::post('/{profile}', ['as' => 'panel.users.editprofile', 'uses' => 'UserController@editprof']);
+//        Route::get('/profile/{id}', ['as' => 'panel.users.profile', 'uses' => 'UserController@profile']);
         Route::prefix('/edit')->group(function () {
             Route::get('/{user}', ['as' => 'panel.users.edit', 'uses' => 'UserController@edit']);
             Route::put('/{user}', ['as' => 'panel.users.edit', 'uses' => 'UserController@update']);

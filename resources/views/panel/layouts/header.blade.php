@@ -28,30 +28,30 @@
                         <li class="header">You have 4 new messages</li>
                         <li>
                             <ul class="menu">
-                                <li><a href="#">
-                                        <div class="pull-left"><img src="/panel/img/img1.jpg" class="img-circle" alt="User Image"> <span class="profile-status online pull-right"></span></div>
-                                        <h4>Alex C. Patton</h4>
-                                        <p>I've finished it! See you so...</p>
-                                        <p><span class="time">9:30 AM</span></p>
-                                    </a></li>
-                                <li><a href="#">
-                                        <div class="pull-left"><img src="/panel/img/img3.jpg" class="img-circle" alt="User Image"> <span class="profile-status offline pull-right"></span></div>
-                                        <h4>Nikolaj S. Henriksen</h4>
-                                        <p>I've finished it! See you so...</p>
-                                        <p><span class="time">10:15 AM</span></p>
-                                    </a></li>
-                                <li><a href="#">
-                                        <div class="pull-left"><img src="/panel/img/img2.jpg" class="img-circle" alt="User Image"> <span class="profile-status away pull-right"></span></div>
-                                        <h4>Kasper S. Jessen</h4>
-                                        <p>I've finished it! See you so...</p>
-                                        <p><span class="time">8:45 AM</span></p>
-                                    </a></li>
-                                <li><a href="#">
-                                        <div class="pull-left"><img src="/panel/img/img4.jpg" class="img-circle" alt="User Image"> <span class="profile-status busy pull-right"></span></div>
-                                        <h4>Florence S. Kasper</h4>
-                                        <p>I've finished it! See you so...</p>
-                                        <p><span class="time">12:15 AM</span></p>
-                                    </a></li>
+                                {{--<li><a href="#">--}}
+                                        {{--<div class="pull-left"><img src="/panel/img/img1.jpg" class="img-circle" alt="User Image"> <span class="profile-status online pull-right"></span></div>--}}
+                                        {{--<h4>Alex C. Patton</h4>--}}
+                                        {{--<p>I've finished it! See you so...</p>--}}
+                                        {{--<p><span class="time">9:30 AM</span></p>--}}
+                                    {{--</a></li>--}}
+                                {{--<li><a href="#">--}}
+                                        {{--<div class="pull-left"><img src="/panel/img/img3.jpg" class="img-circle" alt="User Image"> <span class="profile-status offline pull-right"></span></div>--}}
+                                        {{--<h4>Nikolaj S. Henriksen</h4>--}}
+                                        {{--<p>I've finished it! See you so...</p>--}}
+                                        {{--<p><span class="time">10:15 AM</span></p>--}}
+                                    {{--</a></li>--}}
+                                {{--<li><a href="#">--}}
+                                        {{--<div class="pull-left"><img src="/panel/img/img2.jpg" class="img-circle" alt="User Image"> <span class="profile-status away pull-right"></span></div>--}}
+                                        {{--<h4>Kasper S. Jessen</h4>--}}
+                                        {{--<p>I've finished it! See you so...</p>--}}
+                                        {{--<p><span class="time">8:45 AM</span></p>--}}
+                                    {{--</a></li>--}}
+                                {{--<li><a href="#">--}}
+                                        {{--<div class="pull-left"><img src="/panel/img/img4.jpg" class="img-circle" alt="User Image"> <span class="profile-status busy pull-right"></span></div>--}}
+                                        {{--<h4>Florence S. Kasper</h4>--}}
+                                        {{--<p>I've finished it! See you so...</p>--}}
+                                        {{--<p><span class="time">12:15 AM</span></p>--}}
+                                    {{--</a></li>--}}
                             </ul>
                         </li>
                         <li class="footer"><a href="#">View All Messages</a></li>
@@ -119,7 +119,7 @@
                     </ul>
                 </li>
                 <!-- Control Sidebar Toggle Button -->
-                <li> <a href="#" data-toggle="control-sidebar"><i class="fa fa-gear animated "></i></a> </li>
+                <li> <a href="{{route('panel.users.profile',auth()->id())}}" data-toggle="control-sidebar"><i class="fa fa-gear animated "></i></a> </li>
             </ul>
         </div>
     </nav>

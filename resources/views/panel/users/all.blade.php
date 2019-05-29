@@ -27,7 +27,7 @@
                             <th  width="5%">#</th>
                             <th width="15%">الأسم</th>
                             <th width="15%">البريد الالكترونى </th>
-                            <th width="15%">الحاله </th>
+                            {{--<th width="15%">الحاله </th>--}}
                             <th width="15%">الكليه </th>
                             <th width="15%">تاريخ الإضافة</th>
                             <th width="25%">#</th>
@@ -87,7 +87,7 @@
                         {data: 'id', name: 'id'},
                         {data: 'name', name: 'name'},
                         {data: 'email', name: 'email'},
-                        {data: 'active', name: 'active'},
+                        // {data: 'active', name: 'active'},
                         {data: 'faculty_id', name: 'faculty_id'},
                         {data: 'created_at', name: 'created_at'},
                         {data: 'action', name: 'action'}

@@ -101,12 +101,13 @@ class UserController extends Controller
         try {
             return DataTables::of($items)->editColumn('id', function ($item) {
                 return $item->id;
-            })->editColumn('active', function ($item) {
-//                return '<div class="row"> test</div>';
-
-                return ($item->active == 1) ? 'مفعل' : 'غير مفعل';//Done what it the problem?
-
             })->
+//            addColumn('active', function ($item) {
+////                return '<div class="row"> test</div>';
+//
+//                return ($item->active == 1) ? 'مفعل' : 'غير مفعل';//Done what it the problem?
+//
+//            })->
             editColumn('faculty_id', function ($item) {
                 if(!empty($item->faculty))
                 {
@@ -121,11 +122,12 @@ class UserController extends Controller
                 if ($item->active == 1) {
                     $statuss = '<a  style="margin-right: 10px;background-color: #FA2A00;color:white"  href="' . admin_url('user/status/' . $item->id) . '"   class="btn btn-sm btn-success ">  <i style="margin-left:3px" class="fa  fa-trash-o"></i> نعطيل </a>';
                 } else {
-                    $statuss = '<a  style="margin-right: 10px;background-color: #37fa3d;color:white"  href="' . admin_url('user/status/' . $item->id) . '"   class="btn btn-sm btn-success ">  <i style="margin-left:3px" class="fa  fa-trash-o"></i> تفعيل </a>';
+                    $statuss = '<a  style="margin-right: 10px;background-color: #5cbdc1;color:white"  href="' . admin_url('user/status/' . $item->id) . '"   class="btn btn-sm btn-success ">  <i style="margin-left:3px" class="fa  fa-trash-o"></i> تفعيل </a>';
                 }
                 return '<div class="row">
                       <a  title="Edit" style="margin-right: 10px"  href="' .route('panel.users.edit', ['id' => $item->id]) . '"  class="btn btn-sm btn-primary edit" > <i style="margin-left: 3px" class="fa fa-check-square-o"></i> تعديل</a>
                        <a  data-toggle="reject" title="Delete" style="margin-right: 10px;background-color: #FA2A00;color:white"  data-url="' . admin_url('user/delete/' . $item->id) . '"   class="btn btn-sm btn-danger delete">  <i style="margin-left:3px" class="fa  fa-trash-o"></i> حذف </a>
+            
                        '.$statuss.'
                     </div>';
             })->rawColumns([ 'action'])->make(true);
@@ -141,16 +143,47 @@ class UserController extends Controller
             $user = User::find($id);
             if($user->active == 1)
             {
-                $status = 'is Inactive';
+                $status = 'تم ايقاف الحساب';
                 $user->active = 0;
             } else {
-                $status = 'is Active';
+                $status = 'تم تفعيل الحساب';
                 $user->active = 1;
             }
             $user->save();
             return redirect()->route('panel.users.all')->with('status', $status)->send();
         }
         return redirect()->route('panel.users.all')->with('status', 'Isn\'t numeric' )->send();
+    }
+
+    public function profile($id){
+        $data['user'] = User::find($id);
+        return (isset($data['user'])) ? view('panel.users.profile', $data) : redirect()->route(get_current_locale() . '.panel.dashboard');
+    }
+
+    public function editprof($id, CreateUser $request){
+
+        $user= new User();
+        $user = User::updateOrCreate(['id' => $id]);
+        $user->name=$request->name;
+        $user->username=$request->username;
+        $user->email=$request->email;
+        $user->password = bcrypt($request->password);
+
+        $imgprofile = $request->file('img');
+        $img_size = $imgprofile->getClientSize();
+        $extension = $imgprofile->getClientOriginalExtension();
+
+        $originalName = str_replace('.' . $extension, '', $imgprofile->getClientOriginalName());
+        $imgprofile->move(public_path('uploads/users/profiles/'),$originalName. '.'.$extension);
+
+        $user->img= $originalName . '.' . $extension;
+        $user->active='1';
+        $request->repeat_pw ?  $user->password=bcrypt($request->password)  : bcrypt($request->password);
+
+        $user->save();
+
+        return (isset($user)) ? $this->response_api(true, 'تم التعديل بنجاح') : $this->response_api(false, 'حدث خطأ غير متوقع');
+
     }
 
 
