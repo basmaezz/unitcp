@@ -25,3 +25,7 @@ Route::prefix('public')->group(function () {
     Route::post('download/exam', 'site\HomeController@getDownload')->name('downloadexamx');
     Route::get('home','site\HomeController@home')->name('mostdownload');
 });
+
+
+Route::view('try','public.Index');
+Route::view('tst','public.search');
