@@ -31,12 +31,13 @@ class PanelLoginController extends Controller
 
     public function login(Request $request)
     {
+
         $this->validate($request, [
-            'username' => 'required|min:3',
+            'username' => 'required|min:1',
             'password' => 'required|min:3'
         ]);
         $credentials = ['username' => $request->username, 'password' => $request->password];
-        if (Auth::guard()->attempt($credentials, $request->has('remember'))){
+        if (Auth::attempt($credentials, $request->has('remember'))){
 
             return redirect()->route('panel.dashboard');
         }

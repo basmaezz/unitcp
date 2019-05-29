@@ -27,14 +27,15 @@ form.validate({
                 success: function (response) {
                     $('.upload-spinn').addClass('hidden');
                     if (response.status) {
-                        customSweetAlert(
-                            'success',
-                            response.message,
-                            response.item,
-                            function (event) {
-                                window.location = redirectUrl
-                            }
-                        );
+                        window.location = redirectUrl
+                        // customSweetAlert(
+                        //     'success',
+                        //     response.message,
+                        //     response.item,
+                        //     function (event) {
+                        //         window.location = redirectUrl
+                        //     }
+                        // );
                     } else {
                         customSweetAlert(
                             'error',

@@ -14,8 +14,11 @@ class AuthPermission
         if(Auth::check() && Auth::user()->permission == 1)
         {
             return $next($request);
-        } else {
-            return abort(404);
         }
+        elseif(Auth::check() && Auth::user()->permission == 2)
+        {
+            return $next($request);
+        }
+        return abort(404);
     }
 }

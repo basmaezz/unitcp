@@ -11,11 +11,6 @@ class AuthSubPermission
 
     public function handle($request, Closure $next)
     {
-        if(Auth::check() && Auth::user()->permission == 2)
-        {
-            return $next($request);
-        } else {
-            return abort(404);
-        }
+        return $next($request);
     }
 }

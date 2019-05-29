@@ -1,5 +1,6 @@
 @extends('public.layouts.app')
 @section('content')
+
     <!--Home search ==== -->
     <div class="search-page">
         <section class=" search-page__controls">
@@ -162,5 +163,14 @@
             </div>
         </section>
 
+
+
+
+
+
+
     </div>
+    <!--
+    End Home search
+    ==================================== -->
 @endsection

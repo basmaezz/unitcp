@@ -12,6 +12,7 @@ Route::middleware(['authpermission','checkactive'])->group(function() {
             Route::get('/', ['as' => 'panel.users.create', 'uses' => 'UserController@create']);
             Route::post('/', ['as' => 'panel.users.create', 'uses' => 'UserController@store']);
         });
+        Route::get('status/{id}', ['as' => 'panel.users.status', 'uses' => 'UserController@status']);
         Route::delete('/delete/{id}', ['as' => 'panel.users.delete', 'uses' => 'UserController@delete']);
         Route::prefix('/edit')->group(function () {
             Route::get('/{user}', ['as' => 'panel.users.edit', 'uses' => 'UserController@edit']);

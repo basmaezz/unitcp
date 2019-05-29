@@ -81,7 +81,7 @@
 
                         <fieldset class="form-group hidden" id="chg-pw">
                             <label>كلمه المرور الجديده</label>
-                            <input class="form-control"  type="password" name="password" placeholder="الرجاء إدخال كله المرور"  value="" required>
+                            <input class="form-control"  type="password" name="repeat_pw" placeholder="الرجاء إدخال كله المرور"  value="" required>
                         </fieldset>
 
 

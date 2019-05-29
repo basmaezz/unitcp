@@ -7,11 +7,16 @@
     @push('panel_css')
         {!! HTML::style('panel/plugins/datatables/css/dataTables.bootstrap.min.css') !!}
     @endpush
+    @include('panel.flash-message')
     <div class="content">
         <div class="card">
             <div class="card-body">
                 <div class="table-responsive">
-
+                    @if(Session::has('status'))
+                        <div class="text-success">
+                            {{ Session::get('status') }}
+                        </div>
+                    @endif
                     <table id="user-table" class="table table-bordered table-hover" data-name="cool-table">
                         <caption class="bottom">
       <a  title="Edit" style="margin-right: 10px"  href="{{route('panel.users.create')}}"  class="btn btn-primary" > <i class="fa fa-plus icon-btn-margin"></i> اضافه جديد </a>
