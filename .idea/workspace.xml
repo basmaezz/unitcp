@@ -2,22 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b7531e58-9230-4eee-94e9-5bd5f20cc339" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Panel/ClassesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Panel/ClassesController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Panel/DepartmentController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Panel/DepartmentController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Panel/ExamController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Panel/ExamController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Panel/MaterialController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Panel/MaterialController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Panel/SemesterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Panel/SemesterController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Logic/helper.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Logic/helper.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/panel/classes/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/panel/classes/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/panel/classes/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/panel/classes/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/panel/department/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/panel/department/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/panel/department/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/panel/department/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/panel/exam/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/panel/exam/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/panel/material/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/panel/material/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/panel/semester/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/panel/semester/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/panel/semester/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/panel/semester/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/public/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/public/layouts/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/panel/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/panel/home.blade.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -261,11 +246,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="create.blade.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="create.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/panel/exam/create.blade.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="323">
               <caret line="43" column="70" selection-start-line="43" selection-start-column="70" selection-end-line="43" selection-end-column="70" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="home.blade.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/resources/views/panel/home.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="425">
+              <caret line="34" column="8" selection-start-line="34" selection-start-column="8" selection-end-line="34" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -295,14 +289,14 @@
       <find>belongsToMany</find>
       <find>logo</find>
       <find>img</find>
-      <find />
+      <find>&lt;img src</find>
       <find>header</find>
-      <find />
+      <find>jumbotron vertical-center-wrapper</find>
       <find>store</find>
       <find>location</find>
       <find>dele</find>
-      <find />
-      <find />
+      <find>fa fa-envelope</find>
+      <find>fa fa-gear</find>
       <find>geer</find>
       <find>action</find>
       <find>das</find>
@@ -344,7 +338,6 @@
         <option value="$PROJECT_DIR$/resources/views/panel/users/create.blade.php" />
         <option value="$PROJECT_DIR$/database/migrations/2018_11_06_084418_create_config_table.php" />
         <option value="$PROJECT_DIR$/app/Log.php" />
-        <option value="$PROJECT_DIR$/resources/views/panel/home.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Panel/ConfigController.php" />
         <option value="$PROJECT_DIR$/resources/views/panel/config.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/site/HomeController.php" />
@@ -392,6 +385,7 @@
         <option value="$PROJECT_DIR$/resources/views/panel/semester/edit.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Panel/ExamController.php" />
         <option value="$PROJECT_DIR$/resources/views/panel/exam/create.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/panel/home.blade.php" />
       </list>
     </option>
   </component>
@@ -505,7 +499,7 @@
       <path value="$PROJECT_DIR$/vendor/laracasts/flash" />
     </include_path>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="674" />
@@ -542,14 +536,6 @@
               <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="panel" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="unitcp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="unitcp" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="panel" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="exam" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
           </expand>
           <select />
@@ -716,12 +702,12 @@
       <workItem from="1558868657215" duration="5723000" />
       <workItem from="1558984174551" duration="2294000" />
       <workItem from="1558987913863" duration="2184000" />
-      <workItem from="1559212002345" duration="5335000" />
+      <workItem from="1559212002345" duration="6483000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="578751000" />
+    <option name="totallyTimeSpent" value="579899000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -804,7 +790,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/Downloads/Exams/Exams/search.html" />
     <entry file="file://$USER_HOME$/Downloads/Exams/Exams/index.html" />
     <entry file="file://$PROJECT_DIR$/resources/views/public/layouts/header.blade.php">
       <provider selected="true" editor-type-id="text-editor">
@@ -1163,6 +1148,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
           <caret line="43" column="70" selection-start-line="43" selection-start-column="70" selection-end-line="43" selection-end-column="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/panel/home.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="34" column="8" selection-start-line="34" selection-start-column="8" selection-end-line="34" selection-end-column="18" />
         </state>
       </provider>
     </entry>

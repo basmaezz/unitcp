@@ -3,7 +3,9 @@
 
 
     <div class="content">
+
         <div class="row">
+            @if(Auth::user()->permission==1)
             <div class="col-lg-4 col-md-6 m-b-3">
                 <div class="widget-info bg-primary">
                     <div class="card-body">
@@ -30,6 +32,7 @@
                     </div>
                 </div>
             </div>
+            @endif
             <div class="col-lg-4 col-md-6 m-b-3">
                 <div class="widget-info bg-danger">
                     <div class="card-body">
@@ -44,6 +47,7 @@
                 </div>
             </div>
         </div>
+
         <!-- /.row -->
 
         <div class="row">
@@ -103,7 +107,7 @@
             </div>
         </div>
         <!-- /.row -->
-
+@if(Auth::user()->permission==1)
         <div class="row">
             <div class="col-lg-5 m-b-3">
                 <div class="card">
@@ -128,6 +132,7 @@
                     </div>
                 </div>
             </div>
+            @endif
             {{--<div class="col-lg-7">--}}
                 {{--<div class="card">--}}
                     {{--<div class="card-body">--}}
