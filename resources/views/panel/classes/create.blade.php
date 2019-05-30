@@ -27,7 +27,7 @@
 
                                 <option disabled selected hidden>اختيار الكليه</option>
                                 @foreach($faculty as $items)
-                                    <option value="{{$items->id}}" name="faculty_id">{{$items->name_ar}}</option>
+                                    <option value="{{$items->id}}" name="faculty_id" @if($items->id == Auth::user()->faculty_id)selected @endif>{{$items->name_ar}}</option>
                                 @endforeach
                             </select>
                         </fieldset>

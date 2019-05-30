@@ -12,6 +12,7 @@ use App\classes;
 use DB;
 use Yajra\DataTables\DataTables;
 use App\Http\Requests\CreateMaterial;
+use Auth;
 
 class MaterialController extends Controller
 {
@@ -23,7 +24,12 @@ class MaterialController extends Controller
     }
     public function create()
     {
-        return view('panel.material.create');
+        if (Auth::user()->has('faculty') && !empty(Auth::user()->faculty)) {
+            $faculty = Faculty ::where('id', Auth::user()->faculty_id)->orderBy('id', 'ASC')->get();
+        } else {
+            $faculty = Faculty ::orderBy('id', 'ASC')->get();
+        }
+        return view('panel.material.create',compact('faculty'));
     }
 
 
@@ -94,7 +100,11 @@ class MaterialController extends Controller
 
     public function get_material_data_table(material $items)
     {
-        $items = $items ->orderBy('id', 'ASC')->get();
+        if (Auth::user()->has('faculty') && !empty(Auth::user()->faculty)) {
+            $items = $items->where('faculty_id', Auth::user()->faculty_id)->orderBy('id', 'ASC')->get();
+        } else {
+            $items = $items->orderBy('id', 'ASC')->get();
+        }
 
 
         try {

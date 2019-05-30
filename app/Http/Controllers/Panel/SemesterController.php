@@ -10,6 +10,7 @@ use App\Semester;
 use Yajra\DataTables\DataTables;
 use App\Http\Requests\CreateSemester;
 use App\traits\collections;
+use Auth;
 
 
 
@@ -21,7 +22,12 @@ class SemesterController extends Controller
 
     public function create()
     {
-        return view('panel.semester.create');
+        if (Auth::user()->has('faculty') && !empty(Auth::user()->faculty)) {
+            $faculty = Faculty ::where('id', Auth::user()->faculty_id)->orderBy('id', 'ASC')->get();
+        } else {
+            $faculty = Faculty ::orderBy('id', 'ASC')->get();
+        }
+        return view('panel.semester.create',compact('faculty'));
 
     }
 
@@ -65,7 +71,13 @@ class SemesterController extends Controller
 
     public function get_semester_data_table(semester $items)
     {
-        $items = $items ->orderBy('id', 'ASC')->get();
+        if (Auth::user()->has('faculty') && !empty(Auth::user()->faculty)) {
+            $items = $items->where('faculty_id', Auth::user()->faculty_id)->orderBy('id', 'ASC')->get();
+        } else {
+            $items = $items->orderBy('id', 'ASC')->get();
+        }
+
+//        $items = $items ->orderBy('id', 'ASC')->get();
         try {
             return DataTables::of($items)->editColumn('id', function ($item) {
                 return $item->id;

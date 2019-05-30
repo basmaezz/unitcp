@@ -23,7 +23,7 @@
                     <div class="card-body">
 
                         @php
-                            $items = get_fac_data();
+                            $items = get_fac_data_user();
                         @endphp
 
                         <fieldset class="form-group">
@@ -33,8 +33,7 @@
                                 @if(isset($items) && $items->count() > 0)
                                     @foreach($items as $item)
                                         {{$items}}
-                                        <option value="{{$item->id}}">{{get_text_locale($item,'name_ar')}}</option>
-                                    @endforeach
+                                        <option value="{{$item->id}}" name="faculty_id" @if($item->id == Auth::user()->faculty_id)selected @endif>{{$item->name_ar}}</option>                                    @endforeach
                                 @endif
                             </select>
                         </fieldset>

@@ -1,7 +1,7 @@
 @php
     $breadcrumb_array = [];
     array_push($breadcrumb_array,collect(['is_last'=>true,'name'=>$department->name_en,'link'=> '#']));
-    array_push($breadcrumb_array,collect(['is_last'=>false,'name'=>'الأقسام','link'=> lang_route('panel.department.all')]));
+    array_push($breadcrumb_array,collect(['is_last'=>false,'name'=>'الأقسام','link'=> route('panel.department.all')]));
 @endphp
 
 @extends('panel.layouts.index',['sub_title'=>'تعديل القسم' ,'breadcrumb_array'=> $breadcrumb_array])
@@ -12,7 +12,7 @@
     @endpush
 
     <div class="content">
-        {!! Form::open(['id'=>'form','method'=>'PUT','url'=>lang_route('panel.department.edit',['id'=>$department->id]),'to'=>lang_route('panel.department.all')]) !!}
+        {!! Form::open(['id'=>'form','method'=>'PUT','url'=>route('panel.department.edit',['id'=>$department->id]),'to'=>route('panel.department.all')]) !!}
 
         <div class="row">
             <div class="col-md-8">
@@ -21,7 +21,7 @@
                     <div class="card-body">
 
                         @php
-                            $items = get_fac_data();
+                            $items = get_fac_data_user();
 
                         @endphp
 

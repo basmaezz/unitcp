@@ -51,8 +51,13 @@ class ExamController extends Controller
 
     public function create()
     {
+        if (Auth::user()->has('faculty') && !empty(Auth::user()->faculty)) {
+            $faculty = Faculty ::where('id', Auth::user()->faculty_id)->orderBy('id', 'ASC')->get();
+        } else {
+            $faculty = Faculty ::orderBy('id', 'ASC')->get();
+        }
         $tags = Tag::all();
-        return view('panel.exam.create')->with(["tag"=>$tags]);
+        return view('panel.exam.create')->with(["tag"=>$tags,"faculty"=>$faculty]);
     }
 
 
@@ -178,12 +183,17 @@ class ExamController extends Controller
 
     public function get_exams_data_table(exam $items, Request $request)
     {
-
-        if ($request->has('faculty_id') && !empty($request->faculty_id)) {
-            $items = $items->where('faculty_id', $request->faculty_id)->orderBy('id', 'ASC')->get();
+        if (Auth::user()->has('faculty') && !empty(Auth::user()->faculty)) {
+            $items = $items->where('faculty_id', Auth::user()->faculty_id)->orderBy('id', 'ASC')->get();
         } else {
             $items = $items->orderBy('id', 'ASC')->get();
         }
+
+//        if ($request->has('faculty_id') && !empty($request->faculty_id)) {
+//            $items = $items->where('faculty_id', $request->faculty_id)->orderBy('id', 'ASC')->get();
+//        } else {
+//            $items = $items->orderBy('id', 'ASC')->get();
+//        }
 
         try {
             return DataTables::of($items)->editColumn('id', function ($item) {

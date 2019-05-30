@@ -9,18 +9,27 @@ use Yajra\DataTables\DataTables;
 use App\classes;
 use App\faculty;
 use App\traits\collections;
+use Auth;
 
 class ClassesController extends Controller
 {
     use collections;
     public function index(){
 
+
+
+
         return view('panel.classes.all');
     }
 
     public function create()
     {
-        $faculty= Faculty::get();
+        if (Auth::user()->has('faculty') && !empty(Auth::user()->faculty)) {
+            $faculty = Faculty ::where('id', Auth::user()->faculty_id)->orderBy('id', 'ASC')->get();
+        } else {
+            $faculty = Faculty ::orderBy('id', 'ASC')->get();
+        }
+//        $faculty= Faculty::get();
 
         return view('panel.classes.create',compact('faculty'));
     }
@@ -57,10 +66,15 @@ class ClassesController extends Controller
         return (isset($item) && $item->delete()) ? $this->response_api(true, 'تمت عملية الحذف بنجاح') : $this->response_api(false, 'حدث خطأ غير متوقع');
     }
 
-    public function get_classes_data_table(classes $items){
+    public function get_classes_data_table(classes $items, Request $request){
 
-        $items = $items ->orderBy('id', 'ASC')->get();
-//        dd($items);
+
+        if (Auth::user()->has('faculty') && !empty(Auth::user()->faculty)) {
+            $items = $items->where('faculty_id', Auth::user()->faculty_id)->orderBy('id', 'ASC')->get();
+        } else {
+            $items = $items->orderBy('id', 'ASC')->get();
+        }
+
 
         try {
             return DataTables::of($items)->editColumn('id', function ($item) {
@@ -87,4 +101,6 @@ class ClassesController extends Controller
         }
 
     }
+
+
 }

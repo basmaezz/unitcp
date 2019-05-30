@@ -46,6 +46,10 @@ function get_fac_data()
 {
     return \App\faculty::where('active',1)->get();
 }
+function get_fac_data_user()
+{
+    return \App\faculty::where('id',Auth::user()->faculty_id)->get();
+}
 
 function get_classes_data()
 {

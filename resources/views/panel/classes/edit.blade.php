@@ -21,7 +21,7 @@
                     <div class="card-body">
 
                         @php
-                            $items = get_fac_data();
+                            $items = get_fac_data_user();
 
                         @endphp
 

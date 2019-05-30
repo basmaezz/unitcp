@@ -9,6 +9,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\CreateDepartment;
 use Yajra\DataTables\DataTables;
 use App\traits\collections;
+use Auth;
 
 
 class DepartmentController extends Controller
@@ -19,7 +20,11 @@ class DepartmentController extends Controller
     }
     public function create()
     {
-        $faculty= Faculty::get();
+        if (Auth::user()->has('faculty') && !empty(Auth::user()->faculty)) {
+            $faculty = Faculty ::where('id', Auth::user()->faculty_id)->orderBy('id', 'ASC')->get();
+        } else {
+            $faculty = Faculty ::orderBy('id', 'ASC')->get();
+        }
         return view('panel.department.create',compact('faculty'));
     }
 
@@ -61,10 +66,14 @@ class DepartmentController extends Controller
     }
 
 
-    public function get_department_data_table(department $items)
+    public function get_department_data_table(department $items , Request $request)
     {
-        $items = $items ->orderBy('id', 'ASC')->with('exams')->get();
-//        dd($items);
+
+        if (Auth::user()->has('faculty') && !empty(Auth::user()->faculty)) {
+            $items = $items->where('faculty_id', Auth::user()->faculty_id)->orderBy('id', 'ASC')->get();
+        } else {
+            $items = $items->orderBy('id', 'ASC')->get();
+        }
 
         try {
             return DataTables::of($items)->editColumn('id', function ($item) {

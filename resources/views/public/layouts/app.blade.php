@@ -58,7 +58,7 @@
 <!-- Essential jQuery Plugins
 ================================================== -->
 <!-- Main jQuery -->
-@include('public.layouts.js');
+@include('public.layouts.js')
 <!-- jquery easing -->
 <script src="{{url('/frontend/js/wow.min.js')}}"></script>
 <script>
