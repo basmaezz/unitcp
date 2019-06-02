@@ -37,6 +37,7 @@ class SemesterController extends Controller
         $semester = Semester::create($request->all());
         $status = $semester ? true : false;
         collections::log(auth()->user()->id , 'Exam', 'تم اصافه فصل دراسى جديد', $semester, $status);
+        session()->flash('response', __('تم اضافه البيانات بنجاح'));
 
         return (isset($semester)) ? $this->response_api(true, 'تم إضافة فصل دراسى جديد بنجاح') : $this->response_api(false, 'حدث خطأ غير متوقع');
     }

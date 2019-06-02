@@ -1,5 +1,6 @@
 <?php
 Route::get('/', ['as' => 'panel', 'uses' => 'PanelLoginController@index']);
+Route::get('pause', ['as' => 'pause', 'uses' => 'PanelLoginController@pause']);
 Route::get('/login', ['as' => 'panel.login', 'uses' => 'PanelLoginController@showLoginForm']);
 Route::post('/login', ['as' => 'panel.login.post', 'uses' => 'PanelLoginController@login']);
 Route::middleware(['authpermission','checkactive'])->group(function() {

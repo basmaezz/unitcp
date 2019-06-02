@@ -97,7 +97,7 @@
                 <!-- User Account  -->
                 <li class="dropdown user user-menu p-ph-res"> <a href="#" class="dropdown-toggle" data-toggle="dropdown">
 
-                        <img src="{{url('uploads/users/profiles/'.$admin->img)}}" class="user-image" alt="User Image">
+                        <img src="{{url('uploads/users/profiles/'.@$admin->img)}}" class="user-image" alt="User Image">
                         <span class="hidden-xs">{{$admin->name}}</span> </a>
                     <ul class="dropdown-menu">
                         <li class="user-header">

@@ -52,4 +52,9 @@ class PanelLoginController extends Controller
     }
 
 
+    public function pause(){
+        return view('panel.pause');
+    }
+
+
 }

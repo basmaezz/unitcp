@@ -76,7 +76,7 @@ class MaterialController extends Controller
             "material" => $material,
             "semester" => $semester
         ];
-
+        session()->flash('response', __('تم تعديل البيانات بنجاح'));
         return view('panel.material.edit')->with('data',$data);
 
     }

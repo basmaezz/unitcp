@@ -38,6 +38,7 @@
 
     @include('panel.layouts.side-panel')
 
+
     <div class="content-wrapper">
         @include('panel.layouts.breadcrumb')
         @yield('main')
