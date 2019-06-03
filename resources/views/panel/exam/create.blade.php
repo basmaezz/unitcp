@@ -17,7 +17,20 @@
     <div class="content">
        <div class="container">
            <div class="row">
-               <img src="{{url('settings/under-upgrade.jpg')}}" style="float: right; padding-right: -10px;">
+               <div class="col-lg-9 col-md-6 m-b-3">
+                   <div class="widget-info bg-danger">
+                       <div class="card-body">
+                           <div class="row">
+                               <div class="col-md-6 text-white">
+                                   <p>اضافه امتحان موقوف حاليا </p>
+                                   <h2 class="font-weight-bold"></h2>
+                                 </div>
+                               <div class="col-md-6 m-t-2 text-right">  </div>
+                           </div>
+                       </div>
+                   </div>
+               </div>
+               {{--<img src="{{url('settings/under-upgrade.jpg')}}" style="float: right; padding-right: -10px;">--}}
            </div>
 
        </div>

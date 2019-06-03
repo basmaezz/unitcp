@@ -102,19 +102,19 @@
 
 {{--</script>--}}
 
-        <script>
-            $(document).ready(function() {
+        {{--<script>--}}
+            {{--$(document).ready(function() {--}}
 
-                $('#upload-off').change(function() {
-                    $('#image').removeClass('hidden');
-                });
-                $('#upload-on').change(function() {
-                    $('#image').addClass('hidden');
-                });
+                {{--$('#upload-off').change(function() {--}}
+                    {{--$('#image').removeClass('hidden');--}}
+                {{--});--}}
+                {{--$('#upload-on').change(function() {--}}
+                    {{--$('#image').addClass('hidden');--}}
+                {{--});--}}
 
-            });
+            {{--});--}}
 
-        </script>
+        {{--</script>--}}
 
     @endpush
 @stop
