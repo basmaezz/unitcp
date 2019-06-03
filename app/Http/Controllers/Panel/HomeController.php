@@ -21,9 +21,11 @@ class HomeController extends Controller
         $exam=Exam::all()->count();
         $visitor=visitor::all()->count();
         $logs= Log::orderBy('id', 'desc')->take(5)->get();
+        $latest= Exam::orderBy('created_at','desc')->paginate(5);
 
 
-        return view('panel.home',compact('faculty','user','exam','visitor','logs'));
+
+        return view('panel.home',compact('faculty','user','exam','visitor','logs','latest'));
     }
 
 
