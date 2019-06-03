@@ -11,7 +11,7 @@
     @endpush
 
     <div class="content">
-        {!! Form::open(['id'=>'form','method'=>'POST','url'=>route('updateconfig')]) !!}
+        {!! Form::open(['id'=>'form','method'=>'POST','url'=>route('updateconfig'),'to'=>route('panel.dashboard')]) !!}
         <div class="row">
             <div class="col-md-8">
                 <div class="card">
@@ -40,9 +40,9 @@
 
                         </fieldset>
 
-                        <fieldset class="form-group hidden" id="img-off">
+                        <fieldset class="form-group hidden" id="image">
                             <label>اختر صوره </label>
-                            <input class="form-control"  type="file" name="img-off">
+                            <input class="form-control"  type="file" name="image">
                         </fieldset>
 
 
@@ -106,10 +106,10 @@
             $(document).ready(function() {
 
                 $('#upload-off').change(function() {
-                    $('#img-off').removeClass('hidden');
+                    $('#image').removeClass('hidden');
                 });
                 $('#upload-on').change(function() {
-                    $('#img-off').addClass('hidden');
+                    $('#image').addClass('hidden');
                 });
 
             });
