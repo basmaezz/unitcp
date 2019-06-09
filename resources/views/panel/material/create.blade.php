@@ -26,11 +26,11 @@
                             <label>اسم الكليه </label>
                             <select class="form-control"  name="faculty_id" data-placeholder="إختيار الكليه" required>
                                 <option disabled selected hidden>إختيار الكليه</option>
-                                @if(isset($items) && $items->count() > 0)
-                                    @foreach($items as $item)
+                                {{--@if(isset($items) && $items->count() > 0)--}}
+                                    @foreach($faculty as $item)
 
                                         <option value="{{$item->id}}" name="faculty_id" @if($item->id == Auth::user()->faculty_id)selected @endif>{{$item->name_ar}}</option>                                    @endforeach
-                                @endif
+                                {{--@endif--}}
                             </select>
                         </fieldset>
 
