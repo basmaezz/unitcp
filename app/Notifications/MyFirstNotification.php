@@ -2,23 +2,30 @@
 
 namespace App\Notifications;
 
+use App\Exam;
+use App\User;
 use Illuminate\Bus\Queueable;
 use Illuminate\Notifications\Notification;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Notifications\Messages\MailMessage;
+use App\classes;
 
 class MyFirstNotification extends Notification
 {
     use Queueable;
+
+    protected $exam,$user;
 
     /**
      * Create a new notification instance.
      *
      * @return void
      */
-    public function __construct()
+    public function __construct( Classes $classes)
     {
-        //
+//        $this->exam = $exam;
+//        $this->user = $user;
+        $this->classes= $classes;
     }
 
     /**
@@ -29,7 +36,7 @@ class MyFirstNotification extends Notification
      */
     public function via($notifiable)
     {
-        return ['database'];
+        return ['database', 'broadcast'];
     }
 
     /**
@@ -49,10 +56,9 @@ class MyFirstNotification extends Notification
 
     public function toDatabase($notifiable)
     {
-        return (new MailMessage)
-            ->line('The introduction to the notification.')
-            ->action('Notification Action', url('/'))
-            ->line('Thank you for using our application!');
+        return [
+            'classes'=>$this->classes
+        ];
     }
 
     /**
@@ -64,7 +70,9 @@ class MyFirstNotification extends Notification
     public function toArray($notifiable)
     {
         return [
-            //
+//            'user_id' => $this->user->id,
+//            'user_name' => $this->user->name,
+//            'exam' => $this->exam->name,
         ];
     }
 }

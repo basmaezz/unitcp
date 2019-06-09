@@ -29,3 +29,27 @@ Route::prefix('public')->group(function () {
 
 Route::view('try','public.Index');
 Route::view('tst','public.search');
+
+Route::get('notify',function(){
+
+    $notify= App\Notification ::get();
+//    dd($notify);
+
+    foreach ($notify as $notification){
+        dd($notification->type);
+    }
+});
+
+
+//Route::get('notification',function(){
+//
+//    $user= Auth::user();
+////    auth()->user()->notify(new MyFirstNotification($classes) );
+//
+//
+////    dd($notification);
+//    foreach($user->notificaitons as $note){
+//        var_dump($note->type);
+//
+//    }
+//});

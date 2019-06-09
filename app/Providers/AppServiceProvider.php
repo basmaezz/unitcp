@@ -2,6 +2,8 @@
 
 namespace App\Providers;
 
+use App\Exam;
+use App\Observe\Notifiy;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\Schema;
 use App\Faculty;
@@ -39,7 +41,7 @@ class AppServiceProvider extends ServiceProvider
 //            $visitor->config = $visitor->config+1;
 //            $visitor->save();
 //        }
-
+        Exam::observe(Notifiy::class);
 
     }
 
