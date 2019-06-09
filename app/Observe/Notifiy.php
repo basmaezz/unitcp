@@ -15,12 +15,12 @@ use App\User;
 
 class Notifiy
 {
-    public function created(Exam $item)
-    {
-        $author = $item->user;
-        $users = User::all();
-        foreach ($users as $user) {
-            $user->notify(new MyFirstNotification($item,$author));
-        }
-    }
+//    public function created(Exam $item)
+//    {
+//        $author = $item->user;
+//        $users = User::all();
+//        foreach ($users as $user) {
+//            $user->notify(new MyFirstNotification($item,$author));
+//        }
+//    }
 }

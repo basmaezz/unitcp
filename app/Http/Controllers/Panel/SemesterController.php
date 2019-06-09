@@ -27,6 +27,7 @@ class SemesterController extends Controller
         } else {
             $faculty = Faculty ::orderBy('id', 'ASC')->get();
         }
+
         return view('panel.semester.create',compact('faculty'));
 
     }

@@ -56,6 +56,7 @@ class ExamController extends Controller
         } else {
             $faculty = Faculty ::orderBy('id', 'ASC')->get();
         }
+
         $tags = Tag::all();
         return view('panel.exam.create')->with(["tag"=>$tags,"faculty"=>$faculty]);
     }
@@ -173,7 +174,10 @@ class ExamController extends Controller
 
         $year = Year::all();
 
+
+
         $data = ["classes" => $classes, "department" => $department, "materials" => $materials, "semesters" => $semesters,"year"=>$year ];
+
 
         $view = view('panel.exam.exam-selectors', $data)->render();
 

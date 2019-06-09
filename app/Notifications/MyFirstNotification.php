@@ -25,7 +25,7 @@ class MyFirstNotification extends Notification
     {
 //        $this->exam = $exam;
 //        $this->user = $user;
-        $this->classes= $classes;
+//        $this->classes= $classes;
     }
 
     /**

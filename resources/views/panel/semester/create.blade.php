@@ -26,15 +26,26 @@
                             $items = get_fac_data_user();
                         @endphp
 
+                        {{--<fieldset class="form-group">--}}
+                            {{--<label>اختر الكليه</label>--}}
+                            {{--<select class="form-control" name="faculty_id" data-placeholder="إختيار الكليه" required>--}}
+
+                                {{--<option disabled selected hidden>اختيار الكليه</option>--}}
+                                {{--@foreach($faculty as $items)--}}
+                                    {{--<option value="{{$items->id}}" name="faculty_id" @if($items->id == Auth::user()->faculty_id)selected @endif>{{$items->name_ar}}</option>--}}
+                                {{--@endforeach--}}
+                            {{--</select>--}}
+                        {{--</fieldset>--}}
+
                         <fieldset class="form-group">
                             <label>اسم الكليه </label>
                             <select class="form-control" name="faculty_id" data-placeholder="إختيار الكليه" required>
                                 <option disabled selected hidden>إختيار الكليه</option>
-                                @if(isset($items) && $items->count() > 0)
-                                    @foreach($items as $item)
+                                {{--@if(isset($items) && $items->count() > 0)--}}
+                                    @foreach($faculty as $item)
                                         {{$items}}
                                         <option value="{{$item->id}}" name="faculty_id" @if($item->id == Auth::user()->faculty_id)selected @endif>{{$item->name_ar}}</option>                                    @endforeach
-                                @endif
+                                {{--@endif--}}
                             </select>
                         </fieldset>
 

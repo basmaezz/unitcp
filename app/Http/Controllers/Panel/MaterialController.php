@@ -51,6 +51,7 @@ class MaterialController extends Controller
 
     public function store(CreateMaterial $request)
     {
+//        dd($request->all());
 
         $material = Material::create($request->all());
 

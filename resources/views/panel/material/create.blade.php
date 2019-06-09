@@ -14,12 +14,11 @@
         {!! Form::open(['id'=>'form','method'=>'POST','url'=>route('panel.material.create'),'to'=>route('panel.material.all')]) !!}
         <div class="row">
             <div class="col-md-8">
-                 <div class="card">
+                <div class="card">
                     <div class="card-body">
 
                         @php
-                            $items = get_fac_data_user();
-
+                            $items = get_fac_data();
                         @endphp
 
                         <fieldset class="form-group">
@@ -29,15 +28,16 @@
                                 {{--@if(isset($items) && $items->count() > 0)--}}
                                     @foreach($faculty as $item)
 
-                                        <option value="{{$item->id}}" name="faculty_id" @if($item->id == Auth::user()->faculty_id)selected @endif>{{$item->name_ar}}</option>                                    @endforeach
+                                        <option value="{{$item->id}}" >{{get_text_locale($item,'name_ar')}}</option>
+                                    @endforeach
                                 {{--@endif--}}
                             </select>
                         </fieldset>
 
 
-                        {{--<div id="selectors_div">--}}
-                            {{--@include('panel.material.fac-selectors')--}}
-                        {{--</div>--}}
+                        <div id="selectors_div">
+                        @include('panel.material.fac-selectors')
+                        </div>
 
                         <fieldset class="form-group">
                             <label>الأسم</label>
