@@ -45,7 +45,7 @@
                     <div class="card-body">
 
                         @php
-                            $items = get_fac_data_user();
+                            $items = get_fac_data();
                         @endphp
 
                         <fieldset class="form-group">
@@ -53,7 +53,7 @@
                             <select class="form-control faculty" name="faculty" data-placeholder="إختيار الكليه" id="faculty_id" required>
                                 <option disabled selected hidden>إختيار الكليه</option>
                                 @if(isset($items) && $items->count() > 0)
-                                    @foreach($items as $item)
+                                    @foreach($faculty as $item)
                                         <option value="{{$item->id}}"  >{{get_text_locale($item,'name_ar')}}</option>
                                     @endforeach
                                 @endif
