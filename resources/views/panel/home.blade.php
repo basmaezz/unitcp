@@ -52,30 +52,30 @@
 
         <div class="row">
 
-            {{--<div class="col-lg-8">--}}
-                {{--<div class="info-box">--}}
-                    {{--<div class="col-12">--}}
-                        {{--<h5>أحدث الأمتحانات المرفوعه</h5>--}}
-                        {{--<div class="row m-t-6 m-b-6">--}}
-                            {{--@foreach($latest as $key => $last)--}}
+            <div class="col-lg-8">
+                <div class="info-box">
+                    <div class="col-12">
+                        <h5>أحدث الأمتحانات المرفوعه</h5>
+                        <div class="row m-t-6 m-b-6">
+                            @foreach($latest as $key => $last)
 
-                                {{--<div class="col-md-9">--}}
-                                    {{--<td ><h6 class="text-blue font-weight-bold">--}}
-                                            {{--{{ getFullNamearray($last->faculty_id, $last->class_id, $last->material_id, $last->semester_id, $last->year_id) }}</h6></td>--}}
+                                <div class="col-md-9">
+                                    <td ><h6 class="text-blue font-weight-bold">
+                                            {{ getFullNamearray($last->faculty_id, $last->class_id, $last->material_id, $last->semester_id, $last->year_id) }}</h6></td>
 
-                                {{--</div><br>--}}
-                                {{--<div class="col-md-3">--}}
-                                    {{--<a title="Download" href="{{ url('storage/faculty/exams/'.$last->faculty_id ."/".$last->department_id."/".--}}
-                            {{--$last->class_id ."/".$last->semester_id ."/".$last->material_id ."/".$last->year_id ."/".$last->files($last->file)) }}" target="_blank" style="margin-right: 9px;--}}
-    {{--height: 42px; margin-bottom: 6px; " data-id="{{ $last->id }}"  class="btn btn-primary download" > تحميل </a>--}}
+                                </div><br>
+                                <div class="col-md-3">
+                                    <a title="Download" href="{{ url('storage/faculty/exams/'.$last->faculty_id ."/".$last->department_id."/".
+                            $last->class_id ."/".$last->semester_id ."/".$last->material_id ."/".$last->year_id ."/".$last->files($last->file)) }}" target="_blank" style="margin-right: 9px;
+    height: 42px; margin-bottom: 6px; " data-id="{{ $last->id }}"  class="btn btn-primary download" > تحميل </a>
 
-                                {{--</div>--}}
-                            {{--@endforeach--}}
-                        {{--</div>--}}
-                    {{--</div>--}}
-                    {{--<div id="earning"></div>--}}
-                {{--</div>--}}
-            {{--</div>--}}
+                                </div>
+                            @endforeach
+                        </div>
+                    </div>
+                    <div id="earning"></div>
+                </div>
+            </div>
 
             {{--<div class="col-lg-8">--}}
                 {{--<div class="info-box">--}}
