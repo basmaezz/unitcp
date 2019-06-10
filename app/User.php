@@ -6,21 +6,21 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Zizaco\Entrust\EntrustPermission;
-use Zizaco\Entrust\Traits\EntrustUserTrait;
+//use Zizaco\Entrust\Traits\EntrustUserTrait;
 
 class User extends Authenticatable
 {
     use \HighIdeas\UsersOnline\Traits\UsersOnlineTrait;
 
     use Notifiable;
-    use EntrustUserTrait { restore as private restoreA; }
-    use SoftDeletes { restore as private restoreB; }
+//    use EntrustUserTrait { restore as private restoreA; }
+//    use SoftDeletes { restore as private restoreB; }
 
-    public function restore()
-    {
-        $this->restoreA();
-        $this->restoreB();
-    }
+//    public function restore()
+//    {
+//        $this->restoreA();
+//        $this->restoreB();
+//    }
 
     /**
      * The attributes that are mass assignable.

@@ -90,6 +90,7 @@ class UserController extends Controller
 
     public function delete($id)
     {
+
         $item = user::find($id);
         return (isset($item) && $item->delete()) ? $this->response_api(true, 'تمت عملية الحذف بنجاح') : $this->response_api(false, 'حدث خطأ غير متوقع');
     }
