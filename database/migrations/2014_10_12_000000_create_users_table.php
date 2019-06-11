@@ -21,6 +21,7 @@ class CreateUsersTable extends Migration
             $table->string('password');
             $table->string('img')->nullable();
             $table->integer('faculty_id')->unsigned()->index()->nullable();//
+            $table->integer('online')->nullable();
             $table->integer('active')->nullable();
             $table->integer('permission')->nullable();
             $table->rememberToken();

@@ -18,7 +18,7 @@ class HomeController extends Controller
     public function Index(){
 
 
-        return view('panel.public.Index');
+        return view('public.Index');
     }
 
     public function getall()
@@ -65,10 +65,10 @@ class HomeController extends Controller
 
 //        dd($items);
         if(!empty($items)){
-            return view('panel.public.all')->with(['item'=>$items]);
+            return view('public.search')->with(['item'=>$items]);
         }
         else{
-            return view('panel.public.all')->with('status','search Failed');
+            return view('panel.search')->with('status','search Failed');
         }
 
     }

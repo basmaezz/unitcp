@@ -179,7 +179,8 @@ class UserController extends Controller
                 $user->password = bcrypt($request->password);
             }
 
-
+            if(!empty($request->file('img')))
+            {
             $imgprofile = $request->file('img');
             $img_size = $imgprofile->getClientSize();
             $extension = $imgprofile->getClientOriginalExtension();
@@ -188,6 +189,7 @@ class UserController extends Controller
             $imgprofile->move(public_path('uploads/users/profiles/'),$originalName. '.'.$extension);
 
             $user->img= $originalName . '.' . $extension;
+            }
             $user->active='1';
 //            $request->repeat_pw ?  $user->password=bcrypt($request->password)  : bcrypt($request->password);
 

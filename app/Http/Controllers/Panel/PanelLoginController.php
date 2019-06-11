@@ -38,18 +38,23 @@ class PanelLoginController extends Controller
         ]);
         $credentials = ['username' => $request->username, 'password' => $request->password];
         if (Auth::attempt($credentials, $request->has('remember'))){
-
+            $user= Auth::user();
+            $user->online='1';
+            $user->save();
             return redirect()->route('panel.dashboard');
         }
         session()->flash('response', __('البيانات المدخلة غير صحيحة'));
         return redirect()->back();
     }
 
-    public function logout(Request $request)
-    {
-        Auth::guard()->logout();
-        return redirect()->route('panel.login');
-    }
+//    public function logout(Request $request)
+//    {
+//        $user= Auth::user();
+//        $user->update($user->online='0');
+//        $user->save();
+//        Auth::guard()->logout();
+//        return redirect()->route('panel.login');
+//    }
 
 
     public function pause(){

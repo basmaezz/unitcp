@@ -19,3 +19,5 @@
 
 <!-- jquery easing -->
 <script src="{{url('/frontend/js/jquery.easing.min.js')}}"></script>
+
+<script src="{{url('/frontend/js/custom.js')}}"></script>

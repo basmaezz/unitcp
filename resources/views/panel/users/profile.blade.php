@@ -53,10 +53,10 @@
                             <input class="form-control"  type="password" name="repeat_pw" placeholder="الرجاء إدخال كله المرور"  value="" >
                         </fieldset>
 
-                        {{--<fieldset class="form-group hidden" id="chg-pw-confirm">--}}
-                            {{--<label>اعاده ادخال كلمه المرور الجديده</label>--}}
-                            {{--<input class="form-control"  type="password" name="repeat_pw_confirm" placeholder="الرجاء اعاده ادخال كلمه المرور الجديده"  value="" >--}}
-                        {{--</fieldset>--}}
+                        <fieldset class="form-group hidden" id="chg-pw-confirm">
+                            <label>اعاده ادخال كلمه المرور الجديده</label>
+                            <input class="form-control"  type="password" name="repeat_pw_confirm" placeholder="الرجاء اعاده ادخال كلمه المرور الجديده"  value="" >
+                        </fieldset>
 
 
                         <fieldset class="form-group">
@@ -100,7 +100,7 @@
             $(document).ready(function(){
                 $("p").click(function(){
                     $('#chg-pw').removeClass('hidden');
-                    // $('#chg-pw-confirm').removeClass('hidden');
+                    $('#chg-pw-confirm').removeClass('hidden');
                 });
             });
         </script>
