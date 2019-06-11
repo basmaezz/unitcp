@@ -8,6 +8,8 @@ use App\Http\Requests\CreateUser;
 use App\user;
 use App\Faculty;
 use Yajra\DataTables\DataTables;
+use Auth;
+use Illuminate\Support\Facades\Hash;
 
 class UserController extends Controller
 {
@@ -163,26 +165,35 @@ class UserController extends Controller
 
     public function editprof($id, CreateUser $request){
 
-        $user= new User();
-        $user = User::updateOrCreate(['id' => $id]);
-        $user->name=$request->name;
-        $user->username=$request->username;
-        $user->email=$request->email;
-        $user->password = bcrypt($request->password);
+        $current_password = Auth::User()->password;
+        if(Hash::check($request->password, $current_password)){
+            $user= new User();
+            $user = User::updateOrCreate(['id' => $id]);
+            $user->name=$request->name;
+            $user->username=$request->username;
+            $user->email=$request->email;
 
-        $imgprofile = $request->file('img');
-        $img_size = $imgprofile->getClientSize();
-        $extension = $imgprofile->getClientOriginalExtension();
+            if(!empty($request->repeat_pw)){
+                $user->password = bcrypt($request->repeat_pw);
+            }else{
+                $user->password = bcrypt($request->password);
+            }
 
-        $originalName = str_replace('.' . $extension, '', $imgprofile->getClientOriginalName());
-        $imgprofile->move(public_path('uploads/users/profiles/'),$originalName. '.'.$extension);
 
-        $user->img= $originalName . '.' . $extension;
-        $user->active='1';
-        $request->repeat_pw ?  $user->password=bcrypt($request->password)  : bcrypt($request->password);
+            $imgprofile = $request->file('img');
+            $img_size = $imgprofile->getClientSize();
+            $extension = $imgprofile->getClientOriginalExtension();
 
-        $user->save();
+            $originalName = str_replace('.' . $extension, '', $imgprofile->getClientOriginalName());
+            $imgprofile->move(public_path('uploads/users/profiles/'),$originalName. '.'.$extension);
 
+            $user->img= $originalName . '.' . $extension;
+            $user->active='1';
+//            $request->repeat_pw ?  $user->password=bcrypt($request->password)  : bcrypt($request->password);
+
+            $user->save();
+
+        }
         return (isset($user)) ? $this->response_api(true, 'تم التعديل بنجاح') : $this->response_api(false, 'حدث خطأ غير متوقع');
 
     }
