@@ -28,7 +28,7 @@
                                                     <label class="search-filter-label "  >Faculty filter</label>
 
                                                     <label class="field uit-select">
-                                                        <select class="form-control faculty" name="faculty" data-placeholder="إختيار الكليه" id="faculty_id" required>                                                            <option selected="selected" value="">Select your faculty</option>
+                                                        <select class="form-control search-faculty" name="search-faculty" data-placeholder="إختيار الكليه" id="faculty_id" required>                                                            <option selected="selected" value="">Select your faculty</option>
                                                             @foreach(get_fac_data() as $fac)
 
                                           <option value="{{ $fac->id }}" @if($fac->id == request('faculty') || $fac->id == request('id')) selected @endif>{{ $fac->name_ar }}</option>
@@ -39,14 +39,6 @@
                                                     </label>
                                                 </div>
 
-                                                {{--<div class="frm-section colm colm3">--}}
-
-                                                    {{--<label class="search-filter-label "  >faculty filter</label>--}}
-
-                                                    {{--<label class="field">--}}
-                                                        {{--<input class="uit-input" placeholder="search for your faculty" type="text">--}}
-                                                    {{--</label>--}}
-                                                {{--</div>--}}
 
                                                 @include('public.fac-exam')
 
@@ -78,7 +70,7 @@
                         @foreach($item as $key => $exam)
                     <li class="row search-document-result flex" >
                         <div class="search-document-result__details"><a href="#">
-                                <h3 class="search-document-result__title" >{{ getFullNamearray($exam->faculty_id, $exam->class_id, $exam->material_id, $exam->semester_id, $exam->year_id) }}</h3>
+                                <h3 class="search-document-result__title" >{{ getFullexamNamearray($exam->department_id, $exam->material_id,  $exam->year_id) }}</h3>
                             </a>
                             <div><a href="" class="search-document-result__course"><span >
                                         {{$exam->facultyexam->name_en}}
@@ -93,18 +85,10 @@
                     </li>
 
                         @endforeach
-                    @else
-
-                    <li class="row search-document-result flex" >
-                        <div class="search-document-result__details"><a href="#">
-                                <h3 class="search-document-result__title" >{{'لم يتم العثور على نتائج'}}</h3>
-                            </a>
 
 
-                        </div>
 
-                    </li>
-                        @endif
+
 
                 </ul>
                 <nav class="pagination-wrapper" >
@@ -120,6 +104,20 @@
                         </li>
                     </ul>
                 </nav>
+                @else
+
+                <ul class="search-document-results  center" >
+                    <li class="row search-document-result flex center" >
+                        <div class="search-document-result__details "><a href="#">
+                                <h3 class="search-document-result__title " >{{'لم يتم العثور على نتائج'}}</h3>
+                            </a>
+
+
+                        </div>
+
+                    </li>
+                </ul>
+                @endif
             </div>
         </section>
 

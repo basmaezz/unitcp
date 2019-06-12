@@ -54,11 +54,12 @@
     <label class="field uit-select">
         <select name="select2">
             <option selected="selected" value="">Select year</option>
-            <option value="1"> Select option 1 </option>
-            <option value="2"> Select option 2 </option>
-            <option value="3"> Select option 3 </option>
-            <option value="4"> Select option 4 </option>
-            <option value="5"> Select option 5 </option>
+            @if(isset($year) && $year->count() > 0)
+                @foreach($year as $item)
+
+                    <option value="{{$item->id}}" >{{get_text_locale($item,'name')}}</option>
+                @endforeach
+                @endif
         </select>
         <i class="select-arrow"></i>
     </label>

@@ -452,6 +452,14 @@ if(!function_exists('getFullNamearray')){
     }
 }
 
+if(!function_exists('getFullexamNamearray')){
+    function getFullexamNamearray(...$id)
+    {
+        return \App\Department::whereId($id[0])->first()->name_ar.'-'.\App\Year::whereId($id[2])->first()->name.'-'.\App\Material::whereId($id[1])->first()->name_ar;
+    }
+}
+
+
 
 
 

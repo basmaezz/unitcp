@@ -156,5 +156,25 @@ class HomeController extends Controller
     }
 
 
+    public function getsearchExamData($id)
+    {
+
+
+        $classes = classes::where("faculty_id", $id)->get();
+//        dd($classes);
+        $department = DB::table("departments")->where("faculty_id", $id)->get();
+        $classes = DB::table("classes")->where("faculty_id", $id)->get();
+        $materials = DB::table("materials")->where("faculty_id", $id)->get();
+        $semesters = DB::table("semesters")->where("faculty_id", $id)->get();
+        $year = DB::table("years")->get();
+
+        $data = ["classes" => $classes, "department" => $department, "materials" => $materials, "semesters" => $semesters, "year" => $year];
+
+        $view = view('public.fac-exam', $data)->render();
+
+        return response()->json(['status' => true, 'item' => $view]);
+    }
+
+
 
 }
