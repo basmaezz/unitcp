@@ -31,6 +31,9 @@ Route::prefix('public')->group(function () {
 
 Route::view('try','public.Index');
 Route::view('tst','public.search');
+Route::view('viewtst','public.view-exam');
+
+
 
 Route::get('notify',function(){
 
