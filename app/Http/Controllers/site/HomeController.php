@@ -10,6 +10,7 @@ use App\Exam;
 use App\Year;
 use App\classes;
 use App\Department;
+use App\User;
 use DB;
 
 class HomeController extends Controller
@@ -18,8 +19,13 @@ class HomeController extends Controller
     public function Index()
     {
         $exams = Exam::orderBy('id', 'desc')->take(4)->get();
+        $examcount=Exam::all()->count();
+        $user=User::all()->count();
+        $faculty=Faculty::all()->count();
 
-        return view('public.Index',compact('exams'));
+
+
+        return view('public.Index',compact('exams','examcount','user','faculty'));
     }
 
     public function getall()

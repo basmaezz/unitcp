@@ -129,7 +129,7 @@
                                 <img src="{{url('/frontend/img/university-icon.png')}}" srcset="{{url('/frontend/img/university-icon.png')}}" alt="university icon" class="illus-figures" width="150" height="150" data-test-selector="homeUniversityIcon"
                                 >
                             </a>
-                            <strong data-to="3200">0</strong>
+                            <strong data-to="{{$faculty}}">0</strong>
                             <!-- Set Your Number here. i,e. data-to="56" -->
                             <p>Faculties</p>
                         </div>
@@ -141,7 +141,7 @@
                                 <img src="{{url('/frontend/img/exam-questions.png')}}" srcset="{{url('/frontend/img/exam-questions.png')}}" alt="Exam icon" class="illus-figures" width="150" height="150" data-test-selector="examIcon"
                                 >
                             </a>
-                            <strong data-to="360">0</strong>
+                            <strong data-to="{{$examcount}}">0</strong>
                             <!-- Set Your Number here. i,e. data-to="56" -->
                             <p> Exams</p>
                         </div>
@@ -151,7 +151,7 @@
                             <a href="">
                                 <img src="{{url('/frontend/img/users.png')}}" srcset="{{url('/frontend/img/users.png')}}" alt="Exam icon" class="illus-figures" width="150" height="150" data-test-selector="examIcon"
                                 >
-                            </a>								<strong data-to="6454">0</strong>
+                            </a>								<strong data-to="{{$user}}">0</strong>
                             <!-- Set Your Number here. i,e. data-to="56" -->
                             <p>Users</p>
                         </div>

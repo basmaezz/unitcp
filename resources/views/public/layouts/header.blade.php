@@ -17,7 +17,8 @@
         <div class="collapse navbar-collapse navbar-right" role="navigation">
             <ul id="nav" class="nav navbar-nav">
                 <li>
-                    <a href=""  id="login" rel="nofollow">Sign in
+
+                    <a href ="{{route('panel.login')}}"  id="login" rel="nofollow">Sign in
                     </a>
                 </li>
                 <li >
