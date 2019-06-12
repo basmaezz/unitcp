@@ -6,7 +6,7 @@
                 <div class="search-page_input-wrapper">
                     <div class="search-bar search-bar-big">
                         <i class="fa fa-search search-bar__icon"></i>
-                        <input type="search" placeholder="Search for Exams" autofocus=""  spellcheck="true" value="">
+                        <input type="search" placeholder="Search for Exams" autofocus=""  spellcheck="true" value="{{$txtsearch}}">
                     </div>
 
                 </div>

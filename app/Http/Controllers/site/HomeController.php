@@ -54,6 +54,7 @@ class HomeController extends Controller
         $txtsearch=$request->txtsearch;
 
 
+
         $items= Exam::with('tags')->where('file', 'like', '%' . $txtsearch . '%')
             ->orWhere('key_search_ar', 'like', '%' . $txtsearch . '%')
             ->orWhere('key_search_en', 'like', '%' . $txtsearch. '%')
@@ -64,7 +65,7 @@ class HomeController extends Controller
 
 //        dd($items);
         if(!empty($items)){
-            return view('public.search')->with(['item'=>$items]);
+            return view('public.search')->with(['item'=>$items ,'txtsearch'=>$txtsearch]);
         }
         else{
             return view('panel.search')->with('status','search Failed');

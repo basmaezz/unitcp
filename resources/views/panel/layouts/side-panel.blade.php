@@ -70,7 +70,7 @@
 
 
 
-            <li class="treeview {{is_element_active('/service/i')}}">
+            <li class="treeview {{is_element_active('/faculty/i')}}">
                 <a href="#">
                     <i class="ti-bar-chart-alt"></i>
                     <span>الكليات</span>
@@ -78,8 +78,8 @@
                 </a>
                 <ul class="treeview-menu">
 
-                    <li class="{{is_active('service/create')}}"><a href="{{route('panel.faculty.create')}}"><i class="fa fa-angle-left"></i> إضافة جديد </a></li>
-                    <li class="{{is_active('service/all')}}"><a href=" {{route('panel.faculty.all')}}"><i class="fa fa-angle-left"></i> عرض الكل </a></li>
+                    <li class="{{is_active('faculty/create')}}"><a href="{{route('panel.faculty.create')}}"><i class="fa fa-angle-left"></i> إضافة جديد </a></li>
+                    <li class="{{is_active('faculty/all')}}"><a href=" {{route('panel.faculty.all')}}"><i class="fa fa-angle-left"></i> عرض الكل </a></li>
                 </ul>
             </li>
 
