@@ -394,11 +394,11 @@ function get_text_locale($obj, $text)
     return no_data();
 }
 
-function get_training_request_data()
-{
-    $trainingRequests = new \App\TrainingRequest;
-    return $trainingRequests->getArrayCount();
-}
+//function get_training_request_data()
+//{
+//    $trainingRequests = new \App\TrainingRequest;
+//    return $trainingRequests->getArrayCount();
+//}
 
 function is_selected($var1, $var2)
 {

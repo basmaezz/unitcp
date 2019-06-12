@@ -21,18 +21,14 @@
 
                                         <div class="frm-body">
 
-
-
-
                                             <div class="frm-row">
 
                                                 <div class="frm-section colm colm3">
 
-                                                    <label class="search-filter-label "  >level filter</label>
+                                                    <label class="search-filter-label "  >Faculty filter</label>
 
                                                     <label class="field uit-select">
-                                                        <select name="select2">
-                                                            <option selected="selected" value="">Select your faculty</option>
+                                                        <select class="form-control faculty" name="faculty" data-placeholder="إختيار الكليه" id="faculty_id" required>                                                            <option selected="selected" value="">Select your faculty</option>
                                                             @foreach(get_fac_data() as $fac)
 
                                           <option value="{{ $fac->id }}" @if($fac->id == request('faculty') || $fac->id == request('id')) selected @endif>{{ $fac->name_ar }}</option>
@@ -42,6 +38,7 @@
                                                         <i class="select-arrow"></i>
                                                     </label>
                                                 </div>
+
                                                 {{--<div class="frm-section colm colm3">--}}
 
                                                     {{--<label class="search-filter-label "  >faculty filter</label>--}}
@@ -51,61 +48,20 @@
                                                     {{--</label>--}}
                                                 {{--</div>--}}
 
-                                                <div class="frm-section colm colm3">
+                                                @include('public.fac-exam')
 
-                                                    <label class="search-filter-label "  >Department filter</label>
-
-                                                    <label class="field">
-                                                        <input class="uit-input" placeholder="search for your Department" type="text">
-                                                    </label>
-                                                </div>
-
-                                                <div class="frm-section colm colm3">
-
-                                                    <label class="search-filter-label "  >level filter</label>
-
-                                                    <label class="field uit-select">
-                                                        <select name="select2">
-                                                            <option selected="selected" value="">Select your level</option>
-                                                            <option value="1"> Select option 1 </option>
-                                                            <option value="2"> Select option 2 </option>
-                                                            <option value="3"> Select option 3 </option>
-                                                            <option value="4"> Select option 4 </option>
-                                                            <option value="5"> Select option 5 </option>
-                                                        </select>
-                                                        <i class="select-arrow"></i>
-                                                    </label>
-                                                </div>
-
-                                                <div class="frm-section colm colm3">
-
-                                                    <label class="search-filter-label "  >year filter</label>
-
-                                                    <label class="field uit-select">
-                                                        <select name="select2">
-                                                            <option selected="selected" value="">Select year</option>
-                                                            <option value="1"> Select option 1 </option>
-                                                            <option value="2"> Select option 2 </option>
-                                                            <option value="3"> Select option 3 </option>
-                                                            <option value="4"> Select option 4 </option>
-                                                            <option value="5"> Select option 5 </option>
-                                                        </select>
-                                                        <i class="select-arrow"></i>
-                                                    </label>
-                                                </div>
 
 
                                             </div>
 
-
+                                        </div>
                                     </form>
 
 
                                 </div>
                             </div>
                         </div>
-
-                    </div>
+                 </div>
                 </div>
             </div>
 
@@ -125,12 +81,12 @@
                                 <h3 class="search-document-result__title" >{{ getFullNamearray($exam->faculty_id, $exam->class_id, $exam->material_id, $exam->semester_id, $exam->year_id) }}</h3>
                             </a>
                             <div><a href="" class="search-document-result__course"><span >
-                                        {{--{{$exam->hasfaculty()->name_en}}--}}
+                                        {{$exam->facultyexam->name_en}}
                                     </span></a><i class="fa fa-circle search-document-result__course-institution-separator"></i><span class="font-small">Mansoura University</span></div>
                             <div class="search-document-result__meta font-extra-small text-gray">
 
 									<span title="Upload date" class="ic-text">
-										<i class="ic fa fa-cloud-upload"></i> {{$exam->created_at}}</span></div>
+										<i class="ic fa fa-cloud-upload"></i> {{date('F d, Y', strtotime($exam->created_at))}}</span></div>
 
                         </div>
                         <span class=" search-document-result__rating"><i class="fa fa-thumbs-up"></i>10</span>

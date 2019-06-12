@@ -21,3 +21,5 @@
 <script src="{{url('/frontend/js/jquery.easing.min.js')}}"></script>
 
 <script src="{{url('/frontend/js/custom.js')}}"></script>
+<script src="{{url('/panel/js/exam-selectors.js')}}"></script>
+{{--{!! HTML::script('/panel/js/exam-selectors.js') !!}--}}
