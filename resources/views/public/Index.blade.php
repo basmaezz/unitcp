@@ -87,10 +87,9 @@
                                 </p>
                             </div>
                             <ul class="exam-items-list">
-                                <li><a href="" class="popular-items__link"><span class="text-ellipsis">Financial accounting-Financial Deb-faculty of commerce</span></a></li>
-                                <li><a href="" class="popular-items__link"><span class="text-ellipsis">Financial accounting-Financial Deb-faculty of commerce</span></a></li>
-                                <li><a href="" class="popular-items__link"><span class="text-ellipsis">Financial accounting-Financial Deb-faculty of commerce</span></a></li>
-                                <li><a href="" class="popular-items__link"><span class="text-ellipsis">Financial accounting-Financial Deb-faculty of commerce</span></a></li>
+                                @foreach($exams as $key => $exam)
+                                <li><a href="" class="popular-items__link"><span class="text-ellipsis">{{ getFullresentNamearray($exam->faculty_id, $exam->department_id,$exam->class_id,$exam->material_id) }}</span></a></li>
+                                @endforeach
                                 <div class="more"><button type="button" class="btn btn-primary">View More</button></div>
 
                             </ul>			</div>

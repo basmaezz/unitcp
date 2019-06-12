@@ -452,10 +452,17 @@ if(!function_exists('getFullNamearray')){
     }
 }
 
-if(!function_exists('getFullexamNamearray')){
+if(!function_exists('getFullexamNamearray')) {
     function getFullexamNamearray(...$id)
     {
-        return \App\Department::whereId($id[0])->first()->name_ar.'-'.\App\Year::whereId($id[2])->first()->name.'-'.\App\Material::whereId($id[1])->first()->name_ar;
+        return \App\Department::whereId($id[0])->first()->name_ar . '-' . \App\Year::whereId($id[1])->first()->name . '-' . \App\Material::whereId($id[2])->first()->name_ar;
+    }
+
+    if (!function_exists('getFullresentNamearray')) {
+        function getFullresentNamearray(...$id)
+        {
+            return \App\Faculty::whereId($id[0])->first()->name_ar . '-' . \App\Department::whereId($id[1])->first()->name . '-' . \App\Classes::whereId($id[2])->first()->name_ar . '-' . \App\Material::whereId($id[3])->first()->name_ar;
+        }
     }
 }
 
