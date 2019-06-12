@@ -15,17 +15,16 @@ use DB;
 class HomeController extends Controller
 {
 
-    public function Index(){
+    public function Index()
+    {
+        $exams = Exam::orderBy('id', 'desc')->take(4)->get();
 
-
-        return view('public.Index');
+        return view('public.Index',compact('exams'));
     }
 
     public function getall()
     {
-
         return view('panel.public.all');
-
     }
 
     public function get_exam_search_data_table(exam $items, Request $request)
