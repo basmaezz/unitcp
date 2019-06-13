@@ -28,7 +28,7 @@
                         <li class="header">You have 4 new messages</li>
                         <li>
                             <ul class="menu">
-                                {{--<li><a href="#">--}}
+                                {{--<li><a href="#">--}}{{--  <i class="fa fa-clipboard"></i> <i class="fi-ticket"></i>--}}
                                         {{--<div class="pull-left"><img src="/panel/img/img1.jpg" class="img-circle" alt="User Image"> <span class="profile-status online pull-right"></span></div>--}}
                                         {{--<h4>Alex C. Patton</h4>--}}
                                         {{--<p>I've finished it! See you so...</p>--}}
