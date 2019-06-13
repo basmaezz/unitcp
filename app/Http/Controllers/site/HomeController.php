@@ -53,13 +53,11 @@ class HomeController extends Controller
 
     public function get_exam_search(Request $request)
     {
-        $request->validate([
-            'txtsearch'=>'required'
-        ]);
-
+//        $request->validate([
+////            'txtsearch'=>'required'
+////        ]);
+///
         $txtsearch=$request->txtsearch;
-
-
 
         $items= Exam::with('tags')->where('file', 'like', '%' . $txtsearch . '%')
             ->orWhere('key_search_ar', 'like', '%' . $txtsearch . '%')
@@ -74,7 +72,8 @@ class HomeController extends Controller
             return view('public.search')->with(['item'=>$items ,'txtsearch'=>$txtsearch]);
         }
         else{
-            return view('panel.search')->with('status','search Failed');
+            $items = Exam::orderBy('id', 'desc')->take(4)->get();
+            return view('panel.search')->with(['item'=>$items ,'txtsearch'=>'']);
         }
 
     }

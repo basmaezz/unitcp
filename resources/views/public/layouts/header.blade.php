@@ -15,15 +15,14 @@
         <!-- main nav -->
 
         <div class="collapse navbar-collapse navbar-right" role="navigation">
-            <ul id="nav" class="nav navbar-nav">
-                <li>
-
-                    <a href ="{{route('panel.login')}}"  id="login" rel="nofollow">Sign in
-                    </a>
-                </li>
+            <ul class="nav navbar-nav">
+               <li>
+                   <a href ="{{route('panel.login')}}"  id="login" rel="nofollow">Sign in
+                   </a>
+               </li>
                 <li >
                     <a href=""  id="lang" rel="nofollow">Arabic
-                    </a></li>
+                    </a></li>   
 
             </ul>
         </div>
@@ -33,4 +32,4 @@
     <!-- /main nav -->
 
 
-</header>
+</header
