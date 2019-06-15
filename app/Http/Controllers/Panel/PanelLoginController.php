@@ -41,6 +41,11 @@ class PanelLoginController extends Controller
             $user= Auth::user();
             $user->online='1';
             $user->save();
+            if (auth()->user()->permission==3){
+                return view('public.Index');
+//                return redirect()->route('try');
+
+            }
             return redirect()->route('panel.dashboard');
         }
         session()->flash('response', __('البيانات المدخلة غير صحيحة'));

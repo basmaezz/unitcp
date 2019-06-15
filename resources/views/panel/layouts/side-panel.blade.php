@@ -69,6 +69,22 @@
             </li>
 
 
+            {{--<li class="treeview {{is_element_active('/post/i')}}">--}}
+                {{--<a href="#">--}}
+                    {{--<i class="ti-layout-list-post"></i>--}}
+                    {{--<span>الطلاب</span>--}}
+                    {{--<span class="pull-right-container"> <i class="fa fa-angle-left pull-right"></i> </span>--}}
+                {{--</a>--}}
+                {{--<ul class="treeview-menu">--}}
+
+                    {{--<li class="{{is_active('student/create')}}"><a href="{{route('panel.students.create')}}"><i class="fa fa-angle-left"></i> إضافة جديد </a></li>--}}
+                    {{--<li class="{{is_active('student/all')}}"><a href="{{route('panel.students.all')}}"><i class="fa fa-angle-left"></i> عرض الطلاب </a></li>--}}
+                    {{--<li class="{{is_active('user/all')}}"><a href="{{route('panel.users.all')}}"><i class="fa fa-angle-left"></i> عرض مديرى النظام </a></li>--}}
+
+                {{--</ul>--}}
+            {{--</li>--}}
+
+
 
             <li class="treeview {{is_element_active('/faculty/i')}}">
                 <a href="#">

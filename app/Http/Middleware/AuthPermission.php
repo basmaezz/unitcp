@@ -19,6 +19,13 @@ class AuthPermission
         {
             return $next($request);
         }
+        elseif(Auth::check() && Auth::user()->permission == 3)
+        {
+            return $next($request);
+//            dd('student');
+//            return view('public.Index');
+//            return redirect()->route('try');
+        }
         return abort(404);
     }
 }

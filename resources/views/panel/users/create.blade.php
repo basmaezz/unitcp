@@ -23,12 +23,17 @@
                             <div class="form-group mt-20 mb-20">
                                 <label><strong>نوع المسستخدم </strong></label> <br>
                                 <label class="radio-inline">
-                                    <input type="radio"  value="0" name="user" id="radio-admin">
+                                    <input type="radio"  value="1" name="user" id="radio-admin">
                                    مدير نظام
                                 </label>
                                 <label class="radio-inline">
-                                    <input type="radio" value="1" name="user" id="radio-user">
+                                    <input type="radio" value="2" name="user" id="radio-user">
                                  مستخدم وحده فرعيه
+                                </label>
+
+                                <label class="radio-inline">
+                                    <input type="radio" value="3" name="user" id="radio-student">
+                                    طالب
                                 </label>
                             </div>
                         </div>

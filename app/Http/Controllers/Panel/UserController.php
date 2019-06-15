@@ -43,7 +43,17 @@ class UserController extends Controller
 
         $user->img= $originalName . '.' . $extension;
         $user->active=$request->active;
-        $request->faculty_id ? $user->permission = 2 : $user->permission = 1;
+        if( $request->user==1){
+            $user->permission = 1;
+
+        }elseif($request->user==2){
+            $user->permission = 2;
+
+        }else{
+
+            $user->permission = 3;
+        }
+//        $request->faculty_id ? $user->permission = 2 : $user->permission = 1;
         $user->save();
 //        flash('Success')->success();
 //        return view('panel.users.all')->with('success','Item created successfully!');
