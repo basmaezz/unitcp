@@ -29,12 +29,12 @@ class HomeController extends Controller
     }
 
 
-//    public function logout(Request $request)
-//    {
-//        $user= Auth::user();
-//        $user->update($user->online='0');
-//        $user->save();
-//        Auth::guard('admin')->logout();
-//        return redirect()->route(get_current_locale().'.panel.login');
-//    }
+    public function logout(Request $request)
+    {
+        $user = Auth::user();
+        $user->online = 0;
+        $user->save();
+        Auth::logout();
+        return redirect()->route('panel.login')->send();
+    }
 }

@@ -14,14 +14,7 @@
                 {{--<a href=""><i class="fa fa-power-off"></i></a>--}}
 
                 <div class="btn-group">
-                    <a href="<?php echo (route('logout')); ?>"
-                       data-toggle="tooltip" data-original-title="Logout" data-placement="bottom" class="btn btn-metis-1 btn-sm"
-                       onclick="event.preventDefault();
-                   document.getElementById('logout-form').submit();">
-                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                            {{ @csrf_field() }}
-
-                        </form>
+                    <a href="{{ route('logout.panel') }}">
                         <i class="fa fa-power-off"></i>
                     </a>
                 </div>
@@ -69,20 +62,20 @@
             </li>
 
 
-            {{--<li class="treeview {{is_element_active('/post/i')}}">--}}
-                {{--<a href="#">--}}
-                    {{--<i class="ti-layout-list-post"></i>--}}
-                    {{--<span>الطلاب</span>--}}
-                    {{--<span class="pull-right-container"> <i class="fa fa-angle-left pull-right"></i> </span>--}}
-                {{--</a>--}}
-                {{--<ul class="treeview-menu">--}}
+            <li class="treeview {{is_element_active('/post/i')}}">
+                <a href="#">
+                    <i class="ti-layout-list-post"></i>
+                    <span>الطلاب</span>
+                    <span class="pull-right-container"> <i class="fa fa-angle-left pull-right"></i> </span>
+                </a>
+                <ul class="treeview-menu">
 
-                    {{--<li class="{{is_active('student/create')}}"><a href="{{route('panel.students.create')}}"><i class="fa fa-angle-left"></i> إضافة جديد </a></li>--}}
-                    {{--<li class="{{is_active('student/all')}}"><a href="{{route('panel.students.all')}}"><i class="fa fa-angle-left"></i> عرض الطلاب </a></li>--}}
-                    {{--<li class="{{is_active('user/all')}}"><a href="{{route('panel.users.all')}}"><i class="fa fa-angle-left"></i> عرض مديرى النظام </a></li>--}}
+                    <li class="{{is_active('user/create')}}"><a href="{{route('panel.users.create')}}"><i class="fa fa-angle-left"></i> إضافة جديد </a></li>
+                    <li class="{{is_active('student/all')}}"><a href="{{route('panel.students.all')}}"><i class="fa fa-angle-left"></i> عرض الطلاب </a></li>
 
-                {{--</ul>--}}
-            {{--</li>--}}
+
+                </ul>
+            </li>
 
 
 

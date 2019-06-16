@@ -2,142 +2,26 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5ecc8cb6-2745-43c6-a27c-4295447f35de" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/iporh.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/iporh.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/panel/students/all.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/public/exam-result.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/public/paginate.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Panel/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Panel/HomeController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Panel/PanelLoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Panel/PanelLoginController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Panel/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Panel/UserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/AuthPermission.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/AuthPermission.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/site/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/site/HomeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/frontend/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/frontend/css/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/frontend/js/bootstrap.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/frontend/js/bootstrap.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/panel/js/exam-selectors.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/panel/js/exam-selectors.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/panel/layouts/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/panel/layouts/header.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/panel/layouts/side-panel.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/panel/layouts/side-panel.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/panel/users/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/panel/users/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/public/Index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/public/Index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/public/fac-exam.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/public/fac-exam.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/public/layouts/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/public/layouts/header.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/public/search.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/public/search.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/panel.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/panel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/barryvdh/laravel-debugbar/src/LaravelDebugbar.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/barryvdh/laravel-debugbar/src/LaravelDebugbar.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/barryvdh/laravel-debugbar/src/ServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/barryvdh/laravel-debugbar/src/ServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_files.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_files.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_namespaces.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_namespaces.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_psr4.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_psr4.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_static.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_static.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/installed.json" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/installed.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/doctrine/lexer/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/doctrine/lexer/LICENSE" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/doctrine/lexer/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/doctrine/lexer/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/doctrine/lexer/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/doctrine/lexer/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/doctrine/lexer/lib/Doctrine/Common/Lexer/AbstractLexer.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/doctrine/lexer/lib/Doctrine/Common/Lexer/AbstractLexer.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/nesbot/carbon/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/nesbot/carbon/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/phpspec/prophecy/CHANGES.md" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phpspec/prophecy/CHANGES.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/phpspec/prophecy/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phpspec/prophecy/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/phpspec/prophecy/src/Prophecy/Doubler/ClassPatch/DisableConstructorPatch.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phpspec/prophecy/src/Prophecy/Doubler/ClassPatch/DisableConstructorPatch.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Application.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/console/Application.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Helper/QuestionHelper.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/console/Helper/QuestionHelper.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/ApplicationTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/console/Tests/ApplicationTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Fixtures/TestTiti.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Fixtures/TestToto.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Helper/QuestionHelperTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/console/Tests/Helper/QuestionHelperTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/contracts/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/contracts/CHANGELOG.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/contracts/Cache/CacheInterface.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/contracts/Cache/CacheTrait.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/contracts/Cache/CallbackInterface.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/contracts/Cache/ItemInterface.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/contracts/Cache/TagAwareCacheInterface.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/contracts/EventDispatcher/Event.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/contracts/EventDispatcher/EventDispatcherInterface.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/contracts/HttpClient/ChunkInterface.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/contracts/HttpClient/Exception/ClientExceptionInterface.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/contracts/HttpClient/Exception/ExceptionInterface.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/contracts/HttpClient/Exception/HttpExceptionInterface.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/contracts/HttpClient/Exception/RedirectionExceptionInterface.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/contracts/HttpClient/Exception/ServerExceptionInterface.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/contracts/HttpClient/Exception/TransportExceptionInterface.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/contracts/HttpClient/HttpClientInterface.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/contracts/HttpClient/ResponseInterface.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/contracts/HttpClient/ResponseStreamInterface.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/contracts/HttpClient/Test/Fixtures/web/index.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/contracts/HttpClient/Test/HttpClientTestCase.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/contracts/HttpClient/Test/TestHttpServer.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/contracts/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/contracts/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/contracts/Service/ResetInterface.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/contracts/Service/ServiceLocatorTrait.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/contracts/Service/ServiceProviderInterface.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/contracts/Service/ServiceSubscriberInterface.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/contracts/Service/ServiceSubscriberTrait.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/contracts/Tests/Cache/CacheTraitTest.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/contracts/Tests/Service/ServiceLocatorTest.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/contracts/Tests/Service/ServiceSubscriberTraitTest.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/contracts/Tests/Translation/TranslatorTest.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/contracts/Translation/LocaleAwareInterface.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/contracts/Translation/TranslatorInterface.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/contracts/Translation/TranslatorTrait.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/contracts/composer.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/contracts/phpunit.xml.dist" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/css-selector/Tests/Parser/ParserTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/css-selector/Tests/Parser/ParserTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/css-selector/Tests/Parser/TokenStreamTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/css-selector/Tests/Parser/TokenStreamTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/css-selector/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/css-selector/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/debug/FatalErrorHandler/ClassNotFoundFatalErrorHandler.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/debug/FatalErrorHandler/ClassNotFoundFatalErrorHandler.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/event-dispatcher/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/event-dispatcher/CHANGELOG.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/event-dispatcher/Debug/TraceableEventDispatcher.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/event-dispatcher/Debug/TraceableEventDispatcher.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/event-dispatcher/Debug/TraceableEventDispatcherInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/event-dispatcher/Debug/TraceableEventDispatcherInterface.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/event-dispatcher/Debug/WrappedListener.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/event-dispatcher/Debug/WrappedListener.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/event-dispatcher/DependencyInjection/RegisterListenersPass.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/event-dispatcher/DependencyInjection/RegisterListenersPass.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/event-dispatcher/Event.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/event-dispatcher/Event.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/event-dispatcher/EventDispatcher.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/event-dispatcher/EventDispatcher.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/event-dispatcher/EventDispatcherInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/event-dispatcher/EventDispatcherInterface.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/event-dispatcher/ImmutableEventDispatcher.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/event-dispatcher/ImmutableEventDispatcher.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/event-dispatcher/Tests/AbstractEventDispatcherTest.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/event-dispatcher/Tests/Debug/TraceableEventDispatcherTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/event-dispatcher/Tests/Debug/TraceableEventDispatcherTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/event-dispatcher/Tests/Debug/WrappedListenerTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/event-dispatcher/Tests/Debug/WrappedListenerTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/event-dispatcher/Tests/EventDispatcherTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/event-dispatcher/Tests/EventDispatcherTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/event-dispatcher/Tests/EventTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/event-dispatcher/Tests/EventTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/event-dispatcher/Tests/GenericEventTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/event-dispatcher/Tests/GenericEventTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/event-dispatcher/Tests/ImmutableEventDispatcherTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/event-dispatcher/Tests/ImmutableEventDispatcherTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/event-dispatcher/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/event-dispatcher/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/finder/Iterator/SortableIterator.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/finder/Iterator/SortableIterator.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/http-foundation/Cookie.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/http-foundation/Cookie.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/http-foundation/Request.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/http-foundation/Request.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/http-foundation/Session/Flash/FlashBagInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/http-foundation/Session/Flash/FlashBagInterface.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Controller/ControllerResolverInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/http-kernel/Controller/ControllerResolverInterface.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/EventListener/FragmentListener.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/http-kernel/EventListener/FragmentListener.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/http-kernel/Kernel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Tests/Log/LoggerTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/http-kernel/Tests/Log/LoggerTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/process/Process.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/process/Process.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/process/Tests/ProcessTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/process/Tests/ProcessTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/routing/Loader/AnnotationClassLoader.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/routing/Loader/AnnotationClassLoader.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/routing/Tests/Loader/AnnotationClassLoaderTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/routing/Tests/Loader/AnnotationClassLoaderTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/routing/Tests/Loader/AnnotationDirectoryLoaderTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/routing/Tests/Loader/AnnotationDirectoryLoaderTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/translation/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/translation/CHANGELOG.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/translation/Command/XliffLintCommand.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/translation/Command/XliffLintCommand.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/translation/DataCollector/TranslationDataCollector.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/translation/DataCollector/TranslationDataCollector.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/translation/DataCollectorTranslator.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/translation/DataCollectorTranslator.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/translation/DependencyInjection/TranslatorPass.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/translation/DependencyInjection/TranslatorPass.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/translation/Dumper/PoFileDumper.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/translation/Dumper/PoFileDumper.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/translation/Dumper/QtFileDumper.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/translation/Dumper/QtFileDumper.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/translation/Extractor/PhpExtractor.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/translation/Extractor/PhpExtractor.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/translation/Loader/XliffFileLoader.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/translation/Loader/XliffFileLoader.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/translation/LoggingTranslator.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/translation/LoggingTranslator.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/translation/Tests/Catalogue/AbstractOperationTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/translation/Tests/Catalogue/AbstractOperationTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/translation/Tests/Command/XliffLintCommandTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/translation/Tests/Command/XliffLintCommandTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/translation/Tests/DataCollector/TranslationDataCollectorTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/translation/Tests/DataCollector/TranslationDataCollectorTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/translation/Tests/DependencyInjection/TranslationPassTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/translation/Tests/DependencyInjection/TranslationPassTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/translation/Tests/Dumper/PoFileDumperTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/translation/Tests/Dumper/PoFileDumperTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/translation/Tests/Dumper/QtFileDumperTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/translation/Tests/Dumper/QtFileDumperTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/translation/Tests/Extractor/PhpExtractorTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/translation/Tests/Extractor/PhpExtractorTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/translation/Tests/IdentityTranslatorTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/translation/Tests/IdentityTranslatorTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/translation/Tests/Loader/QtFileLoaderTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/translation/Tests/Loader/QtFileLoaderTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/translation/Tests/Loader/XliffFileLoaderTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/translation/Tests/Loader/XliffFileLoaderTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/translation/Tests/MessageCatalogueTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/translation/Tests/MessageCatalogueTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/translation/Tests/TranslatorCacheTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/translation/Tests/TranslatorCacheTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/translation/Tests/fixtures/resources.po" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/translation/Tests/fixtures/resources.po" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/translation/Tests/fixtures/resources.ts" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/translation/Tests/fixtures/resources.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/translation/Tests/fixtures/withnote.xlf" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/translation/Tests/fixtures/withnote.xlf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/translation/Translator.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/translation/Translator.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/translation/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/translation/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/theseer/tokenizer/src/XMLSerializer.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/theseer/tokenizer/src/XMLSerializer.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/theseer/tokenizer/tests/XMLSerializerTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/theseer/tokenizer/tests/XMLSerializerTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/yajra/laravel-datatables-oracle/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/yajra/laravel-datatables-oracle/CHANGELOG.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/yajra/laravel-datatables-oracle/src/EloquentDataTable.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/yajra/laravel-datatables-oracle/src/EloquentDataTable.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -294,7 +178,7 @@
     <session id="295206442">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="7" />
+          <entry key="project.closed" value="10" />
           <entry key="project.open.time.11" value="1" />
           <entry key="project.open.time.116" value="1" />
           <entry key="project.open.time.124" value="1" />
@@ -303,49 +187,56 @@
           <entry key="project.open.time.24" value="1" />
           <entry key="project.open.time.36" value="1" />
           <entry key="project.open.time.6" value="1" />
+          <entry key="project.open.time.60" value="1" />
           <entry key="project.open.time.63" value="1" />
           <entry key="project.open.time.68" value="1" />
           <entry key="project.open.time.69" value="1" />
+          <entry key="project.open.time.75" value="1" />
+          <entry key="project.open.time.83" value="1" />
           <entry key="project.open.time.87" value="2" />
           <entry key="project.open.time.98" value="1" />
-          <entry key="project.opened" value="14" />
+          <entry key="project.opened" value="17" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
+          <entry key="css" value="14" />
           <entry key="dummy" value="2" />
           <entry key="env" value="4" />
           <entry key="html" value="7" />
-          <entry key="js" value="9" />
-          <entry key="php" value="4887" />
+          <entry key="js" value="123" />
+          <entry key="php" value="6011" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key=".env file" value="4" />
-          <entry key="Blade" value="1844" />
+          <entry key="Blade" value="2286" />
+          <entry key="CSS" value="14" />
           <entry key="HTML" value="22" />
-          <entry key="JavaScript" value="9" />
-          <entry key="PHP" value="3028" />
+          <entry key="JavaScript" value="123" />
+          <entry key="PHP" value="3710" />
           <entry key="PLAIN_TEXT" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
+          <entry key="css" value="2" />
           <entry key="env" value="1" />
-          <entry key="html" value="2" />
-          <entry key="js" value="5" />
-          <entry key="php" value="206" />
+          <entry key="html" value="4" />
+          <entry key="js" value="7" />
+          <entry key="php" value="259" />
           <entry key="vue" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key=".env file" value="1" />
-          <entry key="Blade" value="74" />
-          <entry key="HTML" value="2" />
-          <entry key="JavaScript" value="5" />
-          <entry key="PHP" value="132" />
+          <entry key="Blade" value="109" />
+          <entry key="CSS" value="2" />
+          <entry key="HTML" value="4" />
+          <entry key="JavaScript" value="7" />
+          <entry key="PHP" value="150" />
           <entry key="Vue.js" value="1" />
         </counts>
       </usages-collector>
@@ -359,19 +250,28 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/routes/panel.php">
+        <entry file="file://$PROJECT_DIR$/resources/views/public/layouts/app.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="26" selection-start-line="26" selection-start-column="2" selection-end-line="39" selection-end-column="9" />
+            <state relative-caret-position="408">
+              <caret line="42" selection-start-line="42" selection-end-line="42" selection-end-column="33" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Panel/UserController.php">
+        <entry file="file://$PROJECT_DIR$/resources/views/public/Index.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="56" column="22" selection-start-line="56" selection-start-column="22" selection-end-line="56" selection-end-column="22" />
+            <state relative-caret-position="343">
+              <caret line="185" column="14" selection-start-line="185" selection-start-column="14" selection-end-line="185" selection-end-column="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/site/HomeController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="183" column="33" selection-start-line="183" selection-start-column="20" selection-end-line="183" selection-end-column="33" />
             </state>
           </provider>
         </entry>
@@ -379,35 +279,28 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/routes/web.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="71">
-              <caret line="31" column="19" lean-forward="true" selection-start-line="31" selection-start-column="19" selection-end-line="31" selection-end-column="31" />
+            <state relative-caret-position="391">
+              <caret line="23" column="33" selection-start-line="23" selection-start-column="16" selection-end-line="23" selection-end-column="33" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/panel/users/create.blade.php">
+        <entry file="file://$PROJECT_DIR$/public/panel/js/exam-selectors.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="35" column="40" selection-start-line="35" selection-start-column="40" selection-end-line="35" selection-end-column="40" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Panel/PanelLoginController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="44" column="41" selection-start-line="44" selection-start-column="41" selection-end-line="44" selection-end-column="41" />
+            <state relative-caret-position="-799">
+              <caret line="28" column="30" selection-start-line="28" selection-start-column="30" selection-end-line="28" selection-end-column="30" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Middleware/AuthPermission.php">
+        <entry file="file://$PROJECT_DIR$/resources/views/public/view-exam.blade.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="357">
-              <caret line="23" column="35" selection-start-line="23" selection-start-column="35" selection-end-line="23" selection-end-column="35" />
+              <caret line="159" column="11" selection-start-line="159" selection-start-column="11" selection-end-line="159" selection-end-column="11" />
+              <caret line="152" column="27" selection-start-line="152" selection-start-column="27" selection-end-line="152" selection-end-column="27" />
+              <caret line="149" selection-start-line="149" selection-end-line="149" />
             </state>
           </provider>
         </entry>
@@ -424,36 +317,36 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>selected</find>
-      <find>crea</find>
-      <find>lang</find>
-      <find>uploads/users/profiles</find>
-      <find>name_ar</find>
-      <find>Notifications</find>
-      <find>notify</find>
+      <find>panel.dashboard</find>
+      <find>class=&quot;jumbotron vertical-center-wrapper&quot;</find>
+      <find>auth</find>
+      <find>name</find>
+      <find>logout-form</find>
+      <find>submi</find>
+      <find>background-image</find>
+      <find>&lt;/fo</find>
+      <find>radio-user</find>
+      <find>where</find>
+      <find>panel.users.all.data</find>
+      <find>get_user_data_table</find>
+      <find>get</find>
+      <find>panel.users.all</find>
+      <find>edit_modal</find>
+      <find>textarea</find>
+      <find>&lt;textarea class=&quot;form-control &quot;</find>
+      <find>head.png</find>
+      <find>jumbotron</find>
       <find>logout</find>
-      <find>img</find>
-      <find>wow</find>
-      <find>&lt;section  class=&quot;jumbotron</find>
-      <find>logo</find>
-      <find>&lt;img src</find>
-      <find>session</find>
-      <find>search-page__controls</find>
-      <find>form</find>
-      <find>panel.exam.search-s</find>
-      <find>get_exam_search</find>
-      <find>get_fac_data</find>
-      <find>faculty</find>
-      <find>exam-selectors.js</find>
-      <find>getExamData</find>
-      <find>views_num</find>
-      <find>Facul</find>
-      <find>('panel.login')</find>
-      <find>login</find>
-      <find>panel.login</find>
-      <find>showL</find>
+      <find>&lt;img</find>
+      <find>Department filter</find>
+      <find>selectors_div</find>
+      <find>Select your Department</find>
+      <find>$data</find>
+      <find>search-document-results list-unstyled</find>
+      <find>pagination-wrapper</find>
+      <find>find($id)</find>
+      <find>getsearchExam</find>
       <find>getsearchExamData</find>
-      <find>user</find>
     </findStrings>
     <replaceStrings>
       <replace>panel.</replace>
@@ -484,12 +377,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/resources/views/panel/department/edit.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/panel/semester/edit.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/panel/layouts/index.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/panel/pause.blade.php" />
-        <option value="$PROJECT_DIR$/app/Http/Middleware/CheckActive.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/Panel/ConfigController.php" />
         <option value="$PROJECT_DIR$/resources/views/panel/config.blade.php" />
         <option value="$PROJECT_DIR$/.env" />
         <option value="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" />
@@ -511,30 +398,36 @@
         <option value="$PROJECT_DIR$/app/Observe/Notifiy.php" />
         <option value="$PROJECT_DIR$/app/User.php" />
         <option value="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/Panel/HomeController.php" />
         <option value="$PROJECT_DIR$/resources/views/panel/users/profile.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/public/layouts/css.blade.php" />
         <option value="G:/exams/Exams/search.html" />
-        <option value="$PROJECT_DIR$/public/panel/js/exam-selectors.js" />
-        <option value="$PROJECT_DIR$/resources/views/public/fac-exam.blade.php" />
-        <option value="$PROJECT_DIR$/routes/web.php" />
         <option value="$PROJECT_DIR$/app/Logic/helper.php" />
-        <option value="$PROJECT_DIR$/resources/views/public/search.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/public/Index.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/panel/layouts/header.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/public/layouts/js.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/public/view-exam.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/public/layouts/app.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/public/recent-exams.blade.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/site/HomeController.php" />
-        <option value="$PROJECT_DIR$/resources/views/public/layouts/header.blade.php" />
         <option value="$PROJECT_DIR$/config/app.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/Panel/UserController.php" />
-        <option value="$PROJECT_DIR$/routes/panel.php" />
-        <option value="$PROJECT_DIR$/resources/views/panel/layouts/side-panel.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/panel/users/create.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Middleware/AuthPermission.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Panel/PanelLoginController.php" />
+        <option value="$PROJECT_DIR$/public/frontend/css/main.css" />
+        <option value="$PROJECT_DIR$/resources/views/panel/users/create.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/panel/students/all.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Panel/UserController.php" />
+        <option value="$PROJECT_DIR$/resources/views/panel/layouts/header.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" />
+        <option value="$PROJECT_DIR$/resources/views/panel/layouts/side-panel.blade.php" />
+        <option value="$PROJECT_DIR$/routes/panel.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Panel/HomeController.php" />
+        <option value="$PROJECT_DIR$/resources/views/public/layouts/header.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/public/fac-exam.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/public/exam-result.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/public/search.blade.php" />
+        <option value="$PROJECT_DIR$/public/panel/js/exam-selectors.js" />
+        <option value="$PROJECT_DIR$/resources/views/vendor/pagination/default.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/public/paginate.blade.php" />
+        <option value="$PROJECT_DIR$/routes/web.php" />
+        <option value="$PROJECT_DIR$/resources/views/public/view-exam.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/public/layouts/app.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/public/Index.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/site/HomeController.php" />
       </list>
     </option>
   </component>
@@ -652,7 +545,8 @@
     </include_path>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="556" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
     <option name="width" value="674" />
     <option name="height" value="688" />
   </component>
@@ -672,28 +566,20 @@
             <path>
               <item name="unitcp" type="b2602c69:ProjectViewProjectNode" />
               <item name="unitcp" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="unitcp" type="b2602c69:ProjectViewProjectNode" />
               <item name="unitcp" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="Http" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="unitcp" type="b2602c69:ProjectViewProjectNode" />
               <item name="unitcp" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="Http" type="462c0819:PsiDirectoryNode" />
-              <item name="Controllers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="unitcp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="unitcp" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="Http" type="462c0819:PsiDirectoryNode" />
-              <item name="Controllers" type="462c0819:PsiDirectoryNode" />
-              <item name="Panel" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -707,6 +593,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../eiadat" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -874,11 +761,14 @@
       <workItem from="1560307426590" duration="8453000" />
       <workItem from="1560327433286" duration="7952000" />
       <workItem from="1560414649245" duration="8215000" />
+      <workItem from="1560631751536" duration="12750000" />
+      <workItem from="1560646474724" duration="587000" />
+      <workItem from="1560655759460" duration="1300000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="654713000" />
+    <option name="totallyTimeSpent" value="678444000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -893,7 +783,7 @@
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.22239032" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.22844176" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -909,6 +799,7 @@
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="10" show_stripe_button="false" />
       <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49621785" weight="0.4003268" />
+      <window_info anchor="bottom" id="Messages" order="12" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -926,17 +817,17 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/routes/panel.php</url>
-          <line>107</line>
+          <line>110</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/routes/panel.php</url>
-          <line>115</line>
+          <line>118</line>
           <option name="timeStamp" value="5" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/routes/panel.php</url>
-          <line>95</line>
+          <line>98</line>
           <option name="timeStamp" value="6" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
@@ -961,113 +852,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Panel/DepartmentController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="61" column="9" selection-start-line="61" selection-start-column="9" selection-end-line="61" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/panel/users/edit.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="154" column="19" selection-start-line="153" selection-start-column="30" selection-end-line="154" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/panel/users/profile.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="103" column="19" lean-forward="true" selection-start-line="103" selection-start-column="19" selection-end-line="103" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Panel/HomeController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="30" selection-start-line="30" selection-end-line="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/public/layouts/css.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="16" selection-start-line="17" selection-start-column="16" selection-end-line="17" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://G:/exams/Exams/index-bg.html" />
-    <entry file="file://$PROJECT_DIR$/.env">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="629">
-          <caret line="37" column="46" selection-start-line="37" selection-start-column="46" selection-end-line="37" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://G:/exams/Exams/search.html" />
-    <entry file="file://$PROJECT_DIR$/resources/views/panel/public/Index.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="25" column="69" selection-start-line="25" selection-start-column="69" selection-end-line="25" selection-end-column="85" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Faculty.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="24" selection-start-line="24" selection-end-line="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/panel/layouts/js.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" selection-start-line="19" selection-end-line="19" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/panel/exam/create.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2029">
-          <caret line="155" column="57" lean-forward="true" selection-start-line="155" selection-start-column="57" selection-end-line="155" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Exam.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1496">
-          <caret line="90" column="31" selection-start-line="90" selection-start-column="20" selection-end-line="90" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/panel/exam/exam-selectors.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="61" column="1" lean-forward="true" selection-start-line="61" selection-start-column="1" selection-end-line="65" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/panel/public/all.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="680">
-          <caret line="40" column="49" selection-start-line="40" selection-start-column="49" selection-end-line="40" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/public/fac-exam.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1122">
-          <caret line="66" selection-start-line="66" selection-end-line="66" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/units/ExamController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="194">
-          <caret line="153" selection-start-line="153" selection-end-line="168" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/public/home.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-357" />
@@ -1094,24 +878,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/panel/layouts/header.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="30" column="62" lean-forward="true" selection-start-line="30" selection-start-column="62" selection-end-line="30" selection-end-column="119" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/panel/login.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="194">
           <caret line="24" column="59" selection-start-line="24" selection-start-column="59" selection-end-line="24" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/panel/js/exam-selectors.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="33" column="30" selection-start-line="33" selection-start-column="30" selection-end-line="33" selection-end-column="30" />
         </state>
       </provider>
     </entry>
@@ -1128,27 +898,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/public/view-exam.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="411">
-          <caret line="157" selection-start-line="157" selection-end-line="157" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/public/layouts/app.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="500">
-          <caret line="73" column="9" selection-start-line="73" selection-start-column="9" selection-end-line="73" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/public/search.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="117" selection-start-line="8" selection-start-column="117" selection-end-line="8" selection-end-column="117" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://E:/Basma/temelates/unitcp/Exams/Exams/recent-exams.html" />
     <entry file="file://$PROJECT_DIR$/resources/views/public/recent-exams.blade.php">
       <provider selected="true" editor-type-id="text-editor">
@@ -1157,28 +906,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/public/Index.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1411">
-          <caret line="143" column="57" selection-start-line="143" selection-start-column="57" selection-end-line="143" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/site/HomeController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="177">
-          <caret line="163" column="37" selection-start-line="163" selection-start-column="20" selection-end-line="163" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/Downloads/header.blade.php" />
-    <entry file="file://$PROJECT_DIR$/resources/views/public/layouts/header.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="15" selection-start-line="21" selection-start-column="15" selection-end-line="21" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/lhc_web/ezcomponents/Graph/src/axis/container.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="459">
@@ -1210,31 +938,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/panel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="26" selection-start-line="26" selection-start-column="2" selection-end-line="39" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/panel/layouts/side-panel.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="71" column="8" selection-start-line="71" selection-start-column="8" selection-end-line="84" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Panel/StudentController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="7" column="23" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/panel/users/create.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="35" column="40" selection-start-line="35" selection-start-column="40" selection-end-line="35" selection-end-column="40" />
         </state>
       </provider>
     </entry>
@@ -1251,24 +958,223 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/web.php">
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Panel/PanelLoginController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="71">
-          <caret line="31" column="19" lean-forward="true" selection-start-line="31" selection-start-column="19" selection-end-line="31" selection-end-column="31" />
+        <state relative-caret-position="357">
+          <caret line="45" selection-start-line="45" selection-end-line="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/panel/users/all.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="150" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/panel/users/create.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="196">
+          <caret line="136" column="55" lean-forward="true" selection-start-line="136" selection-start-column="55" selection-end-line="136" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/panel/students/all.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="54" column="55" selection-start-line="54" selection-start-column="55" selection-end-line="54" selection-end-column="55" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Panel/UserController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="56" column="22" selection-start-line="56" selection-start-column="22" selection-end-line="56" selection-end-column="22" />
+        <state relative-caret-position="1904">
+          <caret line="119" column="44" selection-start-line="119" selection-start-column="44" selection-end-line="119" selection-end-column="44" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Panel/PanelLoginController.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/panel/exam/edit.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="44" column="41" selection-start-line="44" selection-start-column="41" selection-end-line="44" selection-end-column="41" />
+        <state relative-caret-position="160">
+          <caret line="102" column="16" selection-start-line="102" selection-start-column="16" selection-end-line="105" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/panel/layouts/header.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="140" column="146" selection-start-line="140" selection-start-column="146" selection-end-line="140" selection-end-column="146" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/panel/faculty/all.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1675">
+          <caret line="100" column="45" selection-start-line="100" selection-start-column="45" selection-end-line="100" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/HomeController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="33" selection-start-line="15" selection-start-column="33" selection-end-line="15" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/panel/layouts/side-panel.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="178">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Providers/AppServiceProvider.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="26" column="32" lean-forward="true" selection-start-line="26" selection-start-column="32" selection-end-line="26" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/frontend/css/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="59">
+          <caret line="216" column="10" selection-start-line="216" selection-start-column="1" selection-end-line="216" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Panel/HomeController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="34" column="18" lean-forward="true" selection-start-line="34" selection-start-column="18" selection-end-line="34" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/public/layouts/header.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="17" column="39" lean-forward="true" selection-start-line="17" selection-start-column="39" selection-end-line="17" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Downloads/Exams (2)/Exams/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="280" selection-start-line="94" selection-start-column="7" selection-end-line="280" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/panel/exam/create.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="142">
+          <caret line="53" column="45" selection-start-line="53" selection-start-column="45" selection-end-line="53" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/panel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="42" lean-forward="true" selection-start-line="3" selection-start-column="31" selection-end-line="3" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/vendor/flash/message.blade.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/public/fac-exam.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="24" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/public/search.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="53">
+          <caret line="98" selection-start-line="98" selection-end-line="98" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/public/exam-result.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="11" selection-start-line="16" selection-start-column="11" selection-end-line="16" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/vendor/pagination/bootstrap-4.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="24" lean-forward="true" selection-start-line="12" selection-start-column="24" selection-end-line="12" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/vendor/pagination/default.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="282">
+          <caret column="15" selection-start-column="5" selection-end-column="15" />
+          <caret line="3" column="23" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="23" />
+          <caret line="6" column="38" selection-start-line="6" selection-start-column="28" selection-end-line="6" selection-end-column="38" />
+          <caret line="19" column="44" selection-start-line="19" selection-start-column="34" selection-end-line="19" selection-end-column="44" />
+          <caret line="29" column="23" selection-start-line="29" selection-start-column="13" selection-end-line="29" selection-end-column="23" />
+          <caret line="30" column="38" selection-start-line="30" selection-start-column="28" selection-end-line="30" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/public/paginate.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="22" column="30" selection-start-line="22" selection-start-column="30" selection-end-line="22" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Downloads/Exams (2)/Exams/view-exam.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="257" column="8" lean-forward="true" selection-start-line="106" selection-start-column="8" selection-end-line="257" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/public/view-exam.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="159" column="11" selection-start-line="159" selection-start-column="11" selection-end-line="159" selection-end-column="11" />
+          <caret line="152" column="27" selection-start-line="152" selection-start-column="27" selection-end-line="152" selection-end-column="27" />
+          <caret line="149" selection-start-line="149" selection-end-line="149" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/public/layouts/app.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="42" selection-start-line="42" selection-end-line="42" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/public/Index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="343">
+          <caret line="185" column="14" selection-start-line="185" selection-start-column="14" selection-end-line="185" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/panel/js/exam-selectors.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-799">
+          <caret line="28" column="30" selection-start-line="28" selection-start-column="30" selection-end-line="28" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/web.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="23" column="33" selection-start-line="23" selection-start-column="16" selection-end-line="23" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/site/HomeController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="183" column="33" selection-start-line="183" selection-start-column="20" selection-end-line="183" selection-end-column="33" />
         </state>
       </provider>
     </entry>

@@ -1,7 +1,9 @@
 @extends('public.layouts.app')
 @section('content')
 
-    <section class="jumbotron vertical-center-wrapper">
+    <!--Home search ==== -->
+
+    <section  class="jumbotron  overlay vertical-center-wrapper">
         <div class="vertical-center-element">
             <div class="container">
                 <h1 class="animated fadeInDown">Find your study resources</h1>
@@ -9,10 +11,9 @@
                 <div class="row">
                     <div class="col-sm-2"></div>
                     <div class=" col-md-8">
-{{--                        <form method="get" action="{{route('panel.exam.search-s')}}">--}}
                         <form method="get" class="search-bar search-bar--big" action="{{route('panel.exam.search-s')}}">
                             <i class="fa fa-search search-bar__icon"></i>
-                            <input type="search" name="txtsearch" placeholder="Search for Exams" data-test-selector="big-search-field" value="" data-hj-whitelist="true">
+                            <input type="search" placeholder="Search for Exams" name="txtsearch" data-test-selector="big-search-field" value="" data-hj-whitelist="true">
                             <button type="submit" class="btn btn-primary btn-lg" data-test-selector="search-button">Search</button>
                         </form>
                     </div>
@@ -36,7 +37,7 @@
                 <div class="sec-title text-center mb50 wow  fadeInDown animated">
                     <h2>We’ve got the best study material for you
                     </h2>
-                    <div class="devider"><i class="fa fa-heart-o fa-lg"></i></div>
+                    <div class="devider"><i class="fas fa-book-reader"></i></div>
 
                 </div>
 
@@ -61,11 +62,12 @@
                             </div>
                             <ul class="exam-items-list">
                                 @foreach($exams as $key => $exam)
-                                <li><a href="" class="popular-items__link"><span class="text-ellipsis">{{ getFullexamNamearray($exam->department_id, $exam->material_id,  $exam->year_id) }}</span></a></li>
+                                    <li><a href="" class="popular-items__link"><span class="text-ellipsis">{{ getFullexamNamearray($exam->department_id, $exam->material_id,  $exam->year_id) }}</span></a></li>
                                 @endforeach
                                 <div class="more"><button type="button" class="btn btn-primary">View More</button></div>
 
-                            </ul>					</div>
+                            </ul>
+                  					</div>
                     </div>
                 </div>
                 <!-- end search item -->
@@ -88,7 +90,7 @@
                             </div>
                             <ul class="exam-items-list">
                                 @foreach($exams as $key => $exam)
-                                <li><a href="" class="popular-items__link"><span class="text-ellipsis">{{ getFullresentNamearray($exam->faculty_id, $exam->department_id,$exam->class_id,$exam->material_id) }}</span></a></li>
+                                    <li><a href="" class="popular-items__link"><span class="text-ellipsis">{{ getFullexamNamearray($exam->department_id, $exam->material_id,  $exam->year_id) }}</span></a></li>
                                 @endforeach
                                 <div class="more"><button type="button" class="btn btn-primary">View More</button></div>
 
@@ -119,7 +121,7 @@
 
                     <div class="sec-title text-center mb50 wow rubberBand animated" data-wow-duration="1000ms">
                         <h2>You're in good company</h2>
-                        <div class="devider"><i class="fa fa-heart-o fa-lg"></i></div>
+                        <div class="devider"><i class="fas fa-book-reader"></i></div>
                     </div>
 
                     <!-- first count item -->
@@ -184,5 +186,6 @@
         </div>
     </section>
     <!-- about-exams -->
+
 
 @endsection

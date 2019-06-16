@@ -5,10 +5,13 @@ Route::get('/login', ['as' => 'panel.login', 'uses' => 'PanelLoginController@sho
 Route::post('/login', ['as' => 'panel.login.post', 'uses' => 'PanelLoginController@login']);
 Route::middleware(['authpermission','checkactive'])->group(function() {
     Route::get('/dashboard', ['as' => 'panel.dashboard', 'uses' => 'HomeController@index']);
-    Route::post('/logout', 'HomeController@logout');
+    Route::get('/logout', 'HomeController@logout')->name('logout.panel');
     Route::prefix('/user')->group(function () {
         Route::get('/all', ['as' => 'panel.users.all', 'uses' => 'UserController@index']);
         Route::get('/all/data', ['as' => 'panel.users.all.data', 'uses' => 'UserController@get_user_data_table']);
+
+        Route::get('/allstudent', ['as' => 'panel.students.all', 'uses' => 'UserController@studentindex']);
+        Route::get('/all/studentdata', ['as' => 'panel.students.all.data', 'uses' => 'UserController@get_student_data_table']);
         Route::prefix('/create')->group(function () {
             Route::get('/', ['as' => 'panel.users.create', 'uses' => 'UserController@create']);
             Route::post('/', ['as' => 'panel.users.create', 'uses' => 'UserController@store']);

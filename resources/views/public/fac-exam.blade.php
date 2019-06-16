@@ -6,29 +6,24 @@
         {{--<input class="uit-input" placeholder="search for your Department" type="text">--}}
     {{--</label>--}}
 {{--</div>--}}
-
 <div class="frm-section colm colm3">
 
     <label class="search-filter-label "  >Department filter</label>
 
     <label class="field uit-select">
-
-            <select name="select2" class="form-control" id="department_id"  name="department_id" data-placeholder="Department filter" required>
+        <select class="form-control" id="de_id"  name="de_id" data-placeholder="Level Filter" required>
             <option selected="selected" value="">Select your Department</option>
-                <select class="form-control" id="department_id"  name="department_id" data-placeholder="إختيار الكليه" required>
-                    <option disabled selected hidden>إختيار القسم</option>
-                    @if(isset($department) && $department->count() > 0)
-
-                        @foreach($department as $item)
-
-                            <option value="{{$item->id}}" >{{get_text_locale($item,'name_ar')}}</option>
-                        @endforeach
-                    @endif
-                </select>
+            @if(isset($department) && $department->count() > 0)
+                @foreach($department as $item)
+                    <option value="{{$item->id}}" @if($item->id == request('class_id'))selected @endif >{{get_text_locale($item,'name_ar')}}</option>
+                @endforeach
+            @endif
         </select>
         <i class="select-arrow"></i>
     </label>
 </div>
+
+
 
 <div class="frm-section colm colm3">
 
@@ -52,7 +47,7 @@
     <label class="search-filter-label "  >year filter</label>
 
     <label class="field uit-select">
-        <select name="select2">
+        <select name="year_id" id="year_id">
             <option selected="selected" value="">Select year</option>
             @if(isset($year) && $year->count() > 0)
                 @foreach($year as $item)

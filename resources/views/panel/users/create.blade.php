@@ -134,6 +134,9 @@
                 $('#radio-user').change(function() {
                     $('#sub-admin').removeClass('hidden');
                 });
+                $('#radio-student').change(function() {
+                    $('#sub-admin').removeClass('hidden');
+                });
                 $('#radio-admin').change(function() {
                     $('#sub-admin').addClass('hidden');
                 });
@@ -141,6 +144,8 @@
             });
 
         </script>
+
+
 
     @endpush
 @stop

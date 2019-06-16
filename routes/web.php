@@ -18,11 +18,13 @@ Route::get('download/{id}','site\HomeController@download');//
 
 
 Route::prefix('public')->group(function () {
-    Route::get('index', ['as' => 'panel.exam.index', 'uses' => 'site\HomeController@index']);
-    Route::post('all', ['as' => 'panel.exam.search', 'uses' => 'site\HomeController@getall']);
+    Route::get('index', ['as' => 'public.index', 'uses' => 'site\HomeController@index']);
+    Route::post('all', ['as' => 'public.search', 'uses' => 'site\HomeController@getall']);
     Route::get('index/data', ['as' => 'panel.exam.search-s', 'uses' => 'site\HomeController@get_exam_search']);
     Route::get('getsearchExamData/{id}', ['as' => 'panel.exam.search', 'uses' => 'site\HomeController@getsearchExamData']);
+    Route::get('searchExams/{deid?}/{classid?}/{yearid?}/', ['as' => 'panel.search.exam', 'uses' => 'site\HomeController@getsearchExam']);
 
+    Route::get('viewpdf/{id}','site\HomeController@viewpdf');
     Route::post('search/exam', 'site\HomeController@getExamData')->name('searchexamx');
     Route::post('download/exam', 'site\HomeController@getDownload')->name('downloadexamx');
     Route::get('home','site\HomeController@home')->name('mostdownload');

@@ -223,6 +223,7 @@ body > section {
   color: #ffffff;
   background:rgb(30, 167, 141,.8);
   background-image: url(../img/head.png);
+
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;

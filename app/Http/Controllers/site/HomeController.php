@@ -19,11 +19,10 @@ class HomeController extends Controller
     public function Index()
     {
         $exams = Exam::orderBy('id', 'desc')->take(4)->get();
+//        dd($exams);
         $examcount=Exam::all()->count();
         $user=User::all()->count();
         $faculty=Faculty::all()->count();
-
-
 
         return view('public.Index',compact('exams','examcount','user','faculty'));
     }
@@ -176,10 +175,38 @@ class HomeController extends Controller
         $data = ["classes" => $classes, "department" => $department, "materials" => $materials, "semesters" => $semesters, "year" => $year];
 
         $view = view('public.fac-exam', $data)->render();
-
-        return response()->json(['status' => true, 'item' => $view]);
+        $exams = ['exams' => Exam::where('faculty_id', $id)->paginate(3)];
+        $exams_v = view('public.exam-result', $exams)->render();
+        $exams_v_pag_v = view('public.paginate', $exams)->render();
+        return response()->json(['status' => true, 'item' => $view, 'exams' => $exams_v, 'paginate' => $exams_v_pag_v]);
     }
 
+    public function getsearchExam($deid = null, $classid = null, $yearid = null)
+    {
+        $exams = [];
+        if($deid =! NULL)
+        {
+            $exams = Exam::where('department_id', $deid)->get();
+        }
 
+        if($classid =! NULL && $deid =! NULL)
+        {
+            $exams = Exam::where('department_id', $deid)->where('class_id', $classid)->get();
+        }
+        if($yearid =! NULL && $classid =! NULL && $deid =! NULL)
+        {
+            $exams = Exam::where('department_id', $deid)->where('class_id', $classid)->where('year_id', $yearid)->get();
+        }
+        $exams = ['exams' => $exams];
+        $exams_v = view('public.exam-result', $exams)->render();
+        return response()->json(['exams' => $exams_v]);
+    }
+
+   public function viewpdf(){
+//        $exam= Exam::find($id);
+        return view('public.view-exam');
+
+
+   }
 
 }

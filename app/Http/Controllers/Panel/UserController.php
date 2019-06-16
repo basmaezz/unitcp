@@ -19,6 +19,12 @@ class UserController extends Controller
         return view('panel.users.all');
 
     }
+
+    public  function studentindex(){
+
+        return view('panel.students.all');
+
+    }
     public function create()
     {
         return view('panel.users.create');
@@ -110,7 +116,9 @@ class UserController extends Controller
 
     public function get_user_data_table(user $items)
     {
-        $items= User::get();
+        $items= User::where('permission',1)
+                    ->ORwhere('permission',2)
+                    ->get();
         try {
             return DataTables::of($items)->editColumn('id', function ($item) {
                 return $item->id;
@@ -148,6 +156,43 @@ class UserController extends Controller
             return $this->response_api(false, 'failed');
         }
     }
+
+
+    public function get_student_data_table(user $items)
+    {
+        $items= User::where('permission',3)->get();
+
+
+        try {
+            return DataTables::of($items)->editColumn('id', function ($item) {
+                return $item->id;
+            })->
+            editColumn('faculty_id', function ($item) {
+                if(!empty($item->faculty))
+                {
+                    return ($item['faculty']->name_ar);
+                }
+
+            })->editColumn('created_at', function ($item) {
+                return get_date_from_timestamp($item->created_at);
+            })->addColumn('action', function ($item) {
+                if ($item->active == 1) {
+                    $statuss = '<a  style="margin-right: 10px;background-color: #FA2A00;color:white"  href="' . admin_url('user/status/' . $item->id) . '"   class="btn btn-sm btn-success ">  <i style="margin-left:3px" class="fa  fa-trash-o"></i> نعطيل </a>';
+                } else {
+                    $statuss = '<a  style="margin-right: 10px;background-color: #5cbdc1;color:white"  href="' . admin_url('user/status/' . $item->id) . '"   class="btn btn-sm btn-success ">  <i style="margin-left:3px" class="fa  fa-trash-o"></i> تفعيل </a>';
+                }
+                return '<div class="row">
+                      <a  title="Edit" style="margin-right: 10px"  href="' .route('panel.users.edit', ['id' => $item->id]) . '"  class="btn btn-sm btn-primary edit" > <i style="margin-left: 3px" class="fa fa-check-square-o"></i> تعديل</a>
+                       <a  data-toggle="reject" title="Delete" style="margin-right: 10px;background-color: #FA2A00;color:white"  data-url="' . admin_url('user/delete/' . $item->id) . '"   class="btn btn-sm btn-danger delete">  <i style="margin-left:3px" class="fa  fa-trash-o"></i> حذف </a>
+
+                       '.$statuss.'
+                    </div>';
+            })->rawColumns([ 'action'])->make(true);
+        } catch (\Exception $e) {
+            return $this->response_api(false, 'failed');
+        }
+    }
+
 
     public function status($id)
     {

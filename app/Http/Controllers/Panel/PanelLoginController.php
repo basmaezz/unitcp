@@ -42,8 +42,8 @@ class PanelLoginController extends Controller
             $user->online='1';
             $user->save();
             if (auth()->user()->permission==3){
-                return view('public.Index');
-//                return redirect()->route('try');
+                return redirect()->route('public.index');
+
 
             }
             return redirect()->route('panel.dashboard');
