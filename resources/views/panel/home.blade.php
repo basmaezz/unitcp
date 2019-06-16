@@ -106,6 +106,15 @@
                             <h5>عدد الزائرين
                                 <button type="button" class="btn btn-sm btn-rounded btn-info pull-left">{{$visitor}}</button>
                             </h5>
+
+
+                        </div>
+                        <div class="m-b-3 font-weight-bold">
+                            <h5> <a href="{{route('users.online')}}"> عدد المتواجدين حاليا</a>
+                                <button type="button" class="btn btn-sm btn-rounded btn-info pull-left">{{$users}}</button>
+                            </h5>
+
+
                         </div>
 
 

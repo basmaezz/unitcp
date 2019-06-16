@@ -22,10 +22,10 @@ class HomeController extends Controller
         $visitor=visitor::all()->count();
         $logs= Log::orderBy('id', 'desc')->take(5)->get();
         $latest= Exam::orderBy('created_at','desc')->paginate(5);
+        $users= User::where('online',1)->count();
+//        dd($users);
 
-
-
-        return view('panel.home',compact('faculty','user','exam','visitor','logs','latest'));
+        return view('panel.home',compact('faculty','user','exam','visitor','logs','latest','users'));
     }
 
 
@@ -37,4 +37,6 @@ class HomeController extends Controller
         Auth::logout();
         return redirect()->route('panel.login')->send();
     }
+
+
 }

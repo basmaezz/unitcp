@@ -255,6 +255,11 @@ class UserController extends Controller
 
     }
 
+    public function online(){
+        $users= User::where('online',1)->get();
+        return view('panel.users.onlineusers',compact('users'));
+    }
+
 
 
 }

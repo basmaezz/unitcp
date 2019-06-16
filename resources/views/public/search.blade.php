@@ -3,12 +3,17 @@
     <div class="search-page">
         <section class=" search-page__controls">
             <div class="container clearfix">
-                <div class="search-page_input-wrapper">
-                    <div class="search-bar search-bar-big">
-                        <i class="fa fa-search search-bar__icon"></i>
-                        <input type="search" placeholder="Search for Exams" autofocus=""  spellcheck="true" value="{{$txtsearch}}">
-                    </div>
 
+
+
+                <div class="search-page_input-wrapper">
+                   <form action="{{route('panel.exam.search-s')}}">
+                    <div class="search-bar search-bar-big">
+
+                        <i class="fa fa-search search-bar__icon"></i>
+                        <input type="search"  name="txtsearch" placeholder="Search for Exams" autofocus=""  spellcheck="true" value="{{$txtsearch}}">
+                    </div>
+                   </form>
                 </div>
 
                 <div class="search-filter-bar__filters">
