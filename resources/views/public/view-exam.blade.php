@@ -31,7 +31,7 @@
 
 <!-- preloader -->
 <div id="preloader">
-    <img src="img/preloader.gif" alt="Preloader">
+    <img src="{{url('/frontend/img/preloader.gif')}}" alt="Preloader">
 </div>
 <!-- end preloader -->
 
@@ -138,7 +138,7 @@ End Fixed Navigation
 
 
                 <div class="input-group mb-3">
-                    <input type="text" class="form-control" placeholder="Search">
+                    <input type="text" class="form-control" placeholder="Search" value="{{url('public/viewpdf/'.$exam->id)}}">
                     <div class="input-group-append">
                         <button class="btn btn-success" type="submit">copy</button>
                     </div>

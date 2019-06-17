@@ -12,7 +12,7 @@
                     <ul class="search-document-results list-unstyled" >
                         @foreach($exams as $key => $exam)
                         <li class="row search-document-result flex" >
-                            <div class="search-document-result__details"><a href="#">
+                            <div class="search-document-result__details"><a href="{{url('public/viewpdf/'.$exam->id)}}">
                                     <h3 class="search-document-result__title" >{{ getFullexamNamearray($exam->department_id, $exam->material_id,  $exam->year_id) }}</h3>
                                 </a>
                                 <div><a href="" class="search-document-result__course"><span > {{$exam->facultyexam->name_en}}</span></a><i class="fa fa-circle search-document-result__course-institution-separator"></i><span class="font-small">Mansoura University</span></div>

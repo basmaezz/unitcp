@@ -140,7 +140,17 @@ class UserController extends Controller
             })->editColumn('created_at', function ($item) {
                 return get_date_from_timestamp($item->created_at);
             })->addColumn('action', function ($item) {
-                if ($item->active == 1) {
+
+                if(Auth::user()->id == $item->id){
+                    return '<div class="row">
+                      <a  title="Edit" style="margin-right: 10px"  href="' .route('panel.users.edit', ['id' => $item->id]) . '"  class="btn btn-sm btn-primary edit" > <i style="margin-left: 3px" class="fa fa-check-square-o"></i> تعديل</a>
+   
+                       
+                    </div>';
+
+                }
+
+              elseif ($item->active == 1) {
                     $statuss = '<a  style="margin-right: 10px;background-color: #FA2A00;color:white"  href="' . admin_url('user/status/' . $item->id) . '"   class="btn btn-sm btn-success ">  <i style="margin-left:3px" class="fa  fa-trash-o"></i> نعطيل </a>';
                 } else {
                     $statuss = '<a  style="margin-right: 10px;background-color: #5cbdc1;color:white"  href="' . admin_url('user/status/' . $item->id) . '"   class="btn btn-sm btn-success ">  <i style="margin-left:3px" class="fa  fa-trash-o"></i> تفعيل </a>';
