@@ -205,11 +205,25 @@ class HomeController extends Controller
         return response()->json(['exams' => $exams_v]);
     }
 
-   public function viewpdf(){
-//        $exam= Exam::find($id);
-        return view('public.view-exam');
+   public function viewpdf($id){
+        $exam= Exam::find($id);
 
-
+        return view('public.view-exam',compact('exam'));
    }
+
+   public function recent(){
+       $exams = Exam::orderBy('id', 'desc')->take(4)->get();
+
+       return view('public.recent-exams',compact('exams'));
+
+    }
+
+    public function popular(){
+        $exams = Exam::orderBy('id', 'desc')->take(4)->get();
+
+        return view('public.popular-exams',compact('exams'));
+
+    }
+
 
 }

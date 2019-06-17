@@ -62,9 +62,12 @@
                             </div>
                             <ul class="exam-items-list">
                                 @foreach($exams as $key => $exam)
-                                    <li><a href="" class="popular-items__link"><span class="text-ellipsis">{{ getFullexamNamearray($exam->department_id, $exam->material_id,  $exam->year_id) }}</span></a></li>
+                                    <li><a href="{{url('public/viewpdf/'.$exam->id)}}" class="popular-items__link"><span class="text-ellipsis">{{ getFullexamNamearray($exam->department_id, $exam->material_id,  $exam->year_id) }}</span></a></li>
                                 @endforeach
-                                <div class="more"><button type="button" class="btn btn-primary">View More</button></div>
+                                <div class="more">
+                                <a href="{{route('popular')}}" class="btn btn-primary">View More</a>
+
+                                </div>
 
                             </ul>
                   					</div>
@@ -90,9 +93,11 @@
                             </div>
                             <ul class="exam-items-list">
                                 @foreach($exams as $key => $exam)
-                                    <li><a href="" class="popular-items__link"><span class="text-ellipsis">{{ getFullexamNamearray($exam->department_id, $exam->material_id,  $exam->year_id) }}</span></a></li>
+                                    <li><a href="{{url('public/viewpdf/'.$exam->id)}}" class="popular-items__link"><span class="text-ellipsis">{{ getFullexamNamearray($exam->department_id, $exam->material_id,  $exam->year_id) }}</span></a></li>
                                 @endforeach
-                                <div class="more"><button type="button" class="btn btn-primary">View More</button></div>
+                                <div class="more">
+                                    <a href="{{route('recent')}}" class="btn btn-primary">View More</a>
+                                </div>
 
                             </ul>			</div>
                     </div>

@@ -24,6 +24,8 @@ Route::prefix('public')->group(function () {
     Route::get('getsearchExamData/{id}', ['as' => 'panel.exam.search', 'uses' => 'site\HomeController@getsearchExamData']);
     Route::get('searchExams/{deid?}/{classid?}/{yearid?}/', ['as' => 'panel.search.exam', 'uses' => 'site\HomeController@getsearchExam']);
 
+    Route::get('popular','site\HomeController@popular')->name('popular');
+    Route::get('recent','site\HomeController@recent')->name('recent');
     Route::get('viewpdf/{id}','site\HomeController@viewpdf');
     Route::post('search/exam', 'site\HomeController@getExamData')->name('searchexamx');
     Route::post('download/exam', 'site\HomeController@getDownload')->name('downloadexamx');
