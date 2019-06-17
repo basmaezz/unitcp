@@ -45,4 +45,9 @@ class User extends Authenticatable
     public function faculty(){
         return $this->belongsTo('App\Faculty','faculty_id','id');
     }
+
+    public function likes(){
+        return $this->belongsTo('App\Like','user_id','id');
+    }
+
 }

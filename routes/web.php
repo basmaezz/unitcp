@@ -28,6 +28,8 @@ Route::prefix('public')->group(function () {
     Route::get('recent','site\HomeController@recent')->name('recent');
     Route::get('comment/{id}','site\CommentController@store');
     Route::get('viewpdf/{id}','site\HomeController@viewpdf');
+    Route::get('storelike/{id}','site\LikeController@store');
+
     Route::post('search/exam', 'site\HomeController@getExamData')->name('searchexamx');
     Route::post('download/exam', 'site\HomeController@getDownload')->name('downloadexamx');
     Route::get('home','site\HomeController@home')->name('mostdownload');

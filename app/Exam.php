@@ -109,4 +109,11 @@ class Exam extends Model
         return $this->belongsToMany(Tag::class,'tag_exams');
     }
 
+
+
+    public function likes()
+    {
+        return $this->hasMany(Like::class,'exam_id');
+    }
+
 }

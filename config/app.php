@@ -167,10 +167,12 @@ return [
         Zizaco\Entrust\EntrustServiceProvider::class,
 
             Yajra\DataTables\DataTablesServiceProvider::class,
+        Barryvdh\DomPDF\ServiceProvider::class,
 
 
 
-    //        Yajra\DataTables\DataTablesServiceProvider::class,
+
+        //        Yajra\DataTables\DataTablesServiceProvider::class,
 
 //        Longman\LaravelMultiLang\MultiLangServiceProvider::class,
 

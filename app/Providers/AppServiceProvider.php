@@ -21,9 +21,9 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
         \Debugbar::disable();
-        Schema::defaultStringLength(191);
-        $all_fac = Faculty::where('active',1)->orderBy('id', 'ASC')->get();
-        View::share('all_fac', $all_fac);
+//        Schema::defaultStringLength(191);
+//        $all_fac = Faculty::where('active',1)->orderBy('id', 'ASC')->get();
+//        View::share('all_fac', $all_fac);
 //       / \Debugbar::disable();
 
         \Blade::if('admin', function () {
