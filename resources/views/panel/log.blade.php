@@ -30,7 +30,7 @@
                                 <th scope="row">{{$key +1}}</th>
                                 <td>{{$logs->who_users->name}}</td>
                                 <td>{{$logs->what}}</td>
-                                <td>{{$logs->created_at}}</td>
+                                <td>{{$logs->created_at->diffForHumans()}}</td>
                             </tr>
                         @endforeach
 
