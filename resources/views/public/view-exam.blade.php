@@ -63,11 +63,26 @@
         <!-- main nav -->
 
         <div class="collapse navbar-collapse navbar-right" role="navigation">
-            <ul id="nav" class="nav navbar-nav">
-                <li>
-                    <a href=""  id="login" rel="nofollow">Sign in
-                    </a>
-                </li>
+            <ul class="nav navbar-nav">
+                @if (Auth::check())
+                    <li>
+                        <a href ="#"  id="login" rel="nofollow">{{auth()->user()->name}}
+
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href ="{{route('logout.panel')}}"  id="login" rel="nofollow">Logout
+
+                        </a>
+                    </li>
+
+                @else
+                    <li>
+                        <a href ="{{route('panel.login')}}"  id="login" rel="nofollow">Sign in
+                        </a>
+                    </li>
+                @endif
                 <li >
                     <a href=""  id="lang" rel="nofollow">Arabic
                     </a></li>
@@ -91,6 +106,7 @@ End Fixed Navigation
 
 <div  id="container" class="sidebar-wrapper wrapper document-viewer">
     <!-- Sidebar -->
+
     <nav id="sidebar" >
         <div class="sidebar-content">
             <div class="sidebar-header">
@@ -138,7 +154,7 @@ End Fixed Navigation
 
 
                 <div class="input-group mb-3">
-                    <input type="text" class="form-control" placeholder="Search" value="{{url('public/viewpdf/'.$exam->id)}}">
+                    <input type="text" class="form-control" value="{{url('public/viewpdf/'.$exam->id)}}">
                     <div class="input-group-append">
                         <button class="btn btn-success" type="submit">copy</button>
                     </div>
@@ -152,55 +168,39 @@ End Fixed Navigation
 
             <div class="document-info-row  row">
                 <p class="title">Comments</p>
-                <div class="col-md-12 ">
-                    <textarea class="form-control" placeholder="write a comment..." rows="1"></textarea>
+                <div class="col ">
+
+
+
+                    <form method="get" action="{{url('public/comment/'.$exam->id)}}">
+                        <div class="input-group mb-5">
+
+                            <input type="hidden" name="exam_id" class="form-control" value="{{$exam->id}}">
+                            @if (Auth::check())
+                            <input type="text" name="txtcomment" class="form-control" placeholder="write comment">
+                            @else
+                                <input type="text" name="txtcomment" class="form-control" placeholder="write comment" disabled>
+                            @endif
+                        </div>
+
+                    </form>
+
+
                 </div>
                 <div class="clearfix"></div>
 
                 <ul class="comment-user-post">
+                    @foreach($comments as $comment)
                     <li class="comment-det" >
                         <div class=""><a href="#" class="pull-left"><i class="far fa-user-circle"></i></a></div>
                         <div class="comment-user-txt">
-                            <span ><a href="" >Ahmed.H</a>•<span >26 days ago</span></span>
-                            <span>thank you a lot. You save my semester</span>
+                            <span ><a href="" >{{$comment->student->name}}</a>•<span >{{$comment->created_at->diffForHumans()}}</span></span>
+                            <span>{{$comment->comment}}</span>
                         </div>
                     </li>
+                   @endforeach
 
-                    <li class="comment-det" >
-                        <div class=""><a href="#" class="pull-left"><i class="far fa-user-circle"></i></a></div>
-                        <div class="comment-user-txt">
-                            <span ><a href="" >Ahmed.H</a>•<span >26 days ago</span></span>
-                            <span>thank you a lot. You save my semester</span>
-                        </div>
-                    </li>
 
-                    <li class="comment-det" >
-                        <div class=""><a href="#" class="pull-left"><i class="far fa-user-circle"></i></a></div>
-                        <div class="comment-user-txt">
-                            <span ><a href="" >Ahmed.H</a>•<span >26 days ago</span></span>
-                            <span>thank you a lot. You save my semester</span>
-                        </div>
-                    </li>
-
-                    <li class="comment-det" >
-                        <div class=""><a href="#" class="pull-left"><i class="far fa-user-circle"></i></a></div>
-                        <div class="comment-user-txt">
-                            <span ><a href="" >Ahmed.H</a>•<span >26 days ago</span></span>
-                            <span>thank you a lot. You save my semester</span>
-                        </div>
-                    </li>	<li class="comment-det" >
-                        <div class=""><a href="#" class="pull-left"><i class="far fa-user-circle"></i></a></div>
-                        <div class="comment-user-txt">
-                            <span ><a href="" >Ahmed.H</a>•<span >26 days ago</span></span>
-                            <span>thank you a lot. You save my semester</span>
-                        </div>
-                    </li>	<li class="comment-det" >
-                        <div class=""><a href="#" class="pull-left"><i class="far fa-user-circle"></i></a></div>
-                        <div class="comment-user-txt">
-                            <span ><a href="" >Ahmed.H</a>•<span >26 days ago</span></span>
-                            <span>thank you a lot. You save my semester</span>
-                        </div>
-                    </li>
                 </ul>
                 <div class="show-more-comments"><button class="btn btn-outline-primary btn-block"> Show 5 more comments.</button></div>
             </div>
@@ -217,13 +217,13 @@ End Fixed Navigation
     <div id="content">
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container-fluid">
-                <div class="content-header row">
-                    <div class="col-md-4 ">
+                <div class="content-header  row">
+                    <div class=" col-md-4 col-sm-2 ">
                         <button type="button" id="sidebarCollapse" class="btn btn-info">
                             <i class="fas fa-align-left"></i>
                         </button>
                     </div>
-                    <div class="col-md-8 right  download-exam">
+                    <div class="col-md-8 col-sm-2 right  download-exam">
                         <button type="button" class="btn btn-success">Download</button>
                     </div>
                 </div>

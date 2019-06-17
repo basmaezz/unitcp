@@ -159,7 +159,7 @@
                                 <div class="mail-contnet">
                                     <h5 style="font-weight: bold;">{{$logs->who_users->name}}</h5>
                                     <span class="mail-desc" style="color: #0E7AC4;">{{$logs->what}}</span>
-                                    <span class="time">{{$logs->created_at}} AM</span>
+                                    <span class="time">{{$logs->created_at->diffForHumans()}} </span>
                                 </div>
                             </a>
                                 @endforeach

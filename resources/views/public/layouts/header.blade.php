@@ -28,20 +28,6 @@
 
                         </a>
                     </li>
-                    {{--<div class="btn-group">--}}
-                        {{--<a href="{{route('logout')}}"--}}
-                           {{--data-toggle="tooltip" data-original-title="Logout" data-placement="bottom" class="btn btn-metis-1 btn-sm"--}}
-                           {{--onclick="event.preventDefault();--}}
-                   {{--document.getElementById('logout-form').submit();">--}}
-                            {{--<form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">--}}
-                                {{--{{ @csrf_field() }}--}}
-
-                            {{--</form>--}}
-                            {{--<li>--}}
-                                {{--Logout--}}
-                            {{--</li>--}}
-                        {{--</a>--}}
-                    {{--</div>--}}
 
                 @else
                <li>

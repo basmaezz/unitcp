@@ -26,6 +26,7 @@ Route::prefix('public')->group(function () {
 
     Route::get('popular','site\HomeController@popular')->name('popular');
     Route::get('recent','site\HomeController@recent')->name('recent');
+    Route::get('comment/{id}','site\CommentController@store');
     Route::get('viewpdf/{id}','site\HomeController@viewpdf');
     Route::post('search/exam', 'site\HomeController@getExamData')->name('searchexamx');
     Route::post('download/exam', 'site\HomeController@getDownload')->name('downloadexamx');

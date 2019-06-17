@@ -12,6 +12,7 @@ use App\classes;
 use App\Department;
 use App\User;
 use DB;
+use App\Comment;
 
 class HomeController extends Controller
 {
@@ -206,9 +207,12 @@ class HomeController extends Controller
     }
 
    public function viewpdf($id){
-        $exam= Exam::find($id);
 
-        return view('public.view-exam',compact('exam'));
+        $exam= Exam::find($id);
+        $comments= Comment::where('exam_id',$id)->orderBy('id', 'desc')->get();
+
+
+        return view('public.view-exam',compact('exam','comments'));
    }
 
    public function recent(){

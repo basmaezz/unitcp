@@ -144,8 +144,7 @@ class UserController extends Controller
                 if(Auth::user()->id == $item->id){
                     return '<div class="row">
                       <a  title="Edit" style="margin-right: 10px"  href="' .route('panel.users.edit', ['id' => $item->id]) . '"  class="btn btn-sm btn-primary edit" > <i style="margin-left: 3px" class="fa fa-check-square-o"></i> تعديل</a>
-   
-                       
+                         
                     </div>';
 
                 }
