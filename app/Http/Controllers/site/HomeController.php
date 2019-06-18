@@ -179,9 +179,9 @@ class HomeController extends Controller
         $view = view('public.fac-exam', $data)->render();
         return response()->json(['status' => true, 'item' => $view]);
 
-//        $exams = ['exams' => Exam::where('faculty_id', $id)->paginate(3)];
-//        $exams_v = view('public.exam-result', $exams)->render();
-//        $exams_v_pag_v = view('public.paginate', $exams)->render();
+        $exams = ['exams' => Exam::where('faculty_id', $id)->get()];
+        $exams_v = view('public.exam-result', $exams)->render();
+        $exams_v_pag_v = view('public.paginate', $exams)->render();
 //        return response()->json(['status' => true, 'item' => $view, 'exams' => $exams_v, 'paginate' => $exams_v_pag_v]);
         return response()->json(['status' => true, 'item' => $view, 'exams' => $exams_v, 'paginate' => $exams_v_pag_v]);
     }
