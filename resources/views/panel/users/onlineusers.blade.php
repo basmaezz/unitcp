@@ -26,7 +26,7 @@
                                     <div class="mail-contnet">
                                         <h5 style="font-weight: bold;">{{$user->username}}</h5>
                                         <span class="mail-desc" style="color: #0E7AC4;"></span>
-                                        <span class="time">{{$user->created_at}} AM</span>
+                                        <span class="time">{{\Carbon\Carbon::parse($user->login_at)->diffForHumans()}} </span>
                                     </div>
                                 </a>
                             @endforeach

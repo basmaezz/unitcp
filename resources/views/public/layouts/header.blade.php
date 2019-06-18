@@ -3,7 +3,7 @@
     <nav class="navbar  navigation ">
         <!-- logo -->
         <div class="navbar-left"></div>
-        <a class="navbar-brand" href="#body">
+        <a class="navbar-brand" href="{{route('public.index')}}">
             <img  src="{{url('/frontend/img/logo.png')}}" alt="Exams">
         </a>
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -24,7 +24,7 @@
                     </li>
 
                     <li>
-                        <a href ="{{route('logout.panel')}}"  id="login" rel="nofollow">Logout
+                        <a href ="{{route('logout.public')}}"  id="login" rel="nofollow">Logout
 
                         </a>
                     </li>

@@ -12,7 +12,7 @@
     @endpush
 
     <div class="content">
-        {!! Form::open(['id'=>'form','method'=>'PUT','url'=>route('panel.users.edit',['id'=>$user->id]),'to'=>route('panel.users.all')]) !!}
+        {!! Form::open(['id'=>'form','method'=>'PUT','url'=>route('panel.users.edit',['id'=>$user->id]),'to'=>route('panel.users.all'),'enctype'=>('multipart/form-data')]) !!}
 
         <div class="row">
             <div class="col-md-8">
@@ -81,7 +81,7 @@
 
                         <fieldset class="form-group hidden" id="chg-pw">
                             <label>كلمه المرور الجديده</label>
-                            <input class="form-control"  type="password" name="repeat_pw" placeholder="الرجاء إدخال كله المرور"  value="" required>
+                            <input class="form-control"  type="password" name="repeat_pw" novalidate placeholder="الرجاء إدخال كله المرور"  value="" required>
                         </fieldset>
 
 

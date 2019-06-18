@@ -88,16 +88,29 @@ class UserController extends Controller
         $user->email=$request->email;
         $user->password = bcrypt($request->password);
         $user->active=$request->active;
-        $imgprofile = $request->file('img');
-        $img_size = $imgprofile->getClientSize();
-        $extension = $imgprofile->getClientOriginalExtension();
 
-        $originalName = str_replace('.' . $extension, '', $imgprofile->getClientOriginalName());
-        $imgprofile->move(public_path('uploads/users/profiles/'),$originalName. '.'.$extension);
 
-        $user->img= $originalName . '.' . $extension;
-        $user->active=$request->active;
-        $request->repeat_pw ?  $user->password=bcrypt($request->password)  : bcrypt($request->password);
+
+        if(!empty($request->repeat_pw)){
+            $user->password = bcrypt($request->repeat_pw);
+        }else{
+            $user->password = bcrypt($request->password);
+        }
+
+        if(!empty($request->file('img')))
+        {
+            $imgprofile = $request->file('img');
+            $img_size = $imgprofile->getClientSize();
+            $extension = $imgprofile->getClientOriginalExtension();
+
+            $originalName = str_replace('.' . $extension, '', $imgprofile->getClientOriginalName());
+            $imgprofile->move(public_path('uploads/users/profiles/'),$originalName. '.'.$extension);
+
+            $user->img= $originalName . '.' . $extension;
+
+        }
+
+//        $request->repeat_pw ?  $user->password=bcrypt($request->password)  : bcrypt($request->password);
         $request->faculty_id ? $user->permission = 2 : $user->permission = 1;
         $user->save();
 
@@ -228,6 +241,7 @@ class UserController extends Controller
     }
 
     public function editprof($id, CreateUser $request){
+//        dd($request);
 
         $current_password = Auth::User()->password;
         if(Hash::check($request->password, $current_password)){
@@ -245,14 +259,15 @@ class UserController extends Controller
 
             if(!empty($request->file('img')))
             {
-            $imgprofile = $request->file('img');
-            $img_size = $imgprofile->getClientSize();
-            $extension = $imgprofile->getClientOriginalExtension();
+                $imgprofile = $request->file('img');
+                $img_size = $imgprofile->getClientSize();
+                $extension = $imgprofile->getClientOriginalExtension();
 
-            $originalName = str_replace('.' . $extension, '', $imgprofile->getClientOriginalName());
-            $imgprofile->move(public_path('uploads/users/profiles/'),$originalName. '.'.$extension);
+                $originalName = str_replace('.' . $extension, '', $imgprofile->getClientOriginalName());
+                $imgprofile->move(public_path('uploads/users/profiles/'),$originalName. '.'.$extension);
 
-            $user->img= $originalName . '.' . $extension;
+                $user->img= $originalName . '.' . $extension;
+
             }
             $user->active='1';
 //            $request->repeat_pw ?  $user->password=bcrypt($request->password)  : bcrypt($request->password);
@@ -260,7 +275,7 @@ class UserController extends Controller
             $user->save();
 
         }
-        return (isset($user)) ? $this->response_api(true, 'تم التعديل بنجاح') : $this->response_api(false, 'حدث خطأ غير متوقع');
+//        return (isset($user)) ? $this->response_api(true, 'تم التعديل بنجاح') : $this->response_api(false, 'حدث خطأ غير متوقع');
 
     }
 

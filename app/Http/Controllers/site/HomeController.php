@@ -13,6 +13,7 @@ use App\Department;
 use App\User;
 use DB;
 use App\Comment;
+use Auth;
 
 class HomeController extends Controller
 {
@@ -227,6 +228,16 @@ class HomeController extends Controller
 
         return view('public.popular-exams',compact('exams'));
 
+    }
+
+    public function logout(Request $request)
+    {
+        $user = Auth::user();
+        $user->online = 0;
+
+        $user->save();
+        Auth::logout();
+        return redirect()->route('panel.login')->send();
     }
 
 

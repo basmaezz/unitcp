@@ -24,6 +24,8 @@ class CreateExamsTable extends Migration
             $table->string('file');
             $table->integer('views_num')->nullable();
             $table->integer('download_num')->nullable();
+            $table->integer('likes_num')->nullable();
+            $table->integer('dislike_num')->nullable();
             $table->string('key_search_ar')->nullable();
             $table->string('key_search_en')->nullable();
             $table->timestamps();

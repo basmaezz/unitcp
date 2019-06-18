@@ -33,6 +33,7 @@ class HomeController extends Controller
     {
         $user = Auth::user();
         $user->online = 0;
+
         $user->save();
         Auth::logout();
         return redirect()->route('panel.login')->send();

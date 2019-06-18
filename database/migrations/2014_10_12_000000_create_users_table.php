@@ -24,6 +24,7 @@ class CreateUsersTable extends Migration
             $table->integer('online')->nullable();
             $table->integer('active')->nullable();
             $table->integer('permission')->nullable();
+            $table->timestamp('login_at');
             $table->rememberToken();
             $table->timestamps();
             $table->softDeletes();

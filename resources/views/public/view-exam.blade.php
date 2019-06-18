@@ -40,7 +40,7 @@
 
     <nav class="navbar  navigation ">
         <!-- logo -->
-        <a class="navbar-brand" href="#body">
+        <a class="navbar-brand" href="{{route('public.index')}}">
             <img src="{{url('/frontend/img/logo.png')}}" alt="Exams">
         </a>
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -118,16 +118,20 @@ End Fixed Navigation
             <div class="document-info-row row">
                 <p class="title">Ratings</p>
                 <div class="col-md-6">
-                    <button class="btn-wrapper btn btn-success ">
+                    {{--<button class="btn-wrapper btn btn-success ">--}}
+                        <a href="{{url('public/storelike/'.$exam->id)}}" class="btn-wrapper btn btn-success ">
                         <i class="fa fa-thumbs-up"></i>
-                        <p class="rating-positive-number">1405</p>
-                    </button>
+                        <p class="rating-positive-number">{{$exam->likes_num}}</p>
+                        </a>
+                    {{--</button>--}}
                 </div>
                 <div class="col-md-6">
-                    <button class="btn-wrapper btn btn-danger">
+                    {{--<button class="btn-wrapper btn btn-danger">--}}
+                    <a href="{{url('public/dislike/'.$exam->id)}}" class="btn-wrapper btn btn-danger ">
                         <i class="fa fa-thumbs-down"></i>
-                        <p class="rating-negative-number">74</p>
-                    </button>
+                        <p class="rating-negative-number">{{$exam->dislike_num}}</p>
+                    {{--</button>--}}
+                    </a>
                 </div>
             </div>
             <!-- social -->

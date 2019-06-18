@@ -12,7 +12,7 @@
     @endpush
 
     <div class="content">
-        {!! Form::open(['id'=>'form','method'=>'post','url'=>route('panel.users.editprofile',['id'=>$user->id]),'to'=>route('panel.dashboard')]) !!}
+        {!! Form::open(['id'=>'form','method'=>'post','url'=>route('panel.users.editprofile',['id'=>$user->id]),'to'=>route('panel.dashboard'),'enctype'=>('multipart/form-data')]) !!}
 
         <div class="row">
             <div class="col-md-8">
@@ -50,13 +50,13 @@
 
                         <fieldset class="form-group hidden" id="chg-pw">
                             <label>كلمه المرور الجديده</label>
-                            <input class="form-control"  type="password" name="repeat_pw" placeholder="الرجاء إدخال كله المرور"  value="" >
+                            <input class="form-control"  type="password" name="repeat_pw" novalidate placeholder="الرجاء إدخال كله المرور"   >
                         </fieldset>
 
-                        <fieldset class="form-group hidden" id="chg-pw-confirm">
-                            <label>اعاده ادخال كلمه المرور الجديده</label>
-                            <input class="form-control"  type="password" name="repeat_pw_confirm" placeholder="الرجاء اعاده ادخال كلمه المرور الجديده"  value="" >
-                        </fieldset>
+                        {{--<fieldset class="form-group hidden" id="chg-pw-confirm">--}}
+                            {{--<label>اعاده ادخال كلمه المرور الجديده</label>--}}
+                            {{--<input class="form-control"  type="password" name="repeat_pw_confirm" placeholder="الرجاء اعاده ادخال كلمه المرور الجديده"  >--}}
+                        {{--</fieldset>--}}
 
 
                         <fieldset class="form-group">

@@ -22,7 +22,9 @@
 										<i class="ic fa fa-cloud-upload"></i> {{date('F d, Y', strtotime($exam->created_at))}}</span></div>
 
                             </div>
-                            <span class=" search-document-result__rating"><i class="fa fa-thumbs-up"></i>10</span>
+                            <a href="{{url('public/storelike/'.$exam->id)}}">
+                                <span class=" search-document-result__rating"><i class="fa fa-thumbs-up"></i>{{$exam->likes_num}}</span>
+                            </a>
                         </li>
                     @endforeach
 

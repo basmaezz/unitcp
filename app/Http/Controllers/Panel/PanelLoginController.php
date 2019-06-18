@@ -40,6 +40,7 @@ class PanelLoginController extends Controller
         if (Auth::attempt($credentials, $request->has('remember'))){
             $user= Auth::user();
             $user->online='1';
+            $user->login_at=now();
             $user->save();
             if (auth()->user()->permission==3){
                 return redirect()->route('public.index');
