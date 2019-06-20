@@ -19,14 +19,19 @@ class CommentController extends Controller
 
     }
 
-       public function store(Request $request, $id){
+       public function store(Request $request, $id,$comment){
 
-        $comment = new Comment;
-        $comment->exam_id=$request->exam_id;
-        $comment->student_id=Auth::user()->id;
-        $comment->comment= $request->txtcomment;
-        $comment->save();
-        return redirect()->back();
+
+        $comments = new Comment;
+        $comments->exam_id=$id;
+        $comments->student_id=Auth::user()->id;
+        $comments->comment= $request->comment;
+        $comments->save();
+
+
+           $view = view('public.view-exam', $comments)->render();
+           return response()->json(['status' => true, 'comments' => $view]);
+//        return redirect()->back();
        }
 
 

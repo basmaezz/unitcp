@@ -54,7 +54,7 @@
         <div class="navbar-search">
 
             {{--<form class="form-inline my-2 my-lg-0">--}}
-                <form method="get" class="form-inline my-2 my-lg-0" action="{{route('panel.exam.search-s')}}">
+            <form method="get" class="form-inline my-2 my-lg-0" action="{{route('panel.exam.search-s')}}">
                 <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="txtsearch">
                 <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
             </form>
@@ -119,20 +119,20 @@ End Fixed Navigation
             <div class="document-info-row row">
                 <p class="title">Ratings</p>
                 <div class="col-md-6">
-                    {{--<button class="btn-wrapper btn btn-success ">--}}
-                        <a href="{{url('public/storelike/'.$exam->id)}}" class="btn-wrapper btn btn-success ">
+                    <button class="btn-wrapper btn btn-success like-btn">
+                    {{--<a href="{{url('public/storelike/'.$exam->id)}}" class="btn-wrapper btn btn-success ">--}}
                         <i class="fa fa-thumbs-up"></i>
                         <p class="rating-positive-number">{{$exam->likes_num}}</p>
-                        </a>
-                    {{--</button>--}}
+                    {{--</a>--}}
+                    </button>
                 </div>
                 <div class="col-md-6">
-                    {{--<button class="btn-wrapper btn btn-danger">--}}
-                    <a href="{{url('public/dislike/'.$exam->id)}}" class="btn-wrapper btn btn-danger ">
+                    <button class="btn-wrapper btn btn-danger dislike-btn">
+{{--                    <a href="{{url('public/dislike/'.$exam->id)}}" class="btn-wrapper btn btn-danger ">--}}
                         <i class="fa fa-thumbs-down"></i>
                         <p class="rating-negative-number">{{$exam->dislike_num}}</p>
-                    {{--</button>--}}
-                    </a>
+                        </button>
+                    {{--</a>--}}
                 </div>
             </div>
             <!-- social -->
@@ -177,12 +177,12 @@ End Fixed Navigation
 
 
 
-                    <form method="get" action="{{url('public/comment/'.$exam->id)}}">
+                    <form method="get" id="comment-form">
                         <div class="input-group mb-5">
 
-                            <input type="hidden" name="exam_id" class="form-control" value="{{$exam->id}}">
+                            <input type="hidden" name="exam_id" class="form-control exam_id" value="{{$exam->id}}">
                             @if (Auth::check())
-                            <input type="text" name="txtcomment" class="form-control" placeholder="write comment">
+                                <input type="text" name="txtcomment" class="form-control txtcomment" placeholder="write comment">
                             @else
                                 <input type="text" name="txtcomment" class="form-control" placeholder="write comment" disabled>
                             @endif
@@ -196,14 +196,14 @@ End Fixed Navigation
 
                 <ul class="comment-user-post">
                     @foreach($comments as $comment)
-                    <li class="comment-det" >
-                        <div class=""><a href="#" class="pull-left"><i class="far fa-user-circle"></i></a></div>
-                        <div class="comment-user-txt">
-                            <span ><a href="" >{{$comment->student->name}}</a>•<span >{{$comment->created_at->diffForHumans()}}</span></span>
-                            <span>{{$comment->comment}}</span>
-                        </div>
-                    </li>
-                   @endforeach
+                        <li class="comment-det" >
+                            <div class=""><a href="#" class="pull-left"><i class="far fa-user-circle"></i></a></div>
+                            <div class="comment-user-txt">
+                                <span ><a href="" >{{$comment->student->name}}</a>•<span >{{$comment->created_at->diffForHumans()}}</span></span>
+                                <span>{{$comment->comment}}</span>
+                            </div>
+                        </li>
+                    @endforeach
 
 
                 </ul>
@@ -236,7 +236,8 @@ End Fixed Navigation
 
             <!-- 4:3 aspect ratio -->
             <div class="embed-responsive embed-responsive-16by9">
-                <iframe class="embed-responsive-item" src="{{ response()->file('storage/faculty/exams/10/485/2/10/2/2/test1-2002-2003.pdf') }}" allowfullscreen></iframe>
+                {{--<iframe class="embed-responsive-item" src="{{ response()->file('storage/faculty/exams/10/485/2/10/2/2/test1-2002-2003.pdf') }}" allowfullscreen></iframe>--}}
+                <iframe class="embed-responsive-item" src="" allowfullscreen></iframe>
             </div>
         </nav>
     </div>
@@ -262,13 +263,41 @@ End Home search
 
 <script type="text/javascript">
     $(document).ready(function () {
-
         $('#sidebarCollapse').on('click', function () {
             $('#sidebar, #content').toggleClass('active');
             $('.collapse.in').toggleClass('in');
             $('a[aria-expanded=true]').attr('aria-expanded', 'false');
         });
     });
+
+
+    $( "#comment-form" ).submit(function( event ) {
+        var exam_id= $(".exam_id").val();
+        var comment= $(".txtcomment").val();
+
+        // alert( exam_id);
+        event.preventDefault();
+
+        $.ajax({
+            type: "get",
+            url: '/public/comment/'+exam_id+'/'+comment,
+
+            success: function(response) {
+                if(response.status)
+                {
+                    alert('ok');
+                    console.log(response);
+                    this.clear();
+
+                }
+
+
+            }
+
+        });
+    });
+
+
 </script>
 </body>
 </html>

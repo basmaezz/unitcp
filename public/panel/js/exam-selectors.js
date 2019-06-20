@@ -109,5 +109,74 @@ $(document).ready(function() {
             });
         }
     });
+
+
+//   Like && DisLike
+
+    $(".like-btn").click(function(e) {
+        var exam_id= $(".exam_id").val();
+        console.log(exam_id);
+        e.preventDefault();
+        if(exam_id){
+            $.ajax({
+                type: "get",
+                url: '/public/storelike/'+exam_id,
+                data: {
+                    id: $(this).val(), // < note use of 'this' here
+                    access_token: $("#access_token").val()
+                },
+                success: function(response) {
+                    if(response.status)
+                    {
+                        // alert('ok');
+                        console.log(response);
+
+                    }
+
+                    //     alert('ok');
+                    // },
+                    // error: function(result) {
+                    //     alert('error');
+                }
+            });
+
+        }
+
+    });
+
+
+    $(".dislike-btn").click(function(e) {
+        var exam_id= $(".exam_id").val();
+        console.log(exam_id);
+        e.preventDefault();
+        if(exam_id){
+            $.ajax({
+                type: "get",
+                url: '/public/dislike/'+exam_id,
+
+                success: function(response) {
+                    if(response.status)
+                    {
+                        alert('ok');
+                        console.log(response);
+
+                    }
+
+
+                }
+            });
+
+        }
+
+    });
+
+
+
+
+
 });
+
+
+
+
 

@@ -26,7 +26,7 @@ Route::prefix('public')->group(function () {
 
     Route::get('popular','site\HomeController@popular')->name('popular');
     Route::get('recent','site\HomeController@recent')->name('recent');
-    Route::get('comment/{id}','site\CommentController@store');
+    Route::get('comment/{id}/{comment}','site\CommentController@store');
     Route::get('viewpdf/{id}','site\HomeController@viewpdf');
     Route::get('storelike/{id}','site\LikeController@store');
     Route::get('dislike/{id}','site\LikeController@dislike');
