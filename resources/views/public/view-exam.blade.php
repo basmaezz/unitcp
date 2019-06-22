@@ -237,7 +237,9 @@ End Fixed Navigation
             <!-- 4:3 aspect ratio -->
             <div class="embed-responsive embed-responsive-16by9">
                 {{--<iframe class="embed-responsive-item" src="{{ response()->file('storage/faculty/exams/10/485/2/10/2/2/test1-2002-2003.pdf') }}" allowfullscreen></iframe>--}}
-                <iframe class="embed-responsive-item" src="" allowfullscreen></iframe>
+                {{--<iframe class="embed-responsive-item" src="" allowfullscreen></iframe>--}}
+                <embed src="https://drive.google.com/viewerng/
+viewer?embedded=true&url={{ url('https://www.tutorialspoint.com/php/php_tutorial.pdf') }}" width="500" height="375">
             </div>
         </nav>
     </div>
