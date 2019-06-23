@@ -55,9 +55,7 @@
                             </ul>
                         </li>
                         <li class="footer"><a href="#">View All Messages</a></li>
-                        <button data-toggle="modal" data-target="#edit_modal" class="btn btn-default">إضافة جديد
-                            <i class="fa fa-plus icon-btn-margin"></i>
-                        </button>
+              
                     </ul>
                 </li>
                 <!-- Notifications  -->
@@ -114,46 +112,6 @@
     </nav>
 
 
-    <div class="modal fade modal-class" id="edit_modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-        {!! Form::open(['id'=>'form','url'=>admin_url('faculty/')]) !!}
-        <div class="modal-dialog modal-lg" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="myModalLabel">Add New Ticket</h5>
-                    <button type="button" class="close pull-left" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                </div>
-                <div class="modal-body">
-                    <div id="loader" class="text-center hidden">
-                        <i style="color: #1183e1;margin-top: 100px;margin-bottom: 100px" class="fa fa-spinner fa-spin fa-2x fa-fw"></i>
-                    </div>
-
-                    <div id="modal_body" class="row">
-                        <input type="hidden" name="id" id="id">
-                        <input type="hidden" name="icon" id="photo">
-                        <div class="col-md-12">
-                            <fieldset class="form-group">
-                                <label class="col-md-4" for="text">الاسم</label>
-                                <input class="form-control col-md-8" id="name_ar" type="text" name="name_ar" placeholder="الرجاء ادخال الاسم" required>
-                            </fieldset>
-
-                            <fieldset class="form-group">
-                                <label>النص</label>
-                                <textarea class="form-control " rows="4" type="text" name="key_search_ar" placeholder="الرجاء إدخال كلمات البحث" ></textarea>
-                            </fieldset>
-
-
-
-                        </div>
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="submit" class="btn btn-primary">  <i class="fa fa-save"></i> &nbsp; حفظ &nbsp; <i style="top: inherit;left: AUTO;" class="upload-spinn fa fa-cog fa-spin fa-1x fa-fw  hidden"></i> </button>
-                </div>
-            </div>
-        </div>
-        {!! Form::close() !!}
-
-    </div>
 
     @push('panel_js')
         {!! HTML::script(panel_url('plugins/datatables/jquery.dataTables.min.js')) !!}

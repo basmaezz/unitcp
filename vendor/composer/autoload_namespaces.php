@@ -11,5 +11,6 @@ return array(
     'Sabberworm\\CSS' => array($vendorDir . '/sabberworm/php-css-parser/lib'),
     'Parsedown' => array($vendorDir . '/erusev/parsedown'),
     'Mockery' => array($vendorDir . '/mockery/mockery/library'),
+    'Mcamara\\LaravelLocalization' => array($vendorDir . '/mcamara/laravel-localization/src'),
     'Laracasts\\Flash' => array($vendorDir . '/laracasts/flash/src'),
 );

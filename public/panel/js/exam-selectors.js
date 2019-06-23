@@ -132,11 +132,6 @@ $(document).ready(function() {
                         console.log(response);
 
                     }
-
-                    //     alert('ok');
-                    // },
-                    // error: function(result) {
-                    //     alert('error');
                 }
             });
 
@@ -161,8 +156,6 @@ $(document).ready(function() {
                         console.log(response);
 
                     }
-
-
                 }
             });
 

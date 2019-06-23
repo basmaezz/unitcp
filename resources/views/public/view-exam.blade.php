@@ -212,6 +212,7 @@ End Fixed Navigation
 
 
 
+
             <!--comment-->
 
         </div>
@@ -229,6 +230,7 @@ End Fixed Navigation
                         </button>
                     </div>
                     <div class="col-md-8 col-sm-2 right  download-exam">
+                        <a href=""  class="btn btn-success">Download</a>
                         <button type="button" class="btn btn-success">Download</button>
                     </div>
                 </div>

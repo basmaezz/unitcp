@@ -426,6 +426,10 @@ class ComposerStaticInit502df56a97e90a796ca8481b7b0f5968
             array (
                 0 => __DIR__ . '/..' . '/mockery/mockery/library',
             ),
+            'Mcamara\\LaravelLocalization' => 
+            array (
+                0 => __DIR__ . '/..' . '/mcamara/laravel-localization/src',
+            ),
         ),
         'L' => 
         array (
@@ -470,6 +474,7 @@ class ComposerStaticInit502df56a97e90a796ca8481b7b0f5968
         'App\\Http\\Controllers\\panel\\StudentController' => __DIR__ . '/../..' . '/app/Http/Controllers/Panel/StudentController.php',
         'App\\Http\\Controllers\\site\\CommentController' => __DIR__ . '/../..' . '/app/Http/Controllers/site/CommentController.php',
         'App\\Http\\Controllers\\site\\HomeController' => __DIR__ . '/../..' . '/app/Http/Controllers/site/HomeController.php',
+        'App\\Http\\Controllers\\site\\LikeController' => __DIR__ . '/../..' . '/app/Http/Controllers/site/LikeController.php',
         'App\\Http\\Controllers\\units\\ClassesController' => __DIR__ . '/../..' . '/app/Http/Controllers/units/ClassesController.php',
         'App\\Http\\Controllers\\units\\ExamController' => __DIR__ . '/../..' . '/app/Http/Controllers/units/ExamController.php',
         'App\\Http\\Controllers\\units\\MaterialController' => __DIR__ . '/../..' . '/app/Http/Controllers/units/MaterialController.php',
@@ -2204,6 +2209,23 @@ class ComposerStaticInit502df56a97e90a796ca8481b7b0f5968
         'League\\Flysystem\\Util\\ContentListingFormatter' => __DIR__ . '/..' . '/league/flysystem/src/Util/ContentListingFormatter.php',
         'League\\Flysystem\\Util\\MimeType' => __DIR__ . '/..' . '/league/flysystem/src/Util/MimeType.php',
         'League\\Flysystem\\Util\\StreamHasher' => __DIR__ . '/..' . '/league/flysystem/src/Util/StreamHasher.php',
+        'Mcamara\\LaravelLocalization\\Commands\\RouteTranslationsCacheCommand' => __DIR__ . '/..' . '/mcamara/laravel-localization/src/Mcamara/LaravelLocalization/Commands/RouteTranslationsCacheCommand.php',
+        'Mcamara\\LaravelLocalization\\Commands\\RouteTranslationsClearCommand' => __DIR__ . '/..' . '/mcamara/laravel-localization/src/Mcamara/LaravelLocalization/Commands/RouteTranslationsClearCommand.php',
+        'Mcamara\\LaravelLocalization\\Commands\\RouteTranslationsListCommand' => __DIR__ . '/..' . '/mcamara/laravel-localization/src/Mcamara/LaravelLocalization/Commands/RouteTranslationsListCommand.php',
+        'Mcamara\\LaravelLocalization\\Exceptions\\SupportedLocalesNotDefined' => __DIR__ . '/..' . '/mcamara/laravel-localization/src/Mcamara/LaravelLocalization/Exceptions/SupportedLocalesNotDefined.php',
+        'Mcamara\\LaravelLocalization\\Exceptions\\UnsupportedLocaleException' => __DIR__ . '/..' . '/mcamara/laravel-localization/src/Mcamara/LaravelLocalization/Exceptions/UnsupportedLocaleException.php',
+        'Mcamara\\LaravelLocalization\\Facades\\LaravelLocalization' => __DIR__ . '/..' . '/mcamara/laravel-localization/src/Mcamara/LaravelLocalization/Facades/LaravelLocalization.php',
+        'Mcamara\\LaravelLocalization\\LanguageNegotiator' => __DIR__ . '/..' . '/mcamara/laravel-localization/src/Mcamara/LaravelLocalization/LanguageNegotiator.php',
+        'Mcamara\\LaravelLocalization\\LaravelLocalization' => __DIR__ . '/..' . '/mcamara/laravel-localization/src/Mcamara/LaravelLocalization/LaravelLocalization.php',
+        'Mcamara\\LaravelLocalization\\LaravelLocalizationServiceProvider' => __DIR__ . '/..' . '/mcamara/laravel-localization/src/Mcamara/LaravelLocalization/LaravelLocalizationServiceProvider.php',
+        'Mcamara\\LaravelLocalization\\Middleware\\LaravelLocalizationMiddlewareBase' => __DIR__ . '/..' . '/mcamara/laravel-localization/src/Mcamara/LaravelLocalization/Middleware/LaravelLocalizationMiddlewareBase.php',
+        'Mcamara\\LaravelLocalization\\Middleware\\LaravelLocalizationRedirectFilter' => __DIR__ . '/..' . '/mcamara/laravel-localization/src/Mcamara/LaravelLocalization/Middleware/LaravelLocalizationRedirectFilter.php',
+        'Mcamara\\LaravelLocalization\\Middleware\\LaravelLocalizationRoutes' => __DIR__ . '/..' . '/mcamara/laravel-localization/src/Mcamara/LaravelLocalization/Middleware/LaravelLocalizationRoutes.php',
+        'Mcamara\\LaravelLocalization\\Middleware\\LaravelLocalizationViewPath' => __DIR__ . '/..' . '/mcamara/laravel-localization/src/Mcamara/LaravelLocalization/Middleware/LaravelLocalizationViewPath.php',
+        'Mcamara\\LaravelLocalization\\Middleware\\LocaleCookieRedirect' => __DIR__ . '/..' . '/mcamara/laravel-localization/src/Mcamara/LaravelLocalization/Middleware/LocaleCookieRedirect.php',
+        'Mcamara\\LaravelLocalization\\Middleware\\LocaleSessionRedirect' => __DIR__ . '/..' . '/mcamara/laravel-localization/src/Mcamara/LaravelLocalization/Middleware/LocaleSessionRedirect.php',
+        'Mcamara\\LaravelLocalization\\Traits\\LoadsTranslatedCachedRoutes' => __DIR__ . '/..' . '/mcamara/laravel-localization/src/Mcamara/LaravelLocalization/Traits/LoadsTranslatedCachedRoutes.php',
+        'Mcamara\\LaravelLocalization\\Traits\\TranslatedRouteCommandContext' => __DIR__ . '/..' . '/mcamara/laravel-localization/src/Mcamara/LaravelLocalization/Traits/TranslatedRouteCommandContext.php',
         'Mockery' => __DIR__ . '/..' . '/mockery/mockery/library/Mockery.php',
         'Mockery\\Adapter\\Phpunit\\Legacy\\TestListenerForV5' => __DIR__ . '/..' . '/mockery/mockery/library/Mockery/Adapter/Phpunit/Legacy/TestListenerForV5.php',
         'Mockery\\Adapter\\Phpunit\\Legacy\\TestListenerForV6' => __DIR__ . '/..' . '/mockery/mockery/library/Mockery/Adapter/Phpunit/Legacy/TestListenerForV6.php',

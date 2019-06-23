@@ -14,17 +14,12 @@ class LikeController extends Controller
 {
     public function store(Request $request,$id){
 
-//        $likes= new Like;
-//        $likes->student_id= Auth::user()->id;
-//        $likes->exam_id=$id;
-//        $likes->likenum='1';
-//        $likes->save();
-//        return redirect()->back();
-
-        $exam=Exam::find($id);
+       $exam=Exam::find($id);
         $exam->likes_num=$exam->likes_num+1;
         $exam->save();
-        return redirect()->back();
+        $view = view('public.view-exam', $exam)->render();
+
+        return response()->json(['status' => true, 'item' => $view]);
 
 
     }
@@ -33,7 +28,7 @@ class LikeController extends Controller
         $exam=Exam::find($id);
         $exam->dislike_num=$exam->dislike_num+1;
         $exam->save();
-        return redirect()->back();
+//        return redirect()->back();
 
 
 }
