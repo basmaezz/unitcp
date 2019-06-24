@@ -10,6 +10,9 @@ return [
     'Most Popular Searches'=>'Most Popular Searches',
     'Most Recent Exams'=>'Most Recent Exams',
     'view more'=>'view more',
+    'Sign in'=>'Sign in',
+    'Logout'=>'Logout',
+    'search'=>'Search',
 
 
 ];

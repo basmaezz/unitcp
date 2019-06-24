@@ -13,13 +13,28 @@
 
 
         <!-- main nav -->
-        @if (app()->getLocale() == 'ar')
-            <div class="collapse navbar-collapse navbar-right" role="navigation">
-                <ul id="nav" class="nav navbar-nav">
+
+        <div class="collapse navbar-collapse navbar-right" role="navigation">
+            <ul class="nav navbar-nav">
+                @if (Auth::check())
                     <li>
-                        <a href=""  id="login" rel="nofollow">تسجيل الدخول
+                        <a href ="#"  id="login" rel="nofollow">{{auth()->user()->name}}
+
                         </a>
                     </li>
+
+                    <li>
+                        <a href ="{{route('logout.public')}}"  id="login" rel="nofollow">@lang('exam.Logout')
+
+                        </a>
+                    </li>
+
+                @else
+                    <li>
+                        <a href ="{{route('panel.login')}}"  id="login" rel="nofollow">@lang('exam.Sign in')
+                        </a>
+                    </li>
+                @endif
                     <li class="dropdown dropdown-user">
                         <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown"
                            data-close-others="true">
@@ -29,73 +44,21 @@
                         </a>
                         <ul class="dropdown-menu dropdown-menu-default">
                             <li>
-                                <a href="{{ url('public/changelang' , 'ar') }}">
+                                <a href="">
                                     <i class="icon-globe"></i>@lang('exam.Arabic') </a>
                             </li>
                             <li class="divider"> </li>
                             <li>
-                                <a href="{{ url('public/changelang' , 'en') }}">
-                                    <i class="icon-globe"></i> @lang ('exam.English')</a>
+                                <a href="">
+                                    <i class="icon-globe"></i> {{ __('exam.English') }}  </a>
                             </li>
 
                         </ul>
 
                     </li>
-
-                </ul>
-            </div>
-
-
-        @else
-        <div class="collapse navbar-collapse navbar-right" role="navigation">
-            <ul class="nav navbar-nav">
-                @if (Auth::check())
-                    <li>
-                        <a href ="#"  id="login" rel="nofollow">{{auth()->user()->name}}
-
-                        </a>
-                    </li>
-                    <li class="dropdown dropdown-user">
-                        <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown"
-                           data-close-others="true">
-
-                            <span class="username username-hide-on-mobile"> Change Language  </span>
-                            <i class="fa fa-angle-down"></i>
-                        </a>
-                        <ul class="dropdown-menu dropdown-menu-default">
-                            <li>
-                                <a href="">
-                                    <i class="icon-globe"></i>Arabic </a>
-                            </li>
-                            <li class="divider"> </li>
-                            <li>
-                                <a href="">
-                                    <i class="icon-globe"></i> English  </a>
-                            </li>
-
-                        </ul>
-
-                    </li>
-
-                    <li>
-                        <a href ="{{route('logout.public')}}"  id="login" rel="nofollow">Logout
-
-                        </a>
-                    </li>
-
-                @else
-               <li>
-                   <a href ="{{route('panel.login')}}"  id="login" rel="nofollow">Sign in
-                   </a>
-               </li>
-                @endif
-                <li >
-                    <a href=""  id="lang" rel="nofollow">Arabic
-                    </a></li>   
 
             </ul>
         </div>
-            @endif
 
 
     </nav>

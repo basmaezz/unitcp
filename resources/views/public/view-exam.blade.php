@@ -3,6 +3,8 @@
 <!--[if IE 7]>         <html lang="en" class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html lang="en" class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+<?php  $locale = App::getLocale();  ?>
+
 <head>
     <!-- meta charec set -->
     <meta charset="utf-8">
@@ -24,7 +26,11 @@
 
     <!-- CSS
     ================================================== -->
-    @include('public.layouts.css')
+    @if($locale =='ar')
+        @include('public.layouts.css-ar')
+        @else
+        @include('public.layouts.css')
+    @endif
 
 </head>
 

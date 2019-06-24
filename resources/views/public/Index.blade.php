@@ -14,7 +14,7 @@
                         <form method="get" class="search-bar search-bar--big" action="{{route('panel.exam.search-s')}}">
                             <i class="fa fa-search search-bar__icon"></i>
                             <input type="search" placeholder="@lang('exam.search for Exams')" name="txtsearch" data-test-selector="big-search-field" value="" data-hj-whitelist="true">
-                            <button type="submit" class="btn btn-primary btn-lg" data-test-selector="search-button">Search</button>
+                            <button type="submit" class="btn btn-primary btn-lg" data-test-selector="search-button">@lang('exam.search')</button>
                         </form>
                     </div>
                     <div class="col-sm-2"></div>
