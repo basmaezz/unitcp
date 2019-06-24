@@ -210,10 +210,10 @@ class HomeController extends Controller
    public function viewpdf($id){
 
         $exam= Exam::find($id);
-        $comments= Comment::where('exam_id',$id)->orderBy('id', 'desc')->get();
+//        $comments= Comment::where('exam_id',$id)->orderBy('id', 'desc')->get();
 
 //       $pdf = view('public.pdf', ['pdf'=>response()->file('storage/faculty/exams/10/485/2/10/2/2/test1-2002-2003.pdf')])->render();
-        return view('public.view-exam',compact('exam','comments'));
+        return view('public.view-exam',compact('exam'));
    }
 
    public function recent(){
@@ -240,5 +240,10 @@ class HomeController extends Controller
         return redirect()->route('panel.login')->send();
     }
 
+    public function changeLang($lang)
+    {
+        Session(['locale' => $lang]);
+        return redirect()->back();
+    }
 
 }

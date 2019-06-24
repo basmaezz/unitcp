@@ -13,7 +13,7 @@
                     <div class=" col-md-8">
                         <form method="get" class="search-bar search-bar--big" action="{{route('panel.exam.search-s')}}">
                             <i class="fa fa-search search-bar__icon"></i>
-                            <input type="search" placeholder="Search for Exams" name="txtsearch" data-test-selector="big-search-field" value="" data-hj-whitelist="true">
+                            <input type="search" placeholder="@lang('exam.search for Exams')" name="txtsearch" data-test-selector="big-search-field" value="" data-hj-whitelist="true">
                             <button type="submit" class="btn btn-primary btn-lg" data-test-selector="search-button">Search</button>
                         </form>
                     </div>
@@ -57,7 +57,7 @@
 								  <i class="fa fa-search fa-stack-1x fa-inverse"></i>
 								</span>
 
-                                <h3>Most Popular Searches</h3>
+                                <h3> @lang ('exam.Most Popular Searches')</h3>
                                 </p>
                             </div>
                             <ul class="exam-items-list">
@@ -65,7 +65,7 @@
                                     <li><a href="{{url('public/viewpdf/'.$exam->id)}}" class="popular-items__link"><span class="text-ellipsis">{{ getFullexamNamearray($exam->department_id, $exam->material_id,  $exam->year_id) }}</span></a></li>
                                 @endforeach
                                 <div class="more">
-                                <a href="{{route('popular')}}" class="btn btn-primary">View More</a>
+                                <a href="{{route('popular')}}" class="btn btn-primary">@lang ('exam.view more')</a>
 
                                 </div>
 
@@ -88,7 +88,7 @@
 								  <i class="fa fa-search fa-stack-1x fa-inverse"></i>
 								</span>
 
-                                <h3>Most Recent Exams </h3>
+                                <h3>@lang ('exam.Most Recent Exams') </h3>
                                 </p>
                             </div>
                             <ul class="exam-items-list">
@@ -96,7 +96,7 @@
                                     <li><a href="{{url('public/viewpdf/'.$exam->id)}}" class="popular-items__link"><span class="text-ellipsis">{{ getFullexamNamearray($exam->department_id, $exam->material_id,  $exam->year_id) }}</span></a></li>
                                 @endforeach
                                 <div class="more">
-                                    <a href="{{route('recent')}}" class="btn btn-primary">View More</a>
+                                    <a href="{{route('recent')}}" class="btn btn-primary">@lang ('exam.view more')</a>
                                 </div>
 
                             </ul>			</div>
@@ -138,7 +138,7 @@
                             </a>
                             <strong data-to="{{$faculty}}">0</strong>
                             <!-- Set Your Number here. i,e. data-to="56" -->
-                            <p>Faculties</p>
+                            <p>@lang('exam.faculities')</p>
                         </div>
                     </div>
 
@@ -150,7 +150,7 @@
                             </a>
                             <strong data-to="{{$examcount}}">0</strong>
                             <!-- Set Your Number here. i,e. data-to="56" -->
-                            <p> Exams</p>
+                            <p> @lang('exam.exams')</p>
                         </div>
                     </div>
                     <div class="col-md-4 col-sm-4 col-xs-12 text-center wow fadeInUp animated" data-wow-duration="500ms" data-wow-delay="900ms">
@@ -160,7 +160,7 @@
                                 >
                             </a>								<strong data-to="{{$user}}">0</strong>
                             <!-- Set Your Number here. i,e. data-to="56" -->
-                            <p>Users</p>
+                            <p>@lang('exam.users')</p>
                         </div>
                     </div>
                     <!-- end first count item -->

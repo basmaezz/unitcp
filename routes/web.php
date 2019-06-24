@@ -18,6 +18,7 @@ Route::get('download/{id}','site\HomeController@download');//
 
 
 Route::prefix('public')->group(function () {
+    Route::get('/changelang/{locale}','site\HomeController@changeLang');
     Route::get('index', ['as' => 'public.index', 'uses' => 'site\HomeController@index']);
     Route::post('all', ['as' => 'public.search', 'uses' => 'site\HomeController@getall']);
     Route::get('index/data', ['as' => 'panel.exam.search-s', 'uses' => 'site\HomeController@get_exam_search']);

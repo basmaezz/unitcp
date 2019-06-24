@@ -55,7 +55,7 @@
                             </ul>
                         </li>
                         <li class="footer"><a href="#">View All Messages</a></li>
-              
+
                     </ul>
                 </li>
                 <!-- Notifications  -->

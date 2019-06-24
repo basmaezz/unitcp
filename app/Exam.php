@@ -109,6 +109,9 @@ class Exam extends Model
         return $this->belongsToMany(Tag::class,'tag_exams');
     }
 
+    public function comments(){
+        return $this->hasMany(Comment::class);
+    }
 
 
     public function likes()

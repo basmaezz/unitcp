@@ -21,6 +21,7 @@
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" media="none" onload="if(media!='all')media='all'">
 
+
     <!-- CSS
     ================================================== -->
     @include('public.layouts.css')
@@ -28,6 +29,26 @@
 </head>
 
 <body id="body">
+<div id="fb-root"></div>
+
+<script>(function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.4&appId=241110544128";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+
+
+<script>
+    (function(d, s, id){
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) {return;}
+        js = d.createElement(s); js.id = id;
+        js.src = "https://connect.facebook.net/en_US/messenger.Extensions.js";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'Messenger'));
+</script>
 
 <!-- preloader -->
 <div id="preloader">
@@ -140,19 +161,31 @@ End Fixed Navigation
             <div class="document-info-row  row">
                 <p class="title">Share</p>
                 <div class="col-md-4">
-                    <button class="btn-wrapper btn btn-primary  btn-lg">
-                        <i class="fab fa-facebook-f"></i>
-                    </button>
+                    <div class="fb-share-button btn-wrapper btn btn-primary  btn-lg" data-href="{{url('storage/faculty/exams/'.$exam->faculty_id ."/".$exam->department_id."/".
+                            $exam->class_id ."/".$exam->semester_id ."/".$exam->material_id ."/".$exam->year_id ."/".$exam->files($exam->file))}}"
+                         data-layout="button_count"></div>
+
                 </div>
                 <div class="col-md-4">
-
-                    <button class="btn-wrapper btn  btn-success  btn-lg">
+                    <a class="btn-wrapper btn  btn-success  btn-lg" href="https://web.whatsapp.com/send?text=url={{url('storage/faculty/exams/'.$exam->faculty_id ."/".$exam->department_id."/".
+                            $exam->class_id ."/".$exam->semester_id ."/".$exam->material_id ."/".$exam->year_id ."/".$exam->files($exam->file))}}" target="_blank">
                         <i class="fab fa-whatsapp"></i>
-                    </button>
+                    </a>
+
+
                 </div>
                 <div class="col-md-4">
+                    {{--<div class="fb-send-to-messenger"--}}
+                         {{--messenger_app_id="<APP_ID>"--}}
+                         {{--page_id="PAGE_ID"--}}
+                         {{--data-ref="{{url('storage/faculty/exams/'.$exam->faculty_id ."/".$exam->department_id."/".--}}
+                            {{--$exam->class_id ."/".$exam->semester_id ."/".$exam->material_id ."/".$exam->year_id ."/".$exam->files($exam->file))}}"--}}
+                         {{--color="<blue | white>"--}}
+                         {{--size="<standard | large | xlarge>">--}}
+                    {{--</div>--}}
 
-                    <button class="btn-wrapper btn  btn-info  btn-lg">
+                    <button class="btn-wrapper btn  btn-info  btn-lg" data-href="{{url('storage/faculty/exams/'.$exam->faculty_id ."/".$exam->department_id."/".
+                            $exam->class_id ."/".$exam->semester_id ."/".$exam->material_id ."/".$exam->year_id ."/".$exam->files($exam->file))}}">
                         <i class="fab fa-facebook-messenger"></i>
                     </button>
                 </div>
@@ -195,7 +228,7 @@ End Fixed Navigation
                 <div class="clearfix"></div>
 
                 <ul class="comment-user-post">
-                    @foreach($comments as $comment)
+                    @foreach($exam->comments as $comment)
                         <li class="comment-det" >
                             <div class=""><a href="#" class="pull-left"><i class="far fa-user-circle"></i></a></div>
                             <div class="comment-user-txt">
@@ -230,8 +263,9 @@ End Fixed Navigation
                         </button>
                     </div>
                     <div class="col-md-8 col-sm-2 right  download-exam">
-                        <a href=""  class="btn btn-success">Download</a>
-                        <button type="button" class="btn btn-success">Download</button>
+                        <a href="{{url('storage/faculty/exams/'.$exam->faculty_id ."/".$exam->department_id."/".
+                            $exam->class_id ."/".$exam->semester_id ."/".$exam->material_id ."/".$exam->year_id ."/".$exam->files($exam->file))}}"  class="btn btn-success">Download</a>
+                        {{--<button type="button" class="btn btn-success">Download</button>--}}
                     </div>
                 </div>
             </div>
