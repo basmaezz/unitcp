@@ -1,11 +1,4 @@
-{{--<div class="frm-section colm colm3">--}}
 
-    {{--<label class="search-filter-label "  >Department filter</label>--}}
-
-    {{--<label class="field">--}}
-        {{--<input class="uit-input" placeholder="search for your Department" type="text">--}}
-    {{--</label>--}}
-{{--</div>--}}
 <div class="frm-section colm colm3">
 
     <label class="search-filter-label "  >Department filter</label>

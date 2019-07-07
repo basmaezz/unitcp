@@ -15,32 +15,8 @@ function is_auth()
     return (isset(auth()->user()->id)) ? true : false;
 }
 
-//function settings_object()
-//{
-//    return new \App\Setting();
-//}
 
-//function sub_words($phrase, $max_words, $index = 0)
-//{
-//    $phrase_array = explode(' ', $phrase);
-//    dd($phrase_array);
-//    if (count($phrase_array) > $max_words && $max_words > 0)
-//        $phrase = implode(' ', array_slice($phrase_array, $index, $max_words)) . ' ';
-//    return $phrase;
-//}
 
-//function get_about_info($type, $is_icon = true)
-//{
-//    switch ($type) {
-//        case 1 :
-//            return ($is_icon) ? 'icon flaticon-target' : 'OUR MISSION';
-//        case 2 :
-//            return ($is_icon) ? 'icon flaticon-eye' : 'OUR VISION';
-//        case 3 :
-//            return ($is_icon) ? 'icon flaticon-envelope' : 'OUR MESSAGE';
-//    }
-//    return '';
-//}
 
 function get_fac_data()
 {
@@ -188,46 +164,8 @@ function string_limit($str, $char_num)
     return str_limit(strip_tags($str), $limit = $char_num, $end = ' ...');
 }
 
-//function is_free($value)
-//{
-//    return (isset($value) && $value > 0) ? $value . '$' : 'مجاناً';
-//}
-//
-//function array_map_int($input)
-//{
-//    if (isset($input) && is_string($input)) {
-//        return array_map('intval', explode(',', $input));
-//    }
-//    return [];
-//}
-//
-//function convert_array_map_int($input)
-//{
-//    if (isset($input) && is_array($input)) {
-//        return array_map('intval', $input);
-//    }
-//    return [];
-//}
 
-//function get_request_status($request)
-//{
-//    switch ($request->status) {
-//        case 'pending_teacher' :
-//            return __("بإنتظار موافقة المدرس");
-//        case 'pending_student' :
-//            return __('بإنتظار تأكيد الطالب');
-//        case 'progress' :
-//            return (isset($request->is_confirmed) && (int)$request->is_confirmed == 0) ? __('قيد التنفيذ') : __('بإنتظار تأكيد التسليم');
-//        case 'completed' :
-//            return __('مكتملة');
-//        case 'canceled' :
-//            return __('ملغية');
-//        case 'rejected' :
-//            return __('مرفوضة');
-//        default:
-//            return '';
-//    }
-//}
+
 
 function get_most_teacher_request()
 {
@@ -241,68 +179,16 @@ function get_all_teachers()
     return $teachers->active()->teachers()->orderBy('rating', 'DESC')->get();
 }
 
-//function is_type_checked($array, $input)
-//{
-//    if (isset($array) && isset($input)) {
-//        foreach ($array as $item) {
-//            if ($input == $item) {
-//                return 'checked';
-//            }
-//        }
-//    }
-//    return '';
-//}
 
-//function is_speciality_selected($inputs, $speciality)
-//{
-//    if ((isset($inputs['specialities']) && $inputs['specialities'] == $speciality->id) || (isset($inputs['sub_specialty']) && isset($speciality->subSpecialties()->find($inputs['sub_specialty'])->id))) {
-//        return 'selected';
-//    }
-//    return '';
-//}
 
-//function get_financial_process_status($process)
-//{
-//    if ($process->isCredit()) {
-//        switch ($process->credit_type) {
-//            case 'paypal':
-//                return 'إيداع مباشر عن طريق PayPal';
-//            case 'visa':
-//                return 'إيداع مباشر عن طريق Visa';
-//            case 'website':
-//                return 'إيداع من طلبات التدريب';
-//        }
-//    } else {
-//        switch ($process->credit_type) {
-//            case 'paypal':
-//                return 'سحب مباشر عن طريق PayPal';
-//            case 'visa':
-//                return 'سحب مباشر عن طريق Visa';
-//            case 'website':
-//                return 'سحب من طلبات التدريب';
-//        }
-//    }
-//    return '';
-//}
+
 
 function no_data()
 {
     return 'لا يوجد بيانات';
 }
 
-function get_training_percent()
-{
-    $constant = new \App\Constant();
-    $percent = $constant->valueOf('percent');
-    return isset($percent) ? (double)$percent : 20;
-}
 
-function get_profit($price)
-{
-    $percent = get_training_percent();
-    $percent = (isset($percent) && $percent >= 0 && $percent <= 100) ? (100 - $percent) : 80;
-    return (($percent * $price) / 100);
-}
 
 function get_unread_notifications_count()
 {

@@ -114,7 +114,10 @@ $(document).ready(function() {
 //   Like && DisLike
 
     $(".like-btn").click(function(e) {
+
+
         var exam_id= $(".exam_id").val();
+        // alert(exam_id);
         console.log(exam_id);
         e.preventDefault();
         if(exam_id){
@@ -128,9 +131,9 @@ $(document).ready(function() {
                 success: function(response) {
                     if(response.status)
                     {
-                        // alert('ok');
-                        console.log(response);
+                        $('#socials').html(response.item);
 
+                        console.log(response);
                     }
                 }
             });

@@ -3,7 +3,7 @@
 <!--[if IE 7]>         <html lang="en" class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html lang="en" class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
-<?php  $locale = App::getLocale();  ?>
+  <?php  $locale = App::getLocale();  ?>
 <?php $pageName =  basename(url()->current()) ?>
 <head>
   <!-- meta charec set -->
@@ -25,6 +25,7 @@
 
   <!-- CSS
   ================================================== -->
+
   <!-- Fontawesome Icon font -->
   @if($locale =='ar')
     @include('public.layouts.css-ar')
@@ -52,9 +53,9 @@
     {{--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-rtl/3.3.1/css/bootstrap-rtl.min.css">--}}
 
     @else
-
-
     @include('public.layouts.css')
+
+ {{----}}
 
 
     @endif

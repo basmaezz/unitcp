@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\site;
 
+use App\Like;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Yajra\DataTables\DataTables;
@@ -210,10 +211,15 @@ class HomeController extends Controller
    public function viewpdf($id){
 
         $exam= Exam::find($id);
+        $like= Like::where('exam_id',$id)->where('likenum','=',1)->count();
+        $dislike= Like::where('exam_id',$id)->where('likenum','=',0)->count();
+
+
+
 //        $comments= Comment::where('exam_id',$id)->orderBy('id', 'desc')->get();
 
 //       $pdf = view('public.pdf', ['pdf'=>response()->file('storage/faculty/exams/10/485/2/10/2/2/test1-2002-2003.pdf')])->render();
-        return view('public.view-exam',compact('exam'));
+        return view('public.view-exam',compact('exam','like','dislike'));
    }
 
    public function recent(){

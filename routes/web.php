@@ -37,6 +37,8 @@ Route::prefix('public')->group(function () {
     Route::post('search/exam', 'site\HomeController@getExamData')->name('searchexamx');
     Route::post('download/exam', 'site\HomeController@getDownload')->name('downloadexamx');
     Route::get('home','site\HomeController@home')->name('mostdownload');
+
+    Route::get('chglang/{lang}','site\HomeController@changeLang')->name('changelang');
 });
 
 

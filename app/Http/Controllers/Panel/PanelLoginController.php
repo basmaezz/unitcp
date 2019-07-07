@@ -31,7 +31,7 @@ class PanelLoginController extends Controller
 
     public function login(Request $request)
     {
-
+//dd($request);
         $this->validate($request, [
             'username' => 'required|min:1',
             'password' => 'required|min:3'

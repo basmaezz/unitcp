@@ -116,7 +116,7 @@ class Exam extends Model
 
     public function likes()
     {
-        return $this->hasMany(Like::class,'exam_id');
+        return $this->hasMany(Like::class);
     }
 
 }

@@ -149,7 +149,7 @@ End Fixed Navigation
                     <button class="btn-wrapper btn btn-success like-btn">
                     {{--<a href="{{url('public/storelike/'.$exam->id)}}" class="btn-wrapper btn btn-success ">--}}
                         <i class="fa fa-thumbs-up"></i>
-                        <p class="rating-positive-number">{{$exam->likes_num}}</p>
+                        <p class="rating-positive-number">{{$like}}</p>
                     {{--</a>--}}
                     </button>
                 </div>
@@ -157,7 +157,7 @@ End Fixed Navigation
                     <button class="btn-wrapper btn btn-danger dislike-btn">
 {{--                    <a href="{{url('public/dislike/'.$exam->id)}}" class="btn-wrapper btn btn-danger ">--}}
                         <i class="fa fa-thumbs-down"></i>
-                        <p class="rating-negative-number">{{$exam->dislike_num}}</p>
+                        <p class="rating-negative-number">{{$dislike}}</p>
                         </button>
                     {{--</a>--}}
                 </div>

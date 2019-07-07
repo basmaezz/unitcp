@@ -47,10 +47,6 @@
                                                     @include('public.fac-exam')
                                                 </div>
 
-
-
-
-
                                             </div>
 
                                         </div>
