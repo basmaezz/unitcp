@@ -13,11 +13,13 @@ use phpDocumentor\Reflection\DocBlock\Tags\Link;
 
 class LikeController extends Controller
 {
-        public function store(Request $request,$id){
+        public function store($id,$type){
 
-            $like = Like::updateOrCreate(['student_id' => auth::user()->id],['exam_id'=>$id]);
-            $like->likenum='1';
-            $like->save();
+            Like::updateOrCreate(['student_id' => auth::user()->id,'exam_id'=>$id],['likenum'=>$type]);
+
+            $like = Like::where('exam_id',$id)->where('likenum','=',1)->count();
+            $dislike = Like::where('exam_id',$id)->where('likenum','=',0)->count();
+            return response()->json(['status' => true, 'like' => $like,'dislike'=>$dislike]);
 //            updateOrCreate(['id' => 1, 'name' => 'Joe'] , ['age' => 15] );
 //            dd($like);
 //            $like->foo = Input::get('foo');
@@ -33,11 +35,11 @@ class LikeController extends Controller
         }
 
     public function dislike($id){
-        $like = Like::updateOrCreate(['student_id' => auth::user()->id],
-                                     ['exam_id'=>$id]
+        $like = Like::updateOrCreate(['student_id' => auth::user()->id,'exam_id'=>$id,['likenum'=>0]]
                                      );
-        $like->likenum='0';
-        $like->save();
+
+        $like = Like::where('exam_id',$id)->where('likenum','=',1)->count();
+        return response()->json(['status' => true, 'like' => $like]);
 
 //        $student_id= Auth::user()->id;
 //        $like = Like::where('student_id', '=', $student_id )->where ('exam_id' ,'=' ,$id)->first();

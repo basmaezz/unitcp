@@ -29,8 +29,8 @@ Route::prefix('public')->group(function () {
     Route::get('recent','site\HomeController@recent')->name('recent');
     Route::get('comment/{id}/{comment}','site\CommentController@store');
     Route::get('viewpdf/{id}','site\HomeController@viewpdf');
-    Route::get('storelike/{id}','site\LikeController@store');
-    Route::get('dislike/{id}','site\LikeController@dislike');
+    Route::get('storelike/{id}/{type}','site\LikeController@store')->where(['id' => '[0-9]+', 'type' => '[0-1]']);;
+    //Route::get('dislike/{id}','site\LikeController@dislike');
 
     Route::get('/studentlogout', 'site\HomeController@logout')->name('logout.public');
 

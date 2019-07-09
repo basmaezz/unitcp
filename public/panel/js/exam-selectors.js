@@ -123,7 +123,7 @@ $(document).ready(function() {
         if(exam_id){
             $.ajax({
                 type: "get",
-                url: '/public/storelike/'+exam_id,
+                url: '/public/storelike/'+exam_id+'/1',
                 data: {
                     id: $(this).val(), // < note use of 'this' here
                     access_token: $("#access_token").val()
@@ -131,9 +131,12 @@ $(document).ready(function() {
                 success: function(response) {
                     if(response.status)
                     {
-                        $('#socials').html(response.item);
+                        //$('#sidebar').html(response.like);
+                        //let like = parseInt($('.rating-positive-number').text())+1;
+                        $('.rating-positive-number').text(response.like);
+                        $('.rating-negative-number').text(response.dislike);
 
-                        console.log(response);
+                        // console.log(response);
                     }
                 }
             });
@@ -150,13 +153,15 @@ $(document).ready(function() {
         if(exam_id){
             $.ajax({
                 type: "get",
-                url: '/public/dislike/'+exam_id,
+                url: '/public/storelike/'+exam_id+'/0',
 
                 success: function(response) {
                     if(response.status)
                     {
-                        alert('ok');
-                        console.log(response);
+                        // alert('ok');
+                        //let dislike = parseInt($('.rating-negative-number').text());
+                        $('.rating-positive-number').text(response.like);
+                        $('.rating-negative-number').text(response.dislike);
 
                     }
                 }

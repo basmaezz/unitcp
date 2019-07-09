@@ -25,6 +25,12 @@ class PanelLoginController extends Controller
     public function showLoginForm()
     {
 
+        if(auth::check()){
+            if (auth()->user()->permission==3){
+                return redirect()->route('public.index');
+            }
+            return redirect()->route('panel.dashboard');
+        }
         return view('panel.login');
     }
 
@@ -44,8 +50,6 @@ class PanelLoginController extends Controller
             $user->save();
             if (auth()->user()->permission==3){
                 return redirect()->route('public.index');
-
-
             }
             return redirect()->route('panel.dashboard');
         }

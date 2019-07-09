@@ -222,8 +222,12 @@ End Fixed Navigation
                             <input type="hidden" name="exam_id" class="form-control exam_id" value="{{$exam->id}}">
                             @if (Auth::check())
                                 <input type="text" name="txtcomment" class="form-control txtcomment" placeholder="write comment">
+                                <div class="input-group-append">
+                                    <button class="btn btn-success" type="submit">send</button>
+                                </div>
                             @else
                                 <input type="text" name="txtcomment" class="form-control" placeholder="write comment" disabled>
+
                             @endif
                         </div>
 
