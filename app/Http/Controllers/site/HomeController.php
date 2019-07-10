@@ -15,6 +15,7 @@ use App\User;
 use DB;
 use App\Comment;
 use Auth;
+use App;
 
 class HomeController extends Controller
 {
@@ -248,7 +249,14 @@ class HomeController extends Controller
 
     public function changeLang($lang)
     {
-        Session(['locale' => $lang]);
+        $locale = App::getLocale();
+        if($lang=='en'){
+            $locale='en';
+
+        }else{
+            $locale='ar';
+        }
+
         return redirect()->back();
     }
 
