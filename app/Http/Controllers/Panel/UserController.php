@@ -5,7 +5,7 @@ namespace App\Http\Controllers\Panel;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\CreateUser;
-use App\user;
+use App\User;
 use App\Faculty;
 use Yajra\DataTables\DataTables;
 use Auth;

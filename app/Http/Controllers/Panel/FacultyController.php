@@ -4,7 +4,7 @@ namespace App\Http\Controllers\Panel;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use App\faculty;
+use App\Faculty;
 use Yajra\DataTables\DataTables;
 use App\Http\Requests\CreateFaculty;
 use App\Exam;

@@ -231,6 +231,7 @@ End Fixed Navigation
 
 
                     <form method="get" id="comment-form">
+                        {{csrf_field()}}
                         <div class="input-group mb-5">
 
                             <input type="hidden" name="exam_id" class="form-control exam_id" value="{{$exam->id}}">
@@ -257,18 +258,13 @@ End Fixed Navigation
                             <div class=""><a href="#" class="pull-left"><i class="far fa-user-circle"></i></a></div>
                             <div class="comment-user-txt">
                                 <span ><a href="" >{{$comment->student->name}}</a>•<span >{{$comment->created_at->diffForHumans()}}</span></span>
-                                <span>{{$comment->comment}}</span>
+                                <span class="user-comment">{{$comment->comment}}</span>
                             </div>
                         </li>
                     @endforeach
-
-
                 </ul>
                 <div class="show-more-comments"><button class="btn btn-outline-primary btn-block"> Show 5 more comments.</button></div>
             </div>
-
-
-
 
             <!--comment-->
 
@@ -298,8 +294,11 @@ End Fixed Navigation
             <div class="embed-responsive embed-responsive-16by9">
                 {{--<iframe class="embed-responsive-item" src="{{ response()->file('storage/faculty/exams/10/485/2/10/2/2/test1-2002-2003.pdf') }}" allowfullscreen></iframe>--}}
                 {{--<iframe class="embed-responsive-item" src="" allowfullscreen></iframe>--}}
+                {{--<embed src="https://drive.google.com/viewerng/--}}
+{{--viewer?embedded=true&url={{ url('https://www.tutorialspoint.com/php/php_tutorial.pdf') }}" width="500" height="375"> --}}
                 <embed src="https://drive.google.com/viewerng/
-viewer?embedded=true&url={{ url('https://www.tutorialspoint.com/php/php_tutorial.pdf') }}" width="500" height="375">
+viewer?embedded=true&url={{ url('storage/faculty/exams/'.$exam->faculty_id ."/".$exam->department_id."/".
+                            $exam->class_id ."/".$exam->semester_id ."/".$exam->material_id ."/".$exam->year_id ."/".$exam->files($exam->file)) }}" width="500" height="375">
             </div>
         </nav>
     </div>
@@ -333,31 +332,34 @@ End Home search
     });
 
 
-    $( "#comment-form" ).submit(function( event ) {
-        var exam_id= $(".exam_id").val();
-        var comment= $(".txtcomment").val();
 
-        // alert( exam_id);
-        event.preventDefault();
 
-        $.ajax({
-            type: "get",
-            url: '/public/comment/'+exam_id+'/'+comment,
+        $( "#comment-form" ).submit(function( event ) {
+            var exam_id= $(".exam_id").val();
+            var comment= $(".txtcomment").val();
+            // alert( exam_id);
+            event.preventDefault();
+            var usercom = $.ajax({
+                type: "get",
+                url: '/public/comment/'+exam_id+'/'+comment,
 
-            success: function(response) {
-                if(response.status)
-                {
-                    alert('ok');
-                    console.log(response);
-                    this.clear();
+                success: function(response) {
+                    if(response.status)
+                    {
+                        $('.user-comment').text(response.comments);
+                        // alert('ok');
+                        // console.log(response);
+                        $('.rating-negative-number').text(response.comments);
+                    }
 
                 }
-
-
-            }
+            });
 
         });
-    });
+
+
+
+
 
 
 </script>

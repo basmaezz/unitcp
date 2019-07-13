@@ -1,4 +1,4 @@
-r@php
+@php
     $breadcrumb_array = [];
     array_push($breadcrumb_array,collect(['is_last'=>true,'name'=>'الأقسام','link'=> ('panel.users.all')]));
 @endphp

@@ -20,16 +20,16 @@ function is_auth()
 
 function get_fac_data()
 {
-    return \App\faculty::where('active',1)->get();
+    return \App\Faculty::where('active',1)->get();
 }
 function get_fac_data_user()
 {
-    return \App\faculty::where('id',Auth::user()->faculty_id)->get();
+    return \App\Faculty::where('id',Auth::user()->faculty_id)->get();
 }
 
 function get_classes_data()
 {
-    return \App\classes::all();
+    return \App\Classes::all();
 }
 
 function get_department_data()

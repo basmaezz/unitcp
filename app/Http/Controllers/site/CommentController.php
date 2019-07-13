@@ -35,15 +35,15 @@ class CommentController extends Controller
 //       }
 
     public function store(Request $request,$id,$comment){
-        if ($request->ajax()){
-//            $user = Auth::user();
+
             $comments = new Comment;
             $comments->exam_id=$id;
             $comments->student_id=Auth::user()->id;
             $comments->comment= $request->comment;
             $comments->save();
-            return response($comments);
-        }
+            return response()->json(['status' => true, 'comments' => $comments]);
+
+
     }
 
 

@@ -33,7 +33,8 @@
                                                     <label class="search-filter-label "  >Faculty filter</label>
 
                                                     <label class="field uit-select">
-                                                        <select class="form-control search-faculty" name="search-faculty" data-placeholder="إختيار الكليه" id="faculty_id" required>                                                            <option selected="selected" value="">Select your faculty</option>
+                                                        <select class="form-control search-faculty" name="search-faculty" data-placeholder="إختيار الكليه" id="faculty_id" required>
+                                                            <option selected="selected" value="">Select your faculty</option>
                                                             @foreach(get_fac_data() as $fac)
 
                                           <option value="{{ $fac->id }}" @if($fac->id == request('faculty') || $fac->id == request('id')) selected @endif>{{ $fac->name_ar }}</option>
