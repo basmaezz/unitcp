@@ -111,9 +111,24 @@
                         </a>
                     </li>
                 @endif
-                <li >
-                    <a href=""  id="lang" rel="nofollow">Arabic
-                    </a></li>
+                    <li class="dropdown dropdown-user">
+                        <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown"
+                           data-close-others="true">
+
+                            <span class="username username-hide-on-mobile"> @lang('exam.Change Language')   </span>
+                            <i class="fa fa-angle-down"></i>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-default">
+                            @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
+                                <li>
+                                    <a rel="alternate" hreflang="{{ $localeCode }}" href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}">
+                                        {{ $properties['native'] }}
+                                    </a>
+                                </li>
+                            @endforeach
+                        </ul>
+
+                    </li>
 
             </ul>
         </div>
@@ -181,20 +196,19 @@ End Fixed Navigation
 
                 </div>
                 <div class="col-md-4">
-                    {{--<div class="fb-send-to-messenger"--}}
-                         {{--messenger_app_id="<APP_ID>"--}}
-                         {{--page_id="PAGE_ID"--}}
-                         {{--data-ref="{{url('storage/faculty/exams/'.$exam->faculty_id ."/".$exam->department_id."/".--}}
-                            {{--$exam->class_id ."/".$exam->semester_id ."/".$exam->material_id ."/".$exam->year_id ."/".$exam->files($exam->file))}}"--}}
-                         {{--color="<blue | white>"--}}
-                         {{--size="<standard | large | xlarge>">--}}
-                    {{--</div>--}}
-
-                    <button class="btn-wrapper btn  btn-info  btn-lg" data-href="{{url('storage/faculty/exams/'.$exam->faculty_id ."/".$exam->department_id."/".
-                            $exam->class_id ."/".$exam->semester_id ."/".$exam->material_id ."/".$exam->year_id ."/".$exam->files($exam->file))}}">
-                        <i class="fab fa-facebook-messenger"></i>
-                    </button>
+                    <a class="btn-wrapper btn  btn-info  btn-lg" href="https://twitter.com/share?text={{url('storage/faculty/exams/'.$exam->faculty_id ."/".$exam->department_id."/".
+                            $exam->class_id ."/".$exam->semester_id ."/".$exam->material_id ."/".$exam->year_id ."/".$exam->files($exam->file))}}" target="_blank">
+                        <i class="fab fa-twitter"></i></a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
                 </div>
+                {{--<div class="col-md-4">--}}
+                    {{--<a class="btn-wrapper btn  btn-info  btn-lg" href="https://twitter.com/share?ref_src=twsrc%5Etfw" target="_blank">--}}
+                        {{--<i class="fab fa-twitter"></i></a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>--}}
+                {{--</div>--}}
+                {{--<div class="col-md-4">--}}
+                    {{--<a class="  twitter-share-button " href="https://twitter.com/share?ref_src=twsrc%5Etfw"--}}
+                       {{--data-show-count="false"><i class="fab fa-twitter">Tweet</i></a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>--}}
+
+                {{--</div>--}}
 
 
                 <div class="input-group mb-3">

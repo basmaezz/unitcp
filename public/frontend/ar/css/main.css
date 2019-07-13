@@ -215,7 +215,18 @@ body > section
   padding: 15px;
 
  }
+ .nav .open>a, .nav .open>a:hover, .nav .open>a:focus {
+  background-color:#003b51 !important;
+  border:none !important;
+}
 
+.navbar-nav li .dropdown-item a{
+ color: #cc681f !important;
+}
+.navbar-nav li .dropdown-item a:hover  {
+ background-color: rgb(30, 167, 141);
+ color:#ffff !important;
+}
 /*=========================================
 	main-search
 ==========================================*/
@@ -859,9 +870,9 @@ padding-top: 10px;
  } 
 
  .download-exam{
-text-align: left;
-
- }
+  float: left;
+   }
+ 
 /* ---------------------------------------------------
   MEDIAQUERIES
 ----------------------------------------------------- */

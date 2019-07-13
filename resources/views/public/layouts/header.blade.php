@@ -51,18 +51,6 @@
                                 </li>
                             @endforeach
                         </ul>
-                        {{--<ul class="dropdown-menu dropdown-menu-default">--}}
-                            {{--<li>--}}
-                                {{--<a href="{{route('changelang',['lang'=>'ar'])}}">--}}
-                                    {{--<i class="icon-globe"></i>@lang('exam.Arabic') </a>--}}
-                            {{--</li>--}}
-                            {{--<li class="divider"> </li>--}}
-                            {{--<li>--}}
-                                {{--<a href="{{route('changelang',['lang'=>'en'])}}">--}}
-                                    {{--<i class="icon-globe"></i> {{ __('exam.English') }}  </a>--}}
-                            {{--</li>--}}
-
-                        {{--</ul>--}}
 
                     </li>
 

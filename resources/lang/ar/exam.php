@@ -16,6 +16,9 @@ return [
     'Sign in'=>'تسجيل دخول',
     'Logout'=>'تسجيل خروج',
     'search'=>'بحث',
+    'Ratings'=>'التقييم',
+    'sharing'=>'المشاركه',
+    'Comments'=>'التعليقات',
 
 
 

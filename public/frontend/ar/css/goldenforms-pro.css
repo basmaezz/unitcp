@@ -1,7 +1,8 @@
 body, html {
 	border: 0;
 	margin: 0;
-	padding: 0
+	padding: 0;
+		
 }
 .goldenforms-pro, .goldenforms-pro * {
 	font-weight: 400;
@@ -9,7 +10,8 @@ body, html {
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 	padding: 0;
-	margin: 0
+	margin: 0;
+	
 }
 .goldenforms-pro {
 	line-height: 1.231;
@@ -65,7 +67,7 @@ body, html {
 	font-size: 14px;
 	font-style: normal;
 	display: inline-block;
-	margin-left: 4px;
+	margin-right: 4px;
 	position: relative;
 	top: 3px
 }
@@ -96,7 +98,7 @@ body, html {
 }
 .goldenforms-pro .frm-footer, .goldenforms-pro .frm-header {
 	background: #F5F5F5;
-	background-image: -webkit-gradient(linear, left top, left bottom, from(#FBFBFB), to(#E6E6E6));
+	background-image: -webkit-gradient(linear, right top, right bottom, from(#FBFBFB), to(#E6E6E6));
 	background-image: -webkit-linear-gradient(top, #FBFBFB, #E6E6E6);
 	background-image: -moz-linear-gradient(top, #FBFBFB, #E6E6E6);
 	background-image: -o-linear-gradient(top, #FBFBFB, #E6E6E6);
@@ -244,7 +246,7 @@ opacity:1!important
 	position: relative;
 	background: #f4f4f4;
 	border: 1px solid #bbb;
-	background-image: -webkit-gradient(linear, left top, left bottom, from(#fbfbfb), to(#ededed));
+	background-image: -webkit-gradient(linear, right top, right bottom, from(#fbfbfb), to(#ededed));
 	background-image: -webkit-linear-gradient(top, #fbfbfb, #ededed);
 	background-image: -moz-linear-gradient(top, #fbfbfb, #ededed);
 	background-image: -o-linear-gradient(top, #fbfbfb, #ededed);
@@ -263,7 +265,7 @@ opacity:1!important
 .goldenforms-pro .append-picker-icon button, .goldenforms-pro .prepend-picker-icon button, .goldenforms-pro .smart-widget .uit-button, .goldenforms-pro .uit-button, .goldenforms-pro .uit-select, .goldenforms-pro input:checked+.checkbox-option, .goldenforms-pro input:checked+.radio-option, .ui-datepicker-buttonpane button {
 	border: 1px solid #BBB;
 	background-color: #f4f4f4;
-	background-image: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#E6E6E6));
+	background-image: -webkit-gradient(linear, right top, right bottom, from(#fff), to(#E6E6E6));
 	background-image: -webkit-linear-gradient(top, #fff, #E6E6E6);
 	background-image: -moz-linear-gradient(top, #fff, #E6E6E6);
 	background-image: -o-linear-gradient(top, #fff, #E6E6E6);
@@ -272,7 +274,7 @@ opacity:1!important
 .goldenforms-pro .append-picker-icon button:hover, .goldenforms-pro .prepend-picker-icon button:hover, .goldenforms-pro .smart-widget .uit-button:hover, .goldenforms-pro .uit-button:focus, .goldenforms-pro .uit-button:hover, .goldenforms-pro .uit-file .file-field:hover~.uit-button, .goldenforms-pro .uit-select:focus, .goldenforms-pro .uit-select:hover, .ui-datepicker-buttonpane button:focus, .ui-datepicker-buttonpane button:hover {
 	border: 1px solid #8FAFC9;
 	background-color: #E8EFF4;
-	background-image: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#dae5ed));
+	background-image: -webkit-gradient(linear, right top, right bottom, from(#fff), to(#dae5ed));
 	background-image: -webkit-linear-gradient(#fff, #dae5ed);
 	background-image: -moz-linear-gradient(#fff, #dae5ed);
 	background-image: -o-linear-gradient(#fff, #dae5ed);
@@ -337,7 +339,7 @@ display:none
 	top: 35%;
 	width: 0;
 	height: 0;
-	right: 10px;
+	left: 10px;
 	border: 4px dashed;
 	pointer-events: none;
 	border-color: #777 transparent;
@@ -377,7 +379,7 @@ display:none
 }
 .goldenforms-pro .uit-option {
 	position: relative;
-	padding-right: 15px;
+	padding-left: 15px;
 	display: inline-block;
 	vertical-align: middle
 }
@@ -386,11 +388,11 @@ display:none
 	width: inherit;
 	height: inherit;
 	opacity: 0;
-	left: 0
+	right: 0
 }
 .goldenforms-pro .checkbox-option, .goldenforms-pro .radio-option {
 	position: relative;
-	margin-right: 3px;
+	margin-left: 3px;
 	width: 22px;
 	height: 22px;
 	display: inline-block;
@@ -432,7 +434,7 @@ display:none
 .goldenforms-pro .checkbox-option:before {
 	position: absolute;
 	top: 6px;
-	left: 5px;
+	right: 5px;
 	width: 7px;
 	height: 3px;
 	border: solid #999;
@@ -467,10 +469,10 @@ display:none
 }
 .goldenforms-pro .uit-file {
 	margin: 0;
-	padding-right: 108px
+	padding-left: 108px
 }
 .goldenforms-pro .uit-file .uit-button {
-	float: right;
+	float: left;
 	height: 36px;
 	padding: 0 16px;
 	position: absolute;
@@ -482,7 +484,7 @@ display:none
 	width: 110px;
 	margin: 0;
 	z-index: 2;
-	right: 0;
+	left: 0;
 	top: 0
 }
 .goldenforms-pro .uit-file .uit-button:hover {
@@ -491,7 +493,7 @@ display:none
 .goldenforms-pro .uit-file .file-field {
 	position: absolute;
 	top: -1px;
-	right: 0;
+	left: 0;
 	padding: 0;
 	font-size: 30px;
 	height: 35px;
@@ -508,8 +510,8 @@ display:none
 }
 .goldenforms-pro .switch-label {
 	line-height: 26px;
-	padding-right: 10px;
-	padding-left: 3px
+	padding-left: 10px;
+	padding-right: 3px
 }
 .goldenforms-pro .uit-switch {
 	width: 64px;
@@ -541,10 +543,10 @@ display:none
 	-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.08), inset 0 11px #F3F3F3;
 	-moz-box-shadow: inset 0 1px 1px rgba(0,0,0,.08), inset 0 11px #F3F3F3;
 	box-shadow: inset 0 1px 1px rgba(0,0,0,.08), inset 0 11px #F3F3F3;
-	-webkit-transition: padding-left .5s ease-out;
-	-moz-transition: padding-left .5s ease-out;
-	-o-transition: padding-left .5s ease-out;
-	transition: padding-left .5s ease-out;
+	-webkit-transition: padding-right .5s ease-out;
+	-moz-transition: padding-right .5s ease-out;
+	-o-transition: padding-right .5s ease-out;
+	transition: padding-right .5s ease-out;
 	-webkit-border-radius: 20px;
 	-moz-border-radius: 20px;
 	border-radius: 20px
@@ -553,11 +555,11 @@ display:none
 	content: '';
 	display: block;
 	background-color: #EEEFF0;
-	background-image: -webkit-gradient(linear, left top, right top, color-stop(0%, #fff), color-stop(100%, #dfe1e2));
-	background-image: -webkit-linear-gradient(left, #fff, #DFE1E2);
-	background-image: -moz-linear-gradient(left, #fff, #DFE1E2);
-	background-image: -o-linear-gradient(left, #fff, #DFE1E2);
-	background-image: linear-gradient(to right, #fff, #DFE1E2);
+	background-image: -webkit-gradient(linear, right top, left top, color-stop(0%, #fff), color-stop(100%, #dfe1e2));
+	background-image: -webkit-linear-gradient(right, #fff, #DFE1E2);
+	background-image: -moz-linear-gradient(right, #fff, #DFE1E2);
+	background-image: -o-linear-gradient(right, #fff, #DFE1E2);
+	background-image: linear-gradient(to left, #fff, #DFE1E2);
 	-webkit-box-shadow: inset 0 0 0 1px rgba(255,255,255,.7), 1px 0 1px rgba(0,0,0,.3);
 	-moz-box-shadow: inset 0 0 0 1px rgba(255,255,255,.7), 1px 0 1px rgba(0,0,0,.3);
 	box-shadow: inset 0 0 0 1px rgba(255,255,255,.7), 1px 0 1px rgba(0,0,0,.3);
@@ -572,14 +574,14 @@ display:none
 	width: 32px;
 	content: attr(data-off);
 	position: absolute;
-	right: 1px;
+	left: 1px;
 	top: 0
 }
 .goldenforms-pro .uit-switch>input {
 	position: absolute;
 	z-index: 0;
 	top: 3px;
-	left: 3px;
+	right: 3px;
 	width: 58px;
 	height: 20px;
 	padding: 0;
@@ -588,7 +590,7 @@ display:none
 }
 .goldenforms-pro .uit-switch>input:checked+label {
 	color: #fff;
-	padding-left: 32px;
+	padding-right: 32px;
 	background: #33a0e8;
 	border-color: #1867a8 #197ccc #1c81d2;
 	-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.15), inset 0 11px #0D7DD9;
@@ -603,7 +605,7 @@ display:none
 }
 .goldenforms-pro .uit-switch>input:checked+label:after {
 	content: attr(data-on);
-	left: 0
+	right: 0
 }
 .goldenforms-pro .switch-square>label {
 	-webkit-border-radius: 2px;
@@ -613,11 +615,11 @@ display:none
 .goldenforms-pro .switch-square>label:before {
 	width: 30px;
 	background-color: #EEEFF0;
-	background-image: -webkit-gradient(linear, left top, right top, color-stop(0%, #fff), color-stop(100%, #dfe1e2));
-	background-image: -webkit-linear-gradient(left, #fff, #DFE1E2);
-	background-image: -moz-linear-gradient(left, #fff, #DFE1E2);
-	background-image: -o-linear-gradient(left, #fff, #DFE1E2);
-	background-image: linear-gradient(to right, #fff, #DFE1E2);
+	background-image: -webkit-gradient(linear, right top, left top, color-stop(0%, #fff), color-stop(100%, #dfe1e2));
+	background-image: -webkit-linear-gradient(right, #fff, #DFE1E2);
+	background-image: -moz-linear-gradient(right, #fff, #DFE1E2);
+	background-image: -o-linear-gradient(right, #fff, #DFE1E2);
+	background-image: linear-gradient(to left, #fff, #DFE1E2);
 	-webkit-border-radius: 1px;
 	-moz-border-radius: 1px;
 	border-radius: 1px
@@ -626,7 +628,7 @@ display:none
 	width: 30px
 }
 .goldenforms-pro .switch-square>input:checked+label {
-	padding-left: 32px
+	padding-right: 32px
 }
 .goldenforms-pro .switch-green>input:checked+label {
 	background: #9dcf4a;
@@ -665,19 +667,19 @@ display:none
 	width: 24px;
 	height: 18px;
 	margin-top: 1px;
-	margin-left: 1px;
+	margin-right: 1px;
 	-webkit-border-radius: 8px;
 	-moz-border-radius: 8px;
 	border-radius: 8px;
 	position: relative;
 	z-index: 5;
-	float: left;
+	float: right;
 	background-color: #DFE1E2;
-	background-image: -webkit-gradient(linear, left top, right top, color-stop(30%, #dfe1e2), color-stop(100%, #fff));
-	background-image: -webkit-linear-gradient(left, #DFE1E2 30%, #fff);
-	background-image: -moz-linear-gradient(left, #DFE1E2 30%, #fff);
-	background-image: -o-linear-gradient(left, #DFE1E2 30%, #fff);
-	background-image: linear-gradient(to right, #DFE1E2 30%, #fff)
+	background-image: -webkit-gradient(linear, right top, left top, color-stop(30%, #dfe1e2), color-stop(100%, #fff));
+	background-image: -webkit-linear-gradient(right, #DFE1E2 30%, #fff);
+	background-image: -moz-linear-gradient(right, #DFE1E2 30%, #fff);
+	background-image: -o-linear-gradient(right, #DFE1E2 30%, #fff);
+	background-image: linear-gradient(to left, #DFE1E2 30%, #fff)
 }
 .goldenforms-pro .switch-square .switch-handle:before {
 	-webkit-border-radius: 0;
@@ -686,17 +688,17 @@ display:none
 }
 .goldenforms-pro .switch-handle:after {
 	content: "";
-	float: right;
+	float: left;
 	position: relative;
-	border-left: 1px solid #aaa;
 	border-right: 1px solid #aaa;
+	border-left: 1px solid #aaa;
 	-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0), 0 1px rgba(255,255,255,.8);
 	-moz-box-shadow: inset 0 1px 1px rgba(0,0,0,0), 0 1px rgba(255,255,255,.8);
 	-o-box-shadow: inset 0 1px 1px rgba(0,0,0,0), 0 1px rgba(255,255,255,.8);
 	box-shadow: inset 0 1px 1px rgba(0,0,0,0), 1px 1px rgba(255,255,255,.8);
 	margin: auto;
 	height: 6px;
-	left: -8px;
+	right: -8px;
 	top: -12px;
 	z-index: 10;
 	width: 1px
@@ -717,14 +719,14 @@ display:none
 	position: relative;
 	display: inline-block;
 	margin-top: -4px;
-	float: right
+	float: left
 }
 .goldenforms-pro .uit-rating-wrapper>span {
 	display: inline-block;
-	float: left
+	float: right
 }
 .goldenforms-pro .uit-rating label {
-	float: right
+	float: left
 }
 .goldenforms-pro .uit-rating input {
 	border: 0;
@@ -773,9 +775,9 @@ display:none
 	font-weight: 700;
 	background: #000;
 	font-size: 11px;
-	margin-left: 0;
+	margin-right: 0;
 	display: block;
-	left: -9999px;
+	right: -9999px;
 	opacity: 0;
 	z-index: 10;
 	top: -80px
@@ -783,15 +785,15 @@ display:none
 .goldenforms-pro .uit-rating label:hover span {
 	top: -25px;
 	opacity: 1;
-	left: auto
+	right: auto
 }
 .goldenforms-pro .uit-rating label span:before {
 	content: '';
 	position: absolute;
 	border-top: 4px solid #000;
-	border-right: 4px solid transparent;
 	border-left: 4px solid transparent;
-	left: 8px;
+	border-right: 4px solid transparent;
+	right: 8px;
 	top: 100%
 }
 .ui-datepicker {
@@ -826,7 +828,7 @@ display:none
 	font-size: 15px;
 	padding: 8px;
 	background: #F5F5F5;
-	background-image: -webkit-gradient(linear, left top, left bottom, from(#FBFBFB), to(#E6E6E6));
+	background-image: -webkit-gradient(linear, right top, right bottom, from(#FBFBFB), to(#E6E6E6));
 	background-image: -webkit-linear-gradient(top, #FBFBFB, #E6E6E6);
 	background-image: -moz-linear-gradient(top, #FBFBFB, #E6E6E6);
 	background-image: -o-linear-gradient(top, #FBFBFB, #E6E6E6);
@@ -851,7 +853,7 @@ display:none
 	color: #888;
 	top: 7px;
 	background-color: #F6F6F6;
-	background-image: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#F0EDF6));
+	background-image: -webkit-gradient(linear, right top, right bottom, from(#fff), to(#F0EDF6));
 	background-image: -webkit-linear-gradient(top, #fff, #F0EDF6);
 	background-image: -moz-linear-gradient(top, #fff, #F0EDF6);
 	background-image: -o-linear-gradient(top, #fff, #F0EDF6);
@@ -869,10 +871,10 @@ display:none
 	text-align: center
 }
 .ui-datepicker .ui-datepicker-prev {
-	left: 7px
+	right: 7px
 }
 .ui-datepicker .ui-datepicker-next {
-	right: 7px
+	left: 7px
 }
 .ui-datepicker .ui-datepicker-title {
 	margin: 0 2.3em;
@@ -901,7 +903,7 @@ display:none
 	font-weight: 400;
 	border: 0;
 	background: #f9f9f9;
-	background-image: -webkit-gradient(linear, left top, left bottom, from(#eee), to(#fff));
+	background-image: -webkit-gradient(linear, right top, right bottom, from(#eee), to(#fff));
 	background-image: -webkit-linear-gradient(top, #eee, #fff);
 	background-image: -moz-linear-gradient(top, #eee, #fff);
 	background-image: -o-linear-gradient(top, #eee, #fff);
@@ -934,7 +936,7 @@ display:none
 	background-color: #208ed3;
 	border-color: #1f58cc #1b4db3 #1b4db3;
 	text-shadow: 0 -1px rgba(0,0,0,.15);
-	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #4baadc), color-stop(100%, #074dda));
+	background-image: -webkit-gradient(linear, right top, right bottom, color-stop(0%, #4baadc), color-stop(100%, #074dda));
 	background-image: -webkit-linear-gradient(top, #4baadc, #074dda);
 	background-image: -moz-linear-gradient(top, #4baadc, #074dda);
 	background-image: -o-linear-gradient(top, #4baadc, #074dda);
@@ -955,7 +957,7 @@ display:none
 	width: auto
 }
 .ui-datepicker-multi .ui-datepicker-group {
-	float: left
+	float: right
 }
 .ui-datepicker-multi .ui-datepicker-group table {
 	width: 95%;
@@ -971,10 +973,10 @@ display:none
 	width: 25%
 }
 .ui-datepicker-multi .ui-datepicker-group-last .ui-datepicker-header, .ui-datepicker-multi .ui-datepicker-group-middle .ui-datepicker-header {
-	border-left-width: 0
+	border-right-width: 0
 }
 .ui-datepicker-multi .ui-datepicker-buttonpane {
-	clear: left
+	clear: right
 }
 .ui-datepicker-row-break {
 	clear: both;
@@ -985,7 +987,7 @@ display:none
 	padding: 10px;
 	background-color: #f9f9f9;
 	border-top: 1px solid #CFCFCF;
-	background-image: -webkit-gradient(linear, left top, left bottom, from(#fbfbfb), to(#ededed));
+	background-image: -webkit-gradient(linear, right top, right bottom, from(#fbfbfb), to(#ededed));
 	background-image: -webkit-linear-gradient(top, #fbfbfb, #ededed);
 	background-image: -moz-linear-gradient(top, #fbfbfb, #ededed);
 	background-image: -ms-linear-gradient(top, #fbfbfb, #ededed);
@@ -1000,7 +1002,7 @@ display:none
 	border-radius: 0 0 3px 3px
 }
 .ui-datepicker-buttonpane button {
-	margin-right: .2em
+	margin-left: .2em
 }
 .ui-monthpicker .ui-datepicker-header {
 	margin-bottom: 3px
@@ -1016,15 +1018,15 @@ display:none
 	padding: 10px
 }
 .ui-timepicker-div dl {
-	text-align: left;
+	text-align: right;
 	border: 1px solid #ddd;
 	border-width: 1px 0 0;
 	padding: 15px 10px;
 	margin: 0
 }
 .ui-timepicker-div dl dt {
-	float: left;
-	clear: left;
+	float: right;
+	clear: right;
 	padding: 0 0 0 5px
 }
 .ui-timepicker-div dl dd {
@@ -1048,12 +1050,12 @@ display:none
 	direction: rtl
 }
 .ui-timepicker-rtl dl {
-	text-align: right;
+	text-align: left;
 	padding: 0 5px 0 0
 }
 .ui-timepicker-rtl dl dt {
-	float: right;
-	clear: right
+	float: left;
+	clear: left
 }
 .ui-timepicker-rtl dl dd {
 	margin: 0 40% 10px 10px
@@ -1079,7 +1081,7 @@ display:none
 }
 .goldenforms-pro .ui-slider {
 	position: relative;
-	text-align: left
+	text-align: right
 }
 .goldenforms-pro .ui-slider .ui-slider-handle {
 	position: absolute;
@@ -1089,7 +1091,7 @@ display:none
 	cursor: default;
 	text-decoration: none;
 	background-color: #fafafa;
-	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(30%, #fff), color-stop(100%, #e0e3e4));
+	background-image: -webkit-gradient(linear, right top, right bottom, color-stop(30%, #fff), color-stop(100%, #e0e3e4));
 	background-image: -webkit-linear-gradient(top, #FFF 30%, #E0E3E4);
 	background-image: -moz-linear-gradient(top, #FFF 30%, #E0E3E4);
 	background-image: -o-linear-gradient(top, #FFF 30%, #E0E3E4);
@@ -1122,7 +1124,7 @@ display:none
 	-o-border-radius: 10px;
 	border-radius: 10px;
 	z-index: 2;
-	left: 6px;
+	right: 6px;
 	top: 6px
 }
 .goldenforms-pro .ui-slider .ui-slider-range {
@@ -1153,13 +1155,13 @@ display:none
 	height: 100%
 }
 .goldenforms-pro .ui-slider-horizontal .ui-slider-range-min {
-	left: 0
-}
-.goldenforms-pro .ui-slider-horizontal .ui-slider-range-max {
 	right: 0
 }
+.goldenforms-pro .ui-slider-horizontal .ui-slider-range-max {
+	left: 0
+}
 .goldenforms-pro .ui-slider-vertical .ui-slider-range {
-	left: 0;
+	right: 0;
 	width: 100%
 }
 .goldenforms-pro .ui-slider-vertical .ui-slider-range-min {
@@ -1185,8 +1187,8 @@ display:none
 	-moz-border-radius: 8px;
 	-o-border-radius: 8px;
 	border-radius: 8px;
-	left: -.35em;
-	margin-left: 0;
+	right: -.35em;
+	margin-right: 0;
 	margin-bottom: -1em
 }
 .goldenforms-pro .sliderv-wrapper, .goldenforms-pro .ui-slider-vertical {
@@ -1195,7 +1197,7 @@ display:none
 }
 .goldenforms-pro .slider-group .sliderv-wrapper {
 	height: 200px;
-	float: left;
+	float: right;
 	margin: 15px
 }
 .goldenforms-pro .ui-slider-vertical .ui-slider-handle:before {
@@ -1204,7 +1206,7 @@ display:none
 	height: 24px;
 	position: absolute;
 	background-color: #E8E9EA;
-	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(4%, #edeeee), color-stop(40%, #fff), color-stop(100%, #ced0d2));
+	background-image: -webkit-gradient(linear, right top, right bottom, color-stop(4%, #edeeee), color-stop(40%, #fff), color-stop(100%, #ced0d2));
 	background-image: -webkit-linear-gradient(top, #EDEEEE 4%, #FFF 40%, #CED0D2);
 	background-image: -moz-linear-gradient(top, #EDEEEE 4%, #FFF 40%, #CED0D2);
 	background-image: -o-linear-gradient(top, #EDEEEE 4%, #FFF 40%, #CED0D2);
@@ -1218,7 +1220,7 @@ display:none
 	-o-border-radius: 5px;
 	border-radius: 5px;
 	z-index: 2;
-	left: 2px;
+	right: 2px;
 	top: 2px
 }
 .goldenforms-pro .ui-slider-vertical .ui-slider-handle:after {
@@ -1233,7 +1235,7 @@ display:none
 	height: 1px;
 	margin: auto;
 	top: 1.1em;
-	left: 4px;
+	right: 4px;
 	z-index: 10
 }
 .goldenforms-pro .ui-slider-horizontal .ui-slider-handle {
@@ -1244,7 +1246,7 @@ display:none
 	-o-border-radius: 30px;
 	border-radius: 30px;
 	top: -.5em;
-	margin-left: -.6em
+	margin-right: -.6em
 }
 .goldenforms-pro .ui-slider-horizontal .ui-slider-handle:before {
 	content: '';
@@ -1252,7 +1254,7 @@ display:none
 	height: 14px;
 	position: absolute;
 	background-color: #E8E9EA;
-	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(4%, #ebebeb), color-stop(100%, #fff));
+	background-image: -webkit-gradient(linear, right top, right bottom, color-stop(4%, #ebebeb), color-stop(100%, #fff));
 	background-image: -webkit-linear-gradient(top, #EBEBEB 4%, #FFF);
 	background-image: -moz-linear-gradient(top, #EBEBEB 4%, #FFF);
 	background-image: -o-linear-gradient(top, #EBEBEB 4%, #FFF);
@@ -1266,7 +1268,7 @@ display:none
 	-o-border-radius: 18px;
 	border-radius: 18px;
 	z-index: 2;
-	left: 4px;
+	right: 4px;
 	top: 4px
 }
 .goldenforms-pro .slider-tip {
@@ -1284,27 +1286,27 @@ display:none
 }
 .goldenforms-pro .slider-wrapper .slider-tip {
 	top: -50px;
-	left: -15px
+	right: -15px
 }
 .goldenforms-pro .slider-wrapper .slider-tip:after {
 	content: '';
 	position: absolute;
 	top: 98%;
-	left: 35%;
+	right: 35%;
 	border-top: 8px solid #333;
-	border-right: 8px solid transparent;
-	border-left: 8px solid transparent
+	border-left: 8px solid transparent;
+	border-right: 8px solid transparent
 }
 .goldenforms-pro .sliderv-wrapper .slider-tip {
-	left: 30px;
+	right: 30px;
 	top: -12px
 }
 .goldenforms-pro .sliderv-wrapper .slider-tip:after {
 	content: '';
 	position: absolute;
 	top: 30%;
-	right: 98%;
-	border-right: 8px solid #333;
+	left: 98%;
+	border-left: 8px solid #333;
 	border-top: 8px solid transparent;
 	border-bottom: 8px solid transparent
 }
@@ -1342,37 +1344,37 @@ display:none
 	top: 0
 }
 .goldenforms-pro .prepend-picker-icon, .goldenforms-pro .sml-50 {
-	padding-left: 50px
+	padding-right: 50px
 }
 .goldenforms-pro .prepend-picker-icon button, .goldenforms-pro .sml-50 .uit-button {
 	width: 51px
 }
 .goldenforms-pro .sml-80 {
-	padding-left: 80px
+	padding-right: 80px
 }
 .goldenforms-pro .sml-80 .uit-button {
 	width: 81px
 }
 .goldenforms-pro .sml-120 {
-	padding-left: 120px
+	padding-right: 120px
 }
 .goldenforms-pro .sml-120 .uit-button {
 	width: 121px
 }
 .goldenforms-pro .append-picker-icon, .goldenforms-pro .smr-50 {
-	padding-right: 50px
+	padding-left: 50px
 }
 .goldenforms-pro .append-picker-icon button, .goldenforms-pro .smr-50 .uit-button {
 	width: 51px
 }
 .goldenforms-pro .smr-80 {
-	padding-right: 80px
+	padding-left: 80px
 }
 .goldenforms-pro .smr-80 .uit-button {
 	width: 81px
 }
 .goldenforms-pro .smr-120 {
-	padding-right: 120px
+	padding-left: 120px
 }
 .goldenforms-pro .smr-120 .uit-button {
 	width: 121px
@@ -1404,26 +1406,26 @@ display:none
 	font-size: 14px
 }
 .goldenforms-pro .prepend-icon .field-icon {
-	left: 0
-}
-.goldenforms-pro .append-icon .field-icon {
 	right: 0
 }
+.goldenforms-pro .append-icon .field-icon {
+	left: 0
+}
 .goldenforms-pro .prepend-icon>input, .goldenforms-pro .prepend-icon>select, .goldenforms-pro .prepend-icon>textarea {
-	padding-left: 32px
+	padding-right: 32px
 }
 .goldenforms-pro .append-icon>input, .goldenforms-pro .append-icon>textarea {
-	padding-right: 32px;
-	padding-left: 10px
+	padding-left: 32px;
+	padding-right: 10px
 }
 .goldenforms-pro .append-icon>textarea {
-	padding-right: 32px
+	padding-left: 32px
 }
 .goldenforms-pro .uit-select .field-icon {
 	line-height: 33px
 }
 .goldenforms-pro .prepend-icon>select {
-	padding-left: 30px
+	padding-right: 30px
 }
 .goldenforms-pro .uit-button, .ui-datepicker-buttonpane button {
 	outline: 0;
@@ -1470,7 +1472,7 @@ display:none
 .goldenforms-pro .append-picker-icon .uit-input:focus+button, .goldenforms-pro .append-picker-icon button:active, .goldenforms-pro .prepend-picker-icon .uit-input:focus+button, .goldenforms-pro .prepend-picker-icon button:active, .goldenforms-pro .smart-widget .uit-button:active, .goldenforms-pro .uit-button.active, .goldenforms-pro .uit-button:active, .goldenforms-pro .uit-file .file-field:focus~.uit-button, .goldenforms-pro .uit-file .file-field:focus~.uit-button:active {
 	background-color: #e8e8e8;
 	border-color: #bfbfbf #bfbfbf #d6d6d6;
-	background-image: -webkit-gradient(linear, left top, left bottom, from(#e8e8e8), to(#fff));
+	background-image: -webkit-gradient(linear, right top, right bottom, from(#e8e8e8), to(#fff));
 	background-image: -webkit-linear-gradient(top, #e8e8e8, #fff);
 	background-image: -moz-linear-gradient(top, #e8e8e8, #fff);
 	background-image: -o-linear-gradient(top, #e8e8e8, #fff);
@@ -1494,7 +1496,7 @@ display:none
 }
 .goldenforms-pro .blue-file .uit-button, .goldenforms-pro .btn-blue, .goldenforms-pro .picker-blue button, .goldenforms-pro .widget-blue .uit-button {
 	background-color: #208ed3;
-	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #4baadc), color-stop(100%, #074dda));
+	background-image: -webkit-gradient(linear, right top, right bottom, color-stop(0%, #4baadc), color-stop(100%, #074dda));
 	background-image: -webkit-linear-gradient(top, #4baadc, #074dda);
 	background-image: -moz-linear-gradient(top, #4baadc, #074dda);
 	background-image: -o-linear-gradient(top, #4baadc, #074dda);
@@ -1504,7 +1506,7 @@ display:none
 }
 .goldenforms-pro .blue-file .file-field:focus~.uit-button, .goldenforms-pro .blue-file .file-field:hover~.uit-button, .goldenforms-pro .btn-blue.focus, .goldenforms-pro .btn-blue.hover, .goldenforms-pro .btn-blue:focus, .goldenforms-pro .btn-blue:hover, .goldenforms-pro .picker-blue button:focus, .goldenforms-pro .picker-blue button:hover, .goldenforms-pro .widget-blue .uit-button:focus, .goldenforms-pro .widget-blue .uit-button:hover {
 	background-color: #1e55c8;
-	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #2160de), color-stop(100%, #1e55c8));
+	background-image: -webkit-gradient(linear, right top, right bottom, color-stop(0%, #2160de), color-stop(100%, #1e55c8));
 	background-image: -webkit-linear-gradient(top, #2160de, #1e55c8);
 	background-image: -moz-linear-gradient(top, #2160de, #1e55c8);
 	background-image: -o-linear-gradient(top, #2160de, #1e55c8);
@@ -1515,7 +1517,7 @@ display:none
 .goldenforms-pro .blue-file .file-field:focus~.uit-button, .goldenforms-pro .btn-blue.active, .goldenforms-pro .btn-blue:active, .goldenforms-pro .picker-blue .uit-input:focus+button, .goldenforms-pro .picker-blue button:active, .goldenforms-pro .widget-blue .uit-button:active {
 	background-color: #0D4DC1;
 	border-color: #0F3779 #0D4DC1 #0F58E1;
-	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #0D4DC1), color-stop(100%, #48a4ff));
+	background-image: -webkit-gradient(linear, right top, right bottom, color-stop(0%, #0D4DC1), color-stop(100%, #48a4ff));
 	background-image: -webkit-linear-gradient(top, #0D4DC1, #48a4ff);
 	background-image: -moz-linear-gradient(top, #0D4DC1, #48a4ff);
 	background-image: -o-linear-gradient(top, #0D4DC1, #48a4ff);
@@ -1523,7 +1525,7 @@ display:none
 }
 .goldenforms-pro .btn-green, .goldenforms-pro .green-file .uit-button, .goldenforms-pro .picker-green button, .goldenforms-pro .widget-green .uit-button {
 	background-color: #7fbf4d;
-	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #a1d254), color-stop(100%, #63a62f));
+	background-image: -webkit-gradient(linear, right top, right bottom, color-stop(0%, #a1d254), color-stop(100%, #63a62f));
 	background-image: -webkit-linear-gradient(top, #a1d254, #63a62f);
 	background-image: -moz-linear-gradient(top, #a1d254, #63a62f);
 	background-image: -ms-linear-gradient(top, #a1d254, #63a62f);
@@ -1535,7 +1537,7 @@ display:none
 }
 .goldenforms-pro .btn-green.focus, .goldenforms-pro .btn-green.hover, .goldenforms-pro .btn-green:focus, .goldenforms-pro .btn-green:hover, .goldenforms-pro .green-file .file-field:focus~.uit-button, .goldenforms-pro .green-file .file-field:hover~.uit-button, .goldenforms-pro .picker-green button:focus, .goldenforms-pro .picker-green button:hover, .goldenforms-pro .widget-green .uit-button:focus, .goldenforms-pro .widget-green .uit-button:hover {
 	background-color: #76b347;
-	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #76b347), color-stop(100%, #5e9e2e));
+	background-image: -webkit-gradient(linear, right top, right bottom, color-stop(0%, #76b347), color-stop(100%, #5e9e2e));
 	background-image: -webkit-linear-gradient(top, #76b347, #5e9e2e);
 	background-image: -moz-linear-gradient(top, #76b347, #5e9e2e);
 	background-image: -ms-linear-gradient(top, #76b347, #5e9e2e);
@@ -1547,7 +1549,7 @@ display:none
 .goldenforms-pro .btn-green.active, .goldenforms-pro .btn-green:active, .goldenforms-pro .green-file .file-field:focus~.uit-button, .goldenforms-pro .picker-green .uit-input:focus+button, .goldenforms-pro .picker-green button:active, .goldenforms-pro .widget-green .uit-button:active {
 	background-color: #548E28;
 	border-color: #678f3a #75a143 #81b049;
-	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #71b533), color-stop(100%, #a7d757));
+	background-image: -webkit-gradient(linear, right top, right bottom, color-stop(0%, #71b533), color-stop(100%, #a7d757));
 	background-image: -webkit-linear-gradient(top, #71b533, #a7d757);
 	background-image: -moz-linear-gradient(top, #71b533, #a7d757);
 	background-image: -o-linear-gradient(top, #71b533, #a7d757);
@@ -1556,7 +1558,7 @@ display:none
 .goldenforms-pro .btn-red, .goldenforms-pro .picker-red button, .goldenforms-pro .red-file .uit-button, .goldenforms-pro .widget-red .uit-button {
 	background-color: #cf3025;
 	border-color: #be1814 #ac1612 #ac1612;
-	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #fc4138), color-stop(100%, #cf3025));
+	background-image: -webkit-gradient(linear, right top, right bottom, color-stop(0%, #fc4138), color-stop(100%, #cf3025));
 	background-image: -webkit-linear-gradient(top, #fc4138, #cf3025);
 	background-image: -moz-linear-gradient(top, #fc4138, #cf3025);
 	background-image: -o-linear-gradient(top, #fc4138, #cf3025);
@@ -1565,7 +1567,7 @@ display:none
 .goldenforms-pro .btn-red.focus, .goldenforms-pro .btn-red.hover, .goldenforms-pro .btn-red:focus, .goldenforms-pro .btn-red:hover, .goldenforms-pro .picker-red button:focus, .goldenforms-pro .picker-red button:hover, .goldenforms-pro .red-file .file-field:focus~.uit-button, .goldenforms-pro .red-file .file-field:hover~.uit-button, .goldenforms-pro .widget-red .uit-button:focus, .goldenforms-pro .widget-red .uit-button:hover {
 	background-color: #BC2D21;
 	border-color: #be1814 #ac1612 #ac1612;
-	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #F81003), color-stop(100%, #BC2D21));
+	background-image: -webkit-gradient(linear, right top, right bottom, color-stop(0%, #F81003), color-stop(100%, #BC2D21));
 	background-image: -webkit-linear-gradient(top, #F81003, #BC2D21);
 	background-image: -moz-linear-gradient(top, #F81003, #BC2D21);
 	background-image: -o-linear-gradient(top, #F81003, #BC2D21);
@@ -1574,7 +1576,7 @@ display:none
 .goldenforms-pro .btn-red.active, .goldenforms-pro .btn-red:active, .goldenforms-pro .picker-red .uit-input:focus+button, .goldenforms-pro .picker-red button:active, .goldenforms-pro .red-file .file-field:focus~.uit-button, .goldenforms-pro .widget-red .uit-button:active {
 	background-color: #A60000;
 	border-color: #A60000 #C10000 #E14A42;
-	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #D00), color-stop(100%, #F96));
+	background-image: -webkit-gradient(linear, right top, right bottom, color-stop(0%, #D00), color-stop(100%, #F96));
 	background-image: -webkit-linear-gradient(top, #D00, #F96);
 	background-image: -moz-linear-gradient(top, #D00, #F96);
 	background-image: -o-linear-gradient(top, #D00, #F96);
@@ -1583,7 +1585,7 @@ display:none
 .goldenforms-pro .black-file .uit-button, .goldenforms-pro .btn-black, .goldenforms-pro .picker-black button, .goldenforms-pro .widget-black .uit-button {
 	background-color: #333;
 	border-color: #3E3E3E #222 #030303;
-	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #4F4F4F), color-stop(100%, #181818));
+	background-image: -webkit-gradient(linear, right top, right bottom, color-stop(0%, #4F4F4F), color-stop(100%, #181818));
 	background-image: -webkit-linear-gradient(top, #4F4F4F, #181818);
 	background-image: -moz-linear-gradient(top, #4F4F4F, #181818);
 	background-image: -o-linear-gradient(top, #4F4F4F, #181818);
@@ -1594,7 +1596,7 @@ display:none
 }
 .goldenforms-pro .black-file .file-field:focus~.uit-button, .goldenforms-pro .black-file .file-field:hover~.uit-button, .goldenforms-pro .btn-black.focus, .goldenforms-pro .btn-black.hover, .goldenforms-pro .btn-black:focus, .goldenforms-pro .btn-black:hover, .goldenforms-pro .picker-black button:focus, .goldenforms-pro .picker-black button:hover, .goldenforms-pro .widget-black .uit-button:focus, .goldenforms-pro .widget-black .uit-button:hover {
 	background-color: #111;
-	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #333), color-stop(100%, #111));
+	background-image: -webkit-gradient(linear, right top, right bottom, color-stop(0%, #333), color-stop(100%, #111));
 	background-image: -webkit-linear-gradient(top, #333, #111);
 	background-image: -moz-linear-gradient(top, #333, #111);
 	background-image: -o-linear-gradient(top, #333, #111);
@@ -1603,7 +1605,7 @@ display:none
 }
 .goldenforms-pro .black-file .file-field:focus~.uit-button, .goldenforms-pro .btn-black.active, .goldenforms-pro .btn-black:active, .goldenforms-pro .picker-black .uit-input:focus+button, .goldenforms-pro .picker-black button:active, .goldenforms-pro .widget-black .uit-button:active {
 	background-color: #070707;
-	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #070707), color-stop(100%, #444));
+	background-image: -webkit-gradient(linear, right top, right bottom, color-stop(0%, #070707), color-stop(100%, #444));
 	background-image: -webkit-linear-gradient(top, #070707, #444);
 	background-image: -moz-linear-gradient(top, #070707, #444);
 	background-image: -o-linear-gradient(top, #070707, #444);
@@ -1626,10 +1628,10 @@ display:none
 	font-size: 0
 }
 .goldenforms-pro .uit-button-group>.uit-button {
-	float: left;
+	float: right;
 	height: inherit;
 	line-height: 36px;
-	margin-left: -1px;
+	margin-right: -1px;
 	-webkit-border-radius: 0;
 	-moz-border-radius: 0;
 	border-radius: 0;
@@ -1638,7 +1640,7 @@ display:none
 	box-shadow: none
 }
 .goldenforms-pro .uit-button-group>.uit-button:first-child {
-	margin-left: 0;
+	margin-right: 0;
 	-webkit-border-radius: 2px 0 0 2px;
 	-moz-border-radius: 2px 0 0 2px;
 	border-radius: 2px 0 0 2px
@@ -1660,21 +1662,21 @@ display:none
 	-moz-box-shadow: inset 0 1px 3px rgba(0,0,0,.15), 0 1px rgba(255,255,255,.1);
 	box-shadow: inset 0 1px 3px rgba(0,0,0,.15), 0 1px rgba(255,255,255,.1)
 }
-.goldenforms-pro .append-picker-icon button, .goldenforms-pro .append-picker-icon button:hover, .goldenforms-pro .prepend-picker-icon .uit-input, .goldenforms-pro .sm-left .field input, .goldenforms-pro .sm-right .uit-button, .goldenforms-pro .sm-right .uit-button:hover {
+.goldenforms-pro .append-picker-icon button, .goldenforms-pro .append-picker-icon button:hover, .goldenforms-pro .prepend-picker-icon .uit-input, .goldenforms-pro .sm-right .field input, .goldenforms-pro .sm-left .uit-button, .goldenforms-pro .sm-left .uit-button:hover {
 	-webkit-border-radius: 0 3px 3px 0;
 	-moz-border-radius: 0 3px 3px 0;
 	border-radius: 0 3px 3px 0
 }
-.goldenforms-pro .append-picker-icon .uit-input, .goldenforms-pro .prepend-picker-icon button, .goldenforms-pro .prepend-picker-icon button:hover, .goldenforms-pro .sm-left .uit-button, .goldenforms-pro .sm-left .uit-button:hover, .goldenforms-pro .sm-right .field input {
+.goldenforms-pro .append-picker-icon .uit-input, .goldenforms-pro .prepend-picker-icon button, .goldenforms-pro .prepend-picker-icon button:hover, .goldenforms-pro .sm-right .uit-button, .goldenforms-pro .sm-right .uit-button:hover, .goldenforms-pro .sm-left .field input {
 	-webkit-border-radius: 3px 0 0 3px;
 	-moz-border-radius: 3px 0 0 3px;
 	border-radius: 3px 0 0 3px
 }
-.goldenforms-pro .prepend-picker-icon button, .goldenforms-pro .sm-left .uit-button {
-	left: 0
-}
-.goldenforms-pro .append-picker-icon button, .goldenforms-pro .sm-right .uit-button {
+.goldenforms-pro .prepend-picker-icon button, .goldenforms-pro .sm-right .uit-button {
 	right: 0
+}
+.goldenforms-pro .append-picker-icon button, .goldenforms-pro .sm-left .uit-button {
+	left: 0
 }
 .goldenforms-pro .append-picker-icon button i, .goldenforms-pro .prepend-picker-icon button i {
 	font-size: 14px
@@ -1703,7 +1705,7 @@ display:none
 	display: block;
 	position: absolute;
 	top: 40%;
-	right: 2px;
+	left: 2px;
 	opacity: .65;
 	margin-top: -7px;
 	padding: inherit;
@@ -1717,7 +1719,7 @@ display:none
 	color: #163161;
 	background-color: #cfe6fc;
 	border-color: #a4c8f5 #96C0F3 #96C0F3;
-	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #E7F2FE), color-stop(100%, #C7E1FC));
+	background-image: -webkit-gradient(linear, right top, right bottom, color-stop(0%, #E7F2FE), color-stop(100%, #C7E1FC));
 	background-image: -webkit-linear-gradient(top, #E7F2FE, #C7E1FC);
 	background-image: -moz-linear-gradient(top, #E7F2FE, #C7E1FC);
 	background-image: -o-linear-gradient(top, #E7F2FE, #C7E1FC);
@@ -1727,7 +1729,7 @@ display:none
 	color: #363;
 	background-color: #d2f7ad;
 	border-color: #aedb2e;
-	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #E4FBCE), color-stop(100%, #CEF7A6));
+	background-image: -webkit-gradient(linear, right top, right bottom, color-stop(0%, #E4FBCE), color-stop(100%, #CEF7A6));
 	background-image: -webkit-linear-gradient(top, #E4FBCE, #CEF7A6);
 	background-image: -moz-linear-gradient(top, #E4FBCE, #CEF7A6);
 	background-image: -o-linear-gradient(top, #E4FBCE, #CEF7A6);
@@ -1737,7 +1739,7 @@ display:none
 	color: #C60;
 	background-color: #fae7a2;
 	border-color: #f5c558;
-	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #FFFFC6), color-stop(100%, #FAE49C));
+	background-image: -webkit-gradient(linear, right top, right bottom, color-stop(0%, #FFFFC6), color-stop(100%, #FAE49C));
 	background-image: -webkit-linear-gradient(top, #FFFFC6, #FAE49C);
 	background-image: -moz-linear-gradient(top, #FFFFC6, #FAE49C);
 	background-image: -o-linear-gradient(top, #FFFFC6, #FAE49C);
@@ -1747,7 +1749,7 @@ display:none
 	color: #900;
 	background-color: #ffd5af;
 	border-color: #f8b472;
-	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #FFE7D3), color-stop(100%, #FFD1A8));
+	background-image: -webkit-gradient(linear, right top, right bottom, color-stop(0%, #FFE7D3), color-stop(100%, #FFD1A8));
 	background-image: -webkit-linear-gradient(top, #FFE7D3, #FFD1A8);
 	background-image: -moz-linear-gradient(top, #FFE7D3, #FFD1A8);
 	background-image: -o-linear-gradient(top, #FFE7D3, #FFD1A8);
@@ -1772,7 +1774,7 @@ display:none
 	position: absolute;
 	display: inline-block;
 	top: -3px;
-	right: -24px;
+	left: -24px;
 	font-size: 9px;
 	color: #93A2AA
 }
@@ -1790,10 +1792,10 @@ display:none
 	-o-border-radius: 3px;
 	border-radius: 3px;
 	background-size: 16px 16px;
-	background-image: -webkit-linear-gradient(top left, transparent, transparent 25%, rgba(255,255,255,.3)25%, rgba(255,255,255,.3)50%, transparent 50%, transparent 75%, rgba(255,255,255,.3)75%, rgba(255,255,255,.3));
-	background-image: -moz-linear-gradient(top left, transparent, transparent 25%, rgba(255,255,255,.3)25%, rgba(255,255,255,.3)50%, transparent 50%, transparent 75%, rgba(255,255,255,.3)75%, rgba(255,255,255,.3));
-	background-image: -o-linear-gradient(top left, transparent, transparent 25%, rgba(255,255,255,.3)25%, rgba(255,255,255,.3)50%, transparent 50%, transparent 75%, rgba(255,255,255,.3)75%, rgba(255,255,255,.3));
-	background-image: linear-gradient(to bottom right, transparent, transparent 25%, rgba(255,255,255,.3)25%, rgba(255,255,255,.3)50%, transparent 50%, transparent 75%, rgba(255,255,255,.3)75%, rgba(255,255,255,.3))
+	background-image: -webkit-linear-gradient(top right, transparent, transparent 25%, rgba(255,255,255,.3)25%, rgba(255,255,255,.3)50%, transparent 50%, transparent 75%, rgba(255,255,255,.3)75%, rgba(255,255,255,.3));
+	background-image: -moz-linear-gradient(top right, transparent, transparent 25%, rgba(255,255,255,.3)25%, rgba(255,255,255,.3)50%, transparent 50%, transparent 75%, rgba(255,255,255,.3)75%, rgba(255,255,255,.3));
+	background-image: -o-linear-gradient(top right, transparent, transparent 25%, rgba(255,255,255,.3)25%, rgba(255,255,255,.3)50%, transparent 50%, transparent 75%, rgba(255,255,255,.3)75%, rgba(255,255,255,.3));
+	background-image: linear-gradient(to bottom left, transparent, transparent 25%, rgba(255,255,255,.3)25%, rgba(255,255,255,.3)50%, transparent 50%, transparent 75%, rgba(255,255,255,.3)75%, rgba(255,255,255,.3))
 }
 .goldenforms-pro .progress-animated>.bar {
 	-webkit-animation: gfprogress .6s linear infinite;
@@ -1851,7 +1853,7 @@ background-position:-16px 0
 	opacity: 0;
 	color: #fff;
 	width: 184px;
-	left: -9999px;
+	right: -9999px;
 	top: auto;
 	font-size: 11px;
 	font-weight: 400;
@@ -1881,22 +1883,6 @@ background-position:-16px 0
 	opacity: 1;
 	z-index: 999
 }
-.goldenforms-pro .tip-left {
-	top: 1px;
-	margin-right: -20px
-}
-.goldenforms-pro .tip-left:after {
-	top: 12px;
-	left: 100%;
-	border-left: 8px solid #0B0B0B;
-	border-top: 8px solid transparent;
-	border-bottom: 8px solid transparent
-}
-.goldenforms-pro .uit-input:focus+.tip-left, .goldenforms-pro .uit-select>select:focus~.tip-left, .goldenforms-pro .uit-textarea:focus+.tip-left {
-	margin-right: 10px;
-	right: 100%;
-	left: auto
-}
 .goldenforms-pro .tip-right {
 	top: 1px;
 	margin-left: -20px
@@ -1909,24 +1895,24 @@ background-position:-16px 0
 	border-bottom: 8px solid transparent
 }
 .goldenforms-pro .uit-input:focus+.tip-right, .goldenforms-pro .uit-select>select:focus~.tip-right, .goldenforms-pro .uit-textarea:focus+.tip-right {
+	margin-left: 10px;
 	left: 100%;
-	margin-left: 10px
+	right: auto
 }
-.goldenforms-pro .tip-right-top {
-	bottom: 100%;
-	margin-bottom: -20px
+.goldenforms-pro .tip-left {
+	top: 1px;
+	margin-right: -20px
 }
-.goldenforms-pro .tip-right-top:after {
-	top: 100%;
-	right: 12px;
-	border-top: 8px solid #0B0B0B;
-	border-right: 8px solid transparent;
-	border-left: 8px solid transparent
+.goldenforms-pro .tip-left:after {
+	top: 12px;
+	left: 100%;
+	border-left: 8px solid #0B0B0B;
+	border-top: 8px solid transparent;
+	border-bottom: 8px solid transparent
 }
-.goldenforms-pro .uit-input:focus+.tip-right-top, .goldenforms-pro .uit-select>select:focus~.tip-right-top, .goldenforms-pro .uit-textarea:focus+.tip-right-top {
-	right: 0;
-	left: auto;
-	margin-bottom: 10px
+.goldenforms-pro .uit-input:focus+.tip-left, .goldenforms-pro .uit-select>select:focus~.tip-left, .goldenforms-pro .uit-textarea:focus+.tip-left {
+	right: 100%;
+	margin-right: 10px
 }
 .goldenforms-pro .tip-left-top {
 	bottom: 100%;
@@ -1936,29 +1922,29 @@ background-position:-16px 0
 	top: 100%;
 	left: 12px;
 	border-top: 8px solid #0B0B0B;
-	border-right: 8px solid transparent;
-	border-left: 8px solid transparent
+	border-left: 8px solid transparent;
+	border-right: 8px solid transparent
 }
 .goldenforms-pro .uit-input:focus+.tip-left-top, .goldenforms-pro .uit-select>select:focus~.tip-left-top, .goldenforms-pro .uit-textarea:focus+.tip-left-top {
 	left: 0;
 	right: auto;
 	margin-bottom: 10px
 }
-.goldenforms-pro .tip-right-bottom {
-	top: 100%;
-	margin-top: -20px
-}
-.goldenforms-pro .tip-right-bottom:after {
-	right: 12px;
+.goldenforms-pro .tip-right-top {
 	bottom: 100%;
-	border-bottom: 8px solid #0B0B0B;
-	border-right: 8px solid transparent;
-	border-left: 8px solid transparent
+	margin-bottom: -20px
 }
-.goldenforms-pro .uit-input:focus+.tip-right-bottom, .goldenforms-pro .uit-select>select:focus~.tip-right-bottom, .goldenforms-pro .uit-textarea:focus+.tip-right-bottom {
-	margin-top: 10px;
+.goldenforms-pro .tip-right-top:after {
+	top: 100%;
+	right: 12px;
+	border-top: 8px solid #0B0B0B;
+	border-left: 8px solid transparent;
+	border-right: 8px solid transparent
+}
+.goldenforms-pro .uit-input:focus+.tip-right-top, .goldenforms-pro .uit-select>select:focus~.tip-right-top, .goldenforms-pro .uit-textarea:focus+.tip-right-top {
+	right: 0;
 	left: auto;
-	right: 0
+	margin-bottom: 10px
 }
 .goldenforms-pro .tip-left-bottom {
 	top: 100%;
@@ -1968,27 +1954,43 @@ background-position:-16px 0
 	left: 12px;
 	bottom: 100%;
 	border-bottom: 8px solid #0B0B0B;
-	border-right: 8px solid transparent;
-	border-left: 8px solid transparent
+	border-left: 8px solid transparent;
+	border-right: 8px solid transparent
 }
 .goldenforms-pro .uit-input:focus+.tip-left-bottom, .goldenforms-pro .uit-select>select:focus~.tip-left-bottom, .goldenforms-pro .uit-textarea:focus+.tip-left-bottom {
 	margin-top: 10px;
 	right: auto;
 	left: 0
 }
+.goldenforms-pro .tip-right-bottom {
+	top: 100%;
+	margin-top: -20px
+}
+.goldenforms-pro .tip-right-bottom:after {
+	right: 12px;
+	bottom: 100%;
+	border-bottom: 8px solid #0B0B0B;
+	border-left: 8px solid transparent;
+	border-right: 8px solid transparent
+}
+.goldenforms-pro .uit-input:focus+.tip-right-bottom, .goldenforms-pro .uit-select>select:focus~.tip-right-bottom, .goldenforms-pro .uit-textarea:focus+.tip-right-bottom {
+	margin-top: 10px;
+	left: auto;
+	right: 0
+}
 .goldenforms-pro .state-error .uit-tooltip {
 	background: #E46B66
-}
-.goldenforms-pro .state-error .tip-left:after {
-	border-left: 8px solid #E46B66
 }
 .goldenforms-pro .state-error .tip-right:after {
 	border-right: 8px solid #E46B66
 }
-.goldenforms-pro .state-error .tip-left-top:after, .goldenforms-pro .state-error .tip-right-top:after {
+.goldenforms-pro .state-error .tip-left:after {
+	border-left: 8px solid #E46B66
+}
+.goldenforms-pro .state-error .tip-right-top:after, .goldenforms-pro .state-error .tip-left-top:after {
 	border-top: 8px solid #E46B66
 }
-.goldenforms-pro .state-error .tip-left-bottom:after, .goldenforms-pro .state-error .tip-right-bottom:after {
+.goldenforms-pro .state-error .tip-right-bottom:after, .goldenforms-pro .state-error .tip-left-bottom:after {
 	border-bottom: 8px solid #E46B66
 }
 .goldenforms-pro .state-error .checkbox-option, .goldenforms-pro .state-error .radio-option, .goldenforms-pro .state-error .uit-input, .goldenforms-pro .state-error .uit-textarea, .goldenforms-pro .state-error input:focus+.checkbox-option, .goldenforms-pro .state-error input:focus+.radio-option, .goldenforms-pro .state-error input:hover+.checkbox-option, .goldenforms-pro .state-error input:hover+.radio-option, .goldenforms-pro .uit-select-multiple.state-error>select {
@@ -2027,7 +2029,7 @@ background-position:-16px 0
 	border-color: #E46B66
 }
 .goldenforms-pro .state-error.uit-file .file-field:focus~.uit-button, .goldenforms-pro .state-error.uit-file .file-field:focus~.uit-button:active, .goldenforms-pro .state-error.uit-file .file-field:hover~.uit-button, .goldenforms-pro .state-error.uit-file .uit-button {
-	border-left: 1px solid #E46B66
+	border-right: 1px solid #E46B66
 }
 .goldenforms-pro .state-success .uit-input, .goldenforms-pro .state-success .uit-textarea, .goldenforms-pro .uit-select-multiple.state-success>select {
 	background: #EAFCD8;
@@ -2056,7 +2058,7 @@ background-position:-16px 0
 	border-color: #2ecc71
 }
 .goldenforms-pro .state-success.uit-file .file-field:focus~.uit-button, .goldenforms-pro .state-success.uit-file .file-field:focus~.uit-button:active, .goldenforms-pro .state-success.uit-file .file-field:hover~.uit-button, .goldenforms-pro .state-success.uit-file .uit-button {
-	border-left: 1px solid #2ecc71
+	border-right: 1px solid #2ecc71
 }
 .goldenforms-pro .state-success .uit-input:focus, .goldenforms-pro .state-success .uit-textarea:focus, .goldenforms-pro .state-success .uit-textarea:focus~.text-hint, .goldenforms-pro .state-success.uit-file .file-field:focus~.uit-input, .goldenforms-pro .uit-select-multiple.state-success>select:focus {
 	-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.15), 0 0 8px rgba(121,185,0,.7);
@@ -2074,7 +2076,7 @@ background-position:-16px 0
 .goldenforms-pro .uit-select .select-arrow {
 position:absolute;
 top:0;
-right:0;
+left:0;
 width:24px;
 height:100%;
 -webkit-border-radius:0 1px 1px 0;
@@ -2140,10 +2142,10 @@ z-index:16
 }
 .goldenforms-pro .frm-row .colm {
 	min-height: 1px;
-	padding-left: 10px;
 	padding-right: 10px;
+	padding-left: 10px;
 	position: relative;
-	float: left
+	float: right
 }
 .goldenforms-pro .frm-row .colm1 {
 	width: 8.33%
@@ -2201,7 +2203,7 @@ z-index:16
 .goldenforms-pro .frmtable td, .goldenforms-pro .frmtable th {
 	border: 1px solid #e0e0e0;
 	padding: 6px 10px;
-	text-align: left
+	text-align: right
 }
 .goldenforms-pro .frmtable th {
 	font-weight: 700;
@@ -2220,18 +2222,18 @@ z-index:16
 	position: relative
 }
 .goldenforms-pro .frmtable th:first-child {
-	border-left-width: 1px;
-	border-top-left-radius: 3px
-}
-.goldenforms-pro .frmtable th:last-child {
+	border-right-width: 1px;
 	border-top-right-radius: 3px
 }
+.goldenforms-pro .frmtable th:last-child {
+	border-top-left-radius: 3px
+}
 .goldenforms-pro .frmtable td {
-	border-right-width: 0;
+	border-left-width: 0;
 	border-top: 0
 }
 .goldenforms-pro .frmtable td:last-child {
-	border-right-width: 1px
+	border-left-width: 1px
 }
 .goldenforms-pro .frmtable tr:nth-child(even) {
 	background: #f9f9f9
@@ -2255,11 +2257,11 @@ z-index:16
 	text-shadow: 0 1px rgba(255,255,255,.5)
 }
 .goldenforms-pro .frmtable .tfoot>tr>td:first-child {
-	border-left-width: 1px;
-	border-bottom-left-radius: 3px
+	border-right-width: 1px;
+	border-bottom-right-radius: 3px
 }
 .goldenforms-pro .frmtable .tfoot>tr>td:last-child {
-	border-bottom-right-radius: 3px
+	border-bottom-left-radius: 3px
 }
 .goldenforms-pro .frmtable td .rcode {
 	font-size: 11px;
@@ -2283,7 +2285,7 @@ z-index:16
 }
 .goldenforms-pro .refresh-captcha {
 	position: absolute;
-	right: 7px;
+	left: 7px;
 	top: 2px
 }
 .goldenforms-pro .refresh-captcha i {
@@ -2340,7 +2342,7 @@ z-index:16
 	color: #f00;
 }
 .Grid th {
-	background-image: -webkit-gradient(linear,  left top,  left bottom,  from(#ffffff),  to(#E6E6E6));
+	background-image: -webkit-gradient(linear,  right top,  right bottom,  from(#ffffff),  to(#E6E6E6));
     background-image: -webkit-linear-gradient(top,  #ffffff, #E6E6E6);
     background-image: -moz-linear-gradient(top,  #ffffff, #E6E6E6);
     background-image: -o-linear-gradient(top,  #ffffff, #E6E6E6);
@@ -2350,15 +2352,15 @@ z-index:16
 	vertical-align: middle;
 	color: #444;
 	height: 44px;
-	border-right: 1px #e6e6e6 solid !important;
+	border-left: 1px #e6e6e6 solid !important;
 }
 .Grid td {
 	padding:7px 15px;	
 	height: 30px;
-	border-right: 1px #e6e6e6 solid !important;
+	border-left: 1px #e6e6e6 solid !important;
 }
 .Grid td:first-child, .Grid th:first-child {
-	border-right: 0px !important;
+	border-left: 0px !important;
 }
 .AlterRowStyle td, .AlterRowStyle {
 	background: #dcdfe3;
@@ -2379,15 +2381,15 @@ z-index:16
 	line-height: 17px;
 }
 .GridPager {
-	text-align: left;
+	text-align: right;
 	background: #e1e1e1 url('../images/formImages/GridRpeat.gif') repeat-x 0 100%;
 	padding-top: 8px !important;
 }
-.Tableleft {
+.Tableright {
 	margin: 0 auto ;
 	font-size:120%
 }
-.Tableleft td {
+.Tableright td {
 	padding: 0 ;
 	border: 0px !important;
 	text-align: center !important;
@@ -2397,7 +2399,7 @@ z-index:16
 	padding: 0 15px !important;
 }
 .pagerLinksTD2 a {
-	float: right;
+	float: left;
 	padding: 4px 6px 6px;
 	color: #444;
 }
@@ -2406,7 +2408,7 @@ z-index:16
 	color: #444;
 }
 .pagerLinksTD2 span {
-	float: right;
+	float: left;
 	padding: 4px 8px 6px;
 	background: #7c9605;
 	color: #fff;
@@ -2421,7 +2423,7 @@ z-index:16
 	cursor:pointer
 }
 .pagerLinksTD a {
-	float: right;
+	float: left;
 	padding: 10px 8px 4px;
 	color: #959595;
 	background: url('../images/formControls/pager-r.gif') repeat-x;
@@ -2432,7 +2434,7 @@ z-index:16
 	color: #959595;
 }
 .pagerLinksTD span {
-	float: right;
+	float: left;
 	padding: 10px 8px 4px;
 	background: url('../images/formControls/pager-s.gif') no-repeat center center;
 	color: #fff;
@@ -2455,43 +2457,43 @@ z-index:16
 	border:1px #bfbfbf solid;
 	border-radius:5px
 }
-.GridTopRight {
+.GridTopleft {
 	position: absolute;
 	width: 8px;
 	height: 8px;
-	background: transparent url('../images/formImages/GridTopRight.gif') no-repeat;
+	background: transparent url('../images/formImages/GridTopleft.gif') no-repeat;
 	top: 0px;
-	right: 0px;
+	left: 0px;
 }
-.GridTopLeft {
+.GridTopright {
 	position: absolute;
 	width: 8px;
 	height: 8px;
-	background: transparent url('../images/formImages/GridTopLeft.gif') no-repeat;
+	background: transparent url('../images/formImages/GridTopright.gif') no-repeat;
 	top: 0px;
-	left: 0px;
+	right: 0px;
 }
-.GridBotRight {
+.GridBotleft {
 	position: absolute;
 	width: 8px;
 	height: 32px;
-	background: transparent url('../images/formImages/GridBotRight.gif') no-repeat;
+	background: transparent url('../images/formImages/GridBotleft.gif') no-repeat;
+	bottom: 0px;
+	left: 0px;
+}
+.GridBotright {
+	position: absolute;
+	width: 8px;
+	height: 32px;
+	background: transparent url('../images/formImages/GridBotright.gif') no-repeat;
 	bottom: 0px;
 	right: 0px;
 }
-.GridBotLeft {
-	position: absolute;
-	width: 8px;
-	height: 32px;
-	background: transparent url('../images/formImages/GridBotLeft.gif') no-repeat;
-	bottom: 0px;
-	left: 0px;
-}
-.leftalignment {
-	float: left;
+.rightalignment {
+	float: right;
 	clear: both;
 	width: 100%;
-	text-align: left;
+	text-align: right;
 }
 .WhiteContainr{
 	background: #fff;
@@ -2503,22 +2505,22 @@ z-index:16
 }
 .Whiter-t {
 	top: -3px;
-	right: -1px;
+	left: -1px;
 	position: absolute;
 }
 .Whiter-b {
 	bottom: -2px;
-	right: -1px;
+	left: -1px;
 	position: absolute;
 }
 .Whitel-t {
 	top: -3px;
-	left: -1px;
+	right: -1px;
 	position: absolute;
 }
 .Whitel-b {
 	bottom: -2px;
-	left: -1px;
+	right: -1px;
 	position: absolute;
 }
 .GrayContainr{
@@ -2537,7 +2539,7 @@ z-index:16
 .topWitTitleInner {
 	background: url('../images/fares/topwitTitleRit.gif') no-repeat 100% center;
 	height: 13px;
-	text-align:right;
+	text-align:left;
 	padding: 3px 11px 4px;
 	color: #125f8f;
 }

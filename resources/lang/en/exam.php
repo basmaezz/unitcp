@@ -13,6 +13,9 @@ return [
     'Sign in'=>'Sign in',
     'Logout'=>'Logout',
     'search'=>'Search',
+    'Ratings'=>'Ratings',
+    'sharing'=>'Sharing',
+    'Comments'=>'Comments',
 
 
 ];
