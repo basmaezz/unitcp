@@ -6,12 +6,13 @@ return [
     'faculities'=>'الكليات',
     'exams'=>'الأمتحانات',
     'users'=>'المستخدمين',
-    'search for Exams'=>'البحث عن الامتحانات',
+    'searchforexams'=>'البحث عن الامتحانات',
     'Change Language'=>'تغييراللغه',
     'English'=>'اللغه الانجليزيه',
     'Arabic'=>'اللغه العربيه',
     'Most Popular Searches'=>'اكثر الامتحانات بحثا',
     'Most Recent Exams'=>'أحدث الامتحانات',
+    'MostPopularSearches'=>'أكثر الامتحانات بحثا ',
     'view more'=>'المزيد',
     'Sign in'=>'تسجيل دخول',
     'Logout'=>'تسجيل خروج',
@@ -19,6 +20,9 @@ return [
     'Ratings'=>'التقييم',
     'sharing'=>'المشاركه',
     'Comments'=>'التعليقات',
+    'Search Results'=>'نتائج البحث',
+    'rights'=>'جميع الحقوق محفوظه تصميم وتطوير',
+    'no results'=>'لم يتم العثور على نتائج',
 
 
 

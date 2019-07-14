@@ -68,7 +68,7 @@
 
         <section class="container">
             <div class="search-page__results">
-                <h1 class="search-page__title"> Search Results</h1>
+                <h1 class="search-page__title"> @lang('exam.Search Results')</h1>
                 <div class="row"></div>
                 <ul class="search-document-results list-unstyled" id="exams_view" >
                     @if($item->count() > 0)
@@ -104,7 +104,7 @@
                 <ul class="search-document-results  center" >
                     <li class="row search-document-result flex center" >
                         <div class="search-document-result__details "><a href="#">
-                                <h3 class="search-document-result__title " >{{'لم يتم العثور على نتائج'}}</h3>
+                                <h3 class="search-document-result__title " >@lang('exam.no results')</h3>
                             </a>
 
 

@@ -7,7 +7,7 @@
         <section class="container">
             <div class="search-page__results">
                 <h1 class="search-page__title">
-                    Most Recent Searches</h1>
+                     @lang ('exam.Most Popular Searches')</h1>
                 <div class="row"></div>
                 <ul class="search-document-results list-unstyled" >
                     @foreach($exams as $key => $exam)

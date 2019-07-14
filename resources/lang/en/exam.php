@@ -7,8 +7,6 @@ return [
     'Change Language'=>'Change Language',
     'English'=>'English',
     'Arabic'=>'Arabic',
-    'Most Popular Searches'=>'Most Popular Searches',
-    'Most Recent Exams'=>'Most Recent Exams',
     'view more'=>'view more',
     'Sign in'=>'Sign in',
     'Logout'=>'Logout',
@@ -16,6 +14,12 @@ return [
     'Ratings'=>'Ratings',
     'sharing'=>'Sharing',
     'Comments'=>'Comments',
+    'searchforexams'=>'search For Exams',
+    'MostPopularSearches'=>'Most Popular Searches',
+    'Most Recent Exams'=>'Most Recent Searches',
+    'Search Results'=>'Search Results',
+    'rights'=>'All ',
+    'no results'=>'No Results Found',
 
 
 ];

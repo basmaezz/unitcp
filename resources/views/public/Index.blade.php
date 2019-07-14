@@ -13,7 +13,7 @@
                     <div class=" col-md-8">
                         <form method="get" class="search-bar search-bar--big" action="{{route('panel.exam.search-s')}}">
                             <i class="fa fa-search search-bar__icon"></i>
-                            <input type="search" placeholder="@lang('exam.search for Exams')" name="txtsearch" data-test-selector="big-search-field" value="" data-hj-whitelist="true">
+                            <input type="search" placeholder="@lang('exam.searchforexams')" name="txtsearch" data-test-selector="big-search-field" value="" data-hj-whitelist="true">
                             <button type="submit" class="btn btn-primary btn-lg" data-test-selector="search-button">@lang('exam.search')</button>
                         </form>
                     </div>
@@ -62,7 +62,7 @@
                             </div>
                             <ul class="exam-items-list">
                                 @foreach($exams as $key => $exam)
-                                    <li><a href="{{url('public/viewpdf/'.$exam->id)}}" class="popular-items__link"><span class="text-ellipsis">{{ getFullexamNamearray($exam->department_id, $exam->material_id,  $exam->year_id) }}</span></a></li>
+                                    <li><a href="{{url('public/viewpdf/'.$exam->id)}}" class="popular-items__link"><span class="text-ellipsis">{{ getFullexamNamearray(@$exam->department_id, @$exam->material_id,  @$exam->year_id) }}</span></a></li>
                                 @endforeach
                                 <div class="more">
                                 <a href="{{route('popular')}}" class="btn btn-primary">@lang ('exam.view more')</a>
@@ -93,7 +93,7 @@
                             </div>
                             <ul class="exam-items-list">
                                 @foreach($exams as $key => $exam)
-                                    <li><a href="{{url('public/viewpdf/'.$exam->id)}}" class="popular-items__link"><span class="text-ellipsis">{{ getFullexamNamearray($exam->department_id, $exam->material_id,  $exam->year_id) }}</span></a></li>
+                                    <li><a href="{{url('public/viewpdf/'.$exam->id)}}" class="popular-items__link"><span class="text-ellipsis">{{ getFullexamNamearray(@$exam->department_id, @$exam->material_id,  @$exam->year_id) }}</span></a></li>
                                 @endforeach
                                 <div class="more">
                                     <a href="{{route('recent')}}" class="btn btn-primary">@lang ('exam.view more')</a>
