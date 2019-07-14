@@ -20,6 +20,8 @@ return [
     'Search Results'=>'Search Results',
     'rights'=>'All ',
     'no results'=>'No Results Found',
+    'exams'=>'Exams',
+    'users'=>'Users',
 
 
 ];
