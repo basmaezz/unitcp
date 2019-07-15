@@ -113,7 +113,7 @@ $(document).ready(function() {
 
 //   Like && DisLike
 
-    $(".like-btn").click(function(e) {
+    $(".like-btn").on('click',function(e) {
 
 
         var exam_id= $(".exam_id").val();
@@ -146,7 +146,7 @@ $(document).ready(function() {
     });
 
 
-    $(".dislike-btn").click(function(e) {
+    $(".dislike-btn").on('click',function(e) {
         var exam_id= $(".exam_id").val();
         console.log(exam_id);
         e.preventDefault();

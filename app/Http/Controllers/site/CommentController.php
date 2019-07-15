@@ -41,7 +41,8 @@ class CommentController extends Controller
             $comments->student_id=Auth::user()->id;
             $comments->comment= $request->comment;
             $comments->save();
-            return response()->json(['status' => true, 'comments' => $comments]);
+            return response()->json(['status' => true, 'comments' => ['name'=>auth()->user()->name,'comment'=>$comments->comment,'date'=>$comments->created_at->diffForHumans()]]);
+
 
 
     }

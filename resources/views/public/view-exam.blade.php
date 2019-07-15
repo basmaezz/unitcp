@@ -3,6 +3,7 @@
 <!--[if IE 7]>         <html lang="en" class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html lang="en" class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+
 <?php  $locale = App::getLocale();  ?>
 
 <head>
@@ -18,6 +19,16 @@
     <meta name="author" content="Rehab">
     <!-- Mobile Specific Meta -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:url"   content="http://www.nytimes.com/2015/02/19/arts/international/when-great-minds-dont-think-alike.html" />
+    <meta property="og:type"               content="article" />
+    <meta property="og:title"              content="When Great Minds Don’t Think Alike" />
+    <meta property="og:description"        content="How much does culture influence creative thinking?" />
+    <meta property="og:image"              content="http://static01.nyt.com/images/2015/02/19/arts/international/19iht-btnumbers19A/19iht-btnumbers19A-facebookJumbo-v2.jpg" />
+
+    <meta name="twitter:card" content="photo">
+    <meta name="twitter:title" content="exams  ">
+    <meta name="twitter:description" content="معلش يا حبيبتى، زى كل سنة، شوية ويروحوا :) ـ">
+    <meta name="twitter:image" content="http://instacards.net/storage/card/l/RGg1Nmw4VWpjN0h1bHdVa3oxcWZldz09">
 
     <!-- Google Font -->
 
@@ -182,22 +193,19 @@ End Fixed Navigation
             <div class="document-info-row  row">
                 <p class="title">Share</p>
                 <div class="col-md-4">
-                    <div class="fb-share-button btn-wrapper btn btn-primary  btn-lg" data-href="{{url('storage/faculty/exams/'.$exam->faculty_id ."/".$exam->department_id."/".
-                            $exam->class_id ."/".$exam->semester_id ."/".$exam->material_id ."/".$exam->year_id ."/".$exam->files($exam->file))}}"
+                    <div class="fb-share-button btn-wrapper btn btn-primary  btn-lg" data-href="{{url('public/viewpdf/'.$exam->id)}}"
                          data-layout="button_count"></div>
 
                 </div>
                 <div class="col-md-4">
-                    <a class="btn-wrapper btn  btn-success  btn-lg" href="https://web.whatsapp.com/send?text=url={{url('storage/faculty/exams/'.$exam->faculty_id ."/".$exam->department_id."/".
-                            $exam->class_id ."/".$exam->semester_id ."/".$exam->material_id ."/".$exam->year_id ."/".$exam->files($exam->file))}}" target="_blank">
+                    <a class="btn-wrapper btn  btn-success  btn-lg" href="https://api.whatsapp.com/send?text=url={{url('public/viewpdf/'.$exam->id)}}" target="_blank">
                         <i class="fab fa-whatsapp"></i>
                     </a>
 
 
                 </div>
                 <div class="col-md-4">
-                    <a class="btn-wrapper btn  btn-info  btn-lg" href="https://twitter.com/share?text={{url('storage/faculty/exams/'.$exam->faculty_id ."/".$exam->department_id."/".
-                            $exam->class_id ."/".$exam->semester_id ."/".$exam->material_id ."/".$exam->year_id ."/".$exam->files($exam->file))}}" target="_blank">
+                    <a class="btn-wrapper btn  btn-info  btn-lg" href="https://twitter.com/share?text={{url('public/viewpdf/'.$exam->id)}}" target="_blank">
                         <i class="fab fa-twitter"></i></a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
                 </div>
                 {{--<div class="col-md-4">--}}
@@ -346,11 +354,24 @@ End Home search
                 success: function(response) {
                     if(response.status)
                     {
-                        $('.user-comment').text(response.comments);
+                       // $('.user-comment').text(response.comments);
                         // alert('ok');
                         // console.log(response);
-                        $('.rating-negative-number').text(response.comments);
+                        //$('.rating-negative-number').text(response.comments);
+
+                        let html= '        <li class="comment-det" >\n' +
+                            '                            <div class=""><a href="#" class="pull-left"><i class="far fa-user-circle"></i></a></div>\n' +
+                            '                            <div class="comment-user-txt">\n' +
+                            '                                <span ><a href="" >'+response.comments.name+'</a>•<span >'+response.comments.date+'</span></span>\n' +
+                            '                                <span class="user-comment">'+response.comments.comment+'</span>\n' +
+                            '                            </div>\n' +
+                            '                        </li>';
+
+                        $('.comment-user-post').prepend(html);
+
+
                     }
+                    $('.txtcomment') .val('');
 
                 }
             });
