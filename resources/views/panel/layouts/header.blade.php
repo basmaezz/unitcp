@@ -7,7 +7,7 @@
     <!-- Logo -->
     <a href="index.html" class="logo blue-bg">
         <!-- mini logo for sidebar mini 50x50 pixels -->
-        <span class="logo-mini"><img src="/panel/img/logo-small.png" alt=""></span>
+        <span class="logo-mini"><img src="" alt=""></span>
         <!-- logo for regular state and mobile devices -->
         <span class="logo-lg"><img src="/panel/img/assistlogo.jpeg" style="margin-left: 10px;" alt=""></span> </a>
     {{--/*********Meta Tag For Upload */--}}

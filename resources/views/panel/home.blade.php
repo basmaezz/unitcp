@@ -13,7 +13,7 @@
                             <div class="col-md-6 text-white">
                                 <p>عدد الكليات </p>
                                 <h2 class="font-weight-bold">{{$faculty}}</h2>
-                                <a href="{{route('panel.faculty.all')}}">View Statement</a> </div>
+                                <a href="{{route('panel.faculty.all')}}">View more</a> </div>
                             <div class="col-md-6 m-t-2 text-right"> <span id="spa-bar"></span> </div>
                         </div>
                     </div>
@@ -26,7 +26,7 @@
                             <div class="col-md-6 text-white">
                                 <p>عدد المستخدمين </p>
                                 <h2 class="font-weight-bold">{{$user}}</h2>
-                                <a href="{{route('panel.users.all')}}">View Statement</a> </div>
+                                <a href="{{route('panel.users.all')}}">View more</a> </div>
                             <div class="col-md-6 m-t-2 text-right"> <span id="spa-line"></span> </div>
                         </div>
                     </div>
@@ -40,7 +40,7 @@
                             <div class="col-md-6 text-white">
                                 <p>عدد الامتحانات </p>
                                 <h2 class="font-weight-bold">{{$exam}}</h2>
-                                <a href="{{route('panel.exam.all')}}">View Statement</a> </div>
+                                <a href="{{route('panel.exam.all')}}">View more</a> </div>
                             <div class="col-md-6 m-t-2 text-right"> <span id="spa-pie"></span> </div>
                         </div>
                     </div>
