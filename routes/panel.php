@@ -13,9 +13,11 @@ Route::middleware(['authpermission','checkactive'])->group(function() {
 
 
         Route::get('/allstudent', ['as' => 'panel.students.all', 'uses' => 'UserController@studentindex']);
+        Route::get('/addstudent', ['as' => 'panel.students.createstudent', 'uses' => 'UserController@createstudent']);
         Route::get('/all/studentdata', ['as' => 'panel.students.all.data', 'uses' => 'UserController@get_student_data_table']);
         Route::prefix('/create')->group(function () {
             Route::get('/', ['as' => 'panel.users.create', 'uses' => 'UserController@create']);
+//            Route::get('/', ['as' => 'panel.users.createstudent', 'uses' => 'UserController@createstudent']);
             Route::post('/', ['as' => 'panel.users.create', 'uses' => 'UserController@store']);
         });
         Route::get('status/{id}', ['as' => 'panel.users.status', 'uses' => 'UserController@status']);

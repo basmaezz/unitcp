@@ -54,7 +54,7 @@
                                     {{--</a></li>--}}
                             </ul>
                         </li>
-                        <li class="footer"><a href="#">View All Messages</a></li>
+                        <li class="footer" disabled="true"><a href="#">View All Messages</a></li>
 
                     </ul>
                 </li>
@@ -78,7 +78,7 @@
 
                             </ul>
                         </li>
-                        <li class="footer"><a href="#">Check all Notifications</a></li>
+                        <li class="footer" disabled="true"><a href="#">Check all Notifications</a></li>
                     </ul>
                 </li>
                 <!-- User Account  -->

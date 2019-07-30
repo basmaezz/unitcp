@@ -171,7 +171,7 @@ End Fixed Navigation
             <!-- rating -->
             <div class="document-info-row row">
                 <p class="title">Ratings</p>
-                <div class="col-md-6">
+                <div class="col-md-6 col-xs-4">
                     <button class="btn-wrapper btn btn-success like-btn">
                     {{--<a href="{{url('public/storelike/'.$exam->id)}}" class="btn-wrapper btn btn-success ">--}}
                         <i class="fa fa-thumbs-up"></i>
@@ -179,7 +179,7 @@ End Fixed Navigation
                     {{--</a>--}}
                     </button>
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-6 col-xs-4">
                     <button class="btn-wrapper btn btn-danger dislike-btn">
 {{--                    <a href="{{url('public/dislike/'.$exam->id)}}" class="btn-wrapper btn btn-danger ">--}}
                         <i class="fa fa-thumbs-down"></i>
@@ -192,19 +192,19 @@ End Fixed Navigation
 
             <div class="document-info-row  row">
                 <p class="title">Share</p>
-                <div class="col-md-4">
+                <div class="col-md-4 col-xs-4">
                     <div class="fb-share-button btn-wrapper btn btn-primary  btn-lg" data-href="{{url('public/viewpdf/'.$exam->id)}}"
                          data-layout="button_count"></div>
 
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4 col-xs-4">
                     <a class="btn-wrapper btn  btn-success  btn-lg" href="https://api.whatsapp.com/send?text=url={{url('public/viewpdf/'.$exam->id)}}" target="_blank">
                         <i class="fab fa-whatsapp"></i>
                     </a>
 
 
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4 col-xs-4">
                     <a class="btn-wrapper btn  btn-info  btn-lg" href="https://twitter.com/share?text={{url('public/viewpdf/'.$exam->id)}}" target="_blank">
                         <i class="fab fa-twitter"></i></a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
                 </div>
@@ -299,7 +299,7 @@ End Fixed Navigation
             </div>
 
             <!-- 4:3 aspect ratio -->
-            <div class="embed-responsive embed-responsive-16by9">
+            <div class="embed-responsive embed-responsive-16by9 exam-view">
                 {{--<iframe class="embed-responsive-item" src="{{ response()->file('storage/faculty/exams/10/485/2/10/2/2/test1-2002-2003.pdf') }}" allowfullscreen></iframe>--}}
                 {{--<iframe class="embed-responsive-item" src="" allowfullscreen></iframe>--}}
                 {{--<embed src="https://drive.google.com/viewerng/--}}

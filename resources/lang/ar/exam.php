@@ -23,6 +23,13 @@ return [
     'Search Results'=>'نتائج البحث',
     'rights'=>'جميع الحقوق محفوظه تصميم وتطوير',
     'no results'=>'لم يتم العثور على نتائج',
+    'Faculty filter'=>'الكليه',
+    'Department filter'=>'القسم',
+    'level filter'=>'المستوى',
+    'year filter'=>'السنه',
+    'Select your level'=>'أختر المستوى',
+    'Select your Department'=>'اختر القسم',
+    'Select year'=>'أختر السنه',
 
 
 

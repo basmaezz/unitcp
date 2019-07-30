@@ -147,16 +147,8 @@
                 $(document).on('click', '.delete', function (event) {
                     var delete_url = $(this).data('url');
                     event.preventDefault();
-                    swal({
-                        title: '<span class="info">هل أنت متأكد من حذف العنصر المحدد ؟</span>',
-                        type: 'info',
-                        showCloseButton: true,
-                        showCancelButton: true,
-                        confirmButtonText: 'حذف',
-                        cancelButtonText: 'إغلاق',
-                        confirmButtonColor: '#56ace0',
-                        width: '450px'
-                    }).then(function (value) {
+
+                    if(delete_url){
                         $.ajax({
                             url: delete_url,
                             method: 'delete',
@@ -184,7 +176,9 @@
                                 errorCustomSweet();
                             }
                         });
-                    });
+
+                    }
+
                 });
             });
         </script>

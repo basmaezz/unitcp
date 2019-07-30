@@ -1,10 +1,10 @@
 @php
     $breadcrumb_array = [];
     array_push($breadcrumb_array,collect(['is_last'=>true,'name'=>'أضف جديد ','link'=> '#']));
-    array_push($breadcrumb_array,collect(['is_last'=>false,'name'=>'مديرى النظام','link'=> route('panel.users.all')]));
+    array_push($breadcrumb_array,collect(['is_last'=>false,'name'=>'الطلاب','link'=> route('panel.users.all')]));
 @endphp
 
-@extends('panel.layouts.index',['sub_title'=>'إضافة  جديد' ,'breadcrumb_array'=> $breadcrumb_array])
+@extends('panel.layouts.index',['sub_title'=>'إضافة طالب جديد' ,'breadcrumb_array'=> $breadcrumb_array])
 @section('main')
     @push('panel_css')
         {!! HTML::style('panel/css/jasny-bootstrap.min.css') !!}
@@ -19,46 +19,26 @@
                 <div class="card">
                     <div class="card-body">
 
-                        <div class="col-md-12">
-                            <div class="form-group mt-20 mb-20">
-                                <label><strong>نوع المسستخدم </strong></label> <br>
-                                <label class="radio-inline">
-                                    <input type="radio"  value="1" name="user" id="radio-admin">
-                                   مدير نظام
-                                </label>
-                                <label class="radio-inline">
-                                    <input type="radio" value="2" name="user" id="radio-user">
-                                 مستخدم وحده فرعيه
-                                </label>
+                        {{--<div class="col-md-12">--}}
+                            {{--<div class="form-group mt-20 mb-20">--}}
+                                {{--<label><strong>نوع المسستخدم </strong></label> <br>--}}
+                                {{--<label class="radio-inline">--}}
+                                    {{--<input type="radio"  value="1" name="user" id="radio-admin" checked="">--}}
+                                   {{--مدير نظام--}}
+                                {{--</label>--}}
+                                {{--<label class="radio-inline">--}}
+                                    {{--<input type="radio" value="2" name="user" id="radio-user" checked="">--}}
+                                 {{--مستخدم وحده فرعيه--}}
+                                {{--</label>--}}
 
                                 {{--<label class="radio-inline">--}}
-                                    {{--<input type="radio" value="3" name="user" id="radio-student">--}}
+                                    {{--<input type="radio" hidden value="3" name="user" id="radio-student" checked="true">--}}
                                     {{--طالب--}}
                                 {{--</label>--}}
-                            </div>
-                        </div>
-
-
-                        @php
-                            $items = get_fac_data();
-                        @endphp
-
-                        <fieldset class="form-group  hidden" id="sub-admin" >
-                            <label>اسم الكليه </label>
-                            <select class="form-control "  name="faculty_id" data-placeholder="إختيار الكليه" required>
-                                <option disabled selected hidden>إختيار الكليه</option>
-                                @if(isset($items) && $items->count() > 0)
-                                    @foreach($items as $item)
-
-                                        <option value="{{$item->id}}" >{{get_text_locale($item,'name_ar')}}</option>
-                                    @endforeach
-                                @endif
-                            </select>
-                        </fieldset>
-
-
+                            {{--</div>--}}
+                        {{--</div>--}}
                         <fieldset class="form-group">
-                            <label>الأسم</label>
+                            <label>اسم الطالب</label>
                             <input class="form-control"  type="text" name="name" placeholder="الرجاء إدخال الأسم"  value="" required>
                         </fieldset>
 
@@ -77,6 +57,27 @@
                             <label>كلمه المرور</label>
                             <input class="form-control"  type="password" name="password" placeholder="الرجاء إدخال كله المرور"  value="" required>
                         </fieldset>
+
+
+                        @php
+                            $items = get_fac_data();
+                        @endphp
+
+                        <fieldset class="form-group  " id="sub-admin" >
+                            <label>اختر الكليه </label>
+                            <select class="form-control "  name="faculty_id" data-placeholder="إختيار الكليه" required>
+                                <option disabled selected >إختيار الكليه</option>
+                                @if(isset($items) && $items->count() > 0)
+                                    @foreach($items as $item)
+
+                                        <option value="{{$item->id}}" >{{get_text_locale($item,'name_ar')}}</option>
+                                    @endforeach
+                                @endif
+                            </select>
+                        </fieldset>
+
+
+
 
 
 
@@ -104,7 +105,7 @@
                     <div class="card-body">
                         <div class="row btn_padding">
                             <button style="width: 90%" class=" btn btn-primary"> &nbsp; حفظ<i class="fa fa-save"></i> &nbsp;
-                                <i style="top: inherit;left: AUTO;" class="upload-spinn fa fa-cog fa-spin fa-1x fa-fw  hidden"></i></button>
+                                <i style="top: inherit;left: AUTO;" class="upload-spinn fa fa-cog fa-spin fa-1x fa-fw  "></i></button>
 
 
                         </div>
@@ -134,9 +135,9 @@
                 $('#radio-user').change(function() {
                     $('#sub-admin').removeClass('hidden');
                 });
-                // $('#radio-student').change(function() {
-                //     $('#sub-admin').removeClass('hidden');
-                // });
+                $('#radio-student').change(function() {
+                    $('#sub-admin').removeClass('hidden');
+                });
                 $('#radio-admin').change(function() {
                     $('#sub-admin').addClass('hidden');
                 });

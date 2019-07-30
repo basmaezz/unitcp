@@ -30,7 +30,7 @@
 
                                                 <div class="frm-section colm colm3">
 
-                                                    <label class="search-filter-label "  >Faculty filter</label>
+                                                    <label class="search-filter-label ">@lang('exam.Faculty filter')</label>
 
                                                     <label class="field uit-select">
                                                         <select class="form-control search-faculty" name="search-faculty" data-placeholder="إختيار الكليه" id="faculty_id" required>

@@ -29,6 +29,10 @@ class UserController extends Controller
     {
         return view('panel.users.create');
     }
+    public function createstudent()
+    {
+        return view('panel.students.create');
+    }
 
     public function store(CreateUser $request)
     {

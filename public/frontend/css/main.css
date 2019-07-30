@@ -860,7 +860,9 @@ text-align: right;
     width: 15%;
 
   }
-  #content.active  .download-exam{
+  #content.active  .download-exam ,  #content.active .exam-view
+
+ {
     display: none;
   }
   #sidebarCollapse span {
@@ -873,4 +875,9 @@ text-align: right;
     width: auto;
     vertical-align: middle;
 }
+
+  #content.active .exam-view{
+    display: none;
+
+  }
 }

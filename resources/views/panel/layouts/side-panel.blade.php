@@ -70,7 +70,7 @@
                 </a>
                 <ul class="treeview-menu">
 
-                    <li class="{{is_active('user/create')}}"><a href="{{route('panel.users.create')}}"><i class="fa fa-angle-left"></i> إضافة جديد </a></li>
+                    <li class="{{is_active('student/create')}}"><a href="{{route('panel.students.createstudent')}}"><i class="fa fa-angle-left"></i> إضافة جديد </a></li>
                     <li class="{{is_active('student/all')}}"><a href="{{route('panel.students.all')}}"><i class="fa fa-angle-left"></i> عرض الطلاب </a></li>
 
 

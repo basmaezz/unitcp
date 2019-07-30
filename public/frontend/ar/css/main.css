@@ -906,4 +906,25 @@ padding-top: 10px;
     width: auto;
     vertical-align: middle;
 }
+  .form-inline .form-control{
+  width:176px;
+
+  }
+  @media (max-width: 768px){
+  .form-inline .form-control{
+  width:176px !important;
+
+}
+
+  }
+  #content.active .exam-view{
+  display: none;
+
+  }
+
+
+
+
+
+
 }

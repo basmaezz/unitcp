@@ -55,7 +55,7 @@ class ClassesController extends Controller
         $classes = Classes::create($data);
         $status = $classes ? true : false;
         collections::log(auth()->user()->id , 'Classes', 'تم اضافه فرقه دراسيه جديده', $classes, $status);
-        auth()->user()->notify(new MyFirstNotification($classes) );
+//        auth()->user()->notify(new MyFirstNotification($classes) );
 
 
         return (isset($classes)) ? $this->response_api(true, 'تمت عمليه الاضافه  بنجاح') : $this->response_api(false, 'حدث خطأ غير متوقع');

@@ -94,7 +94,10 @@ class DepartmentController extends Controller
 
             })->addColumn('action', function ($item) {
                 return '<div class="row">
+                      
                       <a  title="Edit" style="margin-right: 10px"  href="' .route('panel.department.edit', ['id' => $item->id]) . '"  class="btn btn-sm btn-primary edit" > <i style="margin-left: 3px" class="fa fa-check-square-o"></i> تعديل</a>
+                      <a  data-toggle="reject" title="Delete" style="margin-right: 10px;background-color: #FA2A00;color:white"  data-url="' . admin_url('department/delete/' . $item->id) . '"   class="btn btn-sm btn-danger delete">  <i style="margin-left:3px" class="fa  fa-trash-o"></i> حذف </a>
+
                     </div>';
             })->rawColumns([ 'action'])->make(true);
         } catch (\Exception $e) {

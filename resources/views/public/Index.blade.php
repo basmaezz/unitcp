@@ -57,7 +57,7 @@
 								  <i class="fa fa-search fa-stack-1x fa-inverse"></i>
 								</span>
 
-                                <h3> @lang ('exam.Most Popular Searches')</h3>
+                                <h3> @lang ('exam.MostPopularSearches')</h3>
                                 </p>
                             </div>
                             <ul class="exam-items-list">

@@ -22,6 +22,14 @@ return [
     'no results'=>'No Results Found',
     'exams'=>'Exams',
     'users'=>'Users',
+    'Faculty filter'=>'Faculty filter',
+    'Department filter'=>'Department filter',
+    'level filter'=>'level filter',
+    'year filter'=>'year filter',
+    'Select your level'=>'Select your level',
+    'Select your Department'=>'Select your Department',
+    'Select year'=>'Select Year',
+
 
 
 ];
