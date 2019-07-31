@@ -37,7 +37,7 @@
 
                                                     <label class="field uit-select">
                                                         <select class="form-control search-faculty" name="search-faculty" data-placeholder="إختيار الكليه" id="faculty_id" required>
-                                                            <option selected="selected" value="">Select your faculty</option>
+                                                            <option selected="selected" value="">@lang('exam.Select your faculty')</option>
                                                             @foreach(get_fac_data() as $fac)
                                                                 @if($lang=='ar')
 
@@ -98,7 +98,9 @@
                                                 <i class="ic fa fa-cloud-upload"></i> {{date('F d, Y', strtotime($exam->created_at))}}</span></div>
 
                                 </div>
-                                <span class=" search-document-result__rating"><a href="{{url('public/storelike/'.$exam->id)}}"><i class="fa fa-thumbs-up">{{@$exam->likes_num}}</i></a></span>
+                                <span class=" search-document-result__rating"><a href="{{url('public/storelike/'.$exam->id)}}">
+                                        <i class="fa fa-thumbs-up"></i></a>
+                                </span>
                             </li>
                         @endforeach
 

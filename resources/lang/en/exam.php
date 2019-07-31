@@ -34,6 +34,7 @@ return [
     'Mansoura University'=>'Mansoura University',
     'copy'=>'copy',
     'send'=>'send',
+    'Select your faculty'=>'Select your faculty',
 
 
 

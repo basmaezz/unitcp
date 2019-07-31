@@ -24,9 +24,7 @@
                     </li>
 
                     <li>
-                        <a href ="{{ route('logout.panel') }}"  id="login" rel="nofollow">@lang('exam.Logout')
-
-                        </a>
+                      <a href ="{{ route('logout.panel') }}">@lang('exam.Logout') </a>
                     </li>
 
                 @else

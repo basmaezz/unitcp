@@ -35,6 +35,7 @@ return [
     'Mansoura University'=>'جامعه المنصوره',
     'copy'=>'نسخ',
     'send'=>'ارسال',
+    'Select your faculty'=>' اختر الكليه',
 
 
 
