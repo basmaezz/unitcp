@@ -211,9 +211,9 @@ End Fixed Navigation
 
 
                 <div class="input-group mb-3">
-                    <input type="text" class="form-control" value="{{url('public/viewpdf/'.$exam->id)}}">
+                    <input type="text" id="current_url" readonly class="form-control" value="{{url('public/viewpdf/'.$exam->id)}}">
                     <div class="input-group-append">
-                        <button class="btn btn-success" type="submit">@lang('exam.copy')</button>
+                        <button onclick="copyMe('current_url')" class="btn btn-success" type="button">@lang('exam.copy')</button>
                     </div>
                 </div>
 

@@ -199,9 +199,20 @@ $(document).ready(function() {
 
 
 
+
+
+
 });
 
 
 
 
+function copyMe(item) {
+    /* Get the text field */
+    var copyText = document.getElementById(item);
+    /* Select the text field */
+    copyText.select();
 
+    /* Copy the text inside the text field */
+    document.execCommand("copy");
+}
