@@ -226,14 +226,15 @@ class HomeController extends Controller
    }
 
    public function recent(){
-       $exams = Exam::orderBy('id', 'desc')->take(4)->get();
+       $exams = Exam::orderBy('id', 'desc')->paginate(4);
+
 
        return view('public.recent-exams',compact('exams'));
 
     }
 
     public function popular(){
-        $exams = Exam::orderBy('id', 'desc')->take(4)->get();
+        $exams = Exam::orderBy('id', 'desc')->paginate(4);
 
         return view('public.popular-exams',compact('exams'));
 
@@ -263,5 +264,16 @@ class HomeController extends Controller
 //
 //        return redirect()->back();
 //    }
+
+    public function logout(Request $request)
+    {
+        $user = Auth::user();
+        $user->online = 0;
+
+        $user->save();
+        Auth::logout();
+        return redirect()->route('panel.login')->send();
+    }
+
 
 }

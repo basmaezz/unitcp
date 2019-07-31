@@ -113,8 +113,32 @@ $(document).ready(function() {
 
 //   Like && DisLike
 
-    $(".like-btn").on('click',function(e) {
+    $(".like-exam").on('click',function(e) {
+        var exam_id= $(this).attr('data-id');
+        var type= $(this).attr('data-type');
+        e.preventDefault();
+        if(exam_id){
+            $.ajax({
+                type: "get",
+                url: '/public/storelike/'+exam_id+'/'+type,
+                data: {
+                    access_token: $("#access_token").val()
+                },
+                success: function(response) {
+                    if(response.status)
+                    {
+                        $('#rating-positive-number_'+exam_id).text(response.like);
+                        $('#rating-negative-number_'+exam_id).text(response.dislike);
 
+                    }
+                }
+            });
+
+        }
+
+    });
+
+    $(".like-btn").on('click',function(e) {
 
         var exam_id= $(".exam_id").val();
         // alert(exam_id);
