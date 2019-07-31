@@ -1,5 +1,6 @@
 @extends('public.layouts.app')
 @section('content')
+    <?php  $lang=app()->getLocale();?>
 
     <!--Home search ==== -->
 

@@ -334,20 +334,39 @@ function get_students_data()
 if(!function_exists('getFullNamearray')){
     function getFullNamearray(...$id)
     {
-        return \App\Faculty::whereId($id[0])->first()->name_ar.'/'.\App\Classes::whereId($id[1])->first()->name_ar.'/'.\App\Material::whereId($id[2])->first()->name_ar.'/'.\App\Semester::whereId($id[3])->first()->name_ar.'/'.\App\Year::whereId($id[4])->first()->name;
+        $lang = app()->getLocale();
+        if ($lang == 'ar') {
+            return \App\Faculty::whereId($id[0])->first()->name_ar . '/' . \App\Classes::whereId($id[1])->first()->name_ar . '/' . \App\Material::whereId($id[2])->first()->name_ar . '/' . \App\Semester::whereId($id[3])->first()->name_ar . '/' . \App\Year::whereId($id[4])->first()->name;
+        }else{
+            return \App\Faculty::whereId($id[0])->first()->name_en . '/' . \App\Classes::whereId($id[1])->first()->name_en . '/' . \App\Material::whereId($id[2])->first()->name_en . '/' . \App\Semester::whereId($id[3])->first()->name_en . '/' . \App\Year::whereId($id[4])->first()->name;
+
+        }
     }
 }
 
 if(!function_exists('getFullexamNamearray')) {
     function getFullexamNamearray(...$id)
     {
-        return \App\Department::whereId($id[0])->first()->name_ar . '-' . \App\Year::whereId($id[1])->first()->name . '-' . \App\Material::whereId($id[2])->first()->name_ar;
+        $lang=app()->getLocale();
+        if($lang=='ar'){
+            return \App\Department::whereId($id[0])->first()->name_ar . '-' . \App\Year::whereId($id[1])->first()->name . '-' . \App\Material::whereId($id[2])->first()->name_ar;
+
+        }else{
+            return \App\Department::whereId($id[0])->first()->name_en . '-' . \App\Year::whereId($id[1])->first()->name . '-' . \App\Material::whereId($id[2])->first()->name_en;
+
+        }
+
     }
 
     if (!function_exists('getFullresentNamearray')) {
         function getFullresentNamearray(...$id)
         {
-            return \App\Faculty::whereId($id[0])->first()->name_ar . '-' . \App\Department::whereId($id[1])->first()->name . '-' . \App\Classes::whereId($id[2])->first()->name_ar . '-' . \App\Material::whereId($id[3])->first()->name_ar;
+            $lang=app()->getLocale();
+            if($lang=='ar'){
+                return \App\Faculty::whereId($id[0])->first()->name_ar . '-' . \App\Department::whereId($id[1])->first()->name . '-' . \App\Classes::whereId($id[2])->first()->name_ar . '-' . \App\Material::whereId($id[3])->first()->name_ar;
+
+            }
+            return \App\Faculty::whereId($id[0])->first()->name_en . '-' . \App\Department::whereId($id[1])->first()->name . '-' . \App\Classes::whereId($id[2])->first()->name_en . '-' . \App\Material::whereId($id[3])->first()->name_en;
         }
     }
 }

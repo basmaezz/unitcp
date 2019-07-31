@@ -1,3 +1,4 @@
+<?php $lang=app()->getLocale(); ?>
 
 <div class="frm-section colm colm3">
 
@@ -8,7 +9,12 @@
             <option selected="selected" value="">@lang('exam.Select your Department')</option>
             @if(isset($department) && $department->count() > 0)
                 @foreach($department as $item)
+                    @if($lang=='ar')
                     <option value="{{$item->id}}" @if($item->id == request('class_id'))selected @endif >{{get_text_locale($item,'name_ar')}}</option>
+                    @else
+                        <option value="{{$item->id}}" @if($item->id == request('class_id'))selected @endif >{{get_text_locale($item,'name_en')}}</option>
+
+                    @endif
                 @endforeach
             @endif
         </select>
@@ -27,7 +33,12 @@
             <option selected="selected" value="">@lang('exam.Select your level')</option>
             @if(isset($classes) && $classes->count() > 0)
                 @foreach($classes as $item)
+                    @if($lang=='ar')
                     <option value="{{$item->id}}" @if($item->id == request('class_id'))selected @endif >{{get_text_locale($item,'name_ar')}}</option>
+                    @else
+                        <option value="{{$item->id}}" @if($item->id == request('class_id'))selected @endif >{{get_text_locale($item,'name_en')}}</option>
+
+                    @endif
                 @endforeach
             @endif
         </select>

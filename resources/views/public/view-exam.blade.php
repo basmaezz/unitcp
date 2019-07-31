@@ -27,7 +27,7 @@
 
     <meta name="twitter:card" content="photo">
     <meta name="twitter:title" content="exams  ">
-    <meta name="twitter:description" content="معلش يا حبيبتى، زى كل سنة، شوية ويروحوا :) ـ">
+    <meta name="twitter:description" content="mansoura university , MyAssistant">
     <meta name="twitter:image" content="http://instacards.net/storage/card/l/RGg1Nmw4VWpjN0h1bHdVa3oxcWZldz09">
 
     <!-- Google Font -->
@@ -111,7 +111,7 @@
                     </li>
 
                     <li>
-                        <a href ="{{route('logout.panel')}}"  id="login" rel="nofollow">Logout
+                        <a href ="{{route('logout.panel')}}"  id="login" rel="nofollow">@lang('exam.Logout')
 
                         </a>
                     </li>
@@ -170,7 +170,7 @@ End Fixed Navigation
             </div>
             <!-- rating -->
             <div class="document-info-row row">
-                <p class="title">Ratings</p>
+                <p class="title">@lang('exam.Ratings')</p>
                 <div class="col-md-6 col-xs-4">
                     <button class="btn-wrapper btn btn-success like-btn">
                     {{--<a href="{{url('public/storelike/'.$exam->id)}}" class="btn-wrapper btn btn-success ">--}}
@@ -191,10 +191,10 @@ End Fixed Navigation
             <!-- social -->
 
             <div class="document-info-row  row">
-                <p class="title">Share</p>
+                <p class="title">@lang('exam.Share')</p>
                 <div class="col-md-4 col-xs-4">
-                    <div class="fb-share-button btn-wrapper btn btn-primary  btn-lg" data-href="{{url('public/viewpdf/'.$exam->id)}}"
-                         data-layout="button_count"></div>
+
+                    <div class="fb-share-button btn-wrapper btn btn-primary  btn-lg" data-href="{{url('public/viewpdf/'.$exam->id)}}"></div>
 
                 </div>
                 <div class="col-md-4 col-xs-4">
@@ -208,21 +208,12 @@ End Fixed Navigation
                     <a class="btn-wrapper btn  btn-info  btn-lg" href="https://twitter.com/share?text={{url('public/viewpdf/'.$exam->id)}}" target="_blank">
                         <i class="fab fa-twitter"></i></a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
                 </div>
-                {{--<div class="col-md-4">--}}
-                    {{--<a class="btn-wrapper btn  btn-info  btn-lg" href="https://twitter.com/share?ref_src=twsrc%5Etfw" target="_blank">--}}
-                        {{--<i class="fab fa-twitter"></i></a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>--}}
-                {{--</div>--}}
-                {{--<div class="col-md-4">--}}
-                    {{--<a class="  twitter-share-button " href="https://twitter.com/share?ref_src=twsrc%5Etfw"--}}
-                       {{--data-show-count="false"><i class="fab fa-twitter">Tweet</i></a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>--}}
-
-                {{--</div>--}}
 
 
                 <div class="input-group mb-3">
                     <input type="text" class="form-control" value="{{url('public/viewpdf/'.$exam->id)}}">
                     <div class="input-group-append">
-                        <button class="btn btn-success" type="submit">copy</button>
+                        <button class="btn btn-success" type="submit">@lang('exam.copy')</button>
                     </div>
                 </div>
 
@@ -246,7 +237,7 @@ End Fixed Navigation
                             @if (Auth::check())
                                 <input type="text" name="txtcomment" class="form-control txtcomment" placeholder="write comment">
                                 <div class="input-group-append">
-                                    <button class="btn btn-success" type="submit">send</button>
+                                    <button class="btn btn-success" type="submit">@lang('exam.send')</button>
                                 </div>
                             @else
                                 <input type="text" name="txtcomment" class="form-control" placeholder="write comment" disabled>
@@ -338,9 +329,6 @@ End Home search
             $('a[aria-expanded=true]').attr('aria-expanded', 'false');
         });
     });
-
-
-
 
         $( "#comment-form" ).submit(function( event ) {
             var exam_id= $(".exam_id").val();

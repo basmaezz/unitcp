@@ -26,6 +26,8 @@
   ================================================== -->
 
   <!-- Fontawesome Icon font -->
+
+
   @if(app()->getLocale() =='ar')
     @include('public.layouts.css-ar')
 

@@ -29,6 +29,11 @@ return [
     'Select your level'=>'Select your level',
     'Select your Department'=>'Select your Department',
     'Select year'=>'Select Year',
+    'Share'=>'Share',
+    'Ratings'=>'Ratings',
+    'Mansoura University'=>'Mansoura University',
+    'copy'=>'copy',
+    'send'=>'send',
 
 
 

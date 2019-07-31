@@ -56,6 +56,7 @@ class HomeController extends Controller
 
     public function get_exam_search(Request $request)
     {
+
 //        $request->validate([
 ////            'txtsearch'=>'required'
 ////        ]);
@@ -76,8 +77,9 @@ class HomeController extends Controller
         }
         else{
             $items = Exam::orderBy('id', 'desc')->take(4)->get();
-            return view('panel.search')->with(['item'=>$items ,'txtsearch'=>'']);
+            return view('public.search')->with(['item'=>$items ,'txtsearch'=>'']);
         }
+
 
     }
 
@@ -237,27 +239,29 @@ class HomeController extends Controller
 
     }
 
-    public function logout(Request $request)
-    {
-        $user = Auth::user();
-        $user->online = 0;
+//    public function logout(Request $request)
+//    {
+//
+//        $user = Auth::user();
+//
+//        $user->online = 0;
+//
+//        $user->save();
+//        Auth::logout();
+//        return redirect()->route('panel.login')->send();
+//    }
 
-        $user->save();
-        Auth::logout();
-        return redirect()->route('panel.login')->send();
-    }
-
-    public function changeLang($lang)
-    {
-        $locale = App::getLocale();
-        if($lang=='en'){
-            $locale='en';
-
-        }else{
-            $locale='ar';
-        }
-
-        return redirect()->back();
-    }
+//    public function changeLang($lang)
+//    {
+//        $locale = App::getLocale();
+//        if($lang=='en'){
+//            $locale='en';
+//
+//        }else{
+//            $locale='ar';
+//        }
+//
+//        return redirect()->back();
+//    }
 
 }

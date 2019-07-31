@@ -30,6 +30,11 @@ return [
     'Select your level'=>'أختر المستوى',
     'Select your Department'=>'اختر القسم',
     'Select year'=>'أختر السنه',
+    'Share'=>'المشاركه',
+    'Ratings'=>'التقييم',
+    'Mansoura University'=>'جامعه المنصوره',
+    'copy'=>'نسخ',
+    'send'=>'ارسال',
 
 
 
