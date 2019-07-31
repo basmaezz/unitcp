@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5ecc8cb6-2745-43c6-a27c-4295447f35de" name="Default" comment="Like,Dislike Count">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/ar/exam.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/ar/exam.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/en/exam.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/en/exam.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/public/layouts/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/public/layouts/header.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/public/search.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/public/search.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/public/popular-exams.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/public/popular-exams.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/public/recent-exams.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/public/recent-exams.blade.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -258,20 +255,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="header.blade.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/resources/views/public/layouts/header.blade.php">
+      <file leaf-file-name="recent-exams.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/public/recent-exams.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="32" column="28" lean-forward="true" selection-start-line="32" selection-start-column="28" selection-end-line="32" selection-end-column="28" />
+            <state relative-caret-position="323">
+              <caret line="19" column="243" lean-forward="true" selection-start-line="19" selection-start-column="243" selection-end-line="19" selection-end-column="276" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="side-panel.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/panel/layouts/side-panel.blade.php">
+      <file leaf-file-name="popular-exams.blade.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/resources/views/public/popular-exams.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" column="12" selection-start-line="15" selection-start-column="12" selection-end-line="19" selection-end-column="22" />
+            <state relative-caret-position="578">
+              <caret line="34" column="29" lean-forward="true" selection-start-line="34" selection-start-column="29" selection-end-line="34" selection-end-column="29" />
             </state>
           </provider>
         </entry>
@@ -288,7 +285,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>panel.users.create</find>
       <find>hidden</find>
       <find>createstudent</find>
       <find>panel.users.createstudent</find>
@@ -305,7 +301,7 @@
       <find>Share</find>
       <find>getFullexamNamearray</find>
       <find>log</find>
-      <find>Mansoura University</find>
+      <find />
       <find>cop</find>
       <find>send</find>
       <find>getsearchExamData</find>
@@ -314,10 +310,11 @@
       <find>LikeController</find>
       <find>storelike</find>
       <find>like</find>
-      <find>fa fa-thumbs-up</find>
+      <find />
       <find>logout</find>
-      <find>Select your faculty</find>
+      <find />
       <find>like-btn</find>
+      <find>login</find>
     </findStrings>
     <replaceStrings>
       <replace>panel.</replace>
@@ -366,7 +363,6 @@
         <option value="$PROJECT_DIR$/app/Http/Controllers/Panel/FacultyController.php" />
         <option value="$PROJECT_DIR$/app/Exam.php" />
         <option value="$PROJECT_DIR$/routes/web.php" />
-        <option value="$PROJECT_DIR$/resources/views/public/popular-exams.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/public/layouts/footer.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/site/CommentController.php" />
         <option value="$PROJECT_DIR$/public/panel/js/exam-selectors.js" />
@@ -398,8 +394,9 @@
         <option value="$PROJECT_DIR$/resources/lang/en/exam.php" />
         <option value="$PROJECT_DIR$/resources/lang/ar/exam.php" />
         <option value="$PROJECT_DIR$/resources/views/public/search.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/public/recent-exams.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/public/layouts/header.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/public/recent-exams.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/public/popular-exams.blade.php" />
       </list>
     </option>
   </component>
@@ -522,7 +519,7 @@
       <path value="$PROJECT_DIR$/vendor/mcamara/laravel-localization" />
     </include_path>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="674" />
@@ -552,6 +549,13 @@
               <item name="unitcp" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="unitcp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="unitcp" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="public" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
           </expand>
           <select />
@@ -772,12 +776,12 @@
       <workItem from="1564003139677" duration="6175000" />
       <workItem from="1564334791144" duration="1957000" />
       <workItem from="1564505570613" duration="8298000" />
-      <workItem from="1564591008978" duration="7206000" />
+      <workItem from="1564591008978" duration="8075000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="857185000" />
+    <option name="totallyTimeSpent" value="858054000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1072,13 +1076,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/public/recent-exams.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/panel/layouts/side-panel.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -1088,8 +1085,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/public/layouts/header.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="32" column="28" lean-forward="true" selection-start-line="32" selection-start-column="28" selection-end-line="32" selection-end-column="28" />
+        <state relative-caret-position="306">
+          <caret line="27" column="25" lean-forward="true" selection-start-line="27" selection-start-column="25" selection-end-line="27" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/public/recent-exams.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="243" lean-forward="true" selection-start-line="19" selection-start-column="243" selection-end-line="19" selection-end-column="276" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/public/popular-exams.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="578">
+          <caret line="34" column="29" lean-forward="true" selection-start-line="34" selection-start-column="29" selection-end-line="34" selection-end-column="29" />
         </state>
       </provider>
     </entry>
