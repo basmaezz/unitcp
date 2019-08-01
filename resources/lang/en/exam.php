@@ -35,6 +35,8 @@ return [
     'copy'=>'copy',
     'send'=>'send',
     'Select your faculty'=>'Select your faculty',
+    'Previous'=>'Previous',
+    'Next'=>'Next',
 
 
 

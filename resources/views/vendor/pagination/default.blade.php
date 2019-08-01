@@ -3,9 +3,9 @@
     <ul class="pagination justify-content-end">
         {{-- Previous Page Link --}}
         @if ($paginator->onFirstPage())
-            <li class="page-item disabled"><span>Previous</span></li>
+            <li class="page-item disabled"><span>@lang('exam.Previous')</span></li>
         @else
-            <li><a class="page-link" href="{{ $paginator->previousPageUrl() }}" rel="prev">Previous</a></li>
+            <li><a class="page-link" href="{{ $paginator->previousPageUrl() }}" rel="prev">@lang('exam.Previous')</a></li>
         @endif
 
         {{-- Pagination Elements --}}
@@ -29,7 +29,7 @@
 
         {{-- Next Page Link --}}
         @if ($paginator->hasMorePages())
-            <li><a class="page-link" href="{{ $paginator->nextPageUrl() }}" rel="next">Next</a></li>
+            <li><a class="page-link" href="{{ $paginator->nextPageUrl() }}" rel="next">@lang('exam.Next')</a></li>
         @else
             <li class="page-item disabled"><span>Next</span></li>
         @endif

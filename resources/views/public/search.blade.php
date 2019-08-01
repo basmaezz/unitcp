@@ -1,13 +1,11 @@
 @extends('public.layouts.app')
 @section('content')
     <?php $lang=app()->getLocale(); ?>
+    <?php  echo "$lang" ?>
 
     <div class="search-page">
         <section class=" search-page__controls">
             <div class="container clearfix">
-
-
-
 
                 <div class="search-page_input-wrapper">
                    <form action="{{route('panel.exam.search-s')}}">
@@ -98,29 +96,34 @@
                                                 <i class="ic fa fa-cloud-upload"></i> {{date('F d, Y', strtotime($exam->created_at))}}</span></div>
 
                                 </div>
-                                <span class=" search-document-result__rating"><a href="{{url('public/storelike/'.$exam->id)}}">
-                                        <i class="fa fa-thumbs-up"></i></a>
-                                </span>
+                                <a href="javascript:void(0);" class="like-exam" data-id="{{$exam->id}}" data-type="1">
+                                    <span class="search-document-result__rating"><i class="fa fa-thumbs-up"></i><span id="rating-positive-number_{{$exam->id}}">{{$exam->likes()->where('likenum',1)->count()}}</span></span>
+                                </a>
+                                <a href="javascript:void(0);" class="like-exam" data-id="{{$exam->id}}" data-type="0">
+                                    <span class="search-document-result__rating"><i class="fa fa-thumbs-down"></i><span id="rating-negative-number_{{$exam->id}}">{{$exam->likes()->where('likenum',0)->count()}}</span></span>
+                                </a>
                             </li>
                         @endforeach
 
                 </ul>
-                <div id="pag_view">
-                    <nav class="pagination-wrapper" >
-                        <ul class="pagination justify-content-end ">
-                            <li class="page-item disabled">
-                                <a class="page-link" href="#" tabindex="-1">Previous</a>
-                            </li>
-                            <li class="page-item"><a class="page-link" href="#">1</a></li>
-                            <li class="page-item"><a class="page-link" href="#">2</a></li>
-                            <li class="page-item"><a class="page-link" href="#">3</a></li>
-                            <li class="page-item">
-                                <a class="page-link" href="#">Next</a>
-                            </li>
-                        </ul>
-                    </nav>
+                {!! $item->links() !!}
 
-                </div>
+                {{--<div id="pag_view">--}}
+                    {{--<nav class="pagination-wrapper" >--}}
+                        {{--<ul class="pagination justify-content-end ">--}}
+                            {{--<li class="page-item disabled">--}}
+                                {{--<a class="page-link" href="#" tabindex="-1">Previous</a>--}}
+                            {{--</li>--}}
+                            {{--<li class="page-item"><a class="page-link" href="#">1</a></li>--}}
+                            {{--<li class="page-item"><a class="page-link" href="#">2</a></li>--}}
+                            {{--<li class="page-item"><a class="page-link" href="#">3</a></li>--}}
+                            {{--<li class="page-item">--}}
+                                {{--<a class="page-link" href="#">Next</a>--}}
+                            {{--</li>--}}
+                        {{--</ul>--}}
+                    {{--</nav>--}}
+
+                {{--</div>--}}
 
                 @else
 

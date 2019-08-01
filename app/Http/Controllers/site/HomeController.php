@@ -57,10 +57,6 @@ class HomeController extends Controller
     public function get_exam_search(Request $request)
     {
 
-//        $request->validate([
-////            'txtsearch'=>'required'
-////        ]);
-///
         $txtsearch=$request->txtsearch;
 
         $items= Exam::with('tags')->where('file', 'like', '%' . $txtsearch . '%')
@@ -69,7 +65,7 @@ class HomeController extends Controller
             ->orWhereHas('tags',function($query) use ($txtsearch){
                 $query->where('name_en', 'like', '%' . $txtsearch. '%')
                     ->orWhere('name_ar', 'like', '%' . $txtsearch. '%');
-            })->get();
+            })->paginate(4);
 
 //        dd($items);
         if(!empty($items)){
@@ -83,11 +79,6 @@ class HomeController extends Controller
 
     }
 
-//    public function get_exam_search(Request $request)
-//    {
-//        $items=Exam::Where('faculty_id', request('id'))->get();
-//        return view('panel.public.all',['item'=>$items]);
-//    }
 
     public function getExamData(Request $request)
     {

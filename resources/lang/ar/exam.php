@@ -36,6 +36,8 @@ return [
     'copy'=>'نسخ',
     'send'=>'ارسال',
     'Select your faculty'=>' اختر الكليه',
+    'Previous'=>'السابق',
+    'Next'=>'التالى',
 
 
 
