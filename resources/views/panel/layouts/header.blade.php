@@ -5,7 +5,7 @@
 <header class="main-header">
     <meta charset="utf-8">
     <!-- Logo -->
-    <a href="index.html" class="logo blue-bg">
+    <a href="#" class="logo blue-bg">
         <!-- mini logo for sidebar mini 50x50 pixels -->
         <span class="logo-mini"><img src="" alt=""></span>
         <!-- logo for regular state and mobile devices -->
