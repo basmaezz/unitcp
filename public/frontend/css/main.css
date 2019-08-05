@@ -205,7 +205,18 @@ body > section
   padding: 15px;
 
  }
+ .nav .open>a, .nav .open>a:hover, .nav .open>a:focus {
+   background-color:#003b51 !important;
+   border:none !important;
+}
 
+.navbar-nav li .dropdown-item a{
+  color: #cc681f !important;
+}
+.navbar-nav li .dropdown-item a:hover  {
+  background-color: rgb(30, 167, 141);
+  color:#ffff !important;
+}
 /*=========================================
 	main-search
 ==========================================*/
@@ -832,13 +843,13 @@ padding-top: 10px;
  .content-header{
  padding-top: 5px;
  padding-bottom: 5px;
- 
+ display: inline-block;
+ width: 100%;
+
    border-bottom: 2px solid #e6e9ec;
  } 
-
  .download-exam{
-text-align: right;
-
+float: right;
  }
 /* ---------------------------------------------------
   MEDIAQUERIES
@@ -860,9 +871,7 @@ text-align: right;
     width: 15%;
 
   }
-  #content.active  .download-exam ,  #content.active .exam-view
-
- {
+  #content.active  .download-exam , #content.active .exam-view{
     display: none;
   }
   #sidebarCollapse span {
@@ -875,9 +884,4 @@ text-align: right;
     width: auto;
     vertical-align: middle;
 }
-
-  #content.active .exam-view{
-    display: none;
-
-  }
 }

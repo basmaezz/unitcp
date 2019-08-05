@@ -38,6 +38,7 @@ return [
     'Select your faculty'=>' اختر الكليه',
     'Previous'=>'السابق',
     'Next'=>'التالى',
+    'Download'=>'تنزيل',
 
 
 

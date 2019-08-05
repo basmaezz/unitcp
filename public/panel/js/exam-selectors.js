@@ -194,14 +194,6 @@ $(document).ready(function() {
         }
 
     });
-
-
-
-
-
-
-
-
 });
 
 
@@ -215,4 +207,5 @@ function copyMe(item) {
 
     /* Copy the text inside the text field */
     document.execCommand("copy");
+    alert('Copied');
 }

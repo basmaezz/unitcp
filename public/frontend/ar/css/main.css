@@ -215,6 +215,20 @@ body > section
   padding: 15px;
 
  }
+
+ .form-inline .form-control
+ {
+
+width:176px ;
+ }
+
+ @media (max-width: 768px)
+ {
+.form-inline .form-control
+ {
+  width:176px !important ;
+}
+}
  .nav .open>a, .nav .open>a:hover, .nav .open>a:focus {
   background-color:#003b51 !important;
   border:none !important;
@@ -893,7 +907,7 @@ padding-top: 10px;
     width: 15%;
 
   }
-  #content.active  .download-exam{
+  #content.active  .download-exam , #content.active .exam-view  {
     display: none;
   }
   #sidebarCollapse span {
@@ -906,25 +920,4 @@ padding-top: 10px;
     width: auto;
     vertical-align: middle;
 }
-  .form-inline .form-control{
-  width:176px;
-
-  }
-  @media (max-width: 768px){
-  .form-inline .form-control{
-  width:176px !important;
-
-}
-
-  }
-  #content.active .exam-view{
-  display: none;
-
-  }
-
-
-
-
-
-
 }

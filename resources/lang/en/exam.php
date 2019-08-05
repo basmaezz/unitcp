@@ -37,6 +37,7 @@ return [
     'Select your faculty'=>'Select your faculty',
     'Previous'=>'Previous',
     'Next'=>'Next',
+    'Download'=>'Download',
 
 
 

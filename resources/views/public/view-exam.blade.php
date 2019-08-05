@@ -37,9 +37,10 @@
 
     <!-- CSS
     ================================================== -->
-    @if($locale =='ar')
+    @if(app()->getLocale() =='ar')
         @include('public.layouts.css-ar')
-        @else
+
+    @else
         @include('public.layouts.css')
     @endif
 
@@ -100,49 +101,76 @@
 
 
         <!-- main nav -->
-
-        <div class="collapse navbar-collapse navbar-right" role="navigation">
-            <ul class="nav navbar-nav">
+        <div id="navbar" class="navbar-collapse collapse navbar-right">
+            <ul  class="nav navbar-nav">
                 @if (Auth::check())
-                    <li>
-                        <a href ="#"  id="login" rel="nofollow">{{auth()->user()->name}}
+                <li class="dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        {{auth()->user()->name}}
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li class="dropdown-item">
+                            <a href ="{{ route('public.logout') }}">@lang('exam.Logout') </a>
+                        </li>
 
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href ="{{route('logout.panel')}}"  id="login" rel="nofollow">@lang('exam.Logout')
-
-                        </a>
-                    </li>
+                    </ul>
 
                 @else
                     <li>
-                        <a href ="{{route('panel.login')}}"  id="login" rel="nofollow">Sign in
+                        <a href ="{{route('panel.login')}}"  id="login" rel="nofollow">@lang('exam.Sign in')
                         </a>
                     </li>
                 @endif
-                    <li class="dropdown dropdown-user">
-                        <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown"
-                           data-close-others="true">
-
-                            <span class="username username-hide-on-mobile"> @lang('exam.Change Language')   </span>
-                            <i class="fa fa-angle-down"></i>
-                        </a>
-                        <ul class="dropdown-menu dropdown-menu-default">
-                            @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
-                                <li>
-                                    <a rel="alternate" hreflang="{{ $localeCode }}" href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}">
-                                        {{ $properties['native'] }}
-                                    </a>
-                                </li>
-                            @endforeach
-                        </ul>
-
-                    </li>
+                <li >
+                    <a href=""  id="lang" rel="nofollow">عربى
+                    </a>
+                </li>
 
             </ul>
         </div>
+
+        {{--<div class="collapse navbar-collapse navbar-right" role="navigation">--}}
+            {{--<ul class="nav navbar-nav">--}}
+                {{--@if (Auth::check())--}}
+                    {{--<li>--}}
+                        {{--<a href ="#"  id="login" rel="nofollow">{{auth()->user()->name}}--}}
+
+                        {{--</a>--}}
+                    {{--</li>--}}
+
+                    {{--<li>--}}
+                        {{--<a href ="{{route('logout.panel')}}"  id="login" rel="nofollow">@lang('exam.Logout')--}}
+
+                        {{--</a>--}}
+                    {{--</li>--}}
+
+                {{--@else--}}
+                    {{--<li>--}}
+                        {{--<a href ="{{route('panel.login')}}"  id="login" rel="nofollow">Sign in--}}
+                        {{--</a>--}}
+                    {{--</li>--}}
+                {{--@endif--}}
+                    {{--<li class="dropdown dropdown-user">--}}
+                        {{--<a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown"--}}
+                           {{--data-close-others="true">--}}
+
+                            {{--<span class="username username-hide-on-mobile"> @lang('exam.Change Language')   </span>--}}
+                            {{--<i class="fa fa-angle-down"></i>--}}
+                        {{--</a>--}}
+                        {{--<ul class="dropdown-menu dropdown-menu-default">--}}
+                            {{--@foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)--}}
+                                {{--<li>--}}
+                                    {{--<a rel="alternate" hreflang="{{ $localeCode }}" href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}">--}}
+                                        {{--{{ $properties['native'] }}--}}
+                                    {{--</a>--}}
+                                {{--</li>--}}
+                            {{--@endforeach--}}
+                        {{--</ul>--}}
+
+                    {{--</li>--}}
+
+            {{--</ul>--}}
+        {{--</div>--}}
 
 
     </nav>
@@ -194,7 +222,7 @@ End Fixed Navigation
                 <p class="title">@lang('exam.Share')</p>
                 <div class="col-md-4 col-xs-4">
 
-                    <div class="fb-share-button btn-wrapper btn btn-primary  btn-lg" data-href="{{url('public/viewpdf/'.$exam->id)}}"></div>
+                    <div class="fab fa-facebook-f btn-wrapper btn btn-primary  btn-lg" data-href="{{url('public/viewpdf/'.$exam->id)}}"></div>
 
                 </div>
                 <div class="col-md-4 col-xs-4">
@@ -218,9 +246,6 @@ End Fixed Navigation
                 </div>
 
             </div>
-
-
-
             <!--comment-->
 
             <div class="document-info-row  row">
@@ -271,48 +296,35 @@ End Fixed Navigation
     </nav>
 
 
-
     <div id="content">
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container-fluid">
-                <div class="content-header  row">
-                    <div class=" col-md-4 col-sm-2 ">
-                        <button type="button" id="sidebarCollapse" class="btn btn-info">
-                            <i class="fas fa-align-left"></i>
-                        </button>
-                    </div>
-                    <div class="col-md-8 col-sm-2 right  download-exam">
-                        <a href="{{url('storage/faculty/exams/'.$exam->faculty_id ."/".$exam->department_id."/".
-                            $exam->class_id ."/".$exam->semester_id ."/".$exam->material_id ."/".$exam->year_id ."/".$exam->files($exam->file))}}"  class="btn btn-success">Download</a>
-                        {{--<button type="button" class="btn btn-success">Download</button>--}}
+                <div class="content-header ">
+
+                    <button type="button" id="sidebarCollapse" class="btn btn-info">
+                        <i class="fas fa-align-left"></i>
+                    </button>
+
+                    <div class="download-exam">
+                        <button type="button" class="btn btn-success">@lang('exam.Download')</button>
                     </div>
                 </div>
             </div>
 
             <!-- 4:3 aspect ratio -->
             <div class="embed-responsive embed-responsive-16by9 exam-view">
-                {{--<iframe class="embed-responsive-item" src="{{ response()->file('storage/faculty/exams/10/485/2/10/2/2/test1-2002-2003.pdf') }}" allowfullscreen></iframe>--}}
-                {{--<iframe class="embed-responsive-item" src="" allowfullscreen></iframe>--}}
-                {{--<embed src="https://drive.google.com/viewerng/--}}
-{{--viewer?embedded=true&url={{ url('https://www.tutorialspoint.com/php/php_tutorial.pdf') }}" width="500" height="375"> --}}
+                <iframe class="embed-responsive-item" src="" allowfullscreen></iframe>
                 <embed src="https://drive.google.com/viewerng/
 viewer?embedded=true&url={{ url('storage/faculty/exams/'.$exam->faculty_id ."/".$exam->department_id."/".
                             $exam->class_id ."/".$exam->semester_id ."/".$exam->material_id ."/".$exam->year_id ."/".$exam->files($exam->file)) }}" width="500" height="375">
             </div>
         </nav>
     </div>
+
+
+
 </div>
 
-<!--
-End Home search
-==================================== -->
-
-
-
-
-
-<!-- Essential jQuery Plugins
-================================================== -->
 <!-- Main jQuery -->
 @include('public.layouts.js')
 
@@ -342,11 +354,6 @@ End Home search
                 success: function(response) {
                     if(response.status)
                     {
-                       // $('.user-comment').text(response.comments);
-                        // alert('ok');
-                        // console.log(response);
-                        //$('.rating-negative-number').text(response.comments);
-
                         let html= '        <li class="comment-det" >\n' +
                             '                            <div class=""><a href="#" class="pull-left"><i class="far fa-user-circle"></i></a></div>\n' +
                             '                            <div class="comment-user-txt">\n' +
@@ -365,11 +372,6 @@ End Home search
             });
 
         });
-
-
-
-
-
 
 </script>
 </body>
