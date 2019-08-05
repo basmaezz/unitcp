@@ -58,15 +58,15 @@
     }(document, 'script', 'facebook-jssdk'));</script>
 
 
-<script>
-    (function(d, s, id){
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) {return;}
-        js = d.createElement(s); js.id = id;
-        js.src = "https://connect.facebook.net/en_US/messenger.Extensions.js";
-        fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'Messenger'));
-</script>
+{{--<script>--}}
+    {{--(function(d, s, id){--}}
+        {{--var js, fjs = d.getElementsByTagName(s)[0];--}}
+        {{--if (d.getElementById(id)) {return;}--}}
+        {{--js = d.createElement(s); js.id = id;--}}
+        {{--js.src = "https://connect.facebook.net/en_US/messenger.Extensions.js";--}}
+        {{--fjs.parentNode.insertBefore(js, fjs);--}}
+    {{--}(document, 'script', 'Messenger'));--}}
+{{--</script>--}}
 
 <!-- preloader -->
 <div id="preloader">
@@ -222,7 +222,9 @@ End Fixed Navigation
                 <p class="title">@lang('exam.Share')</p>
                 <div class="col-md-4 col-xs-4">
 
-                    <div class="fab fa-facebook-f btn-wrapper btn btn-primary  btn-lg" data-href="{{url('public/viewpdf/'.$exam->id)}}"></div>
+                    <div class="fb-share-button fab fa-facebook-f  btn-wrapper btn btn-primary  btn-lg" data-href="{{url('public/viewpdf/'.$exam->id)}}"></div>
+
+                    {{--<div class="fab fa-facebook-f btn-wrapper btn btn-primary  btn-lg" data-href="{{url('public/viewpdf/'.$exam->id)}}"></div>--}}
 
                 </div>
                 <div class="col-md-4 col-xs-4">

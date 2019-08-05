@@ -2,16 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5ecc8cb6-2745-43c6-a27c-4295447f35de" name="Default" comment="Like,Dislike Count">
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/.htaccess" beforeDir="false" afterPath="$PROJECT_DIR$/public/.htaccess" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/frontend/ar/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/frontend/ar/css/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/frontend/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/frontend/css/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/panel/js/exam-selectors.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/panel/js/exam-selectors.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/panel/plugins/dropzone-master/dropzone.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/panel/plugins/dropzone-master/dropzone.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/ar/exam.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/ar/exam.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/en/exam.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/en/exam.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/public/view-exam.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/public/view-exam.blade.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -276,8 +267,8 @@
       <file leaf-file-name="view-exam.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/public/view-exam.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="677">
-              <caret line="247" column="18" lean-forward="true" selection-start-line="247" selection-start-column="18" selection-end-line="247" selection-end-column="18" />
+            <state relative-caret-position="185">
+              <caret line="224" column="32" selection-start-line="224" selection-start-column="32" selection-end-line="224" selection-end-column="47" />
             </state>
           </provider>
         </entry>
@@ -337,8 +328,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>login</find>
-      <find>recent</find>
       <find>getsearchExamData</find>
       <find>logout</find>
       <find>rec</find>
@@ -367,6 +356,8 @@
       <find>copyMe('current_url')</find>
       <find>copyMe</find>
       <find>تنز</find>
+      <find>fab fa-facebook-f btn-wrapper btn btn-primary  btn-lg</find>
+      <find>fb-share-button</find>
     </findStrings>
     <replaceStrings>
       <replace>panel.</replace>
@@ -833,12 +824,12 @@
       <workItem from="1564334791144" duration="1957000" />
       <workItem from="1564505570613" duration="8298000" />
       <workItem from="1564591008978" duration="14598000" />
-      <workItem from="1565024877212" duration="8689000" />
+      <workItem from="1565024877212" duration="9563000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="878435000" />
+    <option name="totallyTimeSpent" value="879309000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1304,8 +1295,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/public/view-exam.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="677">
-          <caret line="247" column="18" lean-forward="true" selection-start-line="247" selection-start-column="18" selection-end-line="247" selection-end-column="18" />
+        <state relative-caret-position="185">
+          <caret line="224" column="32" selection-start-line="224" selection-start-column="32" selection-end-line="224" selection-end-column="47" />
         </state>
       </provider>
     </entry>
