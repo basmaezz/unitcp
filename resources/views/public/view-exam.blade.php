@@ -35,8 +35,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" media="none" onload="if(media!='all')media='all'">
 
 
-    <!-- CSS
-    ================================================== -->
+
     @if(app()->getLocale() =='ar')
         @include('public.layouts.css-ar')
 

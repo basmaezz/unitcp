@@ -38,6 +38,7 @@ return [
     'Previous'=>'Previous',
     'Next'=>'Next',
     'Download'=>'Download',
+    ''=>'',
 
 
 
