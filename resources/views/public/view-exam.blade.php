@@ -94,7 +94,7 @@
             {{--<form class="form-inline my-2 my-lg-0">--}}
             <form method="get" class="form-inline my-2 my-lg-0" action="{{route('panel.exam.search-s')}}">
                 <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="txtsearch">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">@lang('exam.search')</button>
             </form>
         </div>
 
@@ -250,7 +250,7 @@ End Fixed Navigation
             <!--comment-->
 
             <div class="document-info-row  row">
-                <p class="title">Comments</p>
+                <p class="title">@lang('exam.Comments')</p>
                 <div class="col ">
 
 
@@ -288,7 +288,7 @@ End Fixed Navigation
                         </li>
                     @endforeach
                 </ul>
-                <div class="show-more-comments"><button class="btn btn-outline-primary btn-block"> Show 5 more comments.</button></div>
+                <div class="show-more-comments"><button class="btn btn-outline-primary btn-block"> @lang('exam.Show more comments').</button></div>
             </div>
 
             <!--comment-->
@@ -305,10 +305,11 @@ End Fixed Navigation
                     <button type="button" id="sidebarCollapse" class="btn btn-info">
                         <i class="fas fa-align-left"></i>
                     </button>
-
+                    @if (Auth::check())
                     <div class="download-exam">
                         <button type="button" class="btn btn-success">@lang('exam.Download')</button>
                     </div>
+                        @endif
                 </div>
             </div>
 

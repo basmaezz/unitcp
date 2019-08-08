@@ -13,7 +13,7 @@
         <div class="row">
             <div class="col-md-12">
                 <p class="copyright text-center">
-                    Copyright © 2019 . جميع الحقوق محفوظه تصميم وتطوير  <a href=http://mansvu.mans.edu.eg/site/index.php?lang=en/">وحدة التعليم الالكترونى -جامعه المنصورة</a>
+                      @lang('exam.copyright')  <a href=http://mansvu.mans.edu.eg/site/index.php?lang=en/">وحدة التعليم الالكترونى -جامعه المنصورة</a>
                 </p>
             </div>
         </div>

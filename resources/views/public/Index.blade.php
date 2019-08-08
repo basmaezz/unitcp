@@ -7,8 +7,8 @@
     <section  class="jumbotron  overlay vertical-center-wrapper">
         <div class="vertical-center-element">
             <div class="container">
-                <h1 class="animated fadeInDown">Find your study resources</h1>
-                <h3 class="animated fadeInDown">The best documents shared by your fellow students, organized in one place.</h3>
+                <h1 class="animated fadeInDown">@lang('exam.Find your study resources')</h1>
+                <h3 class="animated fadeInDown">@lang('exam.The best documents shared by your fellow students, organized in one place')</h3>
                 <div class="row">
                     <div class="col-sm-2"></div>
                     <div class=" col-md-8">
@@ -36,7 +36,7 @@
             <div class="row">
 
                 <div class="sec-title text-center mb50 wow  fadeInDown animated">
-                    <h2>We’ve got the best study material for you
+                    <h2>@lang('exam.We’ve got the best study material for you')
                     </h2>
                     <div class="devider"><i class="fas fa-book-reader"></i></div>
 
@@ -126,7 +126,7 @@
                 <div class="row number-counters">
 
                     <div class="sec-title text-center mb50 wow rubberBand animated" data-wow-duration="1000ms">
-                        <h2>You're in good company</h2>
+                        <h2>@lang('exam.Youre in good company')</h2>
                         <div class="devider"><i class="fas fa-book-reader"></i></div>
                     </div>
 
@@ -180,9 +180,9 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6  section-padding wow fadeInLeft" data-wow-delay="0.6s">
-                    <h2 class="text-uppercase ">About our Site </h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation. </p>
-                    <button type="button" class="btn btn-primary btn-lg"> Get Strated for free</button>
+                    <h2 class="text-uppercase ">@lang('exam.about') </h2>
+                    <p>@lang('exam.aboutsite') </p>
+                    <button type="button" class="btn btn-primary btn-lg">@lang('exam.GetStratedforfree') </button>
 
                 </div>
                 <div class="col-md-6 wow fadeInRight" data-wow-delay="0.6s">

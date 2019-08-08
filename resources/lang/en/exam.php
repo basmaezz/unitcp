@@ -38,7 +38,16 @@ return [
     'Previous'=>'Previous',
     'Next'=>'Next',
     'Download'=>'Download',
-    ''=>'',
+    'copyright'=>'Copy Right',
+    'Find your study resources'=>'Find your study resources',
+    'The best documents shared by your fellow students, organized in one place'=>'The best documents shared by your fellow students, organized in one place',
+    'We’ve got the best study material for you'=>'We’ve got the best study material for you',
+    'Youre in good company'=>'You’re in good company',
+    'about'=>'ABOUT OUR SITE',
+    'aboutsite'=>'The site provides hosting service for your important study resources. So, you can all excel in your exams. You can find previous exams, lecture notes and many other resources. We wish you all success.',
+    'GetStratedforfree'=>'Get Strated for free',
+    'Comments'=>'Comments',
+    'Show more comments'=>'Show more comments',
 
 
 
