@@ -1,19 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5ecc8cb6-2745-43c6-a27c-4295447f35de" name="Default" comment="Like,Dislike Count">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/frontend/ar/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/frontend/ar/css/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/front/layouts/css.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/front/layouts/footer.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/front/layouts/header.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/front/layouts/index.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/front/layouts/js.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/front/main/home.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/panel/layouts/footer.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/panel/layouts/footer.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/panel/layouts/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/panel/layouts/header.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/panel.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/panel.php" afterDir="false" />
-    </list>
+    <list default="true" id="5ecc8cb6-2745-43c6-a27c-4295447f35de" name="Default" comment="Like,Dislike Count" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -264,12 +252,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="UserController.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="UserController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Panel/UserController.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="338">
               <caret line="73" column="52" lean-forward="true" selection-start-line="73" selection-end-line="74" />
             </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="all.blade.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/resources/views/panel/faculty/all.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-4590" />
           </provider>
         </entry>
       </file>
@@ -303,7 +298,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>lik</find>
       <find>cop</find>
       <find>like</find>
       <find>name</find>
@@ -333,6 +327,7 @@
       <find>fa fa-gear animated</find>
       <find>store</find>
       <find>student</find>
+      <find>createstudent</find>
     </findStrings>
     <replaceStrings>
       <replace>panel.</replace>
@@ -557,7 +552,28 @@
             <path>
               <item name="unitcp" type="b2602c69:ProjectViewProjectNode" />
               <item name="unitcp" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="routes" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="unitcp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="unitcp" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="unitcp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="unitcp" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="panel" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="unitcp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="unitcp" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="panel" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="faculty" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
           </expand>
           <select />
@@ -781,12 +797,12 @@
       <workItem from="1564591008978" duration="14598000" />
       <workItem from="1565024877212" duration="10175000" />
       <workItem from="1565114240149" duration="3146000" />
-      <workItem from="1565280725046" duration="6488000" />
+      <workItem from="1565280725046" duration="7103000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="889555000" />
+    <option name="totallyTimeSpent" value="890170000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -874,13 +890,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/resources/lang/ar/exam.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="31" column="30" selection-start-line="31" selection-start-column="30" selection-end-line="31" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/public/search.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1224">
@@ -1227,6 +1236,11 @@
         <state relative-caret-position="338">
           <caret line="73" column="52" lean-forward="true" selection-start-line="73" selection-end-line="74" />
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/panel/faculty/all.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-4590" />
       </provider>
     </entry>
   </component>
