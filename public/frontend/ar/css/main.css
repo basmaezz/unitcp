@@ -886,7 +886,8 @@ padding-top: 10px;
  .download-exam{
   float: left;
    }
- 
+   
+  .exam-view {min-height: 600px;}
 /* ---------------------------------------------------
   MEDIAQUERIES
 ----------------------------------------------------- */

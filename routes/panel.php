@@ -7,14 +7,16 @@ Route::middleware(['authpermission','checkactive'])->group(function() {
     Route::get('/dashboard', ['as' => 'panel.dashboard', 'uses' => 'HomeController@index']);
     Route::get('/logout', 'HomeController@logout')->name('logout.panel');
     Route::get('/online','UserController@online')->name('users.online');
+    Route::prefix('/student')->group(function () {
+        Route::get('/allstudent', ['as' => 'panel.students.all', 'uses' => 'UserController@studentindex']);
+        Route::get('/addstudent', ['as' => 'panel.students.createstudent', 'uses' => 'UserController@createstudent']);
+        Route::get('/all/studentdata', ['as' => 'panel.students.all.data', 'uses' => 'UserController@get_student_data_table']);
+
+    });
     Route::prefix('/user')->group(function () {
         Route::get('/all', ['as' => 'panel.users.all', 'uses' => 'UserController@index']);
         Route::get('/all/data', ['as' => 'panel.users.all.data', 'uses' => 'UserController@get_user_data_table']);
 
-
-        Route::get('/allstudent', ['as' => 'panel.students.all', 'uses' => 'UserController@studentindex']);
-        Route::get('/addstudent', ['as' => 'panel.students.createstudent', 'uses' => 'UserController@createstudent']);
-        Route::get('/all/studentdata', ['as' => 'panel.students.all.data', 'uses' => 'UserController@get_student_data_table']);
         Route::prefix('/create')->group(function () {
             Route::get('/', ['as' => 'panel.users.create', 'uses' => 'UserController@create']);
 //            Route::get('/', ['as' => 'panel.users.createstudent', 'uses' => 'UserController@createstudent']);

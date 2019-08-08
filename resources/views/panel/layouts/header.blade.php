@@ -106,7 +106,7 @@
                     </ul>
                 </li>
                 <!-- Control Sidebar Toggle Button -->
-                <li> <a href="{{route('panel.users.profile',auth()->id())}}" data-toggle="control-sidebar"><i class="fa fa-gear animated "></i></a> </li>
+                <li> <a href="{{route('panel.users.profile',auth()->id())}}" data-toggle="control-sidebar"><i class="/frontend "></i></a> </li>
             </ul>
         </div>
     </nav>
