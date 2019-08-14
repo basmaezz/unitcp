@@ -14,7 +14,7 @@
   <!-- Meta Description -->
   <meta name="description" content="Exams">
   <meta name="keywords" content="Exams, elearning">
-  <meta name="author" content="Rehab">
+  <meta name="author" content="Elearning unit ">
   <!-- Mobile Specific Meta -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
