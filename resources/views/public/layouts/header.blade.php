@@ -12,6 +12,7 @@
         </div>
 
 
+
         <div id="navbar" class="navbar-collapse collapse navbar-right">
             <ul  class="nav navbar-nav">
                 @if (Auth::check())
@@ -32,10 +33,17 @@
                         </a>
                     </li>
                 @endif
+
+                    @if(app()->getLocale() =='ar')
                 <li >
-                    <a href=""  id="lang" rel="nofollow">عربى
+                    <a href="{{url('/en/public/index')}}"  id="lang" rel="nofollow">English
                     </a>
                 </li>
+                        @else
+                <li > <a href="{{url('/ar/public/index')}}"  id="lang" rel="nofollow">عربى</a>
+                        </li>
+
+                        @endif
 
             </ul>
         </div>
@@ -44,4 +52,4 @@
     <!-- /main nav -->
 
 
-</header
+</header>

@@ -2,10 +2,131 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5ecc8cb6-2745-43c6-a27c-4295447f35de" name="Default" comment="Like,Dislike Count">
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/frontend/img/head.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/frontend/img/head.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/frontend/img/users.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/frontend/img/users.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/public/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/public/layouts/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/frontend/extra/arr/css/all.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/frontend/extra/arr/css/animate.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/frontend/extra/arr/css/bootstrap.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/frontend/extra/arr/css/fontawesome.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/frontend/extra/arr/css/fontawesome.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/frontend/extra/arr/css/goldenforms-pro.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/frontend/extra/arr/css/main.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/frontend/extra/arr/css/media-queries.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/frontend/extra/arr/css/normalize.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/frontend/extra/arr/fonts/GESSTwoLight-Light.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/frontend/extra/arr/fonts/GESSTwoLight-Light.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/frontend/extra/arr/fonts/GESSTwoLight-Light.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/frontend/extra/arr/fonts/GESSTwoLight-Light.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/frontend/extra/arr/fonts/GESSTwoLight-Light.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/frontend/extra/arr/fonts/GE_SS_Two_Medium.otf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/frontend/extra/arr/img/city.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/frontend/extra/arr/img/exam-questions.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/frontend/extra/arr/img/head.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/frontend/extra/arr/img/header.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/frontend/extra/arr/img/illus-devices.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/frontend/extra/arr/img/location-icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/frontend/extra/arr/img/logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/frontend/extra/arr/img/preloader.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/frontend/extra/arr/img/university-icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/frontend/extra/arr/img/users.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/frontend/extra/arr/js/all.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/frontend/extra/arr/js/bootstrap.bundle.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/frontend/extra/arr/js/bootstrap.bundle.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/frontend/extra/arr/js/bootstrap.bundle.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/frontend/extra/arr/js/bootstrap.bundle.min.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/frontend/extra/arr/js/bootstrap.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/frontend/extra/arr/js/bootstrap.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/frontend/extra/arr/js/bootstrap.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/frontend/extra/arr/js/bootstrap.min.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/frontend/extra/arr/js/custom.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/frontend/extra/arr/js/jquery-1.11.1.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/frontend/extra/arr/js/jquery-1.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/frontend/extra/arr/js/jquery-countTo.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/frontend/extra/arr/js/jquery.appear.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/frontend/extra/arr/js/jquery.easing.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/frontend/extra/arr/js/jquery.fancybox.pack.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/frontend/extra/arr/js/jquery.mixitup.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/frontend/extra/arr/js/jquery.parallax-1.1.3.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/frontend/extra/arr/js/jquery.singlePageNav.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/frontend/extra/arr/js/modernizr-2.6.2.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/frontend/extra/arr/js/wow.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/frontend/extra/arr/webfonts/fa-brands-400.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/frontend/extra/arr/webfonts/fa-brands-400.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/frontend/extra/arr/webfonts/fa-brands-400.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/frontend/extra/arr/webfonts/fa-brands-400.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/frontend/extra/arr/webfonts/fa-brands-400.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/frontend/extra/arr/webfonts/fa-regular-400.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/frontend/extra/arr/webfonts/fa-regular-400.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/frontend/extra/arr/webfonts/fa-regular-400.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/frontend/extra/arr/webfonts/fa-regular-400.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/frontend/extra/arr/webfonts/fa-regular-400.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/frontend/extra/arr/webfonts/fa-solid-900.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/frontend/extra/arr/webfonts/fa-solid-900.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/frontend/extra/arr/webfonts/fa-solid-900.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/frontend/extra/arr/webfonts/fa-solid-900.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/frontend/extra/arr/webfonts/fa-solid-900.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/frontend/extra/css/all.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/frontend/extra/css/animate.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/frontend/extra/css/bootstrap.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/frontend/extra/css/fontawesome.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/frontend/extra/css/fontawesome.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/frontend/extra/css/goldenforms-pro.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/frontend/extra/css/main.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/frontend/extra/css/media-queries.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/frontend/extra/css/normalize.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/frontend/extra/fonts/FontAwesome.otf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/frontend/extra/fonts/fontawesome-webfont.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/frontend/extra/fonts/fontawesome-webfont.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/frontend/extra/fonts/fontawesome-webfont.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/frontend/extra/fonts/fontawesome-webfont.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/frontend/extra/img/banner.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/frontend/extra/img/city.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/frontend/extra/img/exam-questions.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/frontend/extra/img/head.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/frontend/extra/img/header.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/frontend/extra/img/illus-devices.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/frontend/extra/img/location-icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/frontend/extra/img/logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/frontend/extra/img/logo1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/frontend/extra/img/logo2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/frontend/extra/img/preloader.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/frontend/extra/img/university-icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/frontend/extra/img/users.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/frontend/extra/js/bootstrap.bundle.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/frontend/extra/js/bootstrap.bundle.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/frontend/extra/js/bootstrap.bundle.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/frontend/extra/js/bootstrap.bundle.min.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/frontend/extra/js/bootstrap.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/frontend/extra/js/bootstrap.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/frontend/extra/js/bootstrap.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/frontend/extra/js/bootstrap.min.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/frontend/extra/js/custom.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/frontend/extra/js/jquery-1.11.1.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/frontend/extra/js/jquery-1.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/frontend/extra/js/jquery-countTo.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/frontend/extra/js/jquery.appear.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/frontend/extra/js/jquery.easing.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/frontend/extra/js/jquery.fancybox.pack.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/frontend/extra/js/jquery.mixitup.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/frontend/extra/js/jquery.parallax-1.1.3.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/frontend/extra/js/jquery.singlePageNav.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/frontend/extra/js/modernizr-2.6.2.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/frontend/extra/js/pdf.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/frontend/extra/js/wow.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/frontend/extra/webfonts/fa-brands-400.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/frontend/extra/webfonts/fa-brands-400.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/frontend/extra/webfonts/fa-brands-400.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/frontend/extra/webfonts/fa-brands-400.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/frontend/extra/webfonts/fa-brands-400.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/frontend/extra/webfonts/fa-regular-400.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/frontend/extra/webfonts/fa-regular-400.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/frontend/extra/webfonts/fa-regular-400.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/frontend/extra/webfonts/fa-regular-400.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/frontend/extra/webfonts/fa-regular-400.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/frontend/extra/webfonts/fa-solid-900.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/frontend/extra/webfonts/fa-solid-900.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/frontend/extra/webfonts/fa-solid-900.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/frontend/extra/webfonts/fa-solid-900.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/frontend/extra/webfonts/fa-solid-900.woff2" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/public/layouts/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/public/layouts/header.blade.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -211,14 +332,14 @@
           <entry key="env" value="31" />
           <entry key="html" value="35" />
           <entry key="js" value="252" />
-          <entry key="php" value="9819" />
+          <entry key="php" value="9965" />
           <entry key="txt" value="36" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key=".env file" value="31" />
-          <entry key="Blade" value="3874" />
+          <entry key="Blade" value="4020" />
           <entry key="CSS" value="14" />
           <entry key="HTML" value="50" />
           <entry key="JavaScript" value="252" />
@@ -233,14 +354,14 @@
           <entry key="env" value="3" />
           <entry key="html" value="5" />
           <entry key="js" value="13" />
-          <entry key="php" value="386" />
+          <entry key="php" value="389" />
           <entry key="vue" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key=".env file" value="3" />
-          <entry key="Blade" value="169" />
+          <entry key="Blade" value="172" />
           <entry key="CSS" value="2" />
           <entry key="HTML" value="5" />
           <entry key="JavaScript" value="13" />
@@ -261,17 +382,26 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/public/layouts/app.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-901">
-              <caret line="9" column="48" selection-start-line="9" selection-start-column="48" selection-end-line="9" selection-end-column="48" />
+            <state relative-caret-position="340">
+              <caret line="32" selection-start-line="32" selection-end-line="32" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/public/layouts/css-ar.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="527">
+              <caret line="31" selection-start-line="31" selection-end-line="31" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/.env">
+        <entry file="file://$PROJECT_DIR$/resources/views/public/layouts/header.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="13" column="27" selection-start-line="13" selection-start-column="27" selection-end-line="13" selection-end-column="27" />
+            <state relative-caret-position="17">
+              <caret line="14" column="7" selection-start-line="14" selection-start-column="7" selection-end-line="14" selection-end-column="7" />
             </state>
           </provider>
         </entry>
@@ -290,7 +420,6 @@
     <findStrings>
       <find>head.png</find>
       <find>STUDENTSMATE</find>
-      <find>preloader</find>
       <find />
       <find>Download</find>
       <find>FACEBOOK</find>
@@ -314,6 +443,7 @@
       <find>download</find>
       <find>copyright</find>
       <find>search</find>
+      <find>preloader</find>
     </findStrings>
     <replaceStrings>
       <replace>panel.</replace>
@@ -393,9 +523,9 @@
         <option value="$PROJECT_DIR$/resources/views/public/view-exam.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/public/layouts/footer.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/public/search.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/public/layouts/header.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/public/layouts/app.blade.php" />
         <option value="$PROJECT_DIR$/.env" />
+        <option value="$PROJECT_DIR$/resources/views/public/layouts/app.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/public/layouts/header.blade.php" />
       </list>
     </option>
   </component>
@@ -537,6 +667,32 @@
             <path>
               <item name="unitcp" type="b2602c69:ProjectViewProjectNode" />
               <item name="unitcp" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="unitcp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="unitcp" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="unitcp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="unitcp" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="unitcp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="unitcp" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="unitcp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="unitcp" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="layouts" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -761,12 +917,12 @@
       <workItem from="1565024877212" duration="10175000" />
       <workItem from="1565114240149" duration="3146000" />
       <workItem from="1565280725046" duration="9010000" />
-      <workItem from="1565808507901" duration="1648000" />
+      <workItem from="1565808507901" duration="5408000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="893725000" />
+    <option name="totallyTimeSpent" value="897485000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -781,7 +937,7 @@
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18910742" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.18910742" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -1038,13 +1194,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/public/layouts/css-ar.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="466">
-          <caret line="31" selection-start-line="31" selection-end-line="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/panel/template/slider.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="408">
@@ -1150,24 +1299,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/public/layouts/header.blade.php">
+    <entry file="file://$PROJECT_DIR$/.env">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+        <state relative-caret-position="221">
+          <caret line="13" column="27" selection-start-line="13" selection-start-column="27" selection-end-line="13" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/public/layouts/css-ar.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="31" selection-start-line="31" selection-end-line="31" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/public/layouts/app.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-901">
-          <caret line="9" column="48" selection-start-line="9" selection-start-column="48" selection-end-line="9" selection-end-column="48" />
+        <state relative-caret-position="340">
+          <caret line="32" selection-start-line="32" selection-end-line="32" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.env">
+    <entry file="file://$PROJECT_DIR$/resources/views/public/layouts/header.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="27" selection-start-line="13" selection-start-column="27" selection-end-line="13" selection-end-column="27" />
+        <state relative-caret-position="17">
+          <caret line="14" column="7" selection-start-line="14" selection-start-column="7" selection-end-line="14" selection-end-column="7" />
         </state>
       </provider>
     </entry>
