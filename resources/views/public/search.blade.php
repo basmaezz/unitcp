@@ -12,7 +12,7 @@
                     <div class="search-bar search-bar-big">
 
                         <i class="fa fa-search search-bar__icon"></i>
-                        <input type="search"  name="txtsearch" placeholder="Search for Exams" autofocus=""  spellcheck="true" value="{{$txtsearch}}">
+                        <input type="search"  name="txtsearch" placeholder="@lang('exam.searchforexams')" autofocus=""  spellcheck="true" value="{{$txtsearch}}">
                     </div>
                    </form>
                 </div>
