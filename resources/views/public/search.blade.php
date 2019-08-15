@@ -1,7 +1,7 @@
 @extends('public.layouts.app')
 @section('content')
     <?php $lang=app()->getLocale(); ?>
-    <?php  echo "$lang" ?>
+
 
     <div class="search-page">
         <section class=" search-page__controls">

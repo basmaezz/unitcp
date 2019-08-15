@@ -79,7 +79,7 @@
 </div>
 
 {!! HTML::script(panel_url('login/vendor/jquery/jquery-3.2.1.min.js')) !!}
-{!! HTML::script(panel_url('login/vendor/bootstrap/js/popper.js')) !!}
+{!! HTML::script(panel_url('login/vendor/bootstrap/js/popper.min.js')) !!}
 {!! HTML::script(panel_url('login/vendor/bootstrap/js/bootstrap.min.js')) !!}
 {!! HTML::script(panel_url('login/vendor/select2/select2.min.js')) !!}
 {!! HTML::script(panel_url('login/vendor/tilt/tilt.jquery.min.js')) !!}
