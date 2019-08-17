@@ -27,12 +27,23 @@
 										<i class="ic fa fa-cloud-upload"></i> {{date('F d, Y', strtotime($exam->created_at))}}</span></div>
 
                             </div>
+                            @if (Auth::check())
                             <a href="javascript:void(0);" class="like-exam" data-id="{{$exam->id}}" data-type="1">
                                 <span class="search-document-result__rating"><i class="fa fa-thumbs-up"></i><span id="rating-positive-number_{{$exam->id}}">{{$exam->likes()->where('likenum',1)->count()}}</span></span>
                             </a>
                             <a href="javascript:void(0);" class="like-exam" data-id="{{$exam->id}}" data-type="0">
                                 <span class="search-document-result__rating"><i class="fa fa-thumbs-down"></i><span id="rating-negative-number_{{$exam->id}}">{{$exam->likes()->where('likenum',0)->count()}}</span></span>
                             </a>
+                                @else
+                                <a href="{{route('panel.login')}}"  >
+                                        <span class="search-document-result__rating"><i class="fa fa-thumbs-up"></i>
+                                            </span>
+                                </a>
+                                <a href="{{route('panel.login')}}">
+                                        <span class="search-document-result__rating"><i class="fa fa-thumbs-down"></i>
+                                           </span>
+                                </a>
+                            @endif
                         </li>
                     @endforeach
 
