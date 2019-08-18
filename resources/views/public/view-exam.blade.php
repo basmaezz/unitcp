@@ -128,49 +128,6 @@
             </ul>
         </div>
 
-        {{--<div class="collapse navbar-collapse navbar-right" role="navigation">--}}
-            {{--<ul class="nav navbar-nav">--}}
-                {{--@if (Auth::check())--}}
-                    {{--<li>--}}
-                        {{--<a href ="#"  id="login" rel="nofollow">{{auth()->user()->name}}--}}
-
-                        {{--</a>--}}
-                    {{--</li>--}}
-
-                    {{--<li>--}}
-                        {{--<a href ="{{route('logout.panel')}}"  id="login" rel="nofollow">@lang('exam.Logout')--}}
-
-                        {{--</a>--}}
-                    {{--</li>--}}
-
-                {{--@else--}}
-                    {{--<li>--}}
-                        {{--<a href ="{{route('panel.login')}}"  id="login" rel="nofollow">Sign in--}}
-                        {{--</a>--}}
-                    {{--</li>--}}
-                {{--@endif--}}
-                    {{--<li class="dropdown dropdown-user">--}}
-                        {{--<a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown"--}}
-                           {{--data-close-others="true">--}}
-
-                            {{--<span class="username username-hide-on-mobile"> @lang('exam.Change Language')   </span>--}}
-                            {{--<i class="fa fa-angle-down"></i>--}}
-                        {{--</a>--}}
-                        {{--<ul class="dropdown-menu dropdown-menu-default">--}}
-                            {{--@foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)--}}
-                                {{--<li>--}}
-                                    {{--<a rel="alternate" hreflang="{{ $localeCode }}" href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}">--}}
-                                        {{--{{ $properties['native'] }}--}}
-                                    {{--</a>--}}
-                                {{--</li>--}}
-                            {{--@endforeach--}}
-                        {{--</ul>--}}
-
-                    {{--</li>--}}
-
-            {{--</ul>--}}
-        {{--</div>--}}
-
 
     </nav>
     <!-- /main nav -->
@@ -227,11 +184,9 @@ End Fixed Navigation
 
                 </div>
                 <div class="col-md-4 col-xs-4">
-                    <a class="btn-wrapper btn  btn-success  btn-lg" href="https://api.whatsapp.com/send?text=url={{url('public/viewpdf/'.$exam->id)}}" target="_blank">
+                    <a class="btn-wrapper btn  btn-success  btn-lg" href="https://web.whatsapp.com/send?text={{url('public/viewpdf/'.$exam->id)}}" target="_blank">
                         <i class="fab fa-whatsapp"></i>
                     </a>
-
-
                 </div>
                 <div class="col-md-4 col-xs-4">
                     <a class="btn-wrapper btn  btn-info  btn-lg" href="https://twitter.com/share?text={{url('public/viewpdf/'.$exam->id)}}" target="_blank">

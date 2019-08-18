@@ -2,9 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5ecc8cb6-2745-43c6-a27c-4295447f35de" name="Default" comment="Like,Dislike Count">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/lang/ar/exam.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/ar/exam.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/lang/en/exam.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/en/exam.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/public/layouts/footer.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/public/layouts/footer.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/public/popular-exams.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/public/popular-exams.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/public/recent-exams.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/public/recent-exams.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/public/view-exam.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/public/view-exam.blade.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -161,7 +163,7 @@
     <session id="295206442">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="30" />
+          <entry key="project.closed" value="31" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.10" value="1" />
@@ -196,11 +198,12 @@
           <entry key="project.open.time.83" value="1" />
           <entry key="project.open.time.84" value="2" />
           <entry key="project.open.time.85" value="1" />
+          <entry key="project.open.time.86" value="1" />
           <entry key="project.open.time.87" value="2" />
           <entry key="project.open.time.9" value="1" />
           <entry key="project.open.time.96" value="1" />
           <entry key="project.open.time.98" value="1" />
-          <entry key="project.opened" value="47" />
+          <entry key="project.opened" value="48" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
@@ -210,18 +213,18 @@
           <entry key="env" value="46" />
           <entry key="html" value="35" />
           <entry key="js" value="260" />
-          <entry key="php" value="10050" />
+          <entry key="php" value="10098" />
           <entry key="txt" value="36" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key=".env file" value="46" />
-          <entry key="Blade" value="4105" />
+          <entry key="Blade" value="4128" />
           <entry key="CSS" value="23" />
           <entry key="HTML" value="50" />
           <entry key="JavaScript" value="260" />
-          <entry key="PHP" value="5930" />
+          <entry key="PHP" value="5955" />
           <entry key="PLAIN_TEXT" value="38" />
         </counts>
       </usages-collector>
@@ -232,18 +235,18 @@
           <entry key="env" value="5" />
           <entry key="html" value="5" />
           <entry key="js" value="27" />
-          <entry key="php" value="400" />
+          <entry key="php" value="404" />
           <entry key="vue" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key=".env file" value="5" />
-          <entry key="Blade" value="182" />
+          <entry key="Blade" value="184" />
           <entry key="CSS" value="11" />
           <entry key="HTML" value="5" />
           <entry key="JavaScript" value="27" />
-          <entry key="PHP" value="218" />
+          <entry key="PHP" value="220" />
           <entry key="UML" value="1" />
           <entry key="Vue.js" value="1" />
         </counts>
@@ -257,65 +260,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/public/search.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="106" column="24" selection-start-line="106" selection-start-column="24" selection-end-line="113" selection-end-column="40" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.env">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" column="20" selection-start-line="14" selection-start-column="20" selection-end-line="14" selection-end-column="20" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/public/Index.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="207">
-              <caret line="184" column="29" selection-start-line="184" selection-start-column="29" selection-end-line="184" selection-end-column="53" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/public/popular-exams.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="39" column="20" lean-forward="true" selection-start-line="39" selection-start-column="20" selection-end-line="46" selection-end-column="36" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/public/recent-exams.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-252">
-              <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/resources/views/public/layouts/footer.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="216" selection-start-line="6" selection-start-column="216" selection-end-line="6" selection-end-column="216" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/public/view-exam.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="312">
-              <caret line="307" column="19" selection-start-line="307" selection-start-column="19" selection-end-line="307" selection-end-column="39" />
+            <state relative-caret-position="196">
+              <caret line="186" column="109" lean-forward="true" selection-start-line="186" selection-start-column="109" selection-end-line="186" selection-end-column="109" />
             </state>
           </provider>
         </entry>
@@ -332,11 +281,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>head.png</find>
-      <find>STUDENTSMATE</find>
-      <find />
-      <find>Download</find>
-      <find>FACEBOOK</find>
       <find>whatsa</find>
       <find>faceb</find>
       <find>Arabic</find>
@@ -354,7 +298,6 @@
       <find>Show</find>
       <find>sear</find>
       <find>download</find>
-      <find>copyright</find>
       <find>search</find>
       <find>preloader</find>
       <find>login</find>
@@ -362,6 +305,12 @@
       <find>Get Strated for free</find>
       <find>auth::check()</find>
       <find>auth</find>
+      <find>copyright</find>
+      <find>copy</find>
+      <find>Pop out</find>
+      <find>Pop</find>
+      <find>comment</find>
+      <find>facebook</find>
     </findStrings>
     <replaceStrings>
       <replace>panel.</replace>
@@ -418,9 +367,6 @@
         <option value="$PROJECT_DIR$/resources/views/panel/users/create.blade.php" />
         <option value="$PROJECT_DIR$/routes/panel.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Panel/UserController.php" />
-        <option value="$PROJECT_DIR$/resources/lang/en/exam.php" />
-        <option value="$PROJECT_DIR$/resources/lang/ar/exam.php" />
-        <option value="$PROJECT_DIR$/resources/views/public/view-exam.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/public/layouts/app.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/public/layouts/header.blade.php" />
         <option value="$PROJECT_DIR$/public/frontend/css/all.css" />
@@ -444,6 +390,9 @@
         <option value="$PROJECT_DIR$/resources/views/public/popular-exams.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/public/recent-exams.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/public/layouts/footer.blade.php" />
+        <option value="$PROJECT_DIR$/resources/lang/en/exam.php" />
+        <option value="$PROJECT_DIR$/resources/lang/ar/exam.php" />
+        <option value="$PROJECT_DIR$/resources/views/public/view-exam.blade.php" />
       </list>
     </option>
   </component>
@@ -578,6 +527,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -603,19 +553,10 @@
               <item name="views" type="462c0819:PsiDirectoryNode" />
               <item name="public" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="unitcp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="unitcp" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-              <item name="layouts" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -837,12 +778,13 @@
       <workItem from="1565280725046" duration="9010000" />
       <workItem from="1565808507901" duration="8043000" />
       <workItem from="1565848763402" duration="5348000" />
-      <workItem from="1566023245854" duration="2599000" />
+      <workItem from="1566023245854" duration="3464000" />
+      <workItem from="1566143420322" duration="1940000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="908067000" />
+    <option name="totallyTimeSpent" value="910872000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -857,7 +799,7 @@
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14901665" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.21558245" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -1017,20 +959,6 @@
     <entry file="file://$PROJECT_DIR$/resources/views/public/paginate.blade.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/lang/en/exam.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="53" column="2" selection-start-line="53" selection-start-column="2" selection-end-line="53" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/lang/ar/exam.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="54" column="6" selection-start-line="54" selection-start-column="6" selection-end-line="54" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/frontend/css/all.css">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -1167,13 +1095,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Downloads/jquery-3.2.1.min_63c8d7ec51ffe475d3e28f408944ae3a.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="57" selection-end-column="86571" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$USER_HOME$/Downloads/jquery-3.2.1.min_63c8d7ec51ffe475d3e28f408944ae3a.js" />
     <entry file="file://$PROJECT_DIR$/public/panel/login/vendor/jquery/jquery-3.2.1.min.js">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -1202,6 +1124,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/public/popular-exams.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="663">
+          <caret line="39" column="20" selection-start-line="39" selection-start-column="20" selection-end-line="46" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/public/recent-exams.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="27" selection-start-line="27" selection-end-line="27" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/.env">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
@@ -1223,31 +1159,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/public/view-exam.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="307" column="19" selection-start-line="307" selection-start-column="19" selection-end-line="307" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/public/popular-exams.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="39" column="20" lean-forward="true" selection-start-line="39" selection-start-column="20" selection-end-line="46" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/public/recent-exams.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-252">
-          <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/public/layouts/footer.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="216" selection-start-line="6" selection-start-column="216" selection-end-line="6" selection-end-column="216" />
+        <state relative-caret-position="255">
+          <caret line="15" column="127" selection-start-line="15" selection-start-column="127" selection-end-line="15" selection-end-column="127" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/lang/en/exam.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="213">
+          <caret line="40" column="81" selection-start-line="40" selection-start-column="81" selection-end-line="40" selection-end-column="81" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/lang/ar/exam.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="41" column="68" selection-start-line="41" selection-start-column="68" selection-end-line="41" selection-end-column="68" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/public/view-exam.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="196">
+          <caret line="186" column="109" lean-forward="true" selection-start-line="186" selection-start-column="109" selection-end-line="186" selection-end-column="109" />
         </state>
       </provider>
     </entry>
