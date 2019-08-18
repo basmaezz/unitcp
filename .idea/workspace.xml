@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5ecc8cb6-2745-43c6-a27c-4295447f35de" name="Default" comment="Like,Dislike Count">
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/ar/exam.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/ar/exam.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/en/exam.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/en/exam.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/public/layouts/footer.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/public/layouts/footer.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/public/view-exam.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/public/view-exam.blade.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -210,17 +208,17 @@
         <counts>
           <entry key="css" value="23" />
           <entry key="dummy" value="2" />
-          <entry key="env" value="46" />
+          <entry key="env" value="74" />
           <entry key="html" value="35" />
           <entry key="js" value="260" />
-          <entry key="php" value="10098" />
+          <entry key="php" value="10106" />
           <entry key="txt" value="36" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key=".env file" value="46" />
-          <entry key="Blade" value="4128" />
+          <entry key=".env file" value="74" />
+          <entry key="Blade" value="4136" />
           <entry key="CSS" value="23" />
           <entry key="HTML" value="50" />
           <entry key="JavaScript" value="260" />
@@ -232,7 +230,7 @@
         <counts>
           <entry key="DATABASE/92d28f93-2918-4478-8052-2c8b6b777f5d" value="1" />
           <entry key="css" value="11" />
-          <entry key="env" value="5" />
+          <entry key="env" value="6" />
           <entry key="html" value="5" />
           <entry key="js" value="27" />
           <entry key="php" value="404" />
@@ -241,7 +239,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key=".env file" value="5" />
+          <entry key=".env file" value="6" />
           <entry key="Blade" value="184" />
           <entry key="CSS" value="11" />
           <entry key="HTML" value="5" />
@@ -260,11 +258,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/public/view-exam.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="196">
-              <caret line="186" column="109" lean-forward="true" selection-start-line="186" selection-start-column="109" selection-end-line="186" selection-end-column="109" />
+            <state relative-caret-position="204">
+              <caret line="57" lean-forward="true" selection-start-line="57" selection-end-line="57" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.env">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="204">
+              <caret line="12" column="26" selection-start-line="12" selection-start-column="26" selection-end-line="12" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -281,7 +288,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>whatsa</find>
       <find>faceb</find>
       <find>Arabic</find>
       <find>navbar</find>
@@ -311,6 +317,7 @@
       <find>Pop</find>
       <find>comment</find>
       <find>facebook</find>
+      <find>fb-share</find>
     </findStrings>
     <replaceStrings>
       <replace>panel.</replace>
@@ -385,7 +392,6 @@
         <option value="$PROJECT_DIR$/public/panel/bootstrap/js/bootstrap.min.js" />
         <option value="$PROJECT_DIR$/public/panel/login/vendor/jquery/jquery-3.2.1.min.js" />
         <option value="$PROJECT_DIR$/public/panel/login/vendor/select2/select2.js" />
-        <option value="$PROJECT_DIR$/.env" />
         <option value="$PROJECT_DIR$/resources/views/public/search.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/public/popular-exams.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/public/recent-exams.blade.php" />
@@ -393,6 +399,7 @@
         <option value="$PROJECT_DIR$/resources/lang/en/exam.php" />
         <option value="$PROJECT_DIR$/resources/lang/ar/exam.php" />
         <option value="$PROJECT_DIR$/resources/views/public/view-exam.blade.php" />
+        <option value="$PROJECT_DIR$/.env" />
       </list>
     </option>
   </component>
@@ -534,24 +541,6 @@
             <path>
               <item name="unitcp" type="b2602c69:ProjectViewProjectNode" />
               <item name="unitcp" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="unitcp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="unitcp" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="unitcp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="unitcp" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="unitcp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="unitcp" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -779,12 +768,12 @@
       <workItem from="1565808507901" duration="8043000" />
       <workItem from="1565848763402" duration="5348000" />
       <workItem from="1566023245854" duration="3464000" />
-      <workItem from="1566143420322" duration="1940000" />
+      <workItem from="1566143420322" duration="2919000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="910872000" />
+    <option name="totallyTimeSpent" value="911851000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -799,7 +788,7 @@
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.21558245" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21558245" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -1138,13 +1127,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.env">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="20" selection-start-line="14" selection-start-column="20" selection-end-line="14" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/public/Index.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="207">
@@ -1182,8 +1164,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/public/view-exam.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="186" column="109" lean-forward="true" selection-start-line="186" selection-start-column="109" selection-end-line="186" selection-end-column="109" />
+        <state relative-caret-position="204">
+          <caret line="57" lean-forward="true" selection-start-line="57" selection-end-line="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.env">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="26" selection-start-line="12" selection-start-column="26" selection-end-line="12" selection-end-column="26" />
         </state>
       </provider>
     </entry>
