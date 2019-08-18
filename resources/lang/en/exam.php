@@ -46,7 +46,7 @@ return [
     'Youre in good company'=>'You’re in good company',
     'about'=>'ABOUT OUR SITE',
     'aboutsite'=>'The site provides hosting service for your important study resources. So, you can all excel in your exams. You can find previous exams, lecture notes and many other resources. We wish you all success.',
-    'GetStratedforfree'=>'Get Strated for free',
+    'GetStrated'=>'Get Strated',
     'Comments'=>'Comments',
     'Show more comments'=>'Show more comments',
 

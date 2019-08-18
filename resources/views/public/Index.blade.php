@@ -182,7 +182,7 @@
                 <div class="col-md-6  section-padding wow fadeInLeft" data-wow-delay="0.6s">
                     <h2 class="text-uppercase ">@lang('exam.about') </h2>
                     <p>@lang('exam.aboutsite') </p>
-                    <a href="{{route('panel.login')}}" class="btn btn-primary btn-lg">@lang('exam.GetStratedforfree') </a>
+                    <a href="{{route('panel.login')}}" class="btn btn-primary btn-lg">@lang('exam.GetStrated') </a>
                     {{--<button type="button" class="btn btn-primary btn-lg">@lang('exam.GetStratedforfree') </button>--}}
 
                 </div>
