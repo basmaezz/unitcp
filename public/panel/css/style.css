@@ -3835,19 +3835,19 @@ small.text-muted {
 }
 
 .btn-primary {
-    background-color: #0077d3;
+    background-color: #1EA78D;
     border-color: #4857d0
 }
 
 caption button.btn-default {
-    background-color: #0077d3;
+    background-color: #003B51;
     border-color: #4857d0;
     margin-right: 5px;
     color: #FFF;
 }
 
 .btn-primary:hover, .btn-primary:active, .btn-primary.hover, caption button.btn-default:hover {
-    background-color: #6a79ee
+    background-color: #1EA78D;
 }
 
 .btn-success {
@@ -4396,7 +4396,7 @@ ul.plan-list li {
     padding: 6px 15px;
     margin-left: -1px;
     line-height: 1.42857143;
-    color: #337ab7;
+    color: #003B51;
     text-decoration: none;
     background-color: #fff;
     border: 1px solid #ddd;

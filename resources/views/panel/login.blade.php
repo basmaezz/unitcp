@@ -23,7 +23,11 @@
             </div>
 
             {!! Form::open(['method'=>'POST','url'=>route('panel.login'),'class'=>'login100-form validate-form']) !!}
-            <span class="login100-form-title">تسجيل الدخول</span>
+            <span class="login100-form-title">
+
+                تسجيل
+
+                <span class="login100-form-title-1">الدخول</span></span>
             @if(session()->has('response'))
                 <div class="alert alert-danger">
                     <span class="text-center" style="margin-left: 35px;">  {{session()->get('response')}} </span>
@@ -56,7 +60,8 @@
 
             <div class="container-login100-form-btn">
                 <button class="login100-form-btn">
-                    تسجيل الدخول
+                    تسجيل
+                 الدخول
                 </button>
             </div>
 

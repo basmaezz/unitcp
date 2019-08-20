@@ -167,7 +167,7 @@ class UserController extends Controller
                 }
 
               elseif ($item->active == 1) {
-                    $statuss = '<a  style="margin-right: 10px;background-color: #FA2A00;color:white"  href="' . admin_url('user/status/' . $item->id) . '"   class="btn btn-sm btn-success ">  <i style="margin-left:3px" class="fa  fa-trash-o"></i> نعطيل </a>';
+                    $statuss = '<a  style="margin-right: 10px;background-color: #F7C764;color:white"  href="' . admin_url('user/status/' . $item->id) . '"   class="btn btn-sm btn-success ">  <i style="margin-left:3px" class="fa  fa-trash-o"></i> نعطيل </a>';
                 } else {
                     $statuss = '<a  style="margin-right: 10px;background-color: #5cbdc1;color:white"  href="' . admin_url('user/status/' . $item->id) . '"   class="btn btn-sm btn-success ">  <i style="margin-left:3px" class="fa  fa-trash-o"></i> تفعيل </a>';
                 }
@@ -203,7 +203,7 @@ class UserController extends Controller
                 return get_date_from_timestamp($item->created_at);
             })->addColumn('action', function ($item) {
                 if ($item->active == 1) {
-                    $statuss = '<a  style="margin-right: 10px;background-color: #FA2A00;color:white"  href="' . admin_url('user/status/' . $item->id) . '"   class="btn btn-sm btn-success ">  <i style="margin-left:3px" class="fa  fa-trash-o"></i> نعطيل </a>';
+                    $statuss = '<a  style="margin-right: 10px;background-color: #F7C764;"  href="' . admin_url('user/status/' . $item->id) . '"   class="btn btn-sm btn-success ">  <i style="margin-left:3px ; " class="fa  fa-trash-o"></i> نعطيل </a>';
                 } else {
                     $statuss = '<a  style="margin-right: 10px;background-color: #5cbdc1;color:white"  href="' . admin_url('user/status/' . $item->id) . '"   class="btn btn-sm btn-success ">  <i style="margin-left:3px" class="fa  fa-trash-o"></i> تفعيل </a>';
                 }

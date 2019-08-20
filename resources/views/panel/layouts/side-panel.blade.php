@@ -28,7 +28,7 @@
             <li class="header">أقسام الموقع</li>
             <li class="{{is_active('dashboard')}}">
                 <a href="{{route('panel.dashboard')}}">
-                    <i class="icon-home"></i>
+                    <i class="icon-home"style="color: #1DA28A; "></i>
                     <span>الصفحة الرئيسية</span>
                 </a>
             </li>
@@ -37,7 +37,7 @@
             @admin
             <li class="treeview {{is_element_active('/service/i')}}">
                 <a href="#">
-                    <i class="ti-bar-chart-alt"></i>
+                    <i class="ti-bar-chart-alt" style="color: #1DA28A; "></i>
                     <span>الاعدادات</span>
                     <span class="pull-right-container"> <i class="fa fa-angle-left pull-right"></i> </span>
                 </a>
@@ -48,7 +48,7 @@
 
             <li class=" treeview {{ request()->segment(2) == 'user'?'active':''}}">
                 <a href="#">
-                    <i class="ti-layout-list-post"></i>
+                    <i class="ti-layout-list-post"style="color: #1DA28A; "></i>
                     <span>مديرى النظام</span>
                     <span class="pull-right-container"> <i class="fa fa-angle-left pull-right"></i> </span>
                 </a>
@@ -64,7 +64,7 @@
 
             <li class="treeview {{ request()->segment(2) == 'student'?'active':''}}">
                 <a href="#">
-                    <i class="ti-layout-list-post"></i>
+                    <i class="ti-layout-list-post"style="color: #1DA28A; "></i>
                     <span>الطلاب</span>
                     <span class="pull-right-container"> <i class="fa fa-angle-left pull-right"></i> </span>
                 </a>
@@ -81,7 +81,7 @@
 
             <li class="treeview {{ request()->segment(2) == 'faculty'?'active':''}}">
                 <a href="#">
-                    <i class="ti-bar-chart-alt"></i>
+                    <i class="ti-bar-chart-alt"style="color: #1DA28A; "></i>
                     <span>الكليات</span>
                     <span class="pull-right-container"> <i class="fa fa-angle-left pull-right"></i> </span>
                 </a>
@@ -97,7 +97,7 @@
 
             <li class="treeview {{ request()->segment(2) == 'classes'?'active':''}}">
                 <a href="#">
-                    <i class="ti-gallery"></i>
+                    <i class="ti-gallery" style="color: #1DA28A; "></i>
                     <span>الفرق الدراسيه</span>
                     <span class="pull-right-container"> <i class="fa fa-angle-left pull-right"></i> </span>
                 </a>
@@ -109,9 +109,9 @@
 
 
 
-            <li class="treeview {{ request()->segment(2) == 'semester'?'active':''}}">
+            <li class="treeview {{ request()->segment(2) == 'semester'?'active':''}}"style="color: #1DA28A; ">
                 <a href="#">
-                    <i class="ti-gallery"></i>
+                    <i class="ti-gallery"style="color: #1DA28A; "></i>
                     <span>الفصول الدراسيه</span>
                     <span class="pull-right-container"> <i class="fa fa-angle-left pull-right"></i> </span>
                 </a>
@@ -121,9 +121,9 @@
                 </ul>
             </li>
 
-            <li class="treeview {{ request()->segment(2) == 'department'?'active':''}}">
+            <li class="treeview {{ request()->segment(2) == 'department'?'active':''}}"style="color: #1DA28A; ">
                 <a href="#">
-                    <i class="ti-bar-chart-alt"></i>
+                    <i class="ti-bar-chart-alt"style="color: #1DA28A; "></i>
                     <span>الأقسام</span>
                     <span class="pull-right-container"> <i class="fa fa-angle-left pull-right"></i> </span>
                 </a>
@@ -134,9 +134,9 @@
             </li>
 
 
-            <li class="treeview {{ request()->segment(2) == 'material'?'active':''}}">
+            <li class="treeview {{ request()->segment(2) == 'material'?'active':''}}"style="color: #1DA28A; ">
                 <a href="#">
-                    <i class="ti-bar-chart-alt"></i>
+                    <i class="ti-bar-chart-alt"style="color: #1DA28A; "></i>
                     <span>المواد الدراسيه</span>
                     <span class="pull-right-container"> <i class="fa fa-angle-left pull-right"></i> </span>
                 </a>
@@ -147,9 +147,9 @@
             </li>
 
 
-            <li class="treeview {{ request()->segment(2) == 'exam'?'active':''}}">
+            <li class="treeview {{ request()->segment(2) == 'exam'?'active':''}}"style="color: #1DA28A; ">
                 <a href="#">
-                    <i class="ti-bar-chart-alt"></i>
+                    <i class="ti-bar-chart-alt"style="color: #1DA28A; "></i>
                     <span>مستودع الأمتحانات</span>
                     <span class="pull-right-container"> <i class="fa fa-angle-left pull-right"></i> </span>
                 </a>
@@ -160,21 +160,11 @@
                 </ul>
             </li>
 
-            {{--<li class="treeview {{is_element_active('/service/i')}}">--}}
-                {{--<a href="#">--}}
-                    {{--<i class="ti-bar-chart-alt"></i>--}}
-                    {{--<span>التاجات</span>--}}
-                    {{--<span class="pull-right-container"> <i class="fa fa-angle-left pull-right"></i> </span>--}}
-                {{--</a>--}}
-                {{--<ul class="treeview-menu">--}}
-                    {{--<li class="{{is_active('tag/main')}}"><a href=" {{route('panel.tag.create')}}"><i class="fa fa-angle-left"></i> اضافه جديد </a></li>--}}
-                    {{--<li class="{{is_active('tag/main')}}"><a href="{{route('panel.tag.all')}} "><i class="fa fa-angle-left"></i> عرض الكل </a></li>--}}
-                {{--</ul>--}}
-            {{--</li>--}}
 
-            <li class="treeview {{ request()->segment(2) == 'log'?'active':''}}">
+
+            <li class="treeview {{ request()->segment(2) == 'log'?'active':''}}"style="color: #1DA28A; ">
                 <a href="#">
-                    <i class="ti-bar-chart-alt"></i>
+                    <i class="ti-bar-chart-alt"style="color: #1DA28A; "></i>
                     <span>السجلات</span>
                     <span class="pull-right-container"> <i class="fa fa-angle-left pull-right"></i> </span>
                 </a>
@@ -184,17 +174,7 @@
             </li>
 
 
-            {{--<li class="treeview {{is_element_active('/album/i')}}">--}}
-                {{--<a href="#">--}}
-                    {{--<i class="ti-gallery"></i>--}}
-                    {{--<span>مستودع الامتحانات الرقميه</span>--}}
-                    {{--<span class="pull-right-container"> <i class="fa fa-angle-left pull-right"></i> </span>--}}
-                {{--</a>--}}
-                {{--<ul class="treeview-menu">--}}
-                    {{--<li class="{{is_active('main')}}"><a href=""><i class="fa fa-angle-left"></i> الرئيسيه </a></li>--}}
-                    {{--<li class="{{is_active('material/create')}}"><a href=""><i class="fa fa-angle-left"></i> إضافة جديد </a></li>--}}
-                    {{--<li class="{{is_active('service/all')}}"><a href=" "><i class="fa fa-angle-left"></i> عرض الكل </a></li>--}}
-                {{--</ul>--}}
+
 
             {{--</li>--}}
         </ul>

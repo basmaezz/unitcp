@@ -6,9 +6,9 @@
 
         <div class="row">
             @if(Auth::user()->permission==1)
-            <div class="col-lg-4 col-md-6 m-b-3">
-                <div class="widget-info bg-primary">
-                    <div class="card-body">
+            <div class="col-lg-4 col-md-6 m-b-3" >
+                <div class="widget-info bg-primary" >
+                    <div class="card-body" style="background-color: #003B51">
                         <div class="row">
                             <div class="col-md-6 text-white">
                                 <p>عدد الكليات </p>
@@ -56,7 +56,7 @@
                 <div class="info-box">
                     <div class="col-12">
                         <h5>أحدث الأمتحانات المرفوعه</h5>
-                        <div class="row m-t-6 m-b-6">
+                        <div class="row m-t-6 m-b-6" >
                             @foreach($latest as $key => $last)
 
                                 <div class="col-md-9">
@@ -64,10 +64,14 @@
                                             {{ getFullNamearray($last->faculty_id, $last->class_id, $last->material_id, $last->semester_id, $last->year_id) }}</h6></td>
 
                                 </div><br>
-                                <div class="col-md-3">
-                                    <a title="Download" href="{{ url('storage/faculty/exams/'.$last->faculty_id ."/".$last->department_id."/".
+                                <div class="col-md-3"  >
+                                    <a title="Download" style="background-color: #003B51; margin-bottom: 10px;"
+                                       href="{{ url('storage/faculty/exams/'.$last->faculty_id ."/".$last->department_id."/".
                             $last->class_id ."/".$last->semester_id ."/".$last->material_id ."/".$last->year_id ."/".$last->files($last->file)) }}" target="_blank" style="margin-right: 9px;
-    height: 42px; margin-bottom: 6px; " data-id="{{ $last->id }}"  class="btn btn-primary download" > تحميل </a>
+    height: 42px; margin-bottom: 6px; " data-id="{{ $last->id }}"  class="btn btn-primary download"   >
+
+                                       تحميل
+                                    </a>
 
                                 </div>
                             @endforeach
@@ -104,41 +108,23 @@
                     <div class="card-body">
                         <div class="m-b-3 font-weight-bold">
                             <h5>عدد الزائرين
-                                <button type="button" class="btn btn-sm btn-rounded btn-info pull-left">{{$visitor}}</button>
+                                <button type="button" class="btn btn-sm btn-rounded btn-info pull-left" style="background-color: #003B51">{{$visitor}}</button>
                             </h5>
 
 
                         </div>
                         <div class="m-b-3 font-weight-bold">
                             <h5> <a href="{{route('users.online')}}"> عدد المتواجدين حاليا</a>
-                                <button type="button" class="btn btn-sm btn-rounded btn-info pull-left">{{$users}}</button>
+                                <button type="button" class="btn btn-sm btn-rounded btn-info pull-left" style="background-color: #003B51">{{$users}}</button>
                             </h5>
 
 
                         </div>
 
 
-                        {{--<div class="m-b-2 f-25">09.5% <i class="ti-bar-chart pull-right f-30"></i> </div>--}}
-                        {{--<div><i class="f-20 ti-upload text-aqua"></i> 35% Increase in 30 Days</div>--}}
                     </div>
                 </div>
-                {{--<div class="card bg-info m-b-3">--}}
-                    {{--<div class="card-body text-white">--}}
-                        {{--<div class="m-b-1 font-weight-500">--}}
-                            {{--<h5><span class="text-white">This Year Income</span>--}}
-                                {{--<button type="button" class="btn btn-sm btn-rounded btn-danger pull-right">View more</button>--}}
-                            {{--</h5>--}}
-                        {{--</div>--}}
-                        {{--<div class="f-40 font-weight-500">$58,869</div>--}}
-                        {{--<div class="m-t-1"><span id="spa-pie-1" class="m-t-3 pull-right"></span> <span class="f-13">New Orders</span>--}}
-                            {{--<h3>$32,535</h3>--}}
-                            {{--<span class="f-13">Online Revenue</span>--}}
-                            {{--<h3>$ 26,334</h3>--}}
-                            {{--<span class="f-13">Total Profit</span>--}}
-                            {{--<h3>$ 58,869</h3>--}}
-                        {{--</div>--}}
-                    {{--</div>--}}
-                {{--</div>--}}
+
             </div>
         </div>
         <!-- /.row -->
@@ -168,70 +154,7 @@
                 </div>
             </div>
             @endif
-            {{--<div class="col-lg-7">--}}
-                {{--<div class="card">--}}
-                    {{--<div class="card-body">--}}
-                        {{--<h5>Recent Chats <span class="pull-left f-13"><a href="#">View All</a></span></h5>--}}
-                        {{--<div class="box-body">--}}
-                            {{--<!-- Conversations are loaded here -->--}}
-                            {{--<div class="direct-chat-messages" style="height:377px;">--}}
-                                {{--<div class="direct-chat-msg">--}}
-                                    {{--<div class="direct-chat-info clearfix"> <span class="direct-chat-name pull-left">Alexander Pierceeeeeeeeeee</span> <span class="direct-chat-timestamp pull-right">23 Jan 2:00 pm</span> </div>--}}
-                                    {{--<img class="direct-chat-img" src="/panel/img/img2.jpg" alt="user image">--}}
-                                    {{--<div class="direct-chat-text"> A small river named Duden flows by their place and supplies it with the necessary. </div>--}}
-                                {{--</div>--}}
-                                {{--<div class="direct-chat-msg right">--}}
-                                    {{--<div class="direct-chat-info clearfix"> <span class="direct-chat-name pull-right">Sarah Bullock</span> <span class="direct-chat-timestamp pull-left">23 Jan 2:05 pm</span> </div>--}}
-                                    {{--<img class="direct-chat-img" src="/panel/img/img3.jpg" alt="user image">--}}
-                                    {{--<!-- /.direct-chat-img -->--}}
-                                    {{--<div class="direct-chat-text"> You better believe it! </div>--}}
-                                {{--</div>--}}
-                                {{--<div class="direct-chat-msg">--}}
-                                    {{--<div class="direct-chat-info clearfix"> <span class="direct-chat-name pull-left">Alexander Pierce</span> <span class="direct-chat-timestamp pull-right">23 Jan 5:37 pm</span> </div>--}}
-                                    {{--<img class="direct-chat-img" src="/panel/img/img4.jpg" alt="user image">--}}
-                                    {{--<div class="direct-chat-text"> A small river named Duden flows by their place and supplies it with the necessary. </div>--}}
-                                {{--</div>--}}
-                                {{--<div class="direct-chat-msg right">--}}
-                                    {{--<div class="direct-chat-info clearfix"> <span class="direct-chat-name pull-right">Sarah Bullock</span> <span class="direct-chat-timestamp pull-left">23 Jan 6:10 pm</span> </div>--}}
-                                    {{--<img class="direct-chat-img" src="/panel/img/img5.jpg" alt="user image">--}}
-                                    {{--<div class="direct-chat-text"> I would love to. </div>--}}
-                                {{--</div>--}}
-                                {{--<div class="direct-chat-msg">--}}
-                                    {{--<div class="direct-chat-info clearfix"> <span class="direct-chat-name pull-left">Alexander Pierce</span> <span class="direct-chat-timestamp pull-right">23 Jan 2:00 pm</span> </div>--}}
-                                    {{--<img class="direct-chat-img" src="/panel/img/img6.jpg" alt="user image">--}}
-                                    {{--<div class="direct-chat-text"> A small river named Duden flows by their place and supplies it with the necessary. </div>--}}
-                                {{--</div>--}}
-                                {{--<div class="direct-chat-msg right">--}}
-                                    {{--<div class="direct-chat-info clearfix"> <span class="direct-chat-name pull-right">Sarah Bullock</span> <span class="direct-chat-timestamp pull-left">23 Jan 2:05 pm</span> </div>--}}
-                                    {{--<img class="direct-chat-img" src="/panel/img/img3.jpg" alt="user image">--}}
-                                    {{--<!-- /.direct-chat-img -->--}}
-                                    {{--<div class="direct-chat-text"> You better believe it! </div>--}}
-                                {{--</div>--}}
-                                {{--<div class="direct-chat-msg">--}}
-                                    {{--<div class="direct-chat-info clearfix"> <span class="direct-chat-name pull-left">Alexander Pierce</span> <span class="direct-chat-timestamp pull-right">23 Jan 2:00 pm</span> </div>--}}
-                                    {{--<img class="direct-chat-img" src="/panel/img/img6.jpg" alt="user image">--}}
-                                    {{--<div class="direct-chat-text"> A small river named Duden flows by their place and supplies it with the necessary. </div>--}}
-                                {{--</div>--}}
-                                {{--<div class="direct-chat-msg right">--}}
-                                    {{--<div class="direct-chat-info clearfix"> <span class="direct-chat-name pull-right">Sarah Bullock</span> <span class="direct-chat-timestamp pull-left">23 Jan 2:05 pm</span> </div>--}}
-                                    {{--<img class="direct-chat-img" src="/panel/img/img3.jpg" alt="user image">--}}
-                                    {{--<!-- /.direct-chat-img -->--}}
-                                    {{--<div class="direct-chat-text"> You better believe it! </div>--}}
-                                {{--</div>--}}
-                            {{--</div>--}}
-                        {{--</div>--}}
-                        {{--<div class="box-footer">--}}
-                            {{--<form action="#" method="post">--}}
-                                {{--<div class="input-group">--}}
-                                    {{--<input name="message" placeholder="Type Message ..." class="form-control" type="text">--}}
-                                    {{--<span class="input-group-btn">--}}
-                    {{--<button type="button" class="btn btn-warning btn-flat">Send</button>--}}
-                    {{--</span> </div>--}}
-                            {{--</form>--}}
-                        {{--</div>--}}
-                    {{--</div>--}}
-                {{--</div>--}}
-            {{--</div>--}}
+
         </div>
         <!-- /.row -->
     </div>
