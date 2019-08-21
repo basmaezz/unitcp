@@ -30,7 +30,7 @@
                             {{--<th width="15%">الحاله </th>--}}
                             <th width="15%">الكليه </th>
                             <th width="15%">تاريخ الإضافة</th>
-                            <th width="25%">#</th>
+                            <th width="25%">خيارات</th>
 
                         </tr>
                         </thead>

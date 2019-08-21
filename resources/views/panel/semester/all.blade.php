@@ -28,7 +28,7 @@
                             <th width="15%">الاسم En </th>
                             <th width="15%">الكليه </th>
                             <th width="15%">تاريخ الإضافة</th>
-                            <th width="25%">#</th>
+                            <th width="25%">خيارات</th>
 
                         </tr>
                         </thead>

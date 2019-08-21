@@ -36,7 +36,7 @@
                             <th class="text-center" width="10%">الفاعليه</th>
                             {{--<th class="text-center" width="20%">تاريخ الإضافة</th>--}}
                             <th class="text-center" width="20%">عدد الأمتحانات</th>
-                            <th class="text-center" width="20%"></th>
+                            <th class="text-center" width="20%">خيارات</th>
                         </tr>
                         </thead>
 
