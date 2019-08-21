@@ -19,7 +19,7 @@
                     @endif
                     <table id="user-table" class="table table-bordered table-hover" data-name="cool-table">
                         <caption class="bottom">
-                            <a  title="Edit" style="margin-right: 10px"  href="{{route('panel.users.create')}}"  class="btn btn-primary" > <i class="fa fa-plus icon-btn-margin"></i> اضافه جديد </a>
+                            <a  title="Edit" style="margin-right: 10px"  href="{{route('panel.students.createstudent')}}"  class="btn btn-primary" > <i class="fa fa-plus icon-btn-margin"></i> اضافه جديد </a>
 
                         </caption>
                         <thead>

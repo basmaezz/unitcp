@@ -3,21 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="5ecc8cb6-2745-43c6-a27c-4295447f35de" name="Default" comment="Like,Dislike Count">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/panel/classes/all.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/panel/classes/all.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/panel/department/all.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/panel/department/all.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/panel/faculty/all.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/panel/faculty/all.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/panel/material/all.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/panel/material/all.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/panel/semester/all.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/panel/semester/all.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/panel/students/all.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/panel/students/all.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/panel/template/about.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/panel/template/contribute.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/panel/template/course.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/panel/template/donation.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/panel/template/faq.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/panel/template/settings.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/panel/template/slider.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/panel/template/social.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/panel/users/all.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/panel/users/all.blade.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -273,20 +259,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="home.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/panel/home.blade.php">
+      <file leaf-file-name="side-panel.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/panel/layouts/side-panel.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="67" column="103" selection-start-line="67" selection-start-column="103" selection-end-line="67" selection-end-column="103" />
+            <state relative-caret-position="459">
+              <caret line="72" column="82" selection-start-line="72" selection-start-column="82" selection-end-line="72" selection-end-column="110" />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="all.blade.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/resources/views/panel/users/all.blade.php">
+        <entry file="file://$PROJECT_DIR$/resources/views/panel/students/all.blade.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="391">
-              <caret line="32" column="50" selection-start-line="32" selection-start-column="50" selection-end-line="32" selection-end-column="50" />
+              <caret line="29" column="64" lean-forward="true" selection-start-line="29" selection-start-column="64" selection-end-line="29" selection-end-column="64" />
             </state>
           </provider>
         </entry>
@@ -303,7 +289,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>download</find>
       <find>search</find>
       <find>preloader</find>
       <find>login</find>
@@ -333,6 +318,7 @@
       <find>ACTIV</find>
       <find>.pagination &gt; li.active a</find>
       <find>تعطيل</find>
+      <find>students</find>
     </findStrings>
     <replaceStrings>
       <replace>panel.</replace>
@@ -407,14 +393,14 @@
         <option value="$PROJECT_DIR$/public/panel/css/style.css" />
         <option value="$PROJECT_DIR$/public/panel/plugins/datatables/css/dataTables.bootstrap.min.css" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Panel/UserController.php" />
-        <option value="$PROJECT_DIR$/resources/views/panel/layouts/side-panel.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/panel/students/all.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/panel/classes/all.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/panel/department/all.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/panel/faculty/all.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/panel/material/all.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/panel/semester/all.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/panel/users/all.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/panel/students/all.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/panel/layouts/side-panel.blade.php" />
       </list>
     </option>
   </component>
@@ -577,7 +563,7 @@
               <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="panel" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="users" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="students" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
           </expand>
           <select />
@@ -809,12 +795,12 @@
       <workItem from="1566143420322" duration="4105000" />
       <workItem from="1566121485650" duration="107000" />
       <workItem from="1566325083732" duration="6659000" />
-      <workItem from="1566409181600" duration="1419000" />
+      <workItem from="1566409181600" duration="2164000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="921222000" />
+    <option name="totallyTimeSpent" value="921967000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -829,7 +815,7 @@
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21522693" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.21522693" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.77124184" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50378215" side_tool="true" weight="0.4003268" />
@@ -1177,13 +1163,6 @@
     <entry file="file://$PROJECT_DIR$/resources/views/panel/public/all.blade.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/panel/layouts/side-panel.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="51" column="45" lean-forward="true" selection-start-line="51" selection-start-column="45" selection-end-line="51" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/panel/semester/all.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
@@ -1198,9 +1177,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/panel/students/all.blade.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/panel/users/all.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
+        <state relative-caret-position="391">
           <caret line="32" column="50" selection-start-line="32" selection-start-column="50" selection-end-line="32" selection-end-column="50" />
         </state>
       </provider>
@@ -1212,10 +1191,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/panel/users/all.blade.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/panel/layouts/side-panel.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="72" column="82" selection-start-line="72" selection-start-column="82" selection-end-line="72" selection-end-column="110" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/panel/students/all.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
-          <caret line="32" column="50" selection-start-line="32" selection-start-column="50" selection-end-line="32" selection-end-column="50" />
+          <caret line="29" column="64" lean-forward="true" selection-start-line="29" selection-start-column="64" selection-end-line="29" selection-end-column="64" />
         </state>
       </provider>
     </entry>
