@@ -560,11 +560,13 @@ b {
 }
 
 .content-header {
+
     position: relative;
     padding: 15px 15px 0 15px
 }
 
 .content-header.sty-one {
+
     position: relative;
     padding: 20px 15px 15px 15px;
     box-shadow: 1px 0px 20px rgba(0, 0, 0, 0.08);
@@ -594,12 +596,12 @@ b {
 }
 
 .content-header > .breadcrumb {
-    float: left;
+    float: right !important;
     background: transparent;
     margin-top: 0;
     margin-bottom: 0;
     font-size: 12px;
-    padding: 7px 5px;
+    padding: 0px 16px;
     position: absolute;
     top: 15px;
     left: 10px;

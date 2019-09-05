@@ -13,7 +13,7 @@
                             <div class="col-md-6 text-white">
                                 <p>عدد الكليات </p>
                                 <h2 class="font-weight-bold">{{$faculty}}</h2>
-                                <a href="{{route('panel.faculty.all')}}">View more</a> </div>
+                                <a href="{{route('panel.faculty.all')}}">المزيد</a> </div>
                             <div class="col-md-6 m-t-2 text-right"> <span id="spa-bar"></span> </div>
                         </div>
                     </div>
@@ -26,7 +26,7 @@
                             <div class="col-md-6 text-white">
                                 <p>عدد المستخدمين </p>
                                 <h2 class="font-weight-bold">{{$user}}</h2>
-                                <a href="{{route('panel.users.all')}}">View more</a> </div>
+                                <a href="{{route('panel.users.all')}}">المزيد</a> </div>
                             <div class="col-md-6 m-t-2 text-right"> <span id="spa-line"></span> </div>
                         </div>
                     </div>
@@ -40,7 +40,7 @@
                             <div class="col-md-6 text-white">
                                 <p>عدد الامتحانات </p>
                                 <h2 class="font-weight-bold">{{$exam}}</h2>
-                                <a href="{{route('panel.exam.all')}}">View more</a> </div>
+                                <a href="{{route('panel.exam.all')}}">المزيد</a> </div>
                             <div class="col-md-6 m-t-2 text-right"> <span id="spa-pie"></span> </div>
                         </div>
                     </div>
@@ -81,41 +81,20 @@
                 </div>
             </div>
 
-            {{--<div class="col-lg-8">--}}
-                {{--<div class="info-box">--}}
-                    {{--<div class="col-12">--}}
-                        {{--<h5></h5>--}}
-                        {{--<div class="row m-t-2 m-b-2">--}}
-                            {{--<div class="col-md-6">--}}
-                                {{--<h4>اخر الأنشطه </h4>--}}
-                                {{--<p>Total </p>--}}
-                            {{--</div>--}}
-                            {{--<div class="col-md-3">--}}
-                                {{--<h6 class="text-blue font-weight-bold">Organic Traffic</h6>--}}
-                                {{--<p class="f-13">+ 40% this month</p>--}}
-                            {{--</div>--}}
-                            {{--<div class="col-md-3">--}}
-                                {{--<h6 class="text-green font-weight-bold">Page Views</h6>--}}
-                                {{--<p class="f-13">+ 25% this month</p>--}}
-                            {{--</div>--}}
-                        {{--</div>--}}
-                    {{--</div>--}}
-                    {{--<div id="earning"></div>--}}
-                {{--</div>--}}
-            {{--</div>--}}
+
             <div class="col-lg-4">
                 <div class="card m-b-3">
                     <div class="card-body">
                         <div class="m-b-3 font-weight-bold">
                             <h5>عدد الزائرين
-                                <button type="button" class="btn btn-sm btn-rounded btn-info pull-left" style="background-color: #003B51">{{$visitor}}</button>
+                                <button type="button" class="btn btn-sm btn-rounded btn-info pull-left" style="background-color: #003B51;cursor: default;">{{$visitor}}</button>
                             </h5>
 
 
                         </div>
                         <div class="m-b-3 font-weight-bold">
                             <h5> <a href="{{route('users.online')}}"> عدد المتواجدين حاليا</a>
-                                <button type="button" class="btn btn-sm btn-rounded btn-info pull-left" style="background-color: #003B51">{{$users}}</button>
+                                <button type="button" class="btn btn-sm btn-rounded btn-info pull-left" style="background-color: #003B51;cursor: default;">{{$users}}</button>
                             </h5>
 
 
@@ -133,7 +112,7 @@
             <div class="col-lg-5 m-b-3">
                 <div class="card">
                     <div class="card-body">
-                        <h5>اخر الأنشطه <span class="pull-left f-13"><a href="{{route('panel.log.all')}}">View All</a></span></h5>
+                        <h5>اخر الأنشطه <span class="pull-left f-13"><a href="{{route('panel.log.all')}}">المزيد</a></span></h5>
                         <div class="message-widget">
                             @foreach($logs as $key => $logs)
                             <a href="#">

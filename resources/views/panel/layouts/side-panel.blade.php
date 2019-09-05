@@ -9,7 +9,7 @@
             <div class="image text-center"><img src="{{url('uploads/users/profiles/'.$admin->img)}}" class="img-circle" alt="User Image"></div>
             <div class="info">
                 <p>{{$admin->username}}</p>
-                <a href="#"><i class="fa fa-envelope"></i></a>
+
                 <a href="{{route('panel.users.profile',auth()->id())}}"><i class="fa fa-gear"></i></a>
                 {{--<a href=""><i class="fa fa-power-off"></i></a>--}}
 
@@ -25,7 +25,7 @@
 
         <!-- sidebar menu -->
         <ul class="sidebar-menu" data-widget="tree">
-            <li class="header">أقسام الموقع</li>
+
             <li class="{{is_active('dashboard')}}">
                 <a href="{{route('panel.dashboard')}}">
                     <i class="icon-home"style="color: #1DA28A; "></i>
@@ -35,14 +35,14 @@
 
 
             @admin
-            <li class="treeview {{is_element_active('/service/i')}}">
+            <li class="treeview {{ request()->segment(2) == 'settings'?'active':''}}"">
                 <a href="#">
                     <i class="ti-bar-chart-alt" style="color: #1DA28A; "></i>
                     <span>الاعدادات</span>
                     <span class="pull-right-container"> <i class="fa fa-angle-left pull-right"></i> </span>
                 </a>
                 <ul class="treeview-menu">
-                    <li class="{{is_active('service/create')}}"><a href="{{route('stopupload')}}"><i class="fa fa-angle-left"></i> إلاعدادات </a></li>
+                    <li class="{{is_active('service/create')}}"><a href="{{route('stopupload')}}"><i class="fa fa-angle-left"></i> إعدادات الموقع </a></li>
                 </ul>
             </li>
 

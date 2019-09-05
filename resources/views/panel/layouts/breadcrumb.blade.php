@@ -1,5 +1,5 @@
 <div class="content-header sty-one">
-    <ol class="breadcrumb">
+    <ol class="breadcrumb" >
         @php
             $breadcrumb_array =  (isset($breadcrumb_array)) ? $breadcrumb_array : [];
         @endphp
@@ -10,8 +10,9 @@
                 <li><i class="fa fa-angle-right"></i> <a href="{{$item['link']}}"> {{$item['name']}} </a> </li>
             @endif
         @endforeach
-        <li><i class="fa fa-angle-right"></i> الصفحة الرئيسية</li>
+        {{--<li ><i class="fa fa-angle-right"></i> الصفحة الرئيسية</li>--}}
+
     </ol>
-    <h1>لوحة التحكم</h1>
+    {{--<h1>لوحة التحكم</h1>--}}
 
 </div>

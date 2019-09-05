@@ -1,10 +1,10 @@
-{{--@php--}}
-    {{--$breadcrumb_array = [];--}}
-    {{--array_push($breadcrumb_array,collect(['is_last'=>true,'name'=>'أضف جديد ','link'=> '#']));--}}
-    {{--array_push($breadcrumb_array,collect(['is_last'=>false,'name'=>'الطلاب','link'=> route('panel.students.all')]));--}}
-{{--@endphp--}}
+@php
+    $breadcrumb_array = [];
+    array_push($breadcrumb_array,collect(['is_last'=>true,'name'=>$student->name,'link'=> '#']));
+    array_push($breadcrumb_array,collect(['is_last'=>true,'name'=>'مديرى النظام','link'=> ('panel.students.all')]));
+@endphp
 
-@extends('panel.layouts.index',['sub_title'=>'إضافة طالب جديد' ])
+@extends('panel.layouts.index',['sub_title'=>'تعديل بيانات ' ,'breadcrumb_array'=> $breadcrumb_array])
 @section('main')
     @push('panel_css')
         {!! HTML::style('panel/css/jasny-bootstrap.min.css') !!}
@@ -12,33 +12,33 @@
     @endpush
 
     <div class="content">
-        {!! Form::open(['id'=>'form','method'=>'POST','url'=>route('panel.users.create'),'to'=>route('panel.students.all'),'enctype'=>('multipart/form-data')]) !!}
+        {!! Form::open(['id'=>'form','method'=>'PUT','url'=>route('panel.students.edit',['id'=>$student->id]),'to'=>route('panel.students.all'),'enctype'=>('multipart/form-data')]) !!}
+
         <div class="row">
             <div class="col-md-8">
                 {{--<input type="hidden" id="photo" name="image" value="{{$post->image}}">--}}
                 <div class="card">
                     <div class="card-body">
 
-
                         <fieldset class="form-group">
                             <label>اسم الطالب</label>
-                            <input class="form-control"  type="text" name="name" placeholder="الرجاء إدخال الأسم"  value="" >
+                            <input class="form-control"  type="text" name="name"   value="" required>
                         </fieldset>
 
                         <fieldset class="form-group">
                             <label>اسم المستخدم</label>
-                            <input class="form-control"  type="text" name="username" id="username"  placeholder="الرجاء إدخال اسم المستخدم"  value="" >
+                            <input class="form-control"  type="text" name="username" value="" required>
                         </fieldset>
 
 
                         <fieldset class="form-group">
                             <label>البريد الألكترونى</label>
-                            <input class="form-control"  type="text" name="email" placeholder="الرجاء ادخال البريد الالكترونى"  value="" >
+                            <input class="form-control"  type="text" name="email" value="" required>
                         </fieldset>
 
                         <fieldset class="form-group">
                             <label>كلمه المرور</label>
-                            <input class="form-control"  type="password" name="password" id="password" placeholder="الرجاء إدخال كله المرور"  value="">
+                            <input class="form-control"  type="password" name="password" value="" required>
                         </fieldset>
 
 
@@ -48,7 +48,7 @@
 
                         <fieldset class="form-group  " id="sub-admin" >
                             <label>اختر الكليه </label>
-                            <select class="form-control "  name="faculty_id" data-placeholder="إختيار الكليه" >
+                            <select class="form-control "  name="faculty_id" data-placeholder="إختيار الكليه" required>
                                 <option disabled selected >إختيار الكليه</option>
                                 @if(isset($items) && $items->count() > 0)
                                     @foreach($items as $item)
@@ -71,8 +71,10 @@
 
                         <fieldset class="form-group">
                             <label>الصوره الشخصيه</label>
-                            <input class="form-control"  type="file" name="img" placeholder="اختر الملف" value="اختر الصوره">
+                            <input class="form-control"  type="file" name="img">
                         </fieldset>
+
+
                     </div>
                 </div>
             </div>
@@ -104,38 +106,6 @@
         {!! HTML::script('panel/js/jasny.js') !!}
         {!! HTML::script('panel/plugins/summernote/summernote-bs4.js') !!}
         {!! HTML::script('/panel/js/post.js') !!}
-
-        <script>
-            $(document).ready(function() {
-
-                $('#radio-user').change(function() {
-                    $('#sub-admin').removeClass('hidden');
-                });
-                $('#radio-student').change(function() {
-                    $('#sub-admin').removeClass('hidden');
-                });
-                $('#radio-admin').change(function() {
-                    $('#sub-admin').addClass('hidden');
-                });
-
-            });
-
-        </script>
-
-
-        <script>
-            $(document).ready(function() {
-                var username = document.getElementById('username');
-                var password = document.getElementById('password');
-
-                username.value = 'الرجاء إدخال اسم المستخدم';
-                password.value = '';
-
-
-            });
-        </script>
-
-
 
 
     @endpush

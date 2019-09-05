@@ -26,9 +26,11 @@ class CreateUser extends FormRequest
         return [
 
             'name'=> 'required',
-            'username'=> 'required',
+             'username'=> 'required',
             'password'=>'required',
             'email'=>'required',
+            'active'=>'required',
+            'faculty_id'=>'required',
 
 
 

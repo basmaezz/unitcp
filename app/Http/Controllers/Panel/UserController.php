@@ -63,17 +63,10 @@ class UserController extends Controller
 
             $user->permission = 3;
         }
-//        $request->faculty_id ? $user->permission = 2 : $user->permission = 1;
         $user->save();
-//        flash('Success')->success();
-//        return view('panel.users.all')->with('success','Item created successfully!');
-//        return redirect()->route('panel.users.all');
-//        return (isset($user)) ? view('panel.users.all'););
 
-//        return (isset($user)) ? redirect()->route('panel.users.all') : $this->response_api(false, 'حدث خطأ غير متوقع');
         return (isset($user)) ? $this->response_api(true, 'تمت عمليه الاضافه بنجاح') : $this->response_api(false, 'حدث خطأ غير متوقع');
 
-//        return (isset($user) ? view('panel.users.all') : redirect()->route(get_current_locale() . '.panel.dashboard'));
     }
 
     public function edit($id)
@@ -92,8 +85,6 @@ class UserController extends Controller
         $user->email=$request->email;
         $user->password = bcrypt($request->password);
         $user->active=$request->active;
-
-
 
         if(!empty($request->repeat_pw)){
             $user->password = bcrypt($request->repeat_pw);
@@ -140,18 +131,13 @@ class UserController extends Controller
             return DataTables::of($items)->editColumn('id', function ($item) {
                 return $item->id;
             })->
-//            addColumn('active', function ($item) {
-////                return '<div class="row"> test</div>';
-//
-//                return ($item->active == 1) ? 'مفعل' : 'غير مفعل';//Done what it the problem?
-//
-//            })->
+
             editColumn('faculty_id', function ($item) {
                 if(!empty($item->faculty))
                 {
                     return ($item['faculty']->name_ar);
                 } else {
-                    return 'admin';
+                    return 'مدير نظام';
                 }
 
             })->editColumn('created_at', function ($item) {
@@ -289,5 +275,8 @@ class UserController extends Controller
     }
 
 
+    public function editstudent(){
+        
+    }
 
 }
