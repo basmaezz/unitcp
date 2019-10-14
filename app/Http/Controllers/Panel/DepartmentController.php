@@ -11,7 +11,6 @@ use Yajra\DataTables\DataTables;
 use App\traits\collections;
 use Auth;
 
-
 class DepartmentController extends Controller
 {
     public  function index(){

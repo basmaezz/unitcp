@@ -36,7 +36,7 @@
                             <th class="text-center" width="10%">الفاعليه</th>
                             {{--<th class="text-center" width="20%">تاريخ الإضافة</th>--}}
                             <th class="text-center" width="20%">عدد الأمتحانات</th>
-                            <th class="text-center" width="20%">خيارات</th>
+                            <th class="text-center" width="20%"></th>
                         </tr>
                         </thead>
 
@@ -239,7 +239,6 @@
                 $(document).on('click', '.delete', function (event) {
                     var delete_url = $(this).data('url');
                     event.preventDefault();
-
                     if(delete_url){
                         $.ajax({
                             url: delete_url,
@@ -268,52 +267,9 @@
                                 errorCustomSweet();
                             }
                         });
-
                     }
-
                 });
-                // $(document).on('click', '.delete', function (event) {
-                //     var delete_url = $(this).data('url');
-                //     event.preventDefault();
-                //     swal({
-                //         title: '<span class="info">هل أنت متأكد من حذف العنصر المحدد ؟</span>',
-                //         type: 'info',
-                //         showCloseButton: true,
-                //         showCancelButton: true,
-                //         confirmButtonText: 'حذف',
-                //         cancelButtonText: 'إغلاق',
-                //         confirmButtonColor: '#56ace0',
-                //         width: '450px'
-                //     }).then(function (value) {
-                //         $.ajax({
-                //             url: delete_url,
-                //             method: 'delete',
-                //             type: 'json',
-                //             success: function (response) {
-                //                 if (response.status) {
-                //                     customSweetAlert(
-                //                         'success',
-                //                         response.message,
-                //                         response.item,
-                //                         function (event) {
-                //                             tbl.ajax.reload();
-                //                         }
-                //                     );
-                //                 } else {
-                //                     customSweetAlert(
-                //                         'error',
-                //                         response.message,
-                //                         response.errors_object
-                //                     );
-                //                 }
-                //             },
-                //             error: function (response) {
-                //                 $('.upload-spinn').addClass('hidden');
-                //                 errorCustomSweet();
-                //             }
-                //         });
-                //     });
-                // });
+
             });
         </script>
     @endpush

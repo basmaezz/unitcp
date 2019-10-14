@@ -9,7 +9,6 @@
         <style>
             .input-sm{
                 width: 288px !important;
-
             }
         </style>
     @endpush
@@ -17,7 +16,6 @@
         <div class="card">
             <div class="card-body">
                 <div class="table-responsive">
-
                     <table id="exam-table" class="table table-bordered table-hover" data-name="cool-table">
                         <caption class="bottom">
                             <a  title="Edit" style="margin-right: 10px"  href="{{route('panel.exam.create')}}"  class="btn btn-primary" > <i class="fa fa-plus icon-btn-margin"></i> اضافه جديد </a>
@@ -25,12 +23,10 @@
                         </caption>
                         <thead>
                         <tr>
-                            <th  width="5%">#</th>
+                            {{--<th  width="5%">#</th>--}}
                             <th width="15%">الأسم</th>
-
                             <th width="15%">تاريخ الإضافة</th>
                             <th width="25%">#</th>
-
                         </tr>
                         </thead>
                         <tbody>
@@ -42,12 +38,9 @@
             </div>
         </div>
     </div>
-
     @push('panel_js')
         {!! HTML::script(panel_url('plugins/datatables/jquery.dataTables.min.js')) !!}
         {!! HTML::script(panel_url('plugins/datatables/dataTables.bootstrap.min.js')) !!}
-
-
         <script>
             $(document).ready(function()
             {
@@ -111,7 +104,7 @@
                         "url": url
                     },
                     "columns": [
-                        {data: 'id', name: 'id'},
+                        // {data: 'id', name: 'id'},
                         {data: 'fullName', name: 'fullName'},
                         {data: 'created_at', name: 'created_at'},
                         {data: 'action', name: 'action'}
@@ -163,49 +156,6 @@
                     }
 
                 });
-
-                // $(document).on('click', '.delete', function (event) {
-                //     var delete_url = $(this).data('url');
-                //     event.preventDefault();
-                //     swal({
-                //         title: '<span class="info">هل أنت متأكد من حذف العنصر المحدد ؟</span>',
-                //         type: 'info',
-                //         showCloseButton: true,
-                //         showCancelButton: true,
-                //         confirmButtonText: 'حذف',
-                //         cancelButtonText: 'إغلاق',
-                //         confirmButtonColor: '#56ace0',
-                //         width: '450px'
-                //     }).then(function (value) {
-                //         $.ajax({
-                //             url: delete_url,
-                //             method: 'delete',
-                //             type: 'json',
-                //             success: function (response) {
-                //                 if (response.status) {
-                //                     customSweetAlert(
-                //                         'success',
-                //                         response.message,
-                //                         response.item,
-                //                         function (event) {
-                //                             tbl.ajax.reload();
-                //                         }
-                //                     );
-                //                 } else {
-                //                     customSweetAlert(
-                //                         'error',
-                //                         response.message,
-                //                         response.errors_object
-                //                     );
-                //                 }
-                //             },
-                //             error: function (response) {
-                //                 $('.upload-spinn').addClass('hidden');
-                //                 errorCustomSweet();
-                //             }
-                //         });
-                //     });
-                // });
             });
         </script>
     @endpush

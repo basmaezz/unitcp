@@ -1,6 +1,6 @@
 @php
     $breadcrumb_array = [];
-    array_push($breadcrumb_array,collect(['is_last'=>true,'name'=>'الأقسام','link'=> ('panel.users.all')]));
+    array_push($breadcrumb_array,collect(['is_last'=>true,'name'=>'الأقسام','link'=> ('panel.department.all')]));
 @endphp
 @extends('panel.layouts.index',['sub_title'=>'عرض أقسام الكليات' ,'breadcrumb_array'=> $breadcrumb_array])
 @section('main')
@@ -22,11 +22,11 @@
                         </caption>
                         <thead>
                         <tr>
-                            <th  width="5%">#</th>
+                            {{--<th  width="5%">#</th>--}}
                             <th width="15%">الأسم</th>
-                            <th width="15%">الاسم En </th>
+                            <th width="15%">الاسم باللغه الأنجليزيه </th>
                             <th width="15%">الكليه</th>
-                            <th width="15%">تاريخ الإضافة</th>
+
                             <th width="15%">عدد الامتحانات</th>
                             <th width="25%">خيارات</th>
 
@@ -126,11 +126,10 @@
                         "url": url
                     },
                     "columns": [
-                        {data: 'id', name: 'id'},
+                        // {data: 'id', name: 'id'},
                         {data: 'name_ar', name: 'name_ar'},
                         {data: 'name_en', name: 'name_en'},
                         {data: 'faculty_id', name: 'faculty_id'},
-                        {data: 'created_at', name: 'created_at'},
                         {data: 'exam_count', name: 'exam_count'},
                         {data: 'action', name: 'action'}
                     ],

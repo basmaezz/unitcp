@@ -12,7 +12,7 @@
     @endpush
 
     <div class="content">
-        {!! Form::open(['id'=>'form','method'=>'PUT','url'=>route('panel.faculty.edit',['id'=>$faculty->id]),'to'=>lang_route('panel.faculty.all')]) !!}
+        {!! Form::open(['id'=>'form','method'=>'PUT','url'=>route('panel.faculty.edit',['id'=>$faculty->id]),'to'=>route('panel.faculty.all')]) !!}
 
         <div class="row">
             <div class="col-md-8">

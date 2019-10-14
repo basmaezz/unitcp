@@ -23,14 +23,19 @@
                         <div class="col-md-12">
                             <div class="form-group mt-20 mb-20">
                                 <label><strong>نوع المسستخدم </strong></label> <br>
+                                @if(!isset($user->faculty_id))
                                 <label class="radio-inline">
-                                    <input type="radio"  value="0" name="user" id="radio-admin">
+                                    <input type="radio"  value="0" name="user" id="radio-admin"checked disabled >
                                     مدير نظام
                                 </label>
+                                @endif
+                                @if(isset($user->faculty_id))
                                 <label class="radio-inline">
-                                    <input type="radio" value="1" name="user" id="radio-user">
-                                    مستخدم وحده فرعيه
-                                </label>
+                                        <input type="radio" value="1" name="user" id="radio-user" checked disabled>
+                                        مستخدم وحده فرعيه
+                                    </label>
+
+
                             </div>
                         </div>
 
@@ -39,19 +44,18 @@
                             $items = get_fac_data();
                         @endphp
 
-                        <fieldset class="form-group  hidden" id="sub-admin" >
+                        <fieldset class="form-group " id="sub-admin" >
                             <label>اسم الكليه </label>
-                            <select class="form-control "  name="faculty_id" data-placeholder="إختيار الكليه" required>
+                            <select class="form-control "  name="faculty_id" data-placeholder="إختيار الكليه" >
                                 <option disabled selected hidden>إختيار الكليه</option>
                                 @if(isset($items) && $items->count() > 0)
                                     @foreach($items as $item)
-
-                                        <option value="{{$item->id}}" >{{get_text_locale($item,'name_ar')}}</option>
+                                        <option value="{{$item->id}}" {{is_selected($item->id,$user->faculty_id)}} disabled>{{get_text_locale($item,'name_ar')}}</option>
                                     @endforeach
                                 @endif
                             </select>
                         </fieldset>
-
+                        @endif
 
                         <fieldset class="form-group">
                             <label>الأسم</label>
@@ -70,7 +74,7 @@
 
                         <fieldset class="form-group">
                             <label>كلمه المرور</label>
-                            <input class="form-control"  type="password" name="password" placeholder="الرجاء إدخال كله المرور"  value="" required>
+                            <input class="form-control"  type="password" name="password" placeholder="الرجاء إدخال كله المرور"  value="" >
                         </fieldset>
 
                         <p style="color: #0d6aad;">اعاده تعيين كلمه المرور!</p>
@@ -133,21 +137,17 @@
         {!! HTML::script('/panel/js/post.js') !!}
 
 
-        <script>
-            $(document).ready(function() {
+        {{--<script>--}}
+            {{--$(document).ready(function() {--}}
+                {{--$('#radio-user').change(function() {--}}
+                    {{--$('#sub-admin').removeClass('hidden');--}}
+                {{--});--}}
+                {{--$('#radio-admin').change(function() {--}}
+                    {{--$('#sub-admin').addClass('hidden');--}}
+                {{--});--}}
+            {{--});--}}
 
-                $('#radio-user').change(function() {
-                    $('#sub-admin').removeClass('hidden');
-                });
-                $('#radio-admin').change(function() {
-                    $('#sub-admin').addClass('hidden');
-                });
-
-
-
-            });
-
-        </script>
+        {{--</script>--}}
         <script>
             $(document).ready(function(){
                 $("p").click(function(){

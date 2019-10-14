@@ -58,7 +58,6 @@ class SemesterController extends Controller
         $status = $semester ? true : false;
         collections::log(auth()->user()->id , 'Exam', 'تم تعديل بيانات الفصل الدراسى', $semester, $status);
 
-
         return (isset($semester)) ? $this->response_api(true, 'تم تعديل بيانات الفصل الدراسى بنجاح') : $this->response_api(false, 'حدث خطأ غير متوقع');
     }
 
@@ -98,6 +97,8 @@ class SemesterController extends Controller
             })->addColumn('action', function ($item) {
                 return '<div class="row">
                       <a  title="Edit" style="margin-right: 10px"  href="' . route('panel.semester.edit', ['id' => $item->id]) . '"  class="btn btn-sm btn-primary edit" > <i style="margin-left: 3px" class="fa fa-check-square-o"></i> تعديل</a>
+                       <a  data-toggle="reject" title="Delete" style="margin-right: 10px;background-color: #FA2A00;color:white"  data-url="' . admin_url('semester/delete/' . $item->id) . '"   class="btn btn-sm btn-danger delete">  <i style="margin-left:3px" class="fa  fa-trash-o"></i> حذف </a>
+
                     </div>';
             })->rawColumns([ 'action'])->make(true);
         } catch (\Exception $e) {

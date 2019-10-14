@@ -65,8 +65,6 @@ class FacultyController extends Controller
     public function get_fac_data_table(faculty $items)
     {
         $items = $items->with('exams')->get();
-//        dd($items);
-
 
         try {
             return DataTables::of($items)->editColumn('id', function ($item) {

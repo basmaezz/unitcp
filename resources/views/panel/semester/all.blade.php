@@ -23,11 +23,10 @@
                         </caption>
                         <thead>
                         <tr>
-                            <th  width="5%">#</th>
+                            {{--<th  width="5%">#</th>--}}
                             <th width="15%">الأسم</th>
-                            <th width="15%">الاسم En </th>
+                            <th width="15%">الاسم باللغه الأنجليزيه </th>
                             <th width="15%">الكليه </th>
-                            <th width="15%">تاريخ الإضافة</th>
                             <th width="25%">خيارات</th>
 
                         </tr>
@@ -126,11 +125,10 @@
                         "url": url
                     },
                     "columns": [
-                        {data: 'id', name: 'id'},
+                        // {data: 'id', name: 'id'},
                         {data: 'name_ar', name: 'name_ar'},
                         {data: 'name_en', name: 'name_en'},
                         {data: 'faculty_id', name: 'faculty_id'},
-                        {data: 'created_at', name: 'created_at'},
                         {data: 'action', name: 'action'}
                     ],
                     dom: 'Bfrtip',

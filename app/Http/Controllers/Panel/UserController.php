@@ -36,7 +36,6 @@ class UserController extends Controller
 
     public function store(CreateUser $request)
     {
-
         $user= new User();
         $user->name=$request->name;
         $user->faculty_id=$request->faculty_id;
@@ -55,24 +54,20 @@ class UserController extends Controller
         $user->active=$request->active;
         if( $request->user==1){
             $user->permission = 1;
-
         }elseif($request->user==2){
             $user->permission = 2;
-
         }else{
-
             $user->permission = 3;
         }
         $user->save();
-
         return (isset($user)) ? $this->response_api(true, 'تمت عمليه الاضافه بنجاح') : $this->response_api(false, 'حدث خطأ غير متوقع');
 
     }
 
     public function edit($id)
     {
-        $data['user'] = User::find($id);
-        return (isset($data['user'])) ? view('panel.users.edit', $data) : redirect()->route(get_current_locale() . '.panel.dashboard');
+         $data['user'] = User::find($id);
+         return (isset($data['user'])) ? view('panel.users.edit', $data) : redirect()->route(get_current_locale() . '.panel.dashboard');
     }
 
 
@@ -100,36 +95,34 @@ class UserController extends Controller
 
             $originalName = str_replace('.' . $extension, '', $imgprofile->getClientOriginalName());
             $imgprofile->move(public_path('uploads/users/profiles/'),$originalName. '.'.$extension);
-
             $user->img= $originalName . '.' . $extension;
-
         }
 
 //        $request->repeat_pw ?  $user->password=bcrypt($request->password)  : bcrypt($request->password);
         $request->faculty_id ? $user->permission = 2 : $user->permission = 1;
         $user->save();
-
-        return (isset($user)) ? $this->response_api(true, 'تم التعديل بنجاح') : $this->response_api(false, 'حدث خطأ غير متوقع');
+         return (isset($user)) ? $this->response_api(true, 'تم التعديل بنجاح') : $this->response_api(false, 'حدث خطأ غير متوقع');
     }
-
-
 
     public function delete($id)
     {
-
         $item = user::find($id);
         return (isset($item) && $item->delete()) ? $this->response_api(true, 'تمت عملية الحذف بنجاح') : $this->response_api(false, 'حدث خطأ غير متوقع');
     }
 
-
     public function get_user_data_table(user $items)
     {
-        $items= User::where('permission',1)
+      $items= User::where('permission',1)
                     ->ORwhere('permission',2)
                     ->get();
         try {
             return DataTables::of($items)->editColumn('id', function ($item) {
                 return $item->id;
+            })->
+            editColumn('num', function ($item) {
+                $i=0;
+                $i++;
+                return  $item->i;
             })->
 
             editColumn('faculty_id', function ($item) {
@@ -172,8 +165,8 @@ class UserController extends Controller
 
     public function get_student_data_table(user $items)
     {
-        $items= User::where('permission',3)->get();
 
+        $items= User::where('permission',3)->get();
 
         try {
             return DataTables::of($items)->editColumn('id', function ($item) {

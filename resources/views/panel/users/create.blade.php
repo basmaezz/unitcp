@@ -15,8 +15,7 @@
         {!! Form::open(['id'=>'myForm','method'=>'POST','url'=>route('panel.users.create'),'to'=>route('panel.users.all'),'enctype'=>('multipart/form-data')]) !!}
         <div class="row">
             <div class="col-md-8">
-                {{--<input type="hidden" id="photo" name="image" value="{{$post->image}}">--}}
-                <div class="card">
+                 <div class="card">
                     <div class="card-body">
 
                         <div class="col-md-12">
@@ -150,7 +149,7 @@
                 var username = document.getElementById('username');
                 var password = document.getElementById('password');
 
-                username.value = 'الرجاء إدخال اسم المستخدم';
+                username.value = '';
                 password.value = '';
 
 
