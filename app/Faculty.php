@@ -10,7 +10,7 @@ class Faculty extends Model
 {
     use SoftDeletes;
     protected $fillable = [
-'id', 'name_ar', 'name_en', 'active','file'
+'id', 'name_ar', 'name_en', 'active'
     ];
 
     public function child(){

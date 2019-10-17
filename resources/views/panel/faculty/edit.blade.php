@@ -12,7 +12,7 @@
     @endpush
 
     <div class="content">
-        {!! Form::open(['id'=>'form','method'=>'PUT','url'=>route('panel.faculty.edit',['id'=>$faculty->id]),'to'=>route('panel.faculty.all')]) !!}
+        {!! Form::open(['id'=>'form','method'=>'post','url'=>route('panel.faculty.edit',['id'=>$faculty->id]),'to'=>route('panel.faculty.all')]) !!}
 
         <div class="row">
             <div class="col-md-8">
@@ -33,12 +33,11 @@
                         <fieldset class="form-group">
                             <label>الحاله</label>
                             <select class="form-control" name="category_id" data-placeholder="إختيار التصنيف" >
-                                <option disabled selected hidden>إختيار التصنيف</option>
-                                {{--@if(isset($items) && $items->count() > 0)--}}
-                                {{--@foreach($items as $item)--}}
-                                <option value="{{$faculty->id}}" ></option>
-                                {{--@endforeach--}}
-                                {{--@endif--}}
+                                <option disabled selected hidden>إختيار الفاعليه</option>
+
+                                <option value="1"  {{is_selected($faculty->active,$faculty->active==1) }} >فعاله</option>
+                                <option value="0"  {{is_selected($faculty->active,$faculty->active==0) }} }} >موقوفه</option>
+
                             </select>
                         </fieldset>
 

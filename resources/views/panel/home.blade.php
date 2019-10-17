@@ -61,7 +61,7 @@
 
                                 <div class="col-md-9">
                                     <td ><h6 class="text-blue font-weight-bold">
-                                            {{ getFullNamearray($last->faculty_id, $last->class_id, $last->material_id, $last->semester_id, $last->year_id) }}</h6></td>
+                                            {{ @getFullNamearray($last->faculty_id, $last->class_id, $last->material_id, $last->semester_id, $last->year_id) }}</h6></td>
 
                                 </div><br>
                                 <div class="col-md-3"  >

@@ -14,9 +14,10 @@ class Classes extends Model
         'id','faculty_id','name_en','name_ar'
     ];
 
+
     public function faculty()
     {
-        return $this->belongsTo('App\Faculty', 'id', 'id');
+        return $this->belongsTo(Faculty::class, 'faculty_id', 'id');
     }
 
 

@@ -11,6 +11,7 @@ use App\Faculty;
 use App\traits\collections;
 use Auth;
 use App\Notifications\MyFirstNotification;
+use DB;
 
 class ClassesController extends Controller
 {
@@ -38,15 +39,27 @@ class ClassesController extends Controller
     public function edit($id)
     {
         $data['classes'] = Classes::find($id);
-        return (isset($data['classes'])) ? view('panel.classes.edit', $data) : redirect()->route(get_current_locale() . '.panel.dashboard');
+
+        $fac_id = $data['classes']->faculty_id;
+        $faculty = Faculty::where("id", $fac_id)->get();
+        $classes = DB::table('classes')->where("faculty_id", $fac_id)->get();
+        $data = [
+            "faculties" => $faculty,
+            "classes" => $classes,
+        ];
+//        dd($data);
+        session()->flash('response', __('تم تعديل البيانات بنجاح'));
+        return view('panel.classes.edit')->with('data',$data);
+//        return (isset($data['classes'])) ? view('panel.classes.edit', $data) : redirect()->route(get_current_locale() . '.panel.dashboard');
     }
+
     public function update($id, CreateClasses $request)
     {
         $classes = classes::updateOrCreate(['id' => $id], $request->all());
         $status = $classes ? true : false;
         collections::log(auth()->user()->id , 'Classes', 'تم تعديل بيانات فرقه دراسيه ', $classes, $status);
 
-        return (isset($classes)) ? $this->response_api(true, 'تمت عمليه التعديل بنجاح') : $this->response_api(false, 'حدث خطأ غير متوقع');
+             return (isset($classes)) ? $this->response_api(true, 'تمت عمليه التعديل بنجاح') : $this->response_api(false, 'حدث خطأ غير متوقع');
     }
 
     public function store(CreateClasses $request)
@@ -83,11 +96,10 @@ class ClassesController extends Controller
             return DataTables::of($items)->editColumn('id', function ($item) {
                 return $item->id;
             })->editColumn('faculty_id', function ($item) {
-                if(!empty($item->faculty))
-                {
+                if(!empty($item->faculty))                {
                     return ($item['faculty']->name_ar);
                 } else {
-                    return 'admin';
+                    return 'مدير نظام';
                 }
             })->editColumn('created_at', function ($item) {
                 return get_date_from_timestamp($item->created_at);

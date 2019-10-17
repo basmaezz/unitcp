@@ -1,10 +1,10 @@
+
 @php
     $breadcrumb_array = [];
-    array_push($breadcrumb_array,collect(['is_last'=>true,'name'=>$classes->name_ar,'link'=> '#']));
-    array_push($breadcrumb_array,collect(['is_last'=>false,'name'=>'الفرق الدراسيه','link'=> route('panel.classes.all')]));
+    array_push($breadcrumb_array,collect(['is_last'=>true,'name'=>$data['classes'][0]->name_ar,'link'=> '#']));
+    array_push($breadcrumb_array,collect(['is_last'=>false,'name'=>'المواد الدراسيه','link'=> route('panel.classes.all')]));
 @endphp
-
-@extends('panel.layouts.index',['sub_title'=>'تعديل الفرقه الدراسيه' ,'breadcrumb_array'=> $breadcrumb_array])
+@extends('panel.layouts.index',['sub_title'=>'تعديل الماده الدراسيه' ,'breadcrumb_array'=> $breadcrumb_array])
 @section('main')
     @push('panel_css')
         {!! HTML::style('panel/css/jasny-bootstrap.min.css') !!}
@@ -12,27 +12,21 @@
     @endpush
 
     <div class="content">
-        {!! Form::open(['id'=>'form','method'=>'PUT','url'=>route('panel.classes.edit',['id'=>$classes->id]),'to'=>route('panel.classes.all')]) !!}
-
+        {!! Form::open(['id'=>'form','method'=>'PUT','url'=>route('panel.classes.edit',['id'=>$data['classes'][0]->id]),'to'=>route('panel.classes.all')]) !!}
         <div class="row">
             <div class="col-md-8">
-                {{--<input type="hidden" id="photo" name="image" value="{{$album->image}}">--}}
                 <div class="card">
                     <div class="card-body">
 
-                        @php
-                            $items = get_fac_data_user();
-
-                        @endphp
 
                         <fieldset class="form-group">
                             <label>اسم الكليه </label>
-                            <select class="form-control" name="faculty_id" data-placeholder="إختيار الكليه" required>
+                            <select class="form-control" name="faculty_id" data-placeholder="إختيار الكليه" required >
                                 <option disabled selected hidden>إختيار الكليه</option>
-                                @if(isset($items) && $items->count() > 0)
-                                    @foreach($items as $item)
-                                        {{$items}}
-                                        <option value="{{$item->id}}" {{is_selected($item->id,$classes->faculty_id)}}>{{get_text_locale($item,'name_ar')}}</option>
+                                @if(isset($data['faculties']) && ($data['faculties'])->count() > 0)
+                                    @foreach(($data['faculties']) as $item)
+
+                                        <option value="{{$item->id}}" selected>{{get_text_locale($item,'name_ar')}}</option>
                                     @endforeach
                                 @endif
                             </select>
@@ -40,15 +34,15 @@
 
 
                         <fieldset class="form-group">
-                            <label>الاسم</label>
-                            <input class="form-control"  type="text" name="name_ar" placeholder="الرجاء إدخال العنوان"  value="{{$classes->name_ar}}" required>
+                            <label>اسم الماده </label>
+                            <input class="form-control"  type="text" name="name_ar" placeholder="لرجاء ادخل الاسم"  value="{{$data['classes'][0]->name_ar}}" required>
                         </fieldset>
-
 
                         <fieldset class="form-group">
-                            <label>الاسم</label>
-                            <input class="form-control"  type="text" name="name_en" placeholder="الرجاء إدخال العنوان"  value="{{$classes->name_en}}" required>
+                            <label>اسم الماده </label>
+                            <input class="form-control"  type="text" name="name_en" placeholder="لرجاء ادخل الاسم"  value="{{$data['classes'][0]->name_en}}" required>
                         </fieldset>
+
 
                     </div>
                 </div>
@@ -62,6 +56,7 @@
                         </div>
                     </div>
                 </div>
+
             </div>
         </div>
         {!! Form::close() !!}
