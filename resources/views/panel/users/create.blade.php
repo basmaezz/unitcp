@@ -91,7 +91,7 @@
 
                         <fieldset class="form-group">
                             <label>الصوره الشخصيه</label>
-                                <input class="form-control"  type="file" name="img" value="الصوره" >
+                                <input class="form-control" id="choose-img" type="file" name="choose-img" value="الصوره" >
                         </fieldset>
 
 
@@ -141,21 +141,13 @@
                     $('#sub-admin').addClass('hidden');
                 });
 
+                $("#choose-img ").attr( 'text','nnnnnnnnnn');
             });
+
+
 
         </script>
 
-        <script>
-            $(document).ready(function() {
-                var username = document.getElementById('username');
-                var password = document.getElementById('password');
-
-                username.value = '';
-                password.value = '';
-
-
-            });
-        </script>
 
 
 

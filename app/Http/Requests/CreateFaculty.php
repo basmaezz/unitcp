@@ -27,7 +27,7 @@ class CreateFaculty extends FormRequest
 
             'name_ar'=> 'required',
             'name_en'=> 'required',
-            'active'=>'',
+//            'active'=>'',
 //            'active'=> 'required',
 
         ];

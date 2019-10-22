@@ -34,12 +34,12 @@
 
 
                         <fieldset class="form-group">
-                            <label>اسم الماده </label>
+                            <label>اسم الماده </label><font color="red">*</font></span>
                             <input class="form-control"  type="text" name="name_ar" placeholder="لرجاء ادخل الاسم"  value="{{$data['classes'][0]->name_ar}}" required>
                         </fieldset>
 
                         <fieldset class="form-group">
-                            <label>اسم الماده </label>
+                            <label>اسم الماده </label><font color="red">*</font></span>
                             <input class="form-control"  type="text" name="name_en" placeholder="لرجاء ادخل الاسم"  value="{{$data['classes'][0]->name_en}}" required>
                         </fieldset>
 
