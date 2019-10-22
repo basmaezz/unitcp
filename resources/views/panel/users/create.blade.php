@@ -12,7 +12,7 @@
     @endpush
 
     <div class="content">
-        {!! Form::open(['id'=>'myForm','method'=>'POST','url'=>route('panel.users.create'),'to'=>route('panel.users.all'),'enctype'=>('multipart/form-data')]) !!}
+        {!! Form::open(['id'=>'form','method'=>'POST','url'=>route('panel.users.create'),'to'=>route('panel.users.all'),'enctype'=>('multipart/form-data')]) !!}
         <div class="row">
             <div class="col-md-8">
                  <div class="card">
@@ -57,24 +57,24 @@
 
 
                         <fieldset class="form-group">
-                            <label>الأسم</label>
-                            <input class="form-control"  type="text" name="name" placeholder="الرجاء إدخال الأسم"  value="" required>
+                            <label>الأسم</label><span><font color="red">*</font></span>
+                            <input class="form-control"  type="text" name="name" placeholder="الرجاء إدخال الأسم"  value="" >
                         </fieldset>
 
                         <fieldset class="form-group">
-                            <label>اسم المستخدم</label>
-                            <input class="form-control"  type="text" name="username" id="username" placeholder="الرجاء إدخال اسم المستخدم"  value="" required>
+                            <label>اسم المستخدم</label><span><font color="red">*</font></span>
+                            <input class="form-control"  type="text" name="username" id="username" placeholder="الرجاء إدخال اسم المستخدم"  value="" >
                         </fieldset>
 
 
                         <fieldset class="form-group">
-                            <label>البريد الألكترونى</label>
-                            <input class="form-control"  type="text" name="email" placeholder="الرجاء ادخال البريد الالكترونى"  value="" required>
+                            <label>البريد الألكترونى</label><span><font color="red">*</font></span>
+                            <input class="form-control"  type="text" name="email" placeholder="الرجاء ادخال البريد الالكترونى"  value="" >
                         </fieldset>
 
                         <fieldset class="form-group">
-                            <label>كلمه المرور</label>
-                            <input class="form-control"  type="password" name="password" id="password" placeholder="الرجاء إدخال كله المرور"  value="" required>
+                            <label>كلمه المرور</label><span><font color="red">*</font></span>
+                            <input class="form-control"  type="password" name="password" id="password" placeholder="الرجاء إدخال كله المرور"  value="" >
                         </fieldset>
 
 
@@ -91,7 +91,7 @@
 
                         <fieldset class="form-group">
                             <label>الصوره الشخصيه</label>
-                            <input class="form-control"  type="file" name="img">
+                                <input class="form-control"  type="file" name="img" value="الصوره" >
                         </fieldset>
 
 
@@ -102,7 +102,8 @@
                 <div class="card" style="margin-bottom: 30px">
                     <div class="card-body">
                         <div class="row btn_padding">
-                            <button style="width: 90%" class=" btn btn-primary" > &nbsp; حفظ<i class="fa fa-save"></i> &nbsp;
+                            <button style="width: 90%" class=" btn btn-primary" >                                حفظ
+                                &nbsp;<i class="fa fa-save"></i> &nbsp;
                                 <i style="top: inherit;left: AUTO;" class="upload-spinn fa fa-cog fa-spin fa-1x fa-fw  hidden"></i></button>
 
 

@@ -17,5 +17,6 @@ return [
         'description'           => 'الوصف',
         'text'           => 'المحتوى',
         'image' => 'الصورة',
+        name
     ],
 ];

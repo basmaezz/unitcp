@@ -29,8 +29,7 @@
                             <select class="form-control" name="faculty_id" data-placeholder="إختيار الكليه" required>
                                 <option disabled selected hidden>إختيار الكليه</option>
                                     @foreach($items as $item)
-
-                                        <option value="{{$item->id}}" {{is_selected($item->id,$department->faculty_id)}}>{{get_text_locale($item,'name_ar')}}</option>
+                                    <option value="{{$item->id}}" {{is_selected($item->id,$department->faculty_id)}}>{{get_text_locale($item,'name_ar')}}</option>
                                     @endforeach
 
                             </select>
@@ -63,7 +62,6 @@
             </div>
         </div>
         {!! Form::close() !!}
-
     </div>
 
     @push('top_js')

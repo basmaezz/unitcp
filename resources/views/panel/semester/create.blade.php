@@ -13,8 +13,6 @@
     @endpush
 
     <div class="content">
-        {{--{!! Form::open(['id'=>'form','url'=>admin_url('semester/create'),'to'=>route('panel.semester.all')]) !!}--}}
-
         {!! Form::open(['id'=>'form','method'=>'POST','url'=>route('panel.semester.create'),'to'=>route('panel.semester.all')]) !!}
         <div class="row">
             <div class="col-md-8">
@@ -27,28 +25,26 @@
                         @endphp
 
                         {{--<fieldset class="form-group">--}}
-                            {{--<label>اختر الكليه</label>--}}
+                            {{--<label>اسم الكليه </label>--}}
                             {{--<select class="form-control" name="faculty_id" data-placeholder="إختيار الكليه" required>--}}
-
-                                {{--<option disabled selected hidden>اختيار الكليه</option>--}}
-                                {{--@foreach($faculty as $items)--}}
-                                    {{--<option value="{{$items->id}}" name="faculty_id" @if($items->id == Auth::user()->faculty_id)selected @endif>{{$items->name_ar}}</option>--}}
-                                {{--@endforeach--}}
+                                {{--<option disabled selected hidden>إختيار الكليه</option>--}}
+                                {{--@if(isset($items) && $items->count() > 0)--}}
+                                    {{--@foreach($faculty as $item)--}}
+                                        {{--{{$items}}--}}
+                                        {{--<option value="{{$item->id}}" name="faculty_id" @if($item->id == Auth::user()->faculty_id)selected @endif>{{$item->name_ar}}</option>                                    @endforeach--}}
+                                {{--@endif--}}
                             {{--</select>--}}
                         {{--</fieldset>--}}
-
                         <fieldset class="form-group">
-                            <label>اسم الكليه </label>
+                            <label>اختر الكليه</label>
                             <select class="form-control" name="faculty_id" data-placeholder="إختيار الكليه" required>
-                                <option disabled selected hidden>إختيار الكليه</option>
-                                {{--@if(isset($items) && $items->count() > 0)--}}
-                                    @foreach($faculty as $item)
-                                        {{$items}}
-                                        <option value="{{$item->id}}" name="faculty_id" @if($item->id == Auth::user()->faculty_id)selected @endif>{{$item->name_ar}}</option>                                    @endforeach
-                                {{--@endif--}}
+
+                                <option disabled selected hidden>اختيار الكليه</option>
+                                @foreach($faculty as $items)
+                                    <option value="{{$items->id}}" name="faculty_id" @if($items->id == Auth::user()->faculty_id)selected @endif>{{$items->name_ar}}</option>
+                                @endforeach
                             </select>
                         </fieldset>
-
                         <fieldset class="form-group">
                             <label>الأسم</label>
                             <input class="form-control"  type="text" name="name_ar" placeholder="الرجاء إدخال الأسم"  value="" >

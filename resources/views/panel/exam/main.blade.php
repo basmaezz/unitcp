@@ -44,7 +44,6 @@
             <div class="card-body">
                 <div class="m-b-3 font-weight-bold">
                     <h5>الأحصائيات
-                        <button type="button" class="btn btn-sm btn-rounded btn-info pull-left">250</button>
                     </h5>
                 </div>
                 <div><i class="f-20 ti-upload text-aqua"></i>عدد الأمتحانات المرفوعه

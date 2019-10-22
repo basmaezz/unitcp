@@ -56,6 +56,9 @@
                 <div class="info-box">
                     <div class="col-12">
                         <h5>أحدث الأمتحانات المرفوعه</h5>
+                    @if($latest->count()>0)
+
+
                         <div class="row m-t-6 m-b-6" >
                             @foreach($latest as $key => $last)
 
@@ -76,6 +79,9 @@
                                 </div>
                             @endforeach
                         </div>
+                        @else
+                        <h5>لا يوجد امتحانات مضافه</h5>
+                @endif
                     </div>
                     <div id="earning"></div>
                 </div>

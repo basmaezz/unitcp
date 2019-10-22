@@ -16,10 +16,6 @@
                     <table id="semester-table" class="table table-bordered table-hover" data-name="cool-table">
                         <caption class="bottom">
                             <a  title="Edit" style="margin-right: 10px"  href="{{route('panel.semester.create')}}"  class="btn btn-primary" > <i class="fa fa-plus icon-btn-margin"></i> اضافه جديد </a>
-
-                            {{--<button  class="btn btn-default" onclick="window.open('panel.users.create')">إضافة جديد--}}
-                            {{--<i class="fa fa-plus icon-btn-margin"></i>--}}
-                            {{--</button>--}}
                         </caption>
                         <thead>
                         <tr>
@@ -85,9 +81,6 @@
             </div>
         </div>
     </div>
-
-
-
 
     @push('panel_js')
         {!! HTML::script(panel_url('plugins/datatables/jquery.dataTables.min.js')) !!}

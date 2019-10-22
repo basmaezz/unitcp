@@ -24,7 +24,7 @@
                         <thead>
                         <tr>
                             {{--<th  width="5%">#</th>--}}
-                            <th width="15%">الأسم</th>
+                            <th width="15%">اسم الأمتحان</th>
                             <th width="15%">تاريخ الإضافة</th>
                             <th width="25%">#</th>
                         </tr>

@@ -20,7 +20,8 @@
                 <div class="card">
                     <div class="card-body">
                         @php
-                            $items = get_fac_data_user();
+                            $items = get_fac_data();
+
                         @endphp
 
                         <fieldset class="form-group">
@@ -30,7 +31,7 @@
                                 @if(isset($items) && $items->count() > 0)
                                     @foreach($items as $item)
                                         {{$items}}
-                                        <option value="{{$item->id}}" {{is_selected($item->id,$semester->faculty_id)}}>{{get_text_locale($item,'name_ar')}}</option>
+                                        <option value="{{$item->id}}" {{is_selected($item->id,$semester->faculty_id)}} disabled="disabled">{{get_text_locale($item,'name_ar')}}</option>
                                     @endforeach
                                 @endif
                             </select>

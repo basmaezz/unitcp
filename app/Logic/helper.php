@@ -15,9 +15,6 @@ function is_auth()
     return (isset(auth()->user()->id)) ? true : false;
 }
 
-
-
-
 function get_fac_data()
 {
     return \App\Faculty::where('active',1)->get();
@@ -107,64 +104,6 @@ function format_24_to_12($input)
 {
     return date("g:i a", strtotime($input));
 }
-
-
-function get_social_icon($social)
-{
-    switch ($social) {
-        case 'facebook' :
-            return 'icon-facebook';
-        case 'twitter' :
-            return 'icon-twitter';
-        case 'linkedin' :
-            return 'icon-linkedin-logo';
-        case 'google' :
-            return 'icon-google-plus';
-        case 'instagram' :
-            return 'icon-instagram-symbol';
-        case 'youtube' :
-            return 'icon-youtube-logo';
-    }
-    return '';
-}
-
-function get_social_icon_footer($social)
-{
-    switch ($social) {
-        case 'facebook' :
-            return 'fa fa-facebook';
-        case 'twitter' :
-            return 'fa fa-twitter';
-        case 'linkedin' :
-            return 'fa fa-linkedin';
-        case 'google' :
-            return 'fa fa-google';
-        case 'instagram' :
-            return 'fa fa-instagram';
-        case 'youtube' :
-            return 'fa fa-youtube-play';
-    }
-    return '';
-}
-
-
-function get_socials()
-{
-    return \App\SocialMedia::all();
-}
-
-
-function get_all_categories()
-{
-    return \App\CourseCategory::all();
-}
-
-function string_limit($str, $char_num)
-{
-    return str_limit(strip_tags($str), $limit = $char_num, $end = ' ...');
-}
-
-
 
 
 function get_most_teacher_request()
@@ -280,11 +219,6 @@ function get_text_locale($obj, $text)
     return no_data();
 }
 
-//function get_training_request_data()
-//{
-//    $trainingRequests = new \App\TrainingRequest;
-//    return $trainingRequests->getArrayCount();
-//}
 
 function is_selected($var1, $var2)
 {
@@ -297,15 +231,7 @@ function get_visitor_data()
     return $items->getArrayCount();
 }
 
-//function get_all_post_cats()
-//{
-//    return \App\PostCategory::all();
-//}
-//
-//function get_non_empty_post_cats()
-//{
-//    return \App\PostCategory::nonEmpty()->get();
-//}
+
 
 function get_teachers_data()
 {

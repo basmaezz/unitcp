@@ -19,7 +19,7 @@ function getErrors(jqXhr, path) {
             errorsHtml += '</ul>';
             customSweetAlert(
                 'error',
-                (window.lang === 'ar') ?'حدثت الأخطاء التالية' : 'The Following Error Occurred',
+                (window.lang === 'ar') ?'حدثت الأخطاء التالية' : 'حدثت الأخطاء التالية',
                 errorsHtml
             );
             break;

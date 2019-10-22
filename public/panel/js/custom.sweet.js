@@ -1,8 +1,8 @@
 var ok_btn = 'موافق';
 var err_txt = 'حدث خطأ غير متوقع .. الرجاء المحاولة لاحقاً';
 if (window.lang === 'en'){
-     ok_btn = 'Ok';
-    err_txt = 'Unknown Error .. Try Again';
+     ok_btn = 'موافق';
+    err_txt = 'حدث خطأ غير متوقع .. الرجاء المحاولة لاحقاً';
 }
 function customSweetAlert(type ,title , html , func) {
     var then_function = func || function () {

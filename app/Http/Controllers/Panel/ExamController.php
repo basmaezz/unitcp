@@ -37,14 +37,10 @@ class ExamController extends Controller
     {
         $exams= Exam::all();
         $examcount=$exams->count();
-
         $visitors= visitor::all();
-//        dd($visitors);
         $visitorcount=$visitors->count();
-
         $downloads = Exam::orderBy('download_num','desc')->paginate(5);
         $latest= Exam::orderBy('created_at','desc')->paginate(5);
-//        dd($visitors);
         return view('panel.exam.main', compact('downloads','latest','examcount','visitorcount'));
 
     }
@@ -61,12 +57,8 @@ class ExamController extends Controller
         return view('panel.exam.create')->with(["tag"=>$tags,"faculty"=>$faculty]);
     }
 
-
-//    public function getData($id) {
-
     public function store(CreateExam $request)
     {
-//        dd($request);
         $validator = Validator::make(
             $request->all(),
             \App\File::$rules,
@@ -100,9 +92,6 @@ class ExamController extends Controller
 
         $year=Year::find($year_id);
         $year_name=$year->name;
-
-
-//        $allowed_filename = 'file_' . time() .  '.' . $extension;
         $allowed_filename = $mat_name  . '-' .$year_name.'.' . $extension;
 
         $originalName = str_replace('.' . $extension, '', $fileRequeste->getClientOriginalName());
@@ -150,8 +139,6 @@ class ExamController extends Controller
             $tag_exam->save();
 
         }
-
-//        $exam = Exam::create($request->all());
         $status = $exam ? true : false;
         collections::log(auth()->user()->id , 'Exam', 'تم اضافه امتحان  جديد', $exam, $status);
         return (isset($exam)) ? $this->response_api(true, 'تم الأضافة بنجاح') : $this->response_api(false, 'حدث خطأ غير متوقع');
@@ -192,13 +179,6 @@ class ExamController extends Controller
         } else {
             $items = $items->orderBy('id', 'ASC')->get();
         }
-
-//        if ($request->has('faculty_id') && !empty($request->faculty_id)) {
-//            $items = $items->where('faculty_id', $request->faculty_id)->orderBy('id', 'ASC')->get();
-//        } else {
-//            $items = $items->orderBy('id', 'ASC')->get();
-//        }
-
         try {
             return DataTables::of($items)->editColumn('id', function ($item) {
                 return $item->id;
@@ -304,6 +284,7 @@ class ExamController extends Controller
                 "semester" => $semester,
                 "year"=>$year
             ];
+
             return view('panel.exam.edit')->with('data',$data);
         }
 

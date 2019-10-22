@@ -19,14 +19,14 @@
                 <div class="card">
                     <div class="card-body">
                         <fieldset class="form-group">
-                            <label>الأسم</label>
-                            <input class="form-control"  type="text" name="name_ar" placeholder="الرجاء إدخال الأسم"  value="" required>
+                            <label>الأسم</label><span><font color="red">*</font></span>
+                            <input class="form-control"  type="text" name="name_ar" placeholder="الرجاء إدخال الأسم باللغه العربيه"  value="" required>
                         </fieldset>
 
 
                         <fieldset class="form-group">
-                            <label>الاسم باللغه الانجليزيه</label>
-                            <input class="form-control"  type="text" name="name_en" placeholder="الرجاء الاسم EN"  value="" required>
+                            <label>الاسم باللغه الانجليزيه</label><span><font color="red">*</font></span>
+                            <input class="form-control"  type="text" name="name_en" placeholder="الرجاء الاسم باللغه الانجليزيه"  value="" required>
                         </fieldset>
 
 
