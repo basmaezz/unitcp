@@ -95,9 +95,8 @@ class ExamController extends Controller
         $allowed_filename = $mat_name  . '-' .$year_name.'.' . $extension;
 
         $originalName = str_replace('.' . $extension, '', $fileRequeste->getClientOriginalName());
-        $fileStatus = $fileRequeste->storeAs('faculty/exams/'.$fac_id.'/'.$dep_id.'/'.$class_id.'/'.$semester_id.'/'.$material_id.'/'.$year_id.
-            request('facid'), $allowed_filename);
-
+        $fileStatus = $fileRequeste->storeAs('faculty/exams/'.$fac_id.'/'.$dep_id.'/'.$class_id.'/'.$semester_id.'/'.$material_id.'/'.$year_id.request('facid'), $originalName.'.'.$extension);
+        $fileURL = asset('faculty/exams/'.$fac_id.'/'.$dep_id.'/'.$class_id.'/'.$semester_id.'/'.$material_id.'/'.$year_id.request('facid').$originalName . '.' . $extension);
         if (!$fileStatus) {
             return Response::json([
                 'error' => true,
@@ -106,7 +105,7 @@ class ExamController extends Controller
         }
         $fileModule = new \App\File;
         $fileModule->display_name = $originalName . '.' . $extension;
-        $fileModule->file_name = $allowed_filename;
+        $fileModule->file_name = $originalName . '.' . $extension;
         $fileModule->mime_type = $extension;
         $fileModule->size = $file_size;
         $fileModule->save();
