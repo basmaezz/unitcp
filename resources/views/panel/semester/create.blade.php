@@ -24,20 +24,9 @@
                             $items = get_fac_data_user();
                         @endphp
 
-                        {{--<fieldset class="form-group">--}}
-                            {{--<label>اسم الكليه </label>--}}
-                            {{--<select class="form-control" name="faculty_id" data-placeholder="إختيار الكليه" required>--}}
-                                {{--<option disabled selected hidden>إختيار الكليه</option>--}}
-                                {{--@if(isset($items) && $items->count() > 0)--}}
-                                    {{--@foreach($faculty as $item)--}}
-                                        {{--{{$items}}--}}
-                                        {{--<option value="{{$item->id}}" name="faculty_id" @if($item->id == Auth::user()->faculty_id)selected @endif>{{$item->name_ar}}</option>                                    @endforeach--}}
-                                {{--@endif--}}
-                            {{--</select>--}}
-                        {{--</fieldset>--}}
-                        <fieldset class="form-group">
-                            <label>اختر الكليه</label>
-                            <select class="form-control" name="faculty_id" data-placeholder="إختيار الكليه" required>
+                       <fieldset class="form-group">
+                            <label>اختر الكليه</label><font color="red">*</font></span>
+                            <select class="form-control" name="faculty_id" data-placeholder="إختيار الكليه" >
 
                                 <option disabled selected hidden>اختيار الكليه</option>
                                 @foreach($faculty as $items)
@@ -45,13 +34,13 @@
                                 @endforeach
                             </select>
                         </fieldset>
-                        <fieldset class="form-group">
+                        <fieldset class="form-group"><font color="red">*</font></span>
                             <label>الأسم</label>
                             <input class="form-control"  type="text" name="name_ar" placeholder="الرجاء إدخال الأسم"  value="" >
                         </fieldset>
 
-                        <fieldset class="form-group">
-                            <label>الاسم EN</label>
+                        <fieldset class="form-group"><font color="red">*</font></span>
+                            <label>الاسم باللغه الانجليزيه</label>
                             <input class="form-control"  type="text" name="name_en" placeholder="الرجاء الاسم باللغه الانجليزيه"  value="" >
 
                         </fieldset>

@@ -26,7 +26,7 @@
 
                         <fieldset class="form-group">
                             <label>الاسم باللغه الانجليزيه</label><span><font color="red">*</font></span>
-                            <input class="form-control"  type="text" name="name_en" placeholder="الرجاء الاسم باللغه الانجليزيه"  value="" >
+                            <input class="form-control"  type="text" name="name_en" placeholder="الرجاء إدخال الاسم باللغه الانجليزيه"  value="" >
                         </fieldset>
 
 

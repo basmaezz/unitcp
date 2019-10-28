@@ -30,10 +30,6 @@
                                  مستخدم وحده فرعيه
                                 </label>
 
-                                {{--<label class="radio-inline">--}}
-                                    {{--<input type="radio" value="3" name="user" id="radio-student">--}}
-                                    {{--طالب--}}
-                                {{--</label>--}}
                             </div>
                         </div>
 

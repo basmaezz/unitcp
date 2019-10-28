@@ -34,8 +34,6 @@
                                         <input type="radio" value="1" name="user" id="radio-user" checked disabled>
                                         مستخدم وحده فرعيه
                                     </label>
-
-
                             </div>
                         </div>
 
@@ -58,22 +56,22 @@
                         @endif
 
                         <fieldset class="form-group">
-                            <label>الأسم</label>
+                            <label>الأسم</label><span><font color="red">*</font></span>
                             <input class="form-control"  type="text" name="name" placeholder="الرجاء إدخال الأسم"  value="{{$user->name}}" required>
                         </fieldset>
 
                         <fieldset class="form-group">
-                            <label> أسم المستخدم</label>
+                            <label> أسم المستخدم</label><span><font color="red">*</font></span>
                             <input class="form-control"  type="text" name="username" placeholder="الرجاء إدخال اسم المستخدم"  value="{{$user->username}}" required>
                         </fieldset>
 
                         <fieldset class="form-group">
-                            <label>البريد الألكترونى</label>
+                            <label>البريد الألكترونى</label><span><font color="red">*</font></span>
                             <input class="form-control"  type="text" name="email" placeholder="الرجاء ادخال البريد الالكترونى"  value="{{$user->email}}" required>
                         </fieldset>
 
                         <fieldset class="form-group">
-                            <label>كلمه المرور</label>
+                            <label>كلمه المرور</label><span><font color="red">*</font></span>
                             <input class="form-control"  type="password" name="password" placeholder="الرجاء إدخال كله المرور"  value="" >
                         </fieldset>
 

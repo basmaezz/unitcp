@@ -20,24 +20,24 @@
                     <div class="card-body">
 
 
-                        <fieldset class="form-group">
+                        <fieldset class="form-group"><font color="red">*</font></span>
                             <label>اسم الطالب</label>
                             <input class="form-control"  type="text" name="name" placeholder="الرجاء إدخال الأسم"  value="" >
                         </fieldset>
 
                         <fieldset class="form-group">
-                            <label>اسم المستخدم</label>
+                            <label>اسم المستخدم</label><font color="red">*</font></span>
                             <input class="form-control"  type="text" name="username" id="username"  placeholder="الرجاء إدخال اسم المستخدم"  value="" >
                         </fieldset>
 
 
                         <fieldset class="form-group">
-                            <label>البريد الألكترونى</label>
+                            <label>البريد الألكترونى</label><font color="red">*</font></span>
                             <input class="form-control"  type="text" name="email" placeholder="الرجاء ادخال البريد الالكترونى"  value="" >
                         </fieldset>
 
                         <fieldset class="form-group">
-                            <label>كلمه المرور</label>
+                            <label>كلمه المرور</label><font color="red">*</font></span>
                             <input class="form-control"  type="password" name="password" id="password" placeholder="الرجاء إدخال كله المرور"  value="">
                         </fieldset>
 
@@ -47,7 +47,7 @@
                         @endphp
 
                         <fieldset class="form-group  " id="sub-admin" >
-                            <label>اختر الكليه </label>
+                            <label>اختر الكليه </label><font color="red">*</font></span>
                             <select class="form-control "  name="faculty_id" data-placeholder="إختيار الكليه" >
                                 <option disabled selected >إختيار الكليه</option>
                                 @if(isset($items) && $items->count() > 0)

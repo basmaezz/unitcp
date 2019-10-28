@@ -18,9 +18,9 @@ class CreateMaterial extends FormRequest
              'faculty_id'=>'required',
             'name_ar'=> 'required',
             'name_en'=> 'required',
-//            'class_id'=>'required',
-//            'department_id'=> 'required',
-//            'semester_id'=> 'required',
+            'class_id'=>'required',
+            'department_id'=> 'required',
+            'semester_id'=> 'required',
 
         ];
     }

@@ -11,7 +11,10 @@ Route::middleware(['authpermission','checkactive'])->group(function() {
         Route::get('/allstudent', ['as' => 'panel.students.all', 'uses' => 'UserController@studentindex']);
         Route::get('/addstudent', ['as' => 'panel.students.createstudent', 'uses' => 'UserController@createstudent']);
         Route::get('/all/studentdata', ['as' => 'panel.students.all.data', 'uses' => 'UserController@get_student_data_table']);
-
+        Route::prefix('/edit')->group(function () {
+            Route::get('/{user}', ['as' => 'panel.students.edit', 'uses' => 'UserController@editstudent']);
+            Route::put('/{user}', ['as' => 'panel.students.edit', 'uses' => 'UserController@update']);
+        });
     });
     Route::prefix('/user')->group(function () {
         Route::get('/all', ['as' => 'panel.users.all', 'uses' => 'UserController@index']);
@@ -19,34 +22,19 @@ Route::middleware(['authpermission','checkactive'])->group(function() {
 
         Route::prefix('/create')->group(function () {
             Route::get('/', ['as' => 'panel.users.create', 'uses' => 'UserController@create']);
-//            Route::get('/', ['as' => 'panel.users.createstudent', 'uses' => 'UserController@createstudent']);
             Route::post('/', ['as' => 'panel.users.create', 'uses' => 'UserController@store']);
         });
         Route::get('status/{id}', ['as' => 'panel.users.status', 'uses' => 'UserController@status']);
         Route::delete('/delete/{id}', ['as' => 'panel.users.delete', 'uses' => 'UserController@delete']);
         Route::get('/{profile}', ['as' => 'panel.users.profile', 'uses' => 'UserController@profile']);
         Route::post('/{profile}', ['as' => 'panel.users.editprofile', 'uses' => 'UserController@editprof']);
-//        Route::get('/profile/{id}', ['as' => 'panel.users.profile', 'uses' => 'UserController@profile']);
         Route::prefix('/edit')->group(function () {
             Route::get('/{user}', ['as' => 'panel.users.edit', 'uses' => 'UserController@edit']);
             Route::put('/{user}', ['as' => 'panel.users.edit', 'uses' => 'UserController@update']);
         });
     });
 
-//    Route::prefix('/student')->middleware('authpermission')->group(function () {
-//        Route::get('/all', ['as' => 'panel.student.all', 'uses' => 'StudentController@index']);
-//        Route::get('/all/data', ['as' => 'panel.student.all.data', 'uses' => 'StudentController@get_student_data_table']);
-//        Route::get('/data/{id}', ['as' => 'panel.student.item', 'uses' => 'StudentController@get_faculty_data']);
-//        Route::prefix('/create')->group(function () {
-//            Route::get('/', ['as' => 'panel.student.create', 'uses' => 'StudentController@create']);
-//            Route::post('/', ['as' => 'panel.student.create', 'uses' => 'StudentController@store']);
-//        });
-//        Route::delete('/delete/{id}', ['as' => 'panel.student.delete', 'uses' => 'StudentController@delete']);
-//        Route::prefix('/edit')->group(function () {
-//            Route::get('/{student}', ['as' => 'panel.student.edit', 'uses' => 'StudentController@edit']);
-//            Route::POST('/{student}', ['as' => 'panel.student.edit', 'uses' => 'StudentController@update']);
-//        });
-//    });
+
 
     Route::prefix('/faculty')->middleware('authpermission')->group(function () {
         Route::get('/all', ['as' => 'panel.faculty.all', 'uses' => 'FacultyController@index']);

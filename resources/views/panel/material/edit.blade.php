@@ -21,7 +21,7 @@
 
                         <fieldset class="form-group">
                             <label>اسم الكليه </label>
-                            <select class="form-control" name="faculty_id" data-placeholder="إختيار الكليه" required >
+                            <select class="form-control" name="faculty_id" data-placeholder="إختيار الكليه"  >
                                 <option disabled selected hidden>إختيار الكليه</option>
                                 @if(isset($data['faculties']) && ($data['faculties'])->count() > 0)
                                     @foreach(($data['faculties']) as $item)
@@ -35,12 +35,12 @@
 
                         <fieldset class="form-group">
                             <label>اسم الفرقه </label>
-                            <select class="form-control" select name="class_id" data-placeholder="إختيار الفرقه" required>
+                            <select class="form-control" select name="class_id" data-placeholder="إختيار الفرقه" >
                                 <option disabled selected hidden>اختيار الفرقه</option>
                                 @if(isset($data['classes']) && ($data['classes'])->count() > 0)
                                     @foreach(($data['classes']) as $item)
 
-                                        <option value="{{$item->id}}"  {{is_selected($item->id,$item->faculty_id) }} >{{get_text_locale($item,'name_ar')}}</option>
+                                        <option value="{{$item->id}}" selected {{is_selected($item->id,$item->faculty_id) }} >{{get_text_locale($item,'name_ar')}}</option>
                                     @endforeach
                                 @endif
                             </select>
@@ -49,11 +49,11 @@
 
                         <fieldset class="form-group">
                             <label>اسم القسم </label>
-                            <select class="form-control"  name="department_id" data-placeholder="إختيار القسم" required>
+                            <select class="form-control"  name="department_id" data-placeholder="إختيار القسم" >
                                 <option disabled selected hidden>إختيار القسم</option>
                                 @if(isset($data['department']) && ($data['department'])->count() > 0)
                                     @foreach(($data['department']) as $item)
-                                        <option value="{{$item->id}}"  {{is_selected($item->id,$item->faculty_id) }} >{{get_text_locale($item,'name_ar')}}</option>
+                                        <option value="{{$item->id}}"  selected{{is_selected($item->id,$item->faculty_id) }} >{{get_text_locale($item,'name_ar')}}</option>
                                     @endforeach
                                 @endif
                             </select>
@@ -62,12 +62,12 @@
 
                         <fieldset class="form-group">
                             <label>اسم الترم </label>
-                            <select class="form-control" select name="semester_id" data-placeholder="إختيار الترم" required>
+                            <select class="form-control" select name="semester_id" data-placeholder="إختيار الترم" >
                                 <option disabled selected hidden>إختيار الترم</option>
                                 @if(isset($data['semester']) && $data['semester'])->count() > 0)
                                 @foreach(($data['semester']) as $item)
 
-                                    <option value="{{$item->id}}"  {{is_selected($item->id,$item->faculty_id) }} >{{get_text_locale($item,'name_ar')}}</option>
+                                    <option value="{{$item->id}}" selected {{is_selected($item->id,$item->faculty_id) }} >{{get_text_locale($item,'name_ar')}}</option>
                                     @endforeach
                                 @endif
                             </select>

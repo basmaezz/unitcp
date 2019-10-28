@@ -1,6 +1,6 @@
 <fieldset class="form-group">
     <label>اسم الفرقه </label>
-    <select class="form-control" select name="class_id" data-placeholder="إختيار الفرقه" required>
+    <select class="form-control" select name="class_id" data-placeholder="إختيار الفرقه" >
         <option disabled selected hidden>اختيار الفرقه</option>
         @if(isset($classes) && $classes->count() > 0)
             @foreach($classes as $item)
@@ -13,7 +13,7 @@
 
 <fieldset class="form-group">
     <label>اسم القسم </label>
-    <select class="form-control"  name="department_id" data-placeholder="إختيار القسم" required>
+    <select class="form-control"  name="department_id" data-placeholder="إختيار القسم" >
         <option disabled selected hidden>إختيار القسم</option>
         @if(isset($department) && $department->count() > 0)
             @foreach($department as $item)
@@ -26,7 +26,7 @@
 
 <fieldset class="form-group">
     <label>اسم الترم </label>
-    <select class="form-control" select name="semester_id" data-placeholder="إختيار الترم" required>
+    <select class="form-control" select name="semester_id" data-placeholder="إختيار الترم" >
         <option disabled selected hidden>إختيار الترم</option>
         @if(isset( $semesters) && $semesters->count() > 0)
             @foreach($semesters as $item)

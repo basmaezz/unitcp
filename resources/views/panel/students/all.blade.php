@@ -24,20 +24,12 @@
                         </caption>
                         <thead>
                         <tr>
-                            {{--<th  width="5%">#</th>--}}
                             <th width="15%">الأسم</th>
-                            {{--<th width="15%">البريد الالكترونى </th>--}}
-                            {{--<th width="15%">الحاله </th>--}}
                             <th width="15%">الكليه </th>
-                            {{--<th width="15%">تاريخ الإضافة</th>--}}
                             <th width="25%">خيارات</th>
 
                         </tr>
                         </thead>
-                        <tbody>
-
-                        </tbody>
-
                     </table>
                 </div>
             </div>

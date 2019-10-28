@@ -27,7 +27,7 @@
                                 @if(isset($data['faculties']) && ($data['faculties'])->count() > 0)
                                     @foreach(($data['faculties']) as $item)
 
-                                        <option value="{{$item->id}}" selected>{{get_text_locale($item,'name_ar')}}</option>
+                                        <option value="{{$item->id}}" selected {{is_selected($item->id,$item->faculty_id) }}>{{get_text_locale($item,'name_ar')}}</option>
                                     @endforeach
                                 @endif
                             </select>
@@ -39,8 +39,7 @@
                                 <option disabled selected hidden>اختيار الفرقه</option>
                                 @if(isset($data['classes']) && ($data['classes'])->count() > 0)
                                     @foreach(($data['classes']) as $item)
-
-                                        <option value="{{$item->id}}" selected  {{is_selected($item->id,$item->faculty_id) }} >{{get_text_locale($item,'name_ar')}}</option>
+                                        <option value="{{$item->id}}" {{is_selected($item->id,$data['exam']->class_id) }} >{{get_text_locale($item,'name_ar')}}</option>
                                     @endforeach
                                 @endif
                             </select>
@@ -53,7 +52,8 @@
                                 <option disabled selected hidden>إختيار القسم</option>
                                 @if(isset($data['department']) && ($data['department'])->count() > 0)
                                     @foreach(($data['department']) as $item)
-                                        <option value="{{$item->id}}"selected  {{is_selected($item->id,$item->faculty_id) }} >{{get_text_locale($item,'name_ar')}}</option>
+                                        <option value="{{$item->id}}" {{is_selected($item->id,$data['exam']->department_id) }} >{{get_text_locale($item,'name_ar')}}</option>
+
                                     @endforeach
                                 @endif
                             </select>
@@ -66,7 +66,7 @@
                                 @if(isset($data['semester']) && $data['semester'])->count() > 0)
                                 @foreach(($data['semester']) as $item)
 
-                                    <option value="{{$item->id}}" selected {{is_selected($item->id,$item->faculty_id) }} >{{get_text_locale($item,'name_ar')}}</option>
+                                    <option value="{{$item->id}}" {{is_selected($item->id,$data['exam']->semester_id) }} >{{get_text_locale($item,'name_ar')}}</option>
                                 @endforeach
                                 @endif
                             </select>
@@ -80,7 +80,7 @@
                                 @if(isset($data['material']) && ($data['material'])->count() > 0)
                                     @foreach( ($data['material']) as $item)
 
-                                        <option value="{{$item->id}}" selected{{is_selected($item->id,($data['exam'])->faculty_id)}}>{{get_text_locale($item,'name_ar')}}</option>
+                                        <option value="{{$item->id}}" {{is_selected($item->id,$data['exam']->material_id) }} >{{get_text_locale($item,'name_ar')}}</option>
                                     @endforeach
                                 @endif
                             </select>
@@ -113,12 +113,14 @@
 
                         <div id="fileuploader" >
                             @if(!empty($data['exam']->file))
-                                <button  type="button" class="btn btn-danger del-file" data-id="{{$data['exam']->id}}">Delete File ({{($data['exam'])->file}})</button>
+                                <button  type="button" class="btn btn-danger del-file" data-id="{{$data['exam']->id}}">حذف ملف : ({{($data['exam'])->file}})</button>
 
                                 @else
                                 <input type="file" name="file"> {{($data['exam'])->file}}
                             @endif
+
                             @if(\App\config::where('name', 'upload')->first()->config == 'on')
+
                             <p class="help-block">يمكنك رفع ملف جديد ليتم تحميله</p>
                             @else
                                 <h5>لا يمكن رفع ملف اخر الان</h5>
@@ -164,9 +166,10 @@
                 $('.del-file').on('click', function(){
 
                     var fileId = $(this).data('id');
-                    // alert(fileId);
+
 
                     if(fileId) {
+
                         $.ajaxSetup({
                             headers: {
                                 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')

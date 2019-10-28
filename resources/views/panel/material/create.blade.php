@@ -22,8 +22,8 @@
                         @endphp
 
                         <fieldset class="form-group">
-                            <label>اسم الكليه </label>
-                            <select class="form-control"  name="faculty_id" data-placeholder="إختيار الكليه" required>
+                            <label>اسم الكليه </label><font color="red">*</font></span>
+                            <select class="form-control"  name="faculty_id" data-placeholder="إختيار الكليه" >
                                 <option disabled selected hidden>إختيار الكليه</option>
                                 {{--@if(isset($items) && $items->count() > 0)--}}
                                     @foreach($faculty as $item)
@@ -40,13 +40,13 @@
                         </div>
 
                         <fieldset class="form-group">
-                            <label>الأسم</label>
-                            <input class="form-control"  type="text" name="name_ar" placeholder="الرجاء إدخال الأسم"  value="" required>
+                            <label>الأسم</label><font color="red">*</font></span>
+                            <input class="form-control"  type="text" name="name_ar" placeholder="الرجاء إدخال الأسم"  value="" >
                         </fieldset>
 
                         <fieldset class="form-group">
-                            <label>الاسم باللغه الانجليزيه</label>
-                            <input class="form-control"  type="text" name="name_en" placeholder="الرجاء الاسم باللغه الانجليزيه"  value="" required>
+                            <label>الاسم باللغه الانجليزيه</label><font color="red">*</font></span>
+                            <input class="form-control"  type="text" name="name_en" placeholder="الرجاء الاسم باللغه الانجليزيه"  value="" >
                         </fieldset>
 
                     </div>

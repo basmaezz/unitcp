@@ -70,6 +70,12 @@ class UserController extends Controller
          return (isset($data['user'])) ? view('panel.users.edit', $data) : redirect()->route(get_current_locale() . '.panel.dashboard');
     }
 
+    public function editstudent($id)
+    {
+        $data['user'] = User::find($id);
+        return (isset($data['user'])) ? view('panel.students.edit', $data) : redirect()->route(get_current_locale() . '.panel.dashboard');
+    }
+
 
     public function update($id, CreateUser $request)
     {
@@ -187,7 +193,7 @@ class UserController extends Controller
                     $statuss = '<a  style="margin-right: 10px;background-color: #5cbdc1;color:white"  href="' . admin_url('user/status/' . $item->id) . '"   class="btn btn-sm btn-success ">  <i style="margin-left:3px" class="fa  fa-trash-o"></i> تفعيل </a>';
                 }
                 return '<div class="row">
-                      <a  title="Edit" style="margin-right: 10px"  href="' .route('panel.users.edit', ['id' => $item->id]) . '"  class="btn btn-sm btn-primary edit" > <i style="margin-left: 3px" class="fa fa-check-square-o"></i> تعديل</a>
+                      <a  title="Edit" style="margin-right: 10px"  href="' .route('panel.students.edit', ['id' => $item->id]) . '"  class="btn btn-sm btn-primary edit" > <i style="margin-left: 3px" class="fa fa-check-square-o"></i> تعديل</a>
                        <a  data-toggle="reject" title="Delete" style="margin-right: 10px;background-color: #FA2A00;color:white"  data-url="' . admin_url('user/delete/' . $item->id) . '"   class="btn btn-sm btn-danger delete">  <i style="margin-left:3px" class="fa  fa-trash-o"></i> حذف </a>
 
                        '.$statuss.'
@@ -267,9 +273,5 @@ class UserController extends Controller
         return view('panel.users.onlineusers',compact('users'));
     }
 
-
-    public function editstudent(){
-        
-    }
 
 }

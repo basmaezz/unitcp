@@ -269,10 +269,11 @@ class ExamController extends Controller
             $fac_id = $exam->faculty_id;
             $department = Department::where("faculty_id", $fac_id)->get();
             $faculty = Faculty::where("id", $fac_id)->get();
-            $classes = DB::table('classes')->where("faculty_id", $fac_id)->get();
+            $classes = Classes::where("faculty_id", $fac_id)->get();
+//            dd($classes);
             $material = Material::where("faculty_id", $fac_id)->get();
-
             $semester = Semester::where("faculty_id", $fac_id)->get();
+//            dd($semester);
             $year = year::get();
             $data = [
                 "exam"=> $exam,
@@ -362,7 +363,7 @@ class ExamController extends Controller
 
 
     public function delfile($id){
-        $item = exam::find($id)->first();
+        $item = exam::find($id);
         $item->file = NULL;
         $item->save();
         return 'Success';

@@ -23,13 +23,6 @@
             </div>
         </div>
     </section>
-    <!--
-    End Home search
-    ==================================== -->
-
-    <!--
-    popular
-    ==================================== -->
 
     <section id="popular" class="popular">
         <div class="container">
@@ -41,8 +34,6 @@
                     <div class="devider"><i class="fas fa-book-reader"></i></div>
 
                 </div>
-
-
 
                 <!-- search item -->
 

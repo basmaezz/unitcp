@@ -55,11 +55,4 @@
         <i class="select-arrow"></i>
     </label>
 </div>
-<div class="frm-section colm colm3">
 
-
-    <div class="more">
-        <a href="{{route('popular')}}" class="btn btn-primary">@lang ('exam.search')</a>
-
-    </div>
-</div>
