@@ -38,7 +38,7 @@
     @else
 
     <div class="content">
-        {!! Form::open(['id'=>'form','method'=>'POST','url'=>route('panel.exam.create'),'to'=>route('panel.exam.main')]) !!}
+        {!! Form::open(['id'=>'form','method'=>'POST','url'=>route('panel.exam.create'),'to'=>route('panel.exam.main'),'enctype'=>('multipart/form-data')]) !!}
         <div class="row">
             <div class="col-md-8">
                 <div class="card">
@@ -83,10 +83,6 @@
                                 </div>
 
                         </fieldset>
-
-
-
-
                         <fieldset class="form-group">
                             <label>كلمات البحث</label>
                             <textarea class="form-control " rows="4" type="text" name="key_search_ar" placeholder="الرجاء إدخال كلمات البحث" ></textarea>
@@ -96,10 +92,6 @@
                             <label>كلمات البحث باللغه الانجليزيه</label>
                             <textarea class="form-control " rows="4" type="text" name="key_search_en" placeholder="الرجاء إدخال كلمات البحث باللغه الانجليزيه" ></textarea>
                         </fieldset>
-
-
-
-
 
                         @if(\App\config::where('name', 'upload')->first()->config == 'on')
                         <input type="hidden" id="exam_file_name" name="fexam">

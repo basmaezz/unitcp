@@ -1,6 +1,8 @@
 <?php
 
 use Faker\Generator as Faker;
+use App\User;
+use App\Faculty;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,10 +15,17 @@ use Faker\Generator as Faker;
 |
 */
 
-$factory->define(App\User::class, function (Faker $faker) {
+$factory->define(User::class, function (Faker $faker) {
+    $faculty = Faculty::query()->inRandomOrder()->first();
     return [
         'name' => $faker->name,
+        'username' => $faker->username,
         'email' => $faker->unique()->safeEmail,
+        'img' => $faker->image('public/uploads/users/profiles/',400,300),
+        'faculty_id' => $faculty->id,
+        'active' => $faker->numberBetween(0,1),
+        'online' => $faker->numberBetween(0,1),
+        'permission' => $faker->numberBetween(1,3),
         'password' => '$2y$10$TKh8H1.PfQx37YgCzwiKb.KjNyWgaHb9cbcoQgdIVFlYg7B77UdFm', // secret
         'remember_token' => str_random(10),
     ];

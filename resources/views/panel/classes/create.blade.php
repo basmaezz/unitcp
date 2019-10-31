@@ -22,8 +22,8 @@
                     <div class="card-body">
 
                         <fieldset class="form-group">
-                            <label>اختر الكليه</label>
-                            <select class="form-control" name="faculty_id" data-placeholder="إختيار الكليه" required>
+                            <label>اختر الكليه</label><span><font color="red">*</font></span>
+                            <select class="form-control" name="faculty_id" data-placeholder="إختيار الكليه" >
 
                                 <option disabled selected hidden>اختيار الكليه</option>
                                 @foreach($faculty as $items)
@@ -33,12 +33,12 @@
                         </fieldset>
 
                         <fieldset class="form-group">
-                            <label>الأسم</label>
+                            <label>الأسم</label><span><font color="red">*</font></span>
                             <input class="form-control"  type="text" name="name_ar" placeholder="الرجاء إدخال الأسم"  value="" >
                         </fieldset>
 
                         <fieldset class="form-group">
-                            <label>الاسم باللغه الانجليزيه</label>
+                            <label>الاسم باللغه الانجليزيه</label><span><font color="red">*</font></span>
                             <input class="form-control"  type="text" name="name_en" placeholder="الرجاء الاسم باللغه الانجليزيه"  value="" >
 
                         </fieldset>

@@ -108,7 +108,7 @@ class ExamController extends Controller
         $fileModule->file_name = $originalName . '.' . $extension;
         $fileModule->mime_type = $extension;
         $fileModule->size = $file_size;
-        $fileModule->save();
+//        $fileModule->save();
 
         //Save Exam
 
@@ -161,7 +161,6 @@ class ExamController extends Controller
         $year = Year::all();
 
 
-
         $data = ["classes" => $classes, "department" => $department, "materials" => $materials, "semesters" => $semesters,"year"=>$year ];
 
 
@@ -190,7 +189,7 @@ class ExamController extends Controller
                     return '<div class="row">
                       <a  title="download" style="margin-right: 10px"  href="'.asset("storage/faculty/exams/".$item->faculty_id ."/".$item->department_id."/".
                             $item->class_id ."/".$item->semester_id ."/".$item->material_id ."/".$item->year_id ."/".
-                            $item->files($item->file)).'" class="btn btn-sm btn-primary edit" > <i style="margin-left: 3px" class="fa fa-check-square-o"></i> تحميل</a>
+                            $item->file).'" class="btn btn-sm btn-primary edit" > <i style="margin-left: 3px" class="fa fa-check-square-o"></i> تحميل</a>
                       <a  title="Edit" style="margin-right: 10px"  href="' . route('panel.exam.edit', ['id' => $item->id]) . '"  class="btn btn-sm btn-primary edit" > <i style="margin-left: 3px" class="fa fa-check-square-o"></i> تعديل</a>
                       <a  data-toggle="reject" title="Delete" style="margin-right: 10px;background-color: #FA2A00;color:white"  data-url="' . admin_url('exam/delete/' . $item->id) . '"   class="btn btn-sm btn-danger delete">  <i style="margin-left:3px" class="fa  fa-trash-o"></i> حذف </a>
                     </div>';
@@ -291,6 +290,7 @@ class ExamController extends Controller
 
         public  function update($id,Request $request)
         {
+//            dd($id ,  $request->all());
            $exam = Exam::findOrFail($id);
             if (!config('app.allowUploadFiles')) {
                 return Response::json([
@@ -312,7 +312,10 @@ class ExamController extends Controller
                         'message' => 'هذا الملف قد تم رفعه مسبقا',
                     ], 400);
                 }
-                $fileStatus = $fileRequeste->storeAs('faculty/exams/' . request('facid'), $allowed_filename);
+
+//                dd(request('file'));
+
+                $fileStatus = $fileRequeste->storeAs('faculty/exams', $allowed_filename);
 
                 if (!$fileStatus) {
                     return Response::json([
@@ -321,15 +324,15 @@ class ExamController extends Controller
                     ], 500);
                 }
                 //Delete old file & record
-
-                $oldFile = \App\File::where('file_name','like',$exam->file)->first();
-                if($oldFile){
-                    if(file_exists('faculty/exams/'.$oldFile->file_name))
-                    {
-                        Storage::delete('faculty/exams/'.$oldFile->file_name)->delete();
-                    }
-                    $oldFile->delete();
-                }
+//dd('ggg');
+//                $oldFile = \App\File::where('file_name','like',$exam->file)->first();
+//                if($oldFile){
+//                    if(file_exists('faculty/exams/'.$oldFile->file_name))
+//                    {
+//                        Storage::delete('faculty/exams/'.$oldFile->file_name)->delete();
+//                    }
+//                    $oldFile->delete();
+//                }
 
                 //Create new record for uploaded file
                 $fileModule = new \App\File;
@@ -342,7 +345,8 @@ class ExamController extends Controller
                 $exam->file = $fileModule->display_name;
             }
 
-            //Save Exam
+
+            //Save Examhk
 
 
             $exam->faculty_id       = $request->get('faculty_id');
@@ -354,6 +358,8 @@ class ExamController extends Controller
             $exam->key_search_ar    = $request->get('key_search_ar');//missing
             $exam->key_search_en    = $request->get('key_search_en');//missing
             $exam->save();
+
+//            dd('ggg');
 
             //$exam = Exam::updateOrCreate(['id' => $id], $request->all());
 

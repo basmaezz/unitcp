@@ -66,7 +66,7 @@
                         <h5>أكثر الأمتحانات تحميلا</h5>
                         <div class="row m-t-6 m-b-6">
                             @foreach($downloads as $key => $down)
-
+                                {{--{{dd($last->file)}}--}}
                                 <div class="col-md-9">
                                     <td ><h6 class="text-blue font-weight-bold">
                                             {{ @getFullNamearray($last->faculty_id, $last->class_id, $last->material_id, $last->semester_id, $last->year_id) }}</h6></td>
@@ -74,7 +74,7 @@
                                 </div><br>
                                 <div class="col-md-3">
                                     <a title="Download" href="{{ url('storage/faculty/exams/'.$last->faculty_id ."/".$last->department_id."/".
-                            $last->class_id ."/".$last->semester_id ."/".$last->material_id ."/".$last->year_id ."/".$last->files($last->file)) }}" target="_blank" style="margin-right: 9px;
+                            $last->class_id ."/".$last->semester_id ."/".$last->material_id ."/".$last->year_id ."/".$last->file) }}" target="_blank" style="margin-right: 9px;
     height: 42px; margin-bottom: 6px; " data-id="{{ $last->id }}"  class="btn btn-primary download" > تحميل </a>
 
                                 </div>

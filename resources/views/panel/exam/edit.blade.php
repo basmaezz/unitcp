@@ -52,6 +52,7 @@
                                 <option disabled selected hidden>إختيار القسم</option>
                                 @if(isset($data['department']) && ($data['department'])->count() > 0)
                                     @foreach(($data['department']) as $item)
+                                        <?php  echo ($data['department']);?>
                                         <option value="{{$item->id}}" {{is_selected($item->id,$data['exam']->department_id) }} >{{get_text_locale($item,'name_ar')}}</option>
 
                                     @endforeach
@@ -64,8 +65,8 @@
                             <select class="form-control" select name="semester_id" data-placeholder="إختيار الترم" required>
                                 <option disabled selected hidden>إختيار الترم</option>
                                 @if(isset($data['semester']) && $data['semester'])->count() > 0)
-                                @foreach(($data['semester']) as $item)
-
+                                     @foreach(($data['semester']) as $item)
+                                        <?php echo ($data['exam']->semester_id); ?>
                                     <option value="{{$item->id}}" {{is_selected($item->id,$data['exam']->semester_id) }} >{{get_text_locale($item,'name_ar')}}</option>
                                 @endforeach
                                 @endif
@@ -79,7 +80,6 @@
                                 <option disabled selected hidden>إختيار الماده</option>
                                 @if(isset($data['material']) && ($data['material'])->count() > 0)
                                     @foreach( ($data['material']) as $item)
-
                                         <option value="{{$item->id}}" {{is_selected($item->id,$data['exam']->material_id) }} >{{get_text_locale($item,'name_ar')}}</option>
                                     @endforeach
                                 @endif
@@ -110,27 +110,27 @@
                             <textarea class="form-control " rows="4" type="text" name="key_search_en" placeholder="الرجاء إدخال كلمات البحث باللغه الانجليزيه" >{{($data['exam'])->key_search_en}}</textarea>
                         </fieldset>
 
-
-                        <div id="fileuploader" >
-                            @if(!empty($data['exam']->file))
-                                <button  type="button" class="btn btn-danger del-file" data-id="{{$data['exam']->id}}">حذف ملف : ({{($data['exam'])->file}})</button>
-
-                                @else
-                                <input type="file" name="file"> {{($data['exam'])->file}}
-                            @endif
-
-                            @if(\App\config::where('name', 'upload')->first()->config == 'on')
-
-                            <p class="help-block">يمكنك رفع ملف جديد ليتم تحميله</p>
-                            @else
-                                <h5>لا يمكن رفع ملف اخر الان</h5>
-                                @endif
+                        <button  type="button" class="btn btn-danger del-file" data-id="{{$data['exam']->id}}">حذف ملف : ({{($data['exam'])->file}})</button>
+                        <div id="fileuploader" class="hidden">
+                            <input type="file" name="file">
                         </div>
 
 
+                        {{--<div id="fileuploader" >--}}
+                            {{--@if(!empty($data['exam']->file))--}}
+                                {{--<button  type="button" class="btn btn-danger del-file" data-id="{{$data['exam']->id}}">حذف ملف : ({{($data['exam'])->file}})</button>--}}
 
+                                {{--@else--}}
+                                {{--<input type="file" name="file" class="hidden" id="delete_file"> {{($data['exam'])->file}}--}}
+                            {{--@endif--}}
 
+                            {{--@if(\App\config::where('name', 'upload')->first()->config == 'on')--}}
 
+                            {{--<p class="help-block" id="">يمكنك رفع ملف جديد ليتم تحميله</p>--}}
+                            {{--@else--}}
+                                {{--<h5>لا يمكن رفع ملف اخر الان</h5>--}}
+                                {{--@endif--}}
+                        {{--</div>--}}
                     </div>
                 </div>
             </div>
@@ -164,9 +164,9 @@
             $(document).ready(function() {
 
                 $('.del-file').on('click', function(){
-
+                    $('#fileuploader').removeClass('hidden');
+                    $('.del-file').addClass('hidden');
                     var fileId = $(this).data('id');
-
 
                     if(fileId) {
 
@@ -183,7 +183,6 @@
                                 if(response.status)
                                 {
                                     alert('ok');
-                                    // $('#selectors_div').html(response.item);
                                 }
                             },
 
@@ -194,11 +193,6 @@
 
             });
         </script>
-
-
-
-
-
 
     @endpush
 @stop
