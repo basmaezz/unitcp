@@ -29,7 +29,7 @@
                             <th width="15%">البريد الالكترونى </th>
                             {{--<th width="15%">الحاله </th>--}}
                             <th width="15%">الكليه </th>
-                            <th width="15%">تاريخ الإضافة</th>
+{{--                            <th width="15%">تاريخ الإضافة</th>--}}
                             <th width="25%">خيارات</th>
 
                         </tr>
@@ -84,12 +84,9 @@
                         "url": url
                     },
                     "columns": [
-                        // {data: 'id', name: 'id'},
                         {data: 'name', name: 'name'},
                         {data: 'email', name: 'email'},
-                        // {data: 'active', name: 'active'},
                         {data: 'faculty_id', name: 'faculty_id'},
-                        {data: 'created_at', name: 'created_at'},
                         {data: 'action', name: 'action'}
                     ],
                     dom: 'Bfrtip',
@@ -139,48 +136,7 @@
                     }
 
                 });
-                // $(document).on('click', '.delete', function (event) {
-                //     var delete_url = $(this).data('url');
-                //     event.preventDefault();
-                //     swal({
-                //         title: '<span class="info">هل أنت متأكد من حذف العنصر المحدد ؟</span>',
-                //         type: 'info',
-                //         showCloseButton: true,
-                //         showCancelButton: true,
-                //         confirmButtonText: 'حذف',
-                //         cancelButtonText: 'إغلاق',
-                //         confirmButtonColor: '#56ace0',
-                //         width: '450px'
-                //     }).then(function (value) {
-                //         $.ajax({
-                //             url: delete_url,
-                //             method: 'delete',
-                //             type: 'json',
-                //             success: function (response) {
-                //                 if (response.status) {
-                //                     customSweetAlert(
-                //                         'success',
-                //                         response.message,
-                //                         response.item,
-                //                         function (event) {
-                //                             tbl.ajax.reload();
-                //                         }
-                //                     );
-                //                 } else {
-                //                     customSweetAlert(
-                //                         'error',
-                //                         response.message,
-                //                         response.errors_object
-                //                     );
-                //                 }
-                //             },
-                //             error: function (response) {
-                //                 $('.upload-spinn').addClass('hidden');
-                //                 errorCustomSweet();
-                //             }
-                //         });
-                //     });
-                // });
+
             });
         </script>
     @endpush
