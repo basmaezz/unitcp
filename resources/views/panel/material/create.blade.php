@@ -27,7 +27,6 @@
                                 <option disabled selected hidden>إختيار الكليه</option>
                                 {{--@if(isset($items) && $items->count() > 0)--}}
                                     @foreach($faculty as $item)
-
                                         <option value="{{$item->id}}" >{{get_text_locale($item,'name_ar')}}</option>
                                     @endforeach
                                 {{--@endif--}}

@@ -53,9 +53,17 @@
                             <select class="form-control faculty" name="faculty" data-placeholder="إختيار الكليه" id="faculty_id" required>
                                 <option disabled selected hidden>إختيار الكليه</option>
                                 @if(isset($items) && $items->count() > 0)
-                                    @foreach($faculty as $item)
+                                    @if(auth()->user()->faculty_id ==0)
+                                    @foreach($items as $item)
                                         <option value="{{$item->id}}"  >{{get_text_locale($item,'name_ar')}}</option>
                                     @endforeach
+                                        @else
+
+                                        @foreach($faculty as $item)
+                                            <option value="{{$item->id}}"  >{{get_text_locale($item,'name_ar')}}</option>
+                                        @endforeach
+
+                                        @endif
                                 @endif
                             </select>
                         </fieldset>

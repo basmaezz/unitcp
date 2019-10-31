@@ -28,7 +28,7 @@
                         </fieldset>
 
                         <fieldset class="form-group">
-                            <label> أسم المستخدم</label>
+                            <label> اسم المستخدم</label>
                             <input class="form-control"  type="text" name="username" placeholder="الرجاء إدخال اسم المستخدم"  value="{{$user->username}}" required>
                         </fieldset>
 
@@ -43,10 +43,6 @@
                         </fieldset>
 
                         <p style="color: #0d6aad;">اعاده تعيين كلمه المرور!</p>
-
-                        {{--<fieldset class="form-group">--}}
-                        {{--<label class="btn btn-outline-primary" id="chang-pw" > اعاده تعيين كلمه المرور</label>--}}
-                        {{--</fieldset>--}}
 
                         <fieldset class="form-group hidden" id="chg-pw">
                             <label>كلمه المرور الجديده</label>
