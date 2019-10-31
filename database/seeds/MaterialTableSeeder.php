@@ -12,7 +12,7 @@ class MaterialTableSeeder extends Seeder
      */
     public function run()
     {
-        factory(Material::class, 10)->create();
+        factory(Material::class, 100)->create();
 
     }
 }

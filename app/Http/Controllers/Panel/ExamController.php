@@ -157,15 +157,10 @@ class ExamController extends Controller
         $classes = DB::table("classes")->where("faculty_id", $id)->get();
         $materials = DB::table("materials")->where("faculty_id", $id)->get();
         $semesters = DB::table("semesters")->where("faculty_id", $id)->get();
-
         $year = Year::all();
-
-
         $data = ["classes" => $classes, "department" => $department, "materials" => $materials, "semesters" => $semesters,"year"=>$year ];
 
-
         $view = view('panel.exam.exam-selectors', $data)->render();
-
         return response()->json(['status' => true, 'item' => $view]);
     }
 

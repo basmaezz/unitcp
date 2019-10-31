@@ -12,6 +12,6 @@ class SemesterTableSeeder extends Seeder
      */
     public function run()
     {
-        factory(Semester::class, 10)->create();
+        factory(Semester::class, 100)->create();
     }
 }

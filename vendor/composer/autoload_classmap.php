@@ -3716,6 +3716,7 @@ return array(
     'Yajra\\DataTables\\Utilities\\Config' => $vendorDir . '/yajra/laravel-datatables-oracle/src/Utilities/Config.php',
     'Yajra\\DataTables\\Utilities\\Helper' => $vendorDir . '/yajra/laravel-datatables-oracle/src/Utilities/Helper.php',
     'Yajra\\DataTables\\Utilities\\Request' => $vendorDir . '/yajra/laravel-datatables-oracle/src/Utilities/Request.php',
+    'YearsTableSeeder' => $baseDir . '/database/seeds/YearsTableSeeder.php',
     'Zizaco\\Entrust\\Contracts\\EntrustPermissionInterface' => $vendorDir . '/zizaco/entrust/src/Entrust/Contracts/EntrustPermissionInterface.php',
     'Zizaco\\Entrust\\Contracts\\EntrustRoleInterface' => $vendorDir . '/zizaco/entrust/src/Entrust/Contracts/EntrustRoleInterface.php',
     'Zizaco\\Entrust\\Contracts\\EntrustUserInterface' => $vendorDir . '/zizaco/entrust/src/Entrust/Contracts/EntrustUserInterface.php',
