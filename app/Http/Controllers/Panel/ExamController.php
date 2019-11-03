@@ -267,7 +267,7 @@ class ExamController extends Controller
         $classes = Classes::where("faculty_id", $fac_id)->get();
         $material = Material::where("faculty_id", $fac_id)->get();
         $semester = Semester::where("faculty_id", $fac_id)->get();
-//            dd($semester);
+
         $year = year::get();
         $data = [
             "exam" => $exam,
@@ -301,19 +301,17 @@ class ExamController extends Controller
             ], 400);
         }
 
-//
         if ($request->hasFile('file')) {
             $fileRequeste = $request->file('file');
+
             $file_size = $fileRequeste->getClientSize();
+
             $extension = $fileRequeste->getClientOriginalExtension();
             $allowed_filename = 'file_' . time() . mt_rand() . '.' . $extension;
             $originalName = str_replace('.' . $extension, '', $fileRequeste->getClientOriginalName());
 
-
             $fileStatus = $fileRequeste->storeAs('faculty/exams/' . $fac_id . '/' . $dep_id . '/' . $class_id . '/' . $semester_id . '/' . $material_id . '/' . $year_id . request('facid'), $originalName . '.' . $extension);
 
-
-            //Create new record for uploaded file
             $fileModule = new \App\File;
             $fileModule->display_name = $originalName . '.' . $extension;
             $fileModule->file_name = $allowed_filename;
@@ -322,8 +320,8 @@ class ExamController extends Controller
             $fileModule->save();
             //Update file name in Exam
             $exam->file = $fileModule->display_name;
-        }
-
+          }
+//
         //Save Exam
 
 //            $exam = new Exam;
@@ -340,6 +338,7 @@ class ExamController extends Controller
                 'key_search_en' => $request->key_search_en,
             ]
         );
+
         return (isset($isUpdated)) ? $this->response_api(true, 'تم تعديل بيانات الأمتحان بنجاح') : $this->response_api(false, 'حدث خطأ غير متوقع');
     }
 
