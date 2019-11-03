@@ -4,8 +4,10 @@
     <list default="true" id="5ecc8cb6-2745-43c6-a27c-4295447f35de" name="Default" comment="Like,Dislike Count">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Panel/ExamController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Panel/ExamController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/panel/exam/main.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/panel/exam/main.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/panel/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/panel/home.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/public/faculty/exams/322/344/1/2/102/testings - Copy (6).pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/public/faculty/exams/322/344/1/2/102/testings - Copy (7).pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/public/faculty/exams/8/322/344/1/2/1/testings.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/public/faculty/exams/8/322/344/1/2/102/testings - Copy (6).pdf" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -413,7 +415,7 @@
       <workItem from="1572456978809" duration="15640000" />
       <workItem from="1572728803575" duration="9379000" />
       <workItem from="1572751136125" duration="4905000" />
-      <workItem from="1572791146915" duration="815000" />
+      <workItem from="1572791146915" duration="3546000" />
     </task>
     <servers />
   </component>
@@ -467,11 +469,6 @@
           <url>file://$PROJECT_DIR$/app/Http/Controllers/Panel/SemesterController.php</url>
           <line>60</line>
           <option name="timeStamp" value="3" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/app/Http/Controllers/Panel/ExamController.php</url>
-          <line>310</line>
-          <option name="timeStamp" value="7" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
