@@ -104,7 +104,7 @@
                         @if(\App\config::where('name', 'upload')->first()->config == 'on')
                         <input type="hidden" id="exam_file_name" name="fexam">
                         <div id="fileuploader" class="hidden">
-                            <input type="file" name="file">
+                            <input type="file" name="file" id="choose-file">
                         </div>
                             @else
                             <h5>رفع الملفات موقوف حاليا</h5>
@@ -146,12 +146,16 @@
         <script>
             $(document).ready(function()
             {
+
                 $(document).on('change','.faculty',function () {
                     var cid = $('.faculty option:selected').val();
                     event.preventDefault();
                     if(cid  > 0)
                     {
                         $('#fileuploader').removeClass('hidden');
+                        $('#choose-file').inputFileText({
+                            text: 'Select File'
+                        });
                         // 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
                         /*$("#fileuploader").uploadFile({
                             url:"{{url('admin/file/upload')}}",

@@ -110,19 +110,20 @@
                             <textarea class="form-control " rows="4" type="text" name="key_search_en" placeholder="الرجاء إدخال كلمات البحث باللغه الانجليزيه" >{{($data['exam'])->key_search_en}}</textarea>
                         </fieldset>
 
-                        <button  type="button" class="btn btn-danger del-file" data-id="{{$data['exam']->id}}">حذف ملف : ({{($data['exam'])->file}})</button>
-                        <div id="fileuploader" class="hidden">
-                            <input type="file" name="file">
+                        <button  type="button" class="btn btn-danger del-file {{is_null($data['exam']->file) ? 'hidden' : ''  }}" data-id="{{$data['exam']->id}}">حذف ملف : ({{($data['exam'])->file}})</button>
+{{--                        <div class="{{is_null($data['exam']->file) ? 'hidden' : ''  }}">--}}
+                        <div id="fileuploader" class="{{!is_null($data['exam']->file) ? 'hidden' : ''  }}">
+                            <input type="file" name="file" accept="application/pdf">
                         </div>
 
 
-                        {{--<div id="fileuploader" >--}}
-                            {{--@if(!empty($data['exam']->file))--}}
-                                {{--<button  type="button" class="btn btn-danger del-file" data-id="{{$data['exam']->id}}">حذف ملف : ({{($data['exam'])->file}})</button>--}}
+{{--                        <div id="fileuploader" >--}}
+{{--                            @if(!empty($data['exam']->file))--}}
+{{--                                <button  type="button" class="btn btn-danger del-file" data-id="{{$data['exam']->id}}">حذف ملف : ({{($data['exam'])->file}})</button>--}}
 
-                                {{--@else--}}
-                                {{--<input type="file" name="file" class="hidden" id="delete_file"> {{($data['exam'])->file}}--}}
-                            {{--@endif--}}
+{{--                                @else--}}
+{{--                                <input type="file" name="file" class="hidden" id="delete_file"> {{($data['exam'])->file}}--}}
+{{--                            @endif--}}
 
                             {{--@if(\App\config::where('name', 'upload')->first()->config == 'on')--}}
 
