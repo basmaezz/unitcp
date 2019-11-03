@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Panel;
 
 use App\File;
+use App\Http\Requests\CreateDepartment;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Storage;
@@ -78,7 +79,6 @@ class ExamController extends Controller
         $fileRequeste = $request->file('file');
         $file_size = $fileRequeste->getClientSize();
         $extension = $fileRequeste->getClientOriginalExtension();
-//        $allowed_filename = 'file_' . time() . mt_rand() . '.' . $extension;
         $fac_id=$request->get('faculty');
         $dep_id=$request->get('department_id');
         $class_id=$request->get('class_id');
@@ -281,83 +281,109 @@ class ExamController extends Controller
             return view('panel.exam.edit')->with('data',$data);
         }
 
+    public function update($id,Request $request)
+    {
+        $exam = Exam::updateOrCreate(['id' => $id], $request->all());
+//        $status = $department ? true : false;
+//        collections::log(auth()->user()->id , 'Exam', 'تم تعديل بيانات القسم', $department, $status);
 
-        public  function update($id,Request $request)
-        {
-           $exam = Exam::findOrFail($id);
-//            if (!config('app.allowUploadFiles')) {
-//                return Response::json([
-//                    'error' => true,
-//                    'message' => 'تم ايقاف رفع الملفات بشكل مؤقت برجاء التواصل مع الادارة',
-//                ], 400);
-//            }
+        return (isset($exam)) ? $this->response_api(true, 'تم تعديل بيانات القسم بنجاح') : $this->response_api(false, 'حدث خطأ غير متوقع');
+    }
+//        public  function update($id,Request $request)
+//        {
+//           $exam = Exam::findOrFail($id);
+//            $fileRequeste = $request->file('file');
+//            $file_size = $fileRequeste->getClientSize();
+//            $extension = $fileRequeste->getClientOriginalExtension();
+//            $originalName = str_replace('.' . $extension, '', $fileRequeste->getClientOriginalName());
 //
-//            if($request->hasFile('file')) {
-//                $fileRequeste = $request->file('file');
-//                $file_size = $fileRequeste->getClientSize();
-//                $extension = $fileRequeste->getClientOriginalExtension();
-//                $allowed_filename = 'file_' . time() . mt_rand() . '.' . $extension;
-//                $originalName = str_replace('.' . $extension, '', $fileRequeste->getClientOriginalName());
-//                $checkFileExist = \App\File::where('size', $file_size)->where('display_name', 'like', $originalName . '.' . $extension)->first();
-////                if (!empty($checkFileExist)) {
+//
+//            $fac_id=$request->get('faculty_id');
+//            $dep_id=$request->get('department_id');
+//            $class_id=$request->get('class_id');
+//            $semester_id=$request->get('semester_id');
+//            $material_id=$request->get('material_id');
+//            $year_id=$request->get('year_id');
+//
+//            $fileRequeste = $request->file('file');
+//            $file_size = $fileRequeste->getClientSize();
+//            $extension = $fileRequeste->getClientOriginalExtension();
+//            $fileStatus = $fileRequeste->storeAs('faculty/exams/'.$fac_id.'/'.$dep_id.'/'.$class_id.'/'.$semester_id.'/'.$material_id.'/'.$year_id.request('facid'), $originalName.'.'.$extension);
+////            if (!config('app.allowUploadFiles')) {
+////                return Response::json([
+////                    'error' => true,
+////                    'message' => 'تم ايقاف رفع الملفات بشكل مؤقت برجاء التواصل مع الادارة',
+////                ], 400);
+////            }
+////
+////            if($request->hasFile('file')) {
+////                $fileRequeste = $request->file('file');
+////                $file_size = $fileRequeste->getClientSize();
+////                $extension = $fileRequeste->getClientOriginalExtension();
+////                $allowed_filename = 'file_' . time() . mt_rand() . '.' . $extension;
+////                $originalName = str_replace('.' . $extension, '', $fileRequeste->getClientOriginalName());
+////                $checkFileExist = \App\File::where('size', $file_size)->where('display_name', 'like', $originalName . '.' . $extension)->first();
+//////                if (!empty($checkFileExist)) {
+//////                    return Response::json([
+//////                        'error' => true,
+//////                        'message' => 'هذا الملف قد تم رفعه مسبقا',
+//////                    ], 400);
+//////                }
+////
+//////                dd(request('file'));
+////
+////                $fileStatus = $fileRequeste->storeAs('faculty/exams', $allowed_filename);
+////
+////                if (!$fileStatus) {
 ////                    return Response::json([
 ////                        'error' => true,
-////                        'message' => 'هذا الملف قد تم رفعه مسبقا',
-////                    ], 400);
+////                        'message' => 'حدثت مشكلة في الخادم أثناء رفع الملفات',
+////                    ], 500);
+////                }
+//                //Delete old file & record
+////dd('ggg');
+////                $oldFile = \App\File::where('file_name','like',$exam->file)->first();
+////                if($oldFile){
+////                    if(file_exists('faculty/exams/'.$oldFile->file_name))
+////                    {
+////                        Storage::delete('faculty/exams/'.$oldFile->file_name)->delete();
+////                    }
+////                    $oldFile->delete();
 ////                }
 //
-////                dd(request('file'));
+//                //Create new record for uploaded file
+////                $fileModule = new \App\File;
+////                $fileModule->display_name = $originalName . '.' . $extension;
+////                $fileModule->file_name = $allowed_filename;
+////                $fileModule->mime_type = $extension;
+////                $fileModule->size = $file_size;
+////                $fileModule->save();
+////                //Update file name in Exam
+////                $exam->file = $fileModule->display_name;
+////            }
+//            //Save Examhk
+//            $fileModule = new \App\File;
+//            $fileModule->display_name = $originalName . '.' . $extension;
+//            $fileModule->file_name = $originalName . '.' . $extension;
+//            $fileModule->mime_type = $extension;
+//            $fileModule->size = $file_size;
+////        $fileModule->save();
 //
-//                $fileStatus = $fileRequeste->storeAs('faculty/exams', $allowed_filename);
+//            //Save Exam
 //
-//                if (!$fileStatus) {
-//                    return Response::json([
-//                        'error' => true,
-//                        'message' => 'حدثت مشكلة في الخادم أثناء رفع الملفات',
-//                    ], 500);
-//                }
-                //Delete old file & record
-//dd('ggg');
-//                $oldFile = \App\File::where('file_name','like',$exam->file)->first();
-//                if($oldFile){
-//                    if(file_exists('faculty/exams/'.$oldFile->file_name))
-//                    {
-//                        Storage::delete('faculty/exams/'.$oldFile->file_name)->delete();
-//                    }
-//                    $oldFile->delete();
-//                }
-
-                //Create new record for uploaded file
-//                $fileModule = new \App\File;
-//                $fileModule->display_name = $originalName . '.' . $extension;
-//                $fileModule->file_name = $allowed_filename;
-//                $fileModule->mime_type = $extension;
-//                $fileModule->size = $file_size;
-//                $fileModule->save();
-//                //Update file name in Exam
-//                $exam->file = $fileModule->display_name;
-//            }
-            //Save Examhk
-
-            if($request->hasFile('file')) {
-                $path = $request->file('file')->store('avatars');
-
-            }
-
-            $exam->faculty_id       = $request->get('faculty_id');
-            $exam->class_id         = $request->get('class_id');
-            $exam->department_id    = $request->get('department_id');
-            $exam->semester_id      = $request->get('semester_id');
-            $exam->material_id      = $request->get('material_id');//missing
-            $exam->year_id          = $request->get('year_id');//missing
-            $exam->key_search_ar    = $request->get('key_search_ar');//missing
-            $exam->key_search_en    = $request->get('key_search_en');//missing
-//            $fileName = time().'.'.$request->file->extension();
-//            $request->file->move(public_path('uploads'), $fileName);
+//            $exam = new Exam;
+//            $exam->faculty_id = $fac_id;
+//            $exam->class_id = $class_id;
+//            $exam->department_id = $dep_id;
+//            $exam->semester_id = $semester_id;
+//            $exam->material_id = $material_id;
+//            $exam->year_id = $year_id;
 //            $exam->file = $fileModule->display_name;
-            $exam->save();
-            return (isset($exam)) ? $this->response_api(true, 'تم تعديل بيانات الأمتحان بنجاح') : $this->response_api(false, 'حدث خطأ غير متوقع');
-        }
+//            $exam->key_search_ar = $request->key_search_ar;
+//            $exam->key_search_en = $request->key_search_en;
+//            $exam->save();
+//            return (isset($exam)) ? $this->response_api(true, 'تم تعديل بيانات الأمتحان بنجاح') : $this->response_api(false, 'حدث خطأ غير متوقع');
+//        }
 
     public function delfile($id){
         $exam =  exam::where('id',$id)->update(['file'=>NULL]);

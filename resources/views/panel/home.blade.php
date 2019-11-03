@@ -57,28 +57,22 @@
                     <div class="col-12">
                         <h5>أحدث الأمتحانات المرفوعه</h5>
                     @if($latest->count()>0)
+                            <div class="row m-t-6 m-b-6">
+                                @foreach($latest as $key => $last)
+                                    {{--{{dd($last->file)}}--}}
+                                    <div class="col-md-9">
+                                        <td ><h6 class="text-blue font-weight-bold">
+                                                {{ @getFullNamearray($last->faculty_id, $last->class_id, $last->material_id, $last->semester_id, $last->year_id) }}</h6></td>
 
+                                    </div><br>
+                                    <div class="col-md-3">
+                                        <a title="Download" href="{{ url('storage/faculty/exams/'.$last->faculty_id ."/".$last->department_id."/".
+                            $last->class_id ."/".$last->semester_id ."/".$last->material_id ."/".$last->year_id ."/".$last->file) }}" target="_blank" style="margin-right: 9px;
+    height: 42px; margin-bottom: 6px; " data-id="{{ $last->id }}"  class="btn btn-primary download" > تحميل </a>
 
-                        <div class="row m-t-6 m-b-6" >
-                            @foreach($latest as $key => $last)
-
-                                <div class="col-md-9">
-                                    <td ><h6 class="text-blue font-weight-bold">
-                                            {{ @getFullNamearray($last->faculty_id, $last->class_id, $last->material_id, $last->semester_id, $last->year_id) }}</h6></td>
-
-                                </div><br>
-                                <div class="col-md-3"  >
-                                    <a title="Download" style="background-color: #003B51; margin-bottom: 10px;"
-                                       href="{{ url('storage/faculty/exams/'.$last->faculty_id ."/".$last->department_id."/".
-                            $last->class_id ."/".$last->semester_id ."/".$last->material_id ."/".$last->year_id ."/".$last->files($last->file)) }}" target="_blank" style="margin-right: 9px;
-    height: 42px; margin-bottom: 6px; " data-id="{{ $last->id }}"  class="btn btn-primary download"   >
-
-                                       تحميل
-                                    </a>
-
-                                </div>
-                            @endforeach
-                        </div>
+                                    </div>
+                                @endforeach
+                            </div>
                         @else
                         <h5>لا يوجد امتحانات مضافه</h5>
                 @endif
