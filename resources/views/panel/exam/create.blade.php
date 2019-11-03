@@ -104,7 +104,7 @@
                         @if(\App\config::where('name', 'upload')->first()->config == 'on')
                         <input type="hidden" id="exam_file_name" name="fexam">
                         <div id="fileuploader" class="hidden">
-                            <input type="file" name="file" id="choose-file">
+                            <input type="file" name="file" id="choose-file"accept="application/pdf">
                         </div>
                             @else
                             <h5>رفع الملفات موقوف حاليا</h5>
