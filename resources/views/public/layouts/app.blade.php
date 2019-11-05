@@ -3,7 +3,8 @@
 <!--[if IE 7]>         <html lang="en" class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html lang="en" class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
-<html dir="{{ LaravelLocalization::getCurrentLocaleDirection() }}">
+{{--<html dir="{{ LaravelLocalization::getCurrentLocaleDirection() }}">--}}
+<html>
 <head>
   <!-- meta charec set -->
   <meta charset="utf-8">
@@ -27,6 +28,7 @@
 
   <!-- Fontawesome Icon font -->
 
+{{--  @include('public.layouts.css-ar')--}}
 
   @if(app()->getLocale() =='ar')
     @include('public.layouts.css-ar')
