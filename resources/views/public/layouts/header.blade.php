@@ -34,16 +34,13 @@
                     </li>
                 @endif
 
-{{--                    @if(app()->getLocale() =='ar')--}}
                         @if (App::isLocale('ar'))
                 <li >
                     <a href="{{url('/en/public/index')}}"  id="lang" rel="nofollow">English
-                    {{--<a href="{{url()->current('/en/')}}"  id="lang" rel="nofollow">English--}}
                     </a>
                 </li>
                         @else
 
-{{--                <li > <a href="{{url()->current('/ar/')}}"  id="lang" rel="nofollow">عربى</a>--}}
                 <li > <a href="{{url('/ar/public/index')}}"  id="lang" rel="nofollow">عربى</a>
                         </li>
 

@@ -16,12 +16,12 @@ Route::get('download/{id}','site\HomeController@download');//
 
 //Route::get('/home', 'HomeController@index')->name('home');
 
-Route::group(
-    [
-        'prefix' => LaravelLocalization::setLocale(),
-        'middleware' => [ 'localeSessionRedirect', 'localizationRedirect', 'localeViewPath' ]
-    ],
-    function() {
+//Route::group(
+//    [
+//        'prefix' => LaravelLocalization::setLocale(),
+//        'middleware' => [ 'localeSessionRedirect', 'localizationRedirect', 'localeViewPath' ]
+//    ],
+//    function() {
 
 
         Route::prefix('public')->group(function () {
@@ -49,7 +49,7 @@ Route::group(
             Route::get('chglang/{lang}', 'site\HomeController@changeLang')->name('changelang');
         });
 
-    });
+//    });
 
         Route::view('try', 'public.Index');
         Route::view('tst', 'public.search');
@@ -81,3 +81,9 @@ Route::group(
 //
 //    }
 //});
+Route::get('setlocale/{locale}', function ($locale) {
+    if (in_array($locale, \Config::get('app.locales'))) {
+        Session::put('locale', $locale);
+    }
+    return redirect()->back();
+});

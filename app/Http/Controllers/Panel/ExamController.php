@@ -302,6 +302,8 @@ class ExamController extends Controller
         }
 
         if ($request->hasFile('file')) {
+
+//            $this->deleteFile($exam->file , $path );
             $fileRequeste = $request->file('file');
 
             $file_size = $fileRequeste->getClientSize();
@@ -320,7 +322,7 @@ class ExamController extends Controller
             $fileModule->save();
             //Update file name in Exam
             $exam->file = $fileModule->display_name;
-          }
+        }
 //
         //Save Exam
 
@@ -345,6 +347,13 @@ class ExamController extends Controller
     public function delfile($id)
     {
         $exam = exam::where('id', $id)->update(['file' => NULL]);
+
+    }
+
+
+    private function deleteFile($file, $path)
+    {
+        unlink(public_path($path . $file));
 
     }
 
