@@ -6,7 +6,8 @@
             @foreach($classes as $item)
 
 
-                <option value="{{$item->id}}" @if($item->id == request('class_id'))selected @endif >{{get_text_locale($item,'name_ar')}}</option>
+                {{--<option value="{{$item->id}}" @if($item->id == request('class_id'))selected @endif >{{get_text_locale($item,'name_ar')}}</option>--}}
+                <option value="{{$item->id}}" @if($item->id == request('class_id'))selected @endif >{{$item->name_ar}}</option>
             @endforeach
         @endif
     </select>
@@ -20,7 +21,8 @@
         @if(isset($department) && $department->count() > 0)
             @foreach($department as $item)
 
-                <option value="{{$item->id}}" >{{get_text_locale($item,'name_ar')}}</option>
+                {{--<option value="{{$item->id}}" >{{get_text_locale($item,'name_ar')}}</option>--}}
+                <option value="{{$item->id}}" >{{$item->name_ar}}</option>
             @endforeach
         @endif
     </select>
@@ -34,7 +36,7 @@
         @if(isset( $semesters) && $semesters->count() > 0)
             @foreach($semesters as $item)
 
-                <option value="{{$item->id}}" >{{get_text_locale($item,'name_ar')}}</option>
+                <option value="{{$item->id}}" >{{$item->name_ar}}</option>
             @endforeach
         @endif
     </select>
@@ -48,7 +50,7 @@
 
             @foreach($materials as $item)
 
-                <option value="{{$item->id}}" >{{get_text_locale($item,'name_ar')}}</option>
+                <option value="{{$item->id}}" >{{$item->name_ar}}</option>
             @endforeach
         @endif
     </select>
@@ -62,7 +64,7 @@
         @if(isset($year) && $year->count() > 0)
             @foreach($year as $item)
 
-                <option value="{{$item->id}}" >{{get_text_locale($item,'name')}}</option>
+                <option value="{{$item->id}}" >{{$item->name}}</option>
             @endforeach
         @endif
     </select>

@@ -46,6 +46,7 @@
 
                         @php
                             $items = get_fac_data();
+
                         @endphp
 
                         <fieldset class="form-group">
@@ -55,12 +56,13 @@
                                 @if(isset($items) && $items->count() > 0)
                                     @if(auth()->user()->faculty_id ==0)
                                     @foreach($items as $item)
-                                        <option value="{{$item->id}}"  >{{get_text_locale($item,'name_ar')}}</option>
+{{--                                        <option value="{{$item->id}}"  >{{get_text_locale($item,'name_ar')}}</option>--}}
+                                        <option value="{{$item->id}}"  >{{$item->name_ar}}</option>
                                     @endforeach
                                         @else
 
                                         @foreach($faculty as $item)
-                                            <option value="{{$item->id}}"  >{{get_text_locale($item,'name_ar')}}</option>
+                                            <option value="{{$item->id}}"  >{{$item->name_ar}}</option>
                                         @endforeach
 
                                         @endif
@@ -82,7 +84,7 @@
 
                                         @if(isset($tag) && $tag->count() > 0)
                                             @foreach($tag as $item)
-                                                <option value="{{$item->id}}" >{{get_text_locale($item,'name_ar')}}</option>
+                                                <option value="{{$item->id}}" >{{$item->name_ar}}</option>
                                             @endforeach
                                         @endif
 
