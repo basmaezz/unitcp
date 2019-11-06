@@ -3,15 +3,17 @@
   <component name="ChangeListManager">
     <list default="true" id="5ecc8cb6-2745-43c6-a27c-4295447f35de" name="Default" comment="Like,Dislike Count">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Panel/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Panel/UserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/panel/js/jquery.validate.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/panel/js/jquery.validate.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/ar/validation.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/ar/validation.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/panel/classes/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/panel/classes/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/panel/classes/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/panel/classes/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/panel/department/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/panel/department/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/panel/department/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/panel/department/edit.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/panel/exam/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/panel/exam/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/panel/exam/exam-selectors.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/panel/exam/exam-selectors.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/panel/students/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/panel/students/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/panel/students/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/panel/students/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/panel/material/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/panel/material/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/panel/material/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/panel/material/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/panel/material/fac-selectors.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/panel/material/fac-selectors.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/panel/semester/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/panel/semester/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/panel/semester/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/panel/semester/edit.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/panel/users/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/panel/users/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/panel/users/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/panel/users/edit.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/panel/users/profile.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/panel/users/profile.blade.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -40,31 +42,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="UserController.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Panel/UserController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="287">
-              <caret line="109" column="69" lean-forward="true" selection-start-line="109" selection-start-column="69" selection-end-line="109" selection-end-column="69" />
-              <folding>
-                <element signature="e#9445#10914#0#PHP" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="profile.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/panel/users/profile.blade.php">
+      <file leaf-file-name="create.blade.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/resources/views/panel/exam/create.blade.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="255">
-              <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
-              <folding>
-                <element signature="e#2234#2257#0#HTML" expanded="true" />
-                <element signature="e#3354#3381#0#HTML" expanded="true" />
-                <element signature="e#3517#3535#0#HTML" expanded="true" />
-                <element signature="e#3564#3570#0#HTML" expanded="true" />
-                <element signature="e#3571#3577#0#HTML" expanded="true" />
-                <element signature="e#3613#3645#0#HTML" expanded="true" />
-              </folding>
+              <caret line="75" column="59" selection-start-line="75" selection-start-column="59" selection-end-line="75" selection-end-column="59" />
             </state>
           </provider>
         </entry>
@@ -110,11 +92,20 @@
         <option value="$PROJECT_DIR$/resources/lang/ar/validation.php" />
         <option value="$PROJECT_DIR$/public/panel/js/jquery.validate.min.js" />
         <option value="$PROJECT_DIR$/resources/views/panel/exam/exam-selectors.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/panel/exam/create.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/panel/users/create.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/panel/users/edit.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/panel/users/profile.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Panel/UserController.php" />
+        <option value="$PROJECT_DIR$/resources/views/panel/users/profile.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/panel/users/create.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/panel/semester/edit.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/panel/semester/create.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/panel/classes/create.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/panel/classes/edit.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/panel/department/create.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/panel/department/edit.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/panel/material/create.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/panel/material/fac-selectors.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/panel/material/edit.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/panel/exam/create.blade.php" />
       </list>
     </option>
   </component>
@@ -277,7 +268,7 @@
               <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="panel" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="users" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="exam" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
           </expand>
           <select />
@@ -548,7 +539,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="19456000" />
+    <option name="totallyTimeSpent" value="21285000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -643,34 +634,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/resources/views/public/Index.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="24" column="14" selection-start-line="24" selection-start-column="14" selection-end-line="24" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/public/layouts/header.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="245">
-          <caret line="40" column="49" selection-start-line="40" selection-start-column="49" selection-end-line="40" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/panel/students/all.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="32" selection-start-line="32" selection-end-line="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/panel/students/edit.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="232">
-          <caret line="14" column="131" selection-start-line="14" selection-start-column="131" selection-end-line="14" selection-end-column="131" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.env">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
@@ -689,27 +652,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="459">
           <caret line="27" column="66" lean-forward="true" selection-start-line="27" selection-start-column="66" selection-end-line="27" selection-end-column="105" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/panel/material/edit.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="50" column="53" lean-forward="true" selection-start-line="50" selection-start-column="53" selection-end-line="50" selection-end-column="92" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/panel/classes/create.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="40" column="35" selection-start-line="40" selection-start-column="35" selection-end-line="40" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/panel/classes/edit.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="268">
-          <caret line="41" column="58" selection-start-line="41" selection-start-column="58" selection-end-line="41" selection-end-column="58" />
         </state>
       </provider>
     </entry>
@@ -846,13 +788,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/panel/material/create.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="28" column="63" selection-start-line="28" selection-start-column="63" selection-end-line="28" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Config.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -942,31 +877,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/panel/department/create.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/panel/exam/create.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="52" column="137" selection-start-line="52" selection-start-column="129" selection-end-line="52" selection-end-column="137" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/panel/exam/exam-selectors.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
           <caret line="60" column="36" selection-start-line="60" selection-start-column="36" selection-end-line="60" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/panel/users/create.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="84" column="37" lean-forward="true" selection-start-line="84" selection-start-column="37" selection-end-line="84" selection-end-column="37" />
         </state>
       </provider>
     </entry>
@@ -998,10 +912,45 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/panel/users/profile.blade.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/panel/semester/create.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="38" column="151" selection-start-line="38" selection-start-column="126" selection-end-line="38" selection-end-column="151" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/panel/classes/create.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="41" column="164" selection-start-line="41" selection-start-column="164" selection-end-line="41" selection-end-column="164" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/panel/classes/edit.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="302">
+          <caret line="40" column="53" lean-forward="true" selection-start-line="40" selection-start-column="53" selection-end-line="40" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/panel/users/create.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
-          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+          <caret line="22" column="117" selection-start-line="22" selection-start-column="117" selection-end-line="22" selection-end-column="117" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/panel/semester/edit.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="47" column="65" lean-forward="true" selection-start-line="47" selection-start-column="65" selection-end-line="47" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/panel/users/profile.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="40" column="93" selection-start-line="40" selection-start-column="93" selection-end-line="40" selection-end-column="93" />
           <folding>
             <element signature="e#2234#2257#0#HTML" expanded="true" />
             <element signature="e#3354#3381#0#HTML" expanded="true" />
@@ -1020,6 +969,48 @@
           <folding>
             <element signature="e#9445#10914#0#PHP" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/panel/department/edit.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="27" column="54" lean-forward="true" selection-start-line="27" selection-start-column="54" selection-end-line="27" selection-end-column="93" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/panel/department/create.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="41" column="66" lean-forward="true" selection-start-line="41" selection-start-column="66" selection-end-line="41" selection-end-column="105" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/panel/material/create.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="47" column="162" selection-start-line="47" selection-start-column="162" selection-end-line="47" selection-end-column="162" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/panel/material/fac-selectors.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="28" column="99" selection-start-line="28" selection-start-column="99" selection-end-line="28" selection-end-column="99" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/panel/material/edit.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="663">
+          <caret line="81" column="74" selection-start-line="81" selection-start-column="74" selection-end-line="81" selection-end-column="74" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/panel/exam/create.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="75" column="59" selection-start-line="75" selection-start-column="59" selection-end-line="75" selection-end-column="59" />
         </state>
       </provider>
     </entry>

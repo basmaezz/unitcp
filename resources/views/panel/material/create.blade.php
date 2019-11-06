@@ -22,12 +22,12 @@
                         @endphp
 
                         <fieldset class="form-group">
-                            <label>اسم الكليه </label><font color="red">*</font></span>
+                            <label>اسم الكليه </label><span><font color="red">*</font></span>
                             <select class="form-control"  name="faculty_id" data-placeholder="إختيار الكليه" >
                                 <option disabled selected hidden>إختيار الكليه</option>
                                 {{--@if(isset($items) && $items->count() > 0)--}}
                                     @foreach($faculty as $item)
-                                        <option value="{{$item->id}}" >{{get_text_locale($item,'name_ar')}}</option>
+                                        <option value="{{$item->id}}" >{{$item->name_ar}}</option>
                                     @endforeach
                                 {{--@endif--}}
                             </select>
@@ -40,12 +40,12 @@
 
                         <fieldset class="form-group">
                             <label>الأسم</label><font color="red">*</font></span>
-                            <input class="form-control"  type="text" name="name_ar" placeholder="الرجاء إدخال الأسم"  value="" >
+                            <input class="form-control"  type="text" name="name_ar" placeholder="الرجاء إدخال الأسم"  value="" maxlength="20" required>
                         </fieldset>
 
                         <fieldset class="form-group">
                             <label>الاسم باللغه الانجليزيه</label><font color="red">*</font></span>
-                            <input class="form-control"  type="text" name="name_en" placeholder="الرجاء الاسم باللغه الانجليزيه"  value="" >
+                            <input class="form-control"  type="text" name="name_en" placeholder="الرجاء الاسم باللغه الانجليزيه"  value="" maxlength="20" required>
                         </fieldset>
 
                     </div>

@@ -26,7 +26,7 @@
                                 @if(isset($data['faculties']) && ($data['faculties'])->count() > 0)
                                     @foreach(($data['faculties']) as $item)
 
-                                        <option value="{{$item->id}}" selected>{{get_text_locale($item,'name_ar')}}</option>
+                                        <option value="{{$item->id}}" selected>{{$item->name_ar}}</option>
                                     @endforeach
                                 @endif
                             </select>
@@ -35,12 +35,12 @@
 
                         <fieldset class="form-group">
                             <label>الأسم </label><font color="red">*</font></span>
-                            <input class="form-control"  type="text" name="name_ar" placeholder="لرجاء ادخل الاسم"  value="{{$data['classes'][0]->name_ar}}" required>
+                            <input class="form-control"  type="text" name="name_ar" placeholder="لرجاء ادخل الاسم"  value="{{$data['classes'][0]->name_ar}}"  maxlength="20" required >
                         </fieldset>
 
                         <fieldset class="form-group">
                             <label>الاسم باللغه الانجليزيه </label><font color="red">*</font></span>
-                            <input class="form-control"  type="text" name="name_en" placeholder="لرجاء ادخل الاسم"  value="{{$data['classes'][0]->name_en}}" required>
+                            <input class="form-control"  type="text" name="name_en" placeholder="لرجاء ادخل الاسم"  value="{{$data['classes'][0]->name_en}}"  maxlength="20" required >
                         </fieldset>
 
 

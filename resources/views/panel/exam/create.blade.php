@@ -73,7 +73,7 @@
                         </div>
 
                         <fieldset class="form-group">
-                            <label>اسم التاج </label><font color="red">*</font></span>
+                            <label>اسم التاج </label><span><font color="red">*</font></span>
 
                                 <div class="input-group select2-bootstrap-append">
                                     <select id="multi-append" data-tags="true" class="form-control select2" multiple name="tags[]"required>
@@ -82,7 +82,7 @@
 
                                         @if(isset($tag) && $tag->count() > 0)
                                             @foreach($tag as $item)
-                                                <option value="{{$item->id}}" >{{$item->name_ar}}</option>
+                                                <option value="{{$item->id}}" required >{{$item->name_ar}}</option>
                                             @endforeach
                                         @endif
 

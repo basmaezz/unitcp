@@ -26,7 +26,7 @@
 
                        <fieldset class="form-group">
                             <label>اختر الكليه</label><font color="red">*</font></span>
-                            <select class="form-control" name="faculty_id" data-placeholder="إختيار الكليه" >
+                            <select class="form-control" name="faculty_id" data-placeholder="إختيار الكليه" required >
 
                                 <option disabled selected hidden>اختيار الكليه</option>
                                 @foreach($faculty as $items)
@@ -36,12 +36,12 @@
                         </fieldset>
                         <fieldset class="form-group"><font color="red">*</font></span>
                             <label>الأسم</label>
-                            <input class="form-control"  type="text" name="name_ar" placeholder="الرجاء إدخال الأسم"  value="" >
+                            <input class="form-control"  type="text" name="name_ar" placeholder="الرجاء إدخال الأسم"  value="" maxlength="20" required >
                         </fieldset>
 
                         <fieldset class="form-group"><font color="red">*</font></span>
                             <label>الاسم باللغه الانجليزيه</label>
-                            <input class="form-control"  type="text" name="name_en" placeholder="الرجاء الاسم باللغه الانجليزيه"  value="" >
+                            <input class="form-control"  type="text" name="name_en" placeholder="الرجاء الاسم باللغه الانجليزيه"  value="" maxlength="20" required>
 
                         </fieldset>
 

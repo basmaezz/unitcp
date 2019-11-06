@@ -20,7 +20,7 @@
 
                         <div class="col-md-12">
                             <div class="form-group mt-20 mb-20">
-                                <label><strong>نوع المسستخدم </strong></label> <br>
+                                <label><strong>نوع المسستخدم </strong></label><span><font color="red">*</font></span> <br>
                                 <label class="radio-inline">
                                     <input type="radio"  value="1" name="user" id="radio-admin">
                                    مدير نظام

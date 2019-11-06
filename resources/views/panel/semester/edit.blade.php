@@ -26,12 +26,12 @@
 
                         <fieldset class="form-group">
                             <label>اسم الكليه </label>
-                            <select class="form-control" name="faculty_id" data-placeholder="إختيار الكليه" required>
+                            <select class="form-control" name="faculty_id" data-placeholder="إختيار الكليه" >
                                 <option disabled selected hidden>إختيار الكليه</option>
                                 @if(isset($items) && $items->count() > 0)
                                     @foreach($items as $item)
                                         {{$items}}
-                                        <option value="{{$item->id}}" {{is_selected($item->id,$semester->faculty_id)}} disabled="disabled">{{get_text_locale($item,'name_ar')}}</option>
+                                        <option value="{{$item->id}}" {{is_selected($item->id,$semester->faculty_id)}} >{{$item->name_ar}}</option>
                                     @endforeach
                                 @endif
                             </select>
@@ -40,12 +40,12 @@
 
                         <fieldset class="form-group">
                             <label>الأسم</label>
-                            <input class="form-control"  type="text" name="name_ar" placeholder="لرجاء ادخل الاسم"  value="{{$semester->name_ar}}" required>
+                            <input class="form-control"  type="text" name="name_ar" placeholder="لرجاء ادخل الاسم"  value="{{$semester->name_ar}}" maxlength="20"  required>
                         </fieldset>
 
                         <fieldset class="form-group">
                             <label>الاسم باللغه الانجليزيه</label>
-                            <input class="form-control"  type="text" name="name_en" placeholder="لرجاء ادخل الاسم"  value="{{$semester->name_en}}" required>
+                            <input class="form-control"  type="text" name="name_en" placeholder="لرجاء ادخل الاسم"  value="{{$semester->name_en}}" maxlength="20" required>
                         </fieldset>
 
 

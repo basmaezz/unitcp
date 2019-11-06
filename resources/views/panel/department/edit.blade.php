@@ -25,11 +25,11 @@
                         @endphp
 
                         <fieldset class="form-group">
-                            <label>اسم الكليه </label>
+                            <label>اسم الكليه </label><span><font color="red">*</font></span>
                             <select class="form-control" name="faculty_id" data-placeholder="إختيار الكليه" required>
                                 <option disabled selected hidden>إختيار الكليه</option>
                                     @foreach($items as $item)
-                                    <option value="{{$item->id}}" {{is_selected($item->id,$department->faculty_id)}}>{{get_text_locale($item,'name_ar')}}</option>
+                                    <option value="{{$item->id}}" {{is_selected($item->id,$department->faculty_id)}}>{{$item->name_ar}}</option>
                                     @endforeach
 
                             </select>
@@ -37,14 +37,14 @@
 
 
                         <fieldset class="form-group">
-                            <label>الاسم</label>
-                            <input class="form-control"  type="text" name="name_ar" placeholder="الرجاء إدخال العنوان"  value="{{$department->name_ar}}" required>
+                            <label>الاسم</label><span><font color="red">*</font></span>
+                            <input class="form-control"  type="text" name="name_ar" placeholder="الرجاء إدخال العنوان"  value="{{$department->name_ar}}"  maxlength="20" required >
                         </fieldset>
 
 
                         <fieldset class="form-group">
-                            <label>الاسم</label>
-                            <input class="form-control"  type="text" name="name_en" placeholder="الرجاء إدخال العنوان"  value="{{$department->name_en}}" required>
+                            <label>الاسم</label><span><font color="red">*</font></span>
+                            <input class="form-control"  type="text" name="name_en" placeholder="الرجاء إدخال العنوان"  value="{{$department->name_en}}"  maxlength="20" required >
                         </fieldset>
 
                     </div>
