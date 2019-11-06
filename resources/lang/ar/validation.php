@@ -23,6 +23,7 @@ return [
         'class_id'=>'الفرقه',
         'department_id'=>'القسم',
         'semester_id'=>'الترم',
+        'repeat_pw'=>'اعاده كلمه المرور',
 
     ],
 ];

@@ -67,6 +67,7 @@ class UserController extends Controller
     public function edit($id)
     {
          $data['user'] = User::find($id);
+//         dd($data);
          return (isset($data['user'])) ? view('panel.users.edit', $data) : redirect()->route(get_current_locale() . '.panel.dashboard');
     }
 
@@ -79,37 +80,38 @@ class UserController extends Controller
 
     public function update($id, CreateUser $request)
     {
-        $user= new User();
-        $user = User::updateOrCreate(['id' => $id]);
-        $user->name=$request->name;
-        $user->username=$request->username;
-        $user->email=$request->email;
-        $user->password = bcrypt($request->password);
-        $user->active=$request->active;
-
-        if(!empty($request->repeat_pw)){
-            $user->password = bcrypt($request->repeat_pw);
-        }else{
+        $user = User::find($id);
+        $user_password = $user->password;
+        if (Hash::check($request->password, $user_password)) {
+            $user->name = $request->name;
+            $user->username = $request->username;
+            $user->email = $request->email;
             $user->password = bcrypt($request->password);
-        }
+            $user->active = $request->active;
+            $user->faculty_id = $request->faculty_id;
 
-        if(!empty($request->file('img')))
-        {
-            $imgprofile = $request->file('img');
-            $img_size = $imgprofile->getClientSize();
-            $extension = $imgprofile->getClientOriginalExtension();
+            if (!empty($request->repeat_pw)) {
+                $user->password = bcrypt($request->repeat_pw);
+            } else {
+                $user->password = bcrypt($request->password);
+            }
 
-            $originalName = str_replace('.' . $extension, '', $imgprofile->getClientOriginalName());
-            $imgprofile->move(public_path('uploads/users/profiles/'),$originalName. '.'.$extension);
-            $user->img= $originalName . '.' . $extension;
-        }
+            if (!empty($request->file('img'))) {
+                $imgprofile = $request->file('img');
+                $img_size = $imgprofile->getClientSize();
+                $extension = $imgprofile->getClientOriginalExtension();
+
+                $originalName = str_replace('.' . $extension, '', $imgprofile->getClientOriginalName());
+                $imgprofile->move(public_path('uploads/users/profiles/'), $originalName . '.' . $extension);
+                $user->img = $originalName . '.' . $extension;
+            }
 
 //        $request->repeat_pw ?  $user->password=bcrypt($request->password)  : bcrypt($request->password);
-        $request->faculty_id ? $user->permission = 2 : $user->permission = 1;
-        $user->save();
-         return (isset($user)) ? $this->response_api(true, 'تم التعديل بنجاح') : $this->response_api(false, 'حدث خطأ غير متوقع');
+            $request->faculty_id ? $user->permission = 2 : $user->permission = 1;
+            $user->save();
+            return (isset($user)) ? $this->response_api(true, 'تم التعديل بنجاح') : $this->response_api(false, 'حدث خطأ غير متوقع');
+        }
     }
-
     public function delete($id)
     {
         $item = user::find($id);
@@ -224,17 +226,16 @@ class UserController extends Controller
         return redirect()->route('panel.users.all')->with('status', 'Isn\'t numeric' )->send();
     }
 
-    public function profile($id){
+    public function profile($id)
+    {
         $data['user'] = User::find($id);
         return (isset($data['user'])) ? view('panel.users.profile', $data) : redirect()->route(get_current_locale() . '.panel.dashboard');
     }
 
-    public function editprof($id, CreateUser $request){
-//        dd($request);
-
+    public function editprof($id, CreateUser $request)
+    {
         $current_password = Auth::User()->password;
         if(Hash::check($request->password, $current_password)){
-            $user= new User();
             $user = User::updateOrCreate(['id' => $id]);
             $user->name=$request->name;
             $user->username=$request->username;
@@ -260,11 +261,11 @@ class UserController extends Controller
             }
             $user->active='1';
 //            $request->repeat_pw ?  $user->password=bcrypt($request->password)  : bcrypt($request->password);
-
+//            dd($user);
             $user->save();
 
         }
-//        return (isset($user)) ? $this->response_api(true, 'تم التعديل بنجاح') : $this->response_api(false, 'حدث خطأ غير متوقع');
+        return (isset($user)) ? $this->response_api(true, 'تم التعديل بنجاح') : $this->response_api(false, 'حدث خطأ غير متوقع');
 
     }
 

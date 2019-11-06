@@ -38,7 +38,7 @@
 
                         <fieldset class="form-group">
                             <label>كلمه المرور</label><font color="red">*</font></span>
-                            <input class="form-control"  type="password" name="password" id="password" placeholder="الرجاء إدخال كله المرور"  value="">
+                            <input class="form-control"  type="password" name="password" id="password" placeholder=  value="">
                         </fieldset>
 
 

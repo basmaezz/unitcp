@@ -39,14 +39,14 @@
 
                         <fieldset class="form-group">
                             <label>كلمه المرور</label>
-                            <input class="form-control"  type="password" name="password" placeholder="الرجاء إدخال كله المرور"  value="" required>
+                            <input class="form-control"  type="password" name="password" placeholder="الرجاء إدخال كلمه المرور"  value="" required>
                         </fieldset>
 
                         <p style="color: #0d6aad;">اعاده تعيين كلمه المرور!</p>
 
                         <fieldset class="form-group hidden" id="chg-pw">
                             <label>كلمه المرور الجديده</label>
-                            <input class="form-control"  type="password" name="repeat_pw" novalidate placeholder="الرجاء إدخال كله المرور"   >
+                            <input class="form-control"  type="password" name="repeat_pw" novalidate placeholder="الرجاء إدخال كلمه المرور"   >
                         </fieldset>
 
                         {{--<fieldset class="form-group hidden" id="chg-pw-confirm">--}}

@@ -16,7 +16,6 @@
 
         <div class="row">
             <div class="col-md-8">
-                {{--<input type="hidden" id="photo" name="image" value="{{$post->image}}">--}}
                 <div class="card">
                     <div class="card-body">
 
@@ -31,7 +30,7 @@
                                 @endif
                                 @if(isset($user->faculty_id))
                                 <label class="radio-inline">
-                                        <input type="radio" value="1" name="user" id="radio-user" checked disabled>
+                                        <input type="radio" value="1" name="user" id="radio-user" checked disabled >
                                         مستخدم وحده فرعيه
                                     </label>
                             </div>
@@ -44,11 +43,12 @@
 
                         <fieldset class="form-group " id="sub-admin" >
                             <label>اسم الكليه </label>
-                            <select class="form-control "  name="faculty_id" data-placeholder="إختيار الكليه" >
+                            <select class="form-control "  name="faculty_id" data-placeholder="إختيار الكليه"required >
                                 <option disabled selected hidden>إختيار الكليه</option>
                                 @if(isset($items) && $items->count() > 0)
                                     @foreach($items as $item)
-                                        <option value="{{$item->id}}" {{is_selected($item->id,$user->faculty_id)}} disabled>{{get_text_locale($item,'name_ar')}}</option>
+{{--                                        <option value="{{$item->id}}" {{is_selected($item->id,$user->faculty_id)}} >{{get_text_locale($item,'name_ar')}}</option>--}}
+                                        <option value="{{$item->id}}" {{is_selected($item->id,$user->faculty_id)}} >{{$item->name_ar}}</option>
                                     @endforeach
                                 @endif
                             </select>
@@ -67,12 +67,12 @@
 
                         <fieldset class="form-group">
                             <label>البريد الألكترونى</label><span><font color="red">*</font></span>
-                            <input class="form-control"  type="text" name="email" placeholder="الرجاء ادخال البريد الالكترونى"  value="{{$user->email}}" required>
+                            <input class="form-control"  type="text" name="email" placeholder="الرجاء ادخال البريد الالكترونى"  value="{{$user->email}}" required >
                         </fieldset>
 
                         <fieldset class="form-group">
                             <label>كلمه المرور</label><span><font color="red">*</font></span>
-                            <input class="form-control"  type="password" name="password" placeholder="الرجاء إدخال كله المرور"  value="" >
+                            <input class="form-control"  type="password" name="password" placeholder="" value=""   required >
                         </fieldset>
 
                         <p style="color: #0d6aad;">اعاده تعيين كلمه المرور!</p>
@@ -83,7 +83,7 @@
 
                         <fieldset class="form-group hidden" id="chg-pw">
                             <label>كلمه المرور الجديده</label>
-                            <input class="form-control"  type="password" name="repeat_pw" novalidate placeholder="الرجاء إدخال كله المرور"  value="" required>
+                            <input class="form-control"  type="password" name="repeat_pw" novalidate placeholder="الرجاء إدخال كلمه المرور"  value="" >
                         </fieldset>
 
 
@@ -91,9 +91,8 @@
                             <label>الحاله</label>
                             <select class="form-control" name="active" data-placeholder="إختيار الفاعليه" >
                                 <option disabled selected hidden>إختيار الفاعليه</option>
-
-                                <option value="{{$user->active}}"  {{is_selected($user->active,$user->active==1) }} >فعال</option>
-                                <option value="{{$user->active}}"  {{is_selected($user->active,$user->active==0) }} }} >موقوف</option>
+                                <option value="0"  {{($user->active==0) ? 'selected' : ''  }} >موقوف</option>
+                                <option value="1"  {{($user->active==1) ? 'selected' : ''  }} >فعال</option>
 
                             </select>
                         </fieldset>
@@ -133,17 +132,6 @@
         {!! HTML::script('panel/js/jasny.js') !!}
         {!! HTML::script('panel/plugins/summernote/summernote-bs4.js') !!}
         {!! HTML::script('/panel/js/post.js') !!}
-
-
-        {{--<script>--}}
-            {{--$(document).ready(function() {--}}
-                {{--$('#radio-user').change(function() {--}}
-                    {{--$('#sub-admin').removeClass('hidden');--}}
-                {{--});--}}
-                {{--$('#radio-admin').change(function() {--}}
-                    {{--$('#sub-admin').addClass('hidden');--}}
-                {{--});--}}
-            {{--});--}}
 
         {{--</script>--}}
         <script>
