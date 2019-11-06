@@ -14,15 +14,6 @@ Route::get('tests','site\HomeController@test');
 Route::get('getdata/{id}','site\HomeController@getData');
 Route::get('download/{id}','site\HomeController@download');//
 
-//Route::get('/home', 'HomeController@index')->name('home');
-
-//Route::group(
-//    [
-//        'prefix' => LaravelLocalization::setLocale(),
-//        'middleware' => [ 'localeSessionRedirect', 'localizationRedirect', 'localeViewPath' ]
-//    ],
-//    function() {
-
 
         Route::prefix('public')->group(function () {
             Route::get('/logout', 'site\HomeController@logout')->name('public.logout');
@@ -49,46 +40,10 @@ Route::get('download/{id}','site\HomeController@download');//
             Route::get('chglang/{lang}', 'site\HomeController@changeLang')->name('changelang');
         });
 
-Route::get('locale/{locale}', function ($locale){
-    Session::put('locale', $locale);
-    return redirect()->back();
-});
-
-//    });
-
-//        Route::view('try', 'public.Index');
-//        Route::view('tst', 'public.search');
-//        Route::view('viewtst', 'public.view-exam');
+            Route::get('locale/{locale}', function ($locale){
+                Session::put('locale', $locale);
+                return redirect()->back();
+        });
 
 
 
-//Route::get('notify',function(){
-//
-//    $notify= App\Notification ::get();
-////    dd($notify);
-//
-//    foreach ($notify as $notification){
-//        dd($notification->type);
-//    }
-//});
-
-
-
-//Route::get('notification',function(){
-//
-//    $user= Auth::user();
-////    auth()->user()->notify(new MyFirstNotification($classes) );
-//
-//
-////    dd($notification);
-//    foreach($user->notificaitons as $note){
-//        var_dump($note->type);
-//
-//    }
-//});
-//Route::get('setlocale/{locale}', function ($locale) {
-//    if (in_array($locale, \Config::get('app.locales'))) {
-//        Session::put('locale', $locale);
-//    }
-//    return redirect()->back();
-//});

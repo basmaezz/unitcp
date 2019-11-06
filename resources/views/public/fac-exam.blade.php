@@ -1,4 +1,4 @@
-<?php $lang=app()->getLocale(); ?>
+<?php //$lang=app()->getLocale(); ?>
 
 <div class="frm-section colm colm3">
 

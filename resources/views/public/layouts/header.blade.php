@@ -11,8 +11,6 @@
         </button>
         </div>
 
-
-
         <div id="navbar" class="navbar-collapse collapse navbar-right">
             <ul  class="nav navbar-nav">
                 @if (Auth::check())
@@ -45,10 +43,6 @@
                         </li>
 
                         @endif
-
-                    {{--<li><a href="{{ url('locale/en') }}" > EN</a></li>--}}
-
-                    {{--<li><a href="{{ url('locale/ar') }}" > Arabic</a></li>--}}
 
             </ul>
         </div>
