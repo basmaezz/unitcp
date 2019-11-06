@@ -67,7 +67,6 @@ class UserController extends Controller
     public function edit($id)
     {
          $data['user'] = User::find($id);
-//         dd($data);
          return (isset($data['user'])) ? view('panel.users.edit', $data) : redirect()->route(get_current_locale() . '.panel.dashboard');
     }
 

@@ -4,7 +4,7 @@
 <!--[if IE 8]>         <html lang="en" class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
 {{--<html dir="{{ LaravelLocalization::getCurrentLocaleDirection() }}">--}}
-<html>
+<html lang="{{ app()->getLocale() }}">
 <head>
   <!-- meta charec set -->
   <meta charset="utf-8">

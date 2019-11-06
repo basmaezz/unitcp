@@ -36,15 +36,19 @@
 
                         @if (App::isLocale('ar'))
                 <li >
-                    <a href="{{url('/en/public/index')}}"  id="lang" rel="nofollow">English
+                    <a href="{{url('locale/en')}}"  id="lang" rel="nofollow">English
                     </a>
                 </li>
                         @else
 
-                <li > <a href="{{url('/ar/public/index')}}"  id="lang" rel="nofollow">عربى</a>
+                <li > <a href="{{url('locale/ar')}}"  id="lang" rel="nofollow">عربى</a>
                         </li>
 
                         @endif
+
+                    {{--<li><a href="{{ url('locale/en') }}" > EN</a></li>--}}
+
+                    {{--<li><a href="{{ url('locale/ar') }}" > Arabic</a></li>--}}
 
             </ul>
         </div>

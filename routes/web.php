@@ -49,11 +49,16 @@ Route::get('download/{id}','site\HomeController@download');//
             Route::get('chglang/{lang}', 'site\HomeController@changeLang')->name('changelang');
         });
 
+Route::get('locale/{locale}', function ($locale){
+    Session::put('locale', $locale);
+    return redirect()->back();
+});
+
 //    });
 
-        Route::view('try', 'public.Index');
-        Route::view('tst', 'public.search');
-        Route::view('viewtst', 'public.view-exam');
+//        Route::view('try', 'public.Index');
+//        Route::view('tst', 'public.search');
+//        Route::view('viewtst', 'public.view-exam');
 
 
 

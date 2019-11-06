@@ -57,15 +57,6 @@ class PanelLoginController extends Controller
         return redirect()->back();
     }
 
-//    public function logout(Request $request)
-//    {
-//        $user= Auth::user();
-//        $user->update($user->online='0');
-//        $user->save();
-//        Auth::guard()->logout();
-//        return redirect()->route('panel.login');
-//    }
-
 
     public function pause(){
         return view('panel.pause');

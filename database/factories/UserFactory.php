@@ -17,10 +17,14 @@ use App\Faculty;
 
 $factory->define(User::class, function (Faker $faker) {
     $faculty = Faculty::query()->inRandomOrder()->first();
+    factory(User::class, 1)->create(
+        ['username'=>"admin", 'password' => bcrypt('123456')]
+    );
+
     return [
         'name' => $faker->name,
         'username' => $faker->username,
-        'email' => $faker->unique()->safeEmail,
+        'email' => $faker->safeEmail,
         'img' => $faker->image('public/uploads/users/profiles/',400,300),
         'faculty_id' => $faculty->id,
         'active' => $faker->numberBetween(0,1),

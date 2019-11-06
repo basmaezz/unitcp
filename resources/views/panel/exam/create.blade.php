@@ -76,7 +76,7 @@
                             <label>اسم التاج </label><span><font color="red">*</font></span>
 
                                 <div class="input-group select2-bootstrap-append">
-                                    <select id="multi-append" data-tags="true" class="form-control select2" multiple name="tags[]"required>
+                                    <select id="multi-append" data-tags="true" class="form-control select2" multiple name="tags[]" required>
 
                                         <option>إختر التاج</option>
 

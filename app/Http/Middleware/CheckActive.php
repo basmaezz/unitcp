@@ -16,8 +16,8 @@ class CheckActive
             return $next($request);
         } elseif (Auth::check() && Auth::user()->active == 0 ) {
 
-            dd('Not Active');
-//           return view('panel.pause');
+            session()->flash('response', __('الحساب مغلق مؤقتا'));
+            return redirect()->back();
         }
         return abort(404);
     }
