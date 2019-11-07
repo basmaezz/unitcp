@@ -96,8 +96,6 @@
                 $("p").click(function(){
                     $('#chg-pw').removeClass('hidden');
                 });
-
-
             });
         </script>
 
