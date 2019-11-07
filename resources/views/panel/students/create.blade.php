@@ -71,7 +71,7 @@
                         </fieldset>
 
                         <fieldset class="form-group">
-                            <label></label>
+                            <label>الصوره الشخصيه</label><br>
                             <input hidden class="form-control" id="image_input" type="file" name="img" placeholder="اختر الملف" value="اختر الصوره"accept="image/gif,image/jpeg">
                             <span id="image_status"></span>
                             <button id="image_selector">اختر الصوره</button>
@@ -122,6 +122,14 @@
                 });
 
             });
+
+            //first will will add button and then imitate the image select button
+            $('#image_selector').on('click', function(){
+                    $('#image_input').click();
+
+                }
+            );
+
             //now this is as if you clicked the input , but we need to show that something happened so we will create a div for example
             var readURL = function(input) {
                 if (input.files && input.files[0]) {
@@ -136,12 +144,7 @@
             }
 
 
-            //first will will add button and then imitate the image select button
-            $('#image_selector').on('click', function(){
-                    $('#image_input').click();
 
-                }
-            );
 
             $("#image_input").on('change', function(){
                 readURL(this);
