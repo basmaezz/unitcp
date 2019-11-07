@@ -71,8 +71,10 @@
                         </fieldset>
 
                         <fieldset class="form-group">
-                            <label>الصوره الشخصيه</label>
-                            <input class="form-control"  type="file" name="img" placeholder="اختر الملف" value="اختر الصوره"accept="image/gif,image/jpeg">
+                            <label></label>
+                            <input hidden class="form-control" id="image_input" type="file" name="img" placeholder="اختر الملف" value="اختر الصوره"accept="image/gif,image/jpeg">
+                            <span id="image_status"></span>
+                            <button id="image_selector">اختر الصوره</button>
                         </fieldset>
                     </div>
                 </div>
@@ -120,7 +122,31 @@
                 });
 
             });
+            //now this is as if you clicked the input , but we need to show that something happened so we will create a div for example
+            var readURL = function(input) {
+                if (input.files && input.files[0]) {
+                    var reader = new FileReader();
 
+                    reader.onload = function (e) {
+                        $('#image_status').html('uploaded');
+                    }
+
+                    reader.readAsDataURL(input.files[0]);
+                }
+            }
+
+
+            //first will will add button and then imitate the image select button
+            $('#image_selector').on('click', function(){
+                    $('#image_input').click();
+
+                }
+            );
+
+            $("#image_input").on('change', function(){
+                readURL(this);
+            });
+            // thats it
         </script>
 
 
