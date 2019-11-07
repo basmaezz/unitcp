@@ -85,11 +85,10 @@
                             </select>
                         </fieldset>
 
-                        <fieldset class="form-group">
-                            <label>الصوره الشخصيه</label>
-                                <input class="form-control" id="choose-img" type="file" name="choose-img" value="الصوره"accept="image/gif,image/jpeg" >
-                        </fieldset>
-
+                        <div style="height:0px;overflow:hidden">
+                            <input type="file" id="fileInput" name="fileInput" />
+                        </div>
+                        <button type="button" onclick="chooseFile();">أختر الصوره</button>
 
                     </div>
                 </div>
@@ -101,8 +100,6 @@
                             <button style="width: 90%" class=" btn btn-primary" >                                حفظ
                                 &nbsp;<i class="fa fa-save"></i> &nbsp;
                                 <i style="top: inherit;left: AUTO;" class="upload-spinn fa fa-cog fa-spin fa-1x fa-fw  hidden"></i></button>
-
-
                         </div>
                     </div>
                 </div>
@@ -133,15 +130,8 @@
                 $('#radio-admin').change(function() {
                     $('#sub-admin').addClass('hidden');
                 });
-                $("#choose-img ").attr( 'text','nnnnnnnnnn');
             });
 
         </script>
-
-
-
-
-
-
     @endpush
 @stop
