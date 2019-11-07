@@ -34,6 +34,24 @@
                             <input class="form-control"  type="text" name="email" placeholder="الرجاء ادخال البريد الالكترونى"  value="{{$user->email}}" required>
                         </fieldset>
 
+                        @php
+                            $items = get_fac_data();
+                        @endphp
+
+                        <fieldset class="form-group " id="sub-admin" >
+                            <label>اسم الكليه </label>
+                            <select class="form-control "  name="faculty_id" data-placeholder="إختيار الكليه"required >
+                                <option disabled selected hidden>إختيار الكليه</option>
+                                @if(isset($items) && $items->count() > 0)
+                                    @foreach($items as $item)
+                                        {{--                                        <option value="{{$item->id}}" {{is_selected($item->id,$user->faculty_id)}} >{{get_text_locale($item,'name_ar')}}</option>--}}
+                                        <option value="{{$item->id}}" {{is_selected($item->id,$user->faculty_id)}} >{{$item->name_ar}}</option>
+                                    @endforeach
+                                @endif
+                            </select>
+                        </fieldset>
+
+
                         <fieldset class="form-group">
                             <label>كلمه المرور</label><span><font color="red">*</font></span>
                             <input class="form-control"  type="password" name="password" placeholder=""  value="" >
@@ -45,6 +63,7 @@
                             <label>كلمه المرور الجديده</label>
                             <input class="form-control"  type="password" name="repeat_pw" novalidate placeholder=  value="" required>
                         </fieldset>
+
 
                         <fieldset class="form-group">
                             <label>الحاله</label>

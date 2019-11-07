@@ -20,19 +20,19 @@
                     <div class="card-body">
                         <fieldset class="form-group">
                             <label>الأسم</label><span><font color="red">*</font></span>
-                            <input class="form-control"  type="text" name="name_ar" placeholder="الرجاء إدخال الأسم باللغه العربيه"  value="" >
+                            <input class="form-control"  type="text" name="name_ar" placeholder="الرجاء إدخال الأسم باللغه العربيه"  value="" maxlength="20" required>
                         </fieldset>
 
 
                         <fieldset class="form-group">
                             <label>الاسم باللغه الانجليزيه</label><span><font color="red">*</font></span>
-                            <input class="form-control"  type="text" name="name_en" placeholder="الرجاء إدخال الاسم باللغه الانجليزيه"  value="" >
+                            <input class="form-control"  type="text" name="name_en" placeholder="الرجاء إدخال الاسم باللغه الانجليزيه"  value="" maxlength="20" required >
                         </fieldset>
 
 
                         <fieldset class="form-group">
-                            <label>الحاله</label>
-                            <select class="form-control" name="active" data-placeholder="إختيار التصنيف" >
+                            <label>الحاله</label><span><font color="red">*</font></span>
+                            <select class="form-control" name="active" data-placeholder="إختيار التصنيف" required >
                                 <option disabled selected hidden>اختيار الحاله</option>
 
                                 <option value="1" name="active">فعاله</option>

@@ -21,22 +21,23 @@
                     <div class="card-body">
                         <fieldset class="form-group">
                             <label>الأسم</label>
-                            <input class="form-control"  type="text" name="name_ar" placeholder="لرجاء ادخل الاسم"  value="{{$faculty->name_ar}}" required>
+                            <input class="form-control"  type="text" name="name_ar" placeholder="لرجاء ادخل الاسم"  value="{{$faculty->name_ar}}" maxlength="20" required>
                         </fieldset>
 
                         <fieldset class="form-group">
-                            <label>الاسم EN</label>
-                            <input class="form-control"  type="text" name="name_en" placeholder="لرجاء ادخل الاسم"  value="{{$faculty->name_en}}" required>
+                            <label>الاسم باللغه الانجليزيه</label>
+                            <input class="form-control"  type="text" name="name_en" placeholder="لرجاء ادخل الاسم"  value="{{$faculty->name_en}}" maxlength="20" required>
                         </fieldset>
 
 
                         <fieldset class="form-group">
                             <label>الحاله</label>
-                            <select class="form-control" name="category_id" data-placeholder="إختيار التصنيف" >
+                            <select class="form-control" name="category_id" data-placeholder="إختيار التصنيف" required >
                                 <option disabled selected hidden>إختيار الفاعليه</option>
 
-                                <option value="1"  {{is_selected($faculty->active,$faculty->active==1) }} >فعاله</option>
-                                <option value="0"  {{is_selected($faculty->active,$faculty->active==0) }} }} >موقوفه</option>
+                                <option value="0"  {{($faculty->active==0) ? 'selected' : ''  }} >موقوفه</option>
+                                <option value="1"  {{($faculty->active==1) ? 'selected' : ''  }} >فعاله</option>
+
 
                             </select>
                         </fieldset>

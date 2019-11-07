@@ -106,7 +106,7 @@ class UserController extends Controller
             }
 
 //        $request->repeat_pw ?  $user->password=bcrypt($request->password)  : bcrypt($request->password);
-            $request->faculty_id ? $user->permission = 2 : $user->permission = 1;
+//            $request->faculty_id ? $user->permission = 2 : $user->permission = 1;
             $user->save();
             return (isset($user)) ? $this->response_api(true, 'تم التعديل بنجاح') : $this->response_api(false, 'حدث خطأ غير متوقع');
         }
