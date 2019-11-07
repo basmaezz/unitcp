@@ -27,7 +27,7 @@
                                 @if(isset($data['faculties']) && ($data['faculties'])->count() > 0)
                                     @foreach(($data['faculties']) as $item)
 
-                                        <option value="{{$item->id}}" selected {{is_selected($item->id,$item->faculty_id) }}>{{get_text_locale($item,'name_ar')}}</option>
+                                        <option value="{{$item->id}}" selected {{is_selected($item->id,$item->faculty_id) }}>{{$item->name_ar}}</option>
                                     @endforeach
                                 @endif
                             </select>
@@ -39,7 +39,7 @@
                                 <option disabled selected hidden>اختيار الفرقه</option>
                                 @if(isset($data['classes']) && ($data['classes'])->count() > 0)
                                     @foreach(($data['classes']) as $item)
-                                        <option value="{{$item->id}}" {{is_selected($item->id,$data['exam']->class_id) }} >{{get_text_locale($item,'name_ar')}}</option>
+                                        <option value="{{$item->id}}" {{is_selected($item->id,$data['exam']->class_id) }} >{{$item->name_ar}}</option>
                                     @endforeach
                                 @endif
                             </select>
@@ -53,7 +53,7 @@
                                 @if(isset($data['department']) && ($data['department'])->count() > 0)
                                     @foreach(($data['department']) as $item)
                                         <?php  echo ($data['department']);?>
-                                        <option value="{{$item->id}}" {{is_selected($item->id,$data['exam']->department_id) }} >{{get_text_locale($item,'name_ar')}}</option>
+                                        <option value="{{$item->id}}" {{is_selected($item->id,$data['exam']->department_id) }} >{{$item->name_ar}}</option>
 
                                     @endforeach
                                 @endif
@@ -67,7 +67,7 @@
                                 @if(isset($data['semester']) && $data['semester'])->count() > 0)
                                      @foreach(($data['semester']) as $item)
                                         <?php echo ($data['exam']->semester_id); ?>
-                                    <option value="{{$item->id}}" {{is_selected($item->id,$data['exam']->semester_id) }} >{{get_text_locale($item,'name_ar')}}</option>
+                                    <option value="{{$item->id}}" {{is_selected($item->id,$data['exam']->semester_id) }} >{{$item->name_ar}}</option>
                                 @endforeach
                                 @endif
                             </select>
@@ -80,7 +80,7 @@
                                 <option disabled selected hidden>إختيار الماده</option>
                                 @if(isset($data['material']) && ($data['material'])->count() > 0)
                                     @foreach( ($data['material']) as $item)
-                                        <option value="{{$item->id}}" {{is_selected($item->id,$data['exam']->material_id) }} >{{get_text_locale($item,'name_ar')}}</option>
+                                        <option value="{{$item->id}}" {{is_selected($item->id,$data['exam']->material_id) }} >{{$item->name_ar}}</option>
                                     @endforeach
                                 @endif
                             </select>
@@ -94,7 +94,7 @@
                                 <option disabled selected hidden>إختر السنه</option>
                                 @if(isset($data['year']) && ($data['year'])->count() > 0)
                                     @foreach(($data['year']) as $item)
-                                        <option value="{{$item->id}}"selected {{is_selected($item->id,($data['exam'])->year_id)}}>{{get_text_locale($item,'name')}}</option>
+                                        <option value="{{$item->id}}"selected {{is_selected($item->id,($data['exam'])->year_id)}}>{{$item->name}}</option>
                                     @endforeach
                                 @endif
                             </select>
