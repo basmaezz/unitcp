@@ -99,7 +99,7 @@
 
                         <fieldset class="form-group">
                             <label>الصوره الشخصيه</label>
-                            <input class="form-control"  type="file" name="img">
+                            <input class="form-control"  type="file" name="img"accept="image/gif,image/jpeg">
                         </fieldset>
 
 

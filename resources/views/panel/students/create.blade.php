@@ -20,25 +20,26 @@
                     <div class="card-body">
 
 
-                        <fieldset class="form-group"><font color="red">*</font></span>
-                            <label>اسم الطالب</label>
-                            <input class="form-control"  type="text" name="name" placeholder="الرجاء إدخال الأسم"  value="" >
+                        <fieldset class="form-group">
+                            <label>اسم الطالب</label><font color="red">*</font></span>
+                            <input class="form-control"  type="text" name="name" id="name"  placeholder="الرجاء إدخال اسم المستخدم"  value="" maxlength="10" required>
+{{--                            <input class="form-control"  type="text" name="name" placeholder="الرجاء إدخال الأسم"  value="" maxlength="20" required >--}}
                         </fieldset>
 
                         <fieldset class="form-group">
                             <label>اسم المستخدم</label><font color="red">*</font></span>
-                            <input class="form-control"  type="text" name="username" id="username"  placeholder="الرجاء إدخال اسم المستخدم"  value="" >
+                            <input class="form-control"  type="text" name="username" id="username"  placeholder="الرجاء إدخال اسم المستخدم"  value="" maxlength="10" required>
                         </fieldset>
 
 
                         <fieldset class="form-group">
                             <label>البريد الألكترونى</label><font color="red">*</font></span>
-                            <input class="form-control"  type="text" name="email" placeholder="الرجاء ادخال البريد الالكترونى"  value="" >
+                            <input class="form-control"  type="email" name="email" placeholder="الرجاء ادخال البريد الالكترونى"  value="" required >
                         </fieldset>
 
                         <fieldset class="form-group">
                             <label>كلمه المرور</label><font color="red">*</font></span>
-                            <input class="form-control"  type="password" name="password" id="password" placeholder=  value="">
+                            <input class="form-control"  type="password" name="password" id="password" placeholder=""  value="" maxlength="10" required>
                         </fieldset>
 
 
@@ -53,7 +54,7 @@
                                 @if(isset($items) && $items->count() > 0)
                                     @foreach($items as $item)
 
-                                        <option value="{{$item->id}}" >{{get_text_locale($item,'name_ar')}}</option>
+                                        <option value="{{$item->id}}" >{{$item->name_ar}}</option>
                                     @endforeach
                                 @endif
                             </select>
@@ -71,7 +72,7 @@
 
                         <fieldset class="form-group">
                             <label>الصوره الشخصيه</label>
-                            <input class="form-control"  type="file" name="img" placeholder="اختر الملف" value="اختر الصوره">
+                            <input class="form-control"  type="file" name="img" placeholder="اختر الملف" value="اختر الصوره"accept="image/gif,image/jpeg">
                         </fieldset>
                     </div>
                 </div>
@@ -125,11 +126,13 @@
 
         <script>
             $(document).ready(function() {
+
                 var username = document.getElementById('username');
                 var password = document.getElementById('password');
 
+
                 username.value = 'الرجاء إدخال اسم المستخدم';
-                password.value = '';
+                // password.value = '';
 
 
             });

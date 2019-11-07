@@ -87,7 +87,7 @@
 
                         <fieldset class="form-group">
                             <label>الصوره الشخصيه</label>
-                                <input class="form-control" id="choose-img" type="file" name="choose-img" value="الصوره" >
+                                <input class="form-control" id="choose-img" type="file" name="choose-img" value="الصوره"accept="image/gif,image/jpeg" >
                         </fieldset>
 
 

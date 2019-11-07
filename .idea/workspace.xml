@@ -151,11 +151,6 @@
       <path value="$PROJECT_DIR$/vendor/mcamara/laravel-localization" />
     </include_path>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="460" />
-    <option name="width" value="674" />
-    <option name="height" value="688" />
-  </component>
   <component name="ProjectId" id="1T5XnY9A92lwnYjVjQy4lVEsXuA" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />

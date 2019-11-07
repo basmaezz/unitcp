@@ -36,34 +36,29 @@
 
                         <fieldset class="form-group">
                             <label>كلمه المرور</label><span><font color="red">*</font></span>
-                            <input class="form-control"  type="password" name="password" placeholder=  value="" >
+                            <input class="form-control"  type="password" name="password" placeholder=""  value="" >
                         </fieldset>
 
                         <p style="color: #0d6aad;">اعاده تعيين كلمه المرور!</p>
-
 
                         <fieldset class="form-group hidden" id="chg-pw">
                             <label>كلمه المرور الجديده</label>
                             <input class="form-control"  type="password" name="repeat_pw" novalidate placeholder=  value="" required>
                         </fieldset>
 
-
                         <fieldset class="form-group">
                             <label>الحاله</label>
                             <select class="form-control" name="active" data-placeholder="إختيار الفاعليه" >
                                 <option disabled selected hidden>إختيار الفاعليه</option>
-
-                                <option value="{{$user->active}}"  {{is_selected($user->active,$user->active==1) }} >فعال</option>
-                                <option value="{{$user->active}}"  {{is_selected($user->active,$user->active==0) }} }} >موقوف</option>
-
+                                <option value="0"  {{($user->active==0) ? 'selected' : ''  }} >موقوف</option>
+                                <option value="1"  {{($user->active==1) ? 'selected' : ''  }} >فعال</option>
                             </select>
                         </fieldset>
 
                         <fieldset class="form-group">
                             <label>الصوره الشخصيه</label>
-                            <input class="form-control"  type="file" name="img">
+                            <input class="form-control" id="choose-file" type="file" name="img"accept="image/gif,image/jpeg">
                         </fieldset>
-
 
                     </div>
                 </div>
@@ -101,6 +96,8 @@
                 $("p").click(function(){
                     $('#chg-pw').removeClass('hidden');
                 });
+
+
             });
         </script>
 
