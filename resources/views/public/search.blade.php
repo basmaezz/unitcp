@@ -1,8 +1,6 @@
 @extends('public.layouts.app')
 @section('content')
     <?php $lang=app()->getLocale(); ?>
-
-
     <div class="search-page">
         <section class=" search-page__controls">
             <div class="container clearfix">
@@ -65,9 +63,6 @@
                  </div>
                 </div>
             </div>
-
-
-
         </section>
 
         <section class="container">

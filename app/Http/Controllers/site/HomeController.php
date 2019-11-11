@@ -67,7 +67,6 @@ class HomeController extends Controller
                     ->orWhere('name_ar', 'like', '%' . $txtsearch. '%');
             })->paginate(4);
 
-//        dd($items);
         if(!empty($items)){
             return view('public.search')->with(['item'=>$items ,'txtsearch'=>$txtsearch]);
         }
@@ -159,26 +158,25 @@ class HomeController extends Controller
 
     public function getsearchExamData($id)
     {
-
-
-        $classes = classes::where("faculty_id", $id)->get();
-//        dd($classes);
+//        $classes = classes::where("faculty_id", $id)->get();
         $department = DB::table("departments")->where("faculty_id", $id)->get();
         $classes = DB::table("classes")->where("faculty_id", $id)->get();
         $materials = DB::table("materials")->where("faculty_id", $id)->get();
         $semesters = DB::table("semesters")->where("faculty_id", $id)->get();
         $year = DB::table("years")->get();
+        $exams = DB::table("exams")->where('faculty_id', $id)->get();
 
-        $data = ["classes" => $classes, "department" => $department, "materials" => $materials, "semesters" => $semesters, "year" => $year];
+        $data = ["classes" => $classes, "department" => $department, "materials" => $materials, "semesters" => $semesters, "year" => $year ];
 
         $view = view('public.fac-exam', $data)->render();
-        return response()->json(['status' => true, 'item' => $view]);
 
-        $exams = ['exams' => Exam::where('faculty_id', $id)->get()];
+//        return response()->json(['status' => true, 'item' => $view]);
+
+
         $exams_v = view('public.exam-result', $exams)->render();
         $exams_v_pag_v = view('public.paginate', $exams)->render();
+        return response()->json(['status' => true, 'item' => $view, 'exams_v' => $exams_v, 'paginate' => $exams_v_pag_v]);
 //        return response()->json(['status' => true, 'item' => $view, 'exams' => $exams_v, 'paginate' => $exams_v_pag_v]);
-        return response()->json(['status' => true, 'item' => $view, 'exams' => $exams_v, 'paginate' => $exams_v_pag_v]);
     }
 
     public function getsearchExam($deid = null, $classid = null, $yearid = null)
@@ -207,54 +205,20 @@ class HomeController extends Controller
         $exam= Exam::find($id);
         $like= Like::where('exam_id',$id)->where('likenum','=',1)->count();
         $dislike= Like::where('exam_id',$id)->where('likenum','=',0)->count();
-
-
-
-//        $comments= Comment::where('exam_id',$id)->orderBy('id', 'desc')->get();
-
-//       $pdf = view('public.pdf', ['pdf'=>response()->file('storage/faculty/exams/10/485/2/10/2/2/test1-2002-2003.pdf')])->render();
         return view('public.view-exam',compact('exam','like','dislike'));
    }
 
    public function recent(){
        $exams = Exam::orderBy('id', 'desc')->paginate(4);
-
-
        return view('public.recent-exams',compact('exams'));
 
     }
 
     public function popular(){
         $exams = Exam::orderBy('id', 'desc')->paginate(4);
-
         return view('public.popular-exams',compact('exams'));
 
     }
-
-//    public function logout(Request $request)
-//    {
-//
-//        $user = Auth::user();
-//
-//        $user->online = 0;
-//
-//        $user->save();
-//        Auth::logout();
-//        return redirect()->route('panel.login')->send();
-//    }
-
-//    public function changeLang($lang)
-//    {
-//        $locale = App::getLocale();
-//        if($lang=='en'){
-//            $locale='en';
-//
-//        }else{
-//            $locale='ar';
-//        }
-//
-//        return redirect()->back();
-//    }
 
     public function logout(Request $request)
     {
@@ -265,6 +229,5 @@ class HomeController extends Controller
         Auth::logout();
         return redirect()->route('panel.login')->send();
     }
-
 
 }

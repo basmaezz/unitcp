@@ -1,5 +1,4 @@
-<?php //$lang=app()->getLocale(); ?>
-
+<?php $lang=app()->getLocale();?>
 <div class="frm-section colm colm3">
 
     <label class="search-filter-label "  >@lang('exam.Department filter')</label>
@@ -9,16 +8,14 @@
             <option selected="selected" value="">@lang('exam.Select your Department')</option>
             @if(isset($department) && $department->count() > 0)
                 @foreach($department as $item)
-                    <option value="{{$item->id}}" @if($item->id == request('class_id'))selected @endif >{{get_text_locale($item,'name_'.$lang)}}</option>
+                    <option value="{{$item->id}}" @if($item->id == request('class_id'))selected @endif >{{get_text_locale($item,"name_{$lang}")}}</option>
+
                 @endforeach
             @endif
         </select>
         <i class="select-arrow"></i>
     </label>
 </div>
-
-
-
 <div class="frm-section colm colm3">
 
     <label class="search-filter-label "  >@lang('exam.level filter')</label>

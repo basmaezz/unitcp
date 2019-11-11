@@ -32,9 +32,12 @@ $(document).ready(function() {
                 success:function(response) {
                     if(response.status)
                     {
-                        // alert('ok');
+                        console.log(response.item);
+                        console.log(response.item);
+                        // alert('ok'
+                        $('#exams_view').html("");
                         $('#selectors_div').html(response.item);
-                        $('#exams_view').html(response.exams);
+                        $('#exams_view').html(response.item);
                         $('#pag_view').html(response.paginate);
                     }
                 },

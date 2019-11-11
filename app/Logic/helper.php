@@ -213,7 +213,7 @@ function get_locale_changer_URL($locale)
 function get_text_locale($obj, $text)
 {
     if (isset($obj)) {
-        $val = (get_current_locale() == 'en') ? $text : ($text . '_en');
+        $val = (get_current_locale() =='ar') ? $text : $text ;
         return $obj->$val;
     }
     return no_data();
