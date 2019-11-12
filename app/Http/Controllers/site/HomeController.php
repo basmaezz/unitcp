@@ -1,7 +1,5 @@
 <?php
-
 namespace App\Http\Controllers\site;
-
 use App\Like;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -16,10 +14,8 @@ use DB;
 use App\Comment;
 use Auth;
 use App;
-
 class HomeController extends Controller
 {
-
     public function Index()
     {
         $exams = Exam::orderBy('id', 'desc')->take(4)->get();
@@ -27,23 +23,19 @@ class HomeController extends Controller
         $examcount=Exam::all()->count();
         $user=User::all()->count();
         $faculty=Faculty::all()->count();
-
         return view('public.Index',compact('exams','examcount','user','faculty'));
     }
-
     public function getall()
     {
         return view('panel.public.all');
     }
-
     public function get_exam_search_data_table(exam $items, Request $request)
     {
         //dd(request()->id);
-          $items=Exam::Where('faculty_id', \request()->id)->get();
+        $items=Exam::Where('faculty_id', \request()->id)->get();
         try {
             return DataTables::of($items)->editColumn('id', function ($item) {
                 return $item->id;
-
             })->addColumn('action', function ($item) {
                 return '<div class="row">
                       <a  title="Edit" style="margin-right: 10px"  href="' .route('panel.exam.edit', ['id' => $item->id]) . '"  class="btn btn-sm btn-primary edit" > <i style="margin-left: 3px" class="fa fa-check-square-o"></i> تحميل</a>
@@ -53,12 +45,9 @@ class HomeController extends Controller
             return $this->response_api(false, 'failed');
         }
     }
-
     public function get_exam_search(Request $request)
     {
-
         $txtsearch=$request->txtsearch;
-
         $items= Exam::with('tags')->where('file', 'like', '%' . $txtsearch . '%')
             ->orWhere('key_search_ar', 'like', '%' . $txtsearch . '%')
             ->orWhere('key_search_en', 'like', '%' . $txtsearch. '%')
@@ -66,7 +55,7 @@ class HomeController extends Controller
                 $query->where('name_en', 'like', '%' . $txtsearch. '%')
                     ->orWhere('name_ar', 'like', '%' . $txtsearch. '%');
             })->paginate(4);
-
+//        dd($items);
         if(!empty($items)){
             return view('public.search')->with(['item'=>$items ,'txtsearch'=>$txtsearch]);
         }
@@ -74,11 +63,7 @@ class HomeController extends Controller
             $items = Exam::orderBy('id', 'desc')->take(4)->get();
             return view('public.search')->with(['item'=>$items ,'txtsearch'=>'']);
         }
-
-
     }
-
-
     public function getExamData(Request $request)
     {
         $faculty=Exam::Where('faculty_id', $request->faculty)->get();
@@ -90,7 +75,6 @@ class HomeController extends Controller
                 $items[] = $json;
                 continue;
             }
-
             if(!empty($request->semester_id) && $json->semester_id == $request->semester_id) {
                 foreach ($items as $item){
                     if (!empty($items->id) && $json->id == $items->id) {
@@ -99,7 +83,6 @@ class HomeController extends Controller
                 }
                 $items[] = $json;
             }
-
             if(!empty($request->department_id) && $json->semester_id == $request->department_id) {
                 foreach ($items as $item){
                     if (!empty($items->id) && $json->id == $items->id) {
@@ -108,7 +91,6 @@ class HomeController extends Controller
                 }
                 $items[] = $json;
             }
-
             if(!empty($request->material_id) && $json->material_id == $request->material_id) {
                 foreach ($items as $item){
                     if (!empty($items->id) && $json->id == $items->id) {
@@ -128,12 +110,9 @@ class HomeController extends Controller
             if(empty($request->class_id) && empty($request->semester_id)&& empty($request->department_id)&& empty($request->material_id)&& empty($request->year_id)) {
                 $items[] = $json;
             }
-
         }
-
         return view('panel.public.all',['item'=>$items]);
     }
-
     public function getDownload(Request $request)
     {
         $num = Exam::find($request->id);
@@ -144,41 +123,31 @@ class HomeController extends Controller
         }
         return 'FAILED';
     }
-
     public function home(){
         $downloads = Exam::orderBy('download_num','desc')->paginate(5);
         $latest= Exam::orderBy('created_at','desc')->paginate(5);
         return view('panel.public.frontend', compact('downloads','latest'));
     }
-
     public function mostDownload(){
-
     }
-
-
     public function getsearchExamData($id)
     {
-//        $classes = classes::where("faculty_id", $id)->get();
+        $classes = classes::where("faculty_id", $id)->get();
+//        dd($classes);
         $department = DB::table("departments")->where("faculty_id", $id)->get();
         $classes = DB::table("classes")->where("faculty_id", $id)->get();
         $materials = DB::table("materials")->where("faculty_id", $id)->get();
         $semesters = DB::table("semesters")->where("faculty_id", $id)->get();
         $year = DB::table("years")->get();
-        $exams = DB::table("exams")->where('faculty_id', $id)->get();
-
-        $data = ["classes" => $classes, "department" => $department, "materials" => $materials, "semesters" => $semesters, "year" => $year ];
-
+        $data = ["classes" => $classes, "department" => $department, "materials" => $materials, "semesters" => $semesters, "year" => $year];
         $view = view('public.fac-exam', $data)->render();
-
-//        return response()->json(['status' => true, 'item' => $view]);
-
-
+        return response()->json(['status' => true, 'item' => $view]);
+        $exams = ['exams' => Exam::where('faculty_id', $id)->get()];
         $exams_v = view('public.exam-result', $exams)->render();
         $exams_v_pag_v = view('public.paginate', $exams)->render();
-        return response()->json(['status' => true, 'item' => $view, 'exams_v' => $exams_v, 'paginate' => $exams_v_pag_v]);
 //        return response()->json(['status' => true, 'item' => $view, 'exams' => $exams_v, 'paginate' => $exams_v_pag_v]);
+        return response()->json(['status' => true, 'item' => $view, 'exams' => $exams_v, 'paginate' => $exams_v_pag_v]);
     }
-
     public function getsearchExam($deid = null, $classid = null, $yearid = null)
     {
         $exams = [];
@@ -186,7 +155,6 @@ class HomeController extends Controller
         {
             $exams = Exam::where('department_id', $deid)->get();
         }
-
         if($classid =! NULL && $deid =! NULL)
         {
             $exams = Exam::where('department_id', $deid)->where('class_id', $classid)->get();
@@ -199,35 +167,29 @@ class HomeController extends Controller
         $exams_v = view('public.exam-result', $exams)->render();
         return response()->json(['exams' => $exams_v]);
     }
-
-   public function viewpdf($id){
-
+    public function viewpdf($id){
         $exam= Exam::find($id);
         $like= Like::where('exam_id',$id)->where('likenum','=',1)->count();
         $dislike= Like::where('exam_id',$id)->where('likenum','=',0)->count();
+//        $comments= Comment::where('exam_id',$id)->orderBy('id', 'desc')->get();
+//       $pdf = view('public.pdf', ['pdf'=>response()->file('storage/faculty/exams/10/485/2/10/2/2/test1-2002-2003.pdf')])->render();
         return view('public.view-exam',compact('exam','like','dislike'));
-   }
-
-   public function recent(){
-       $exams = Exam::orderBy('id', 'desc')->paginate(4);
-       return view('public.recent-exams',compact('exams'));
-
     }
-
+    public function recent(){
+        $exams = Exam::orderBy('id', 'desc')->paginate(4);
+        return view('public.recent-exams',compact('exams'));
+    }
     public function popular(){
         $exams = Exam::orderBy('id', 'desc')->paginate(4);
         return view('public.popular-exams',compact('exams'));
-
     }
 
     public function logout(Request $request)
     {
         $user = Auth::user();
         $user->online = 0;
-
         $user->save();
         Auth::logout();
         return redirect()->route('panel.login')->send();
     }
-
 }

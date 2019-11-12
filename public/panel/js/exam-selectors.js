@@ -34,8 +34,7 @@ $(document).ready(function() {
                     {
                         console.log(response.item);
                         console.log(response.item);
-                        // alert('ok'
-                        $('#exams_view').html("");
+                        // $('#exams_view').html("");
                         $('#selectors_div').html(response.item);
                         $('#exams_view').html(response.item);
                         $('#pag_view').html(response.paginate);
