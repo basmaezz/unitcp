@@ -69,7 +69,7 @@
             <div class="search-page__results">
                 <h1 class="search-page__title"> @lang('exam.Search Results')</h1>
                 <div class="row"></div>
-                <ul class="search-document-results list-unstyled" id="exams_view" >
+                <ul class="search-document-results list-unstyled" id="exam_view" >
 
                 @if($item->count() > 0)
                         @foreach($item as $key => $exam)

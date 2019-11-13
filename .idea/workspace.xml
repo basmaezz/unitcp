@@ -3,12 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="5ecc8cb6-2745-43c6-a27c-4295447f35de" name="Default" comment="Like,Dislike Count">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/site/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/site/HomeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/panel/js/exam-selectors.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/panel/js/exam-selectors.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/panel/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/panel/home.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/panel/users/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/panel/users/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/panel/users/profile.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/panel/users/profile.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/public/paginate.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/public/paginate.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/public/search.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/public/search.blade.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -48,6 +43,15 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="search.blade.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/resources/views/public/search.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="204">
+              <caret line="71" column="74" selection-start-line="71" selection-start-column="74" selection-end-line="71" selection-end-column="74" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="index.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/panel/layouts/index.blade.php">
           <provider selected="true" editor-type-id="text-editor">
@@ -66,11 +70,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="paginate.blade.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="paginate.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/public/paginate.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="262">
-              <caret line="30" selection-start-line="30" selection-end-line="30" />
+            <state relative-caret-position="449">
+              <caret line="41" lean-forward="true" selection-start-line="41" selection-end-line="41" />
             </state>
           </provider>
         </entry>
@@ -78,8 +82,8 @@
       <file leaf-file-name="exam-selectors.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/panel/js/exam-selectors.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="38" column="61" selection-start-line="38" selection-start-column="61" selection-end-line="38" selection-end-column="61" />
+            <state relative-caret-position="357">
+              <caret line="36" column="31" lean-forward="true" selection-start-line="36" selection-start-column="31" selection-end-line="36" selection-end-column="41" />
             </state>
           </provider>
         </entry>
@@ -103,6 +107,7 @@
       <find>عدد المتواجدين حاليا</find>
       <find>online</find>
       <find>Previous</find>
+      <find>exams_view</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -115,10 +120,11 @@
         <option value="$PROJECT_DIR$/resources/views/panel/faculty/create.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/panel/users/edit.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/panel/users/profile.blade.php" />
-        <option value="$PROJECT_DIR$/public/panel/js/exam-selectors.js" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/site/HomeController.php" />
         <option value="$PROJECT_DIR$/resources/views/panel/home.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/public/paginate.blade.php" />
+        <option value="$PROJECT_DIR$/public/panel/js/exam-selectors.js" />
+        <option value="$PROJECT_DIR$/resources/views/public/search.blade.php" />
       </list>
     </option>
   </component>
@@ -547,12 +553,12 @@
       <workItem from="1573528275816" duration="537000" />
       <workItem from="1573539975199" duration="6740000" />
       <workItem from="1573593857117" duration="2215000" />
-      <workItem from="1573673250835" duration="2560000" />
+      <workItem from="1573673250835" duration="2730000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4788000" />
+    <option name="totallyTimeSpent" value="4958000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -918,13 +924,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/public/search.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="80" column="64" lean-forward="true" selection-start-line="80" selection-start-column="64" selection-end-line="80" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/panel/users/create.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
@@ -1008,17 +1007,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/panel/js/exam-selectors.js">
+    <entry file="file://$PROJECT_DIR$/resources/views/public/paginate.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="38" column="61" selection-start-line="38" selection-start-column="61" selection-end-line="38" selection-end-column="61" />
+        <state relative-caret-position="449">
+          <caret line="41" lean-forward="true" selection-start-line="41" selection-end-line="41" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/public/paginate.blade.php">
+    <entry file="file://$PROJECT_DIR$/public/panel/js/exam-selectors.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="262">
-          <caret line="30" selection-start-line="30" selection-end-line="30" />
+        <state relative-caret-position="357">
+          <caret line="36" column="31" lean-forward="true" selection-start-line="36" selection-start-column="31" selection-end-line="36" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/public/search.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="71" column="74" selection-start-line="71" selection-start-column="74" selection-end-line="71" selection-end-column="74" />
         </state>
       </provider>
     </entry>
