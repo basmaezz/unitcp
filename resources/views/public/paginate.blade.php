@@ -2,11 +2,11 @@
     <ul class="pagination justify-content-end ">
         @if ($exams->onFirstPage())
             <li class="page-item disabled">
-                <a class="page-link" tabindex="-1">Previous</a>
+                <a class="page-link" tabindex="-1">السابق</a>
             </li>
         @else
             <li class="page-item">
-                <a class="page-link" href="{{ $exams->previousPageUrl() }}" tabindex="-1">Previous</a>
+                <a class="page-link" href="{{ $exams->previousPageUrl() }}" tabindex="-1">السابق</a>
             </li>
         @endif
 
@@ -32,11 +32,11 @@
 
         @if ($exams->hasMorePages())
             <li class="page-item">
-                <a class="page-link" href="{{ $exams->nextPageUrl() }}">Next</a>
+                <a class="page-link" href="{{ $exams->nextPageUrl() }}">التالى</a>
             </li>
         @else
             <li class="page-item disabled">
-                <a class="page-link" href="{{ $exams->nextPageUrl() }}">Next</a>
+                <a class="page-link" href="{{ $exams->nextPageUrl() }}">التالى</a>
             </li>
         @endif
 

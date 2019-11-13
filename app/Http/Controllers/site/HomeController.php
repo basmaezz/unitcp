@@ -133,7 +133,6 @@ class HomeController extends Controller
     public function getsearchExamData($id)
     {
         $classes = classes::where("faculty_id", $id)->get();
-//        dd($classes);
         $department = DB::table("departments")->where("faculty_id", $id)->get();
         $classes = DB::table("classes")->where("faculty_id", $id)->get();
         $materials = DB::table("materials")->where("faculty_id", $id)->get();
@@ -142,11 +141,11 @@ class HomeController extends Controller
         $data = ["classes" => $classes, "department" => $department, "materials" => $materials, "semesters" => $semesters, "year" => $year];
         $view = view('public.fac-exam', $data)->render();
         return response()->json(['status' => true, 'item' => $view]);
-        $exams = ['exams' => Exam::where('faculty_id', $id)->get()];
-        $exams_v = view('public.exam-result', $exams)->render();
-        $exams_v_pag_v = view('public.paginate', $exams)->render();
+//        $exams = ['exams' => Exam::where('faculty_id', $id)->get()];
+//        $exams_v = view('public.exam-result', $exams)->render();
+//        $exams_v_pag_v = view('public.paginate', $exams)->render();
 //        return response()->json(['status' => true, 'item' => $view, 'exams' => $exams_v, 'paginate' => $exams_v_pag_v]);
-        return response()->json(['status' => true, 'item' => $view, 'exams' => $exams_v, 'paginate' => $exams_v_pag_v]);
+//        return response()->json(['status' => true, 'item' => $view, 'exams' => $exams_v, 'paginate' => $exams_v_pag_v]);
     }
     public function getsearchExam($deid = null, $classid = null, $yearid = null)
     {

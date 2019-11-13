@@ -32,8 +32,8 @@ $(document).ready(function() {
                 success:function(response) {
                     if(response.status)
                     {
-                        console.log(response.item);
-                        console.log(response.item);
+                        // console.log(response.item);
+                        // console.log(response.item);
                         // $('#exams_view').html("");
                         $('#selectors_div').html(response.item);
                         $('#exams_view').html(response.item);

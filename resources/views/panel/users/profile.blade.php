@@ -24,12 +24,12 @@
 
                         <fieldset class="form-group">
                             <label>الأسم</label><span><font color="red">*</font></span>
-                            <input class="form-control"  type="text" name="name" placeholder="الرجاء إدخال الأسم"  value="{{$user->name}}" required>
+                            <input class="form-control"  type="text" name="name" placeholder="الرجاء إدخال الأسم"  value="{{$user->name}}" maxlength="20" required>
                         </fieldset>
 
                         <fieldset class="form-group">
                             <label> اسم المستخدم</label><span><font color="red">*</font></span>
-                            <input class="form-control"  type="text" name="username" placeholder="الرجاء إدخال اسم المستخدم"  value="{{$user->username}}" required>
+                            <input class="form-control"  type="text" name="username" placeholder="الرجاء إدخال اسم المستخدم"  value="{{$user->username}}" maxlength="20" required>
                         </fieldset>
 
                         <fieldset class="form-group">
@@ -39,7 +39,7 @@
 
                         <fieldset class="form-group">
                             <label>كلمه المرور</label><span><font color="red">*</font></span>
-                            <input class="form-control"  type="password" name="password" placeholder="الرجاء إدخال كلمه المرور"  value="" required>
+                            <input class="form-control"  type="password" name="password" placeholder="الرجاء إدخال كلمه المرور"  value="" maxlength="20" required>
                         </fieldset>
 
                         <p style="color: #0d6aad;">اعاده تعيين كلمه المرور!</p>
