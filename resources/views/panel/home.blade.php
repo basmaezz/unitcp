@@ -92,15 +92,11 @@
 
 
                         </div>
-                        <div class="m-b-3 font-weight-bold">
-                            <h5> <a href="{{route('users.online')}}"> عدد المتواجدين </a>
-                                <button type="button" class="btn btn-sm btn-rounded btn-info pull-left" style="background-color: #003B51;cursor: default;">{{$users}}</button>
-                            </h5>
-
-
-                        </div>
-
-
+                        {{--<div class="m-b-3 font-weight-bold">--}}
+                            {{--<h5> <a href="{{route('users.online')}}"> عدد المتواجدين </a>--}}
+                                {{--<button type="button" class="btn btn-sm btn-rounded btn-info pull-left" style="background-color: #003B51;cursor: default;">{{$users}}</button>--}}
+                            {{--</h5>--}}
+                        {{--</div>--}}
                     </div>
                 </div>
 
