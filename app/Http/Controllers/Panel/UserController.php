@@ -105,8 +105,6 @@ class UserController extends Controller
                 $user->img = $originalName . '.' . $extension;
             }
 
-//        $request->repeat_pw ?  $user->password=bcrypt($request->password)  : bcrypt($request->password);
-//            $request->faculty_id ? $user->permission = 2 : $user->permission = 1;
             $user->save();
             return (isset($user)) ? $this->response_api(true, 'تم التعديل بنجاح') : $this->response_api(false, 'حدث خطأ غير متوقع');
         }

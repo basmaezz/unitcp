@@ -32,7 +32,7 @@
 
                         <fieldset class="form-group">
                             <label>الحاله</label>
-                            <select class="form-control" name="category_id" data-placeholder="إختيار التصنيف" required >
+                            <select class="form-control" name="active" data-placeholder="إختيار التصنيف" required >
                                 <option disabled selected hidden>إختيار الفاعليه</option>
 
                                 <option value="0"  {{($faculty->active==0) ? 'selected' : ''  }} >موقوفه</option>

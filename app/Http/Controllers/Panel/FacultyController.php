@@ -43,6 +43,7 @@ class FacultyController extends Controller
     public function update($id, CreateFaculty $request)
     {
         $faculty = Faculty::updateOrCreate(['id' => $id], $request->all());
+        $faculty->active= $request->active;
         $status = $faculty ? true : false;
         collections::log(auth()->user()->id , 'Faculty', 'تم تعديل بيانات الكليه', $faculty, $status);
 
